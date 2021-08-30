@@ -27,8 +27,8 @@
       <Argument Key="maxVersionParts" Value="" xmlns="" />
     </TransformComponentArguments>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\..\Api\CoronaReader.Api\bin\Debug\netstandard2.0\CoronaReader.Api.dll" xmlns="" />
-      <DocumentationSource sourceFile="..\..\Api\CoronaReader.Api\bin\Debug\netstandard2.0\CoronaReader.Api.xml" xmlns="" />
+      <DocumentationSource sourceFile="..\..\Api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Api.dll" />
+      <DocumentationSource sourceFile="..\..\Api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Api.xml" />
     </DocumentationSources>
     <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
     <SyntaxFilters>Standard</SyntaxFilters>

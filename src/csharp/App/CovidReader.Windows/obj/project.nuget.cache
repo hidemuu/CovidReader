@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rdxRDgJ6thji+f50aYvPzjfW2jzsHvtlZ91XCubIXfxsV8DOeKljzLG8XzvKN5xDec8OeocgeY813R1hzwdZhw==",
+  "dgSpecHash": "aROZXGEN2A+sNILKB8tMju6Y3KkX6iCVwL3it6LSBvwyL2yYTMNmFC6IfSDRlX2ZjaMZpgQG3D4HeYalwUqHOg==",
   "success": true,
   "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\csharp\\App\\CovidReader.Windows\\CovidReader.Windows.csproj",
   "expectedPackageFiles": [

@@ -24,11 +24,11 @@ namespace CovidReader
         {
             _command = new AppCommand("sql", "sql");
 
-            Console.WriteLine(_command.Help());
-            if (_command.ViewSample())
-            {
-                WindowHelper.SetForeground("CovidReader");
-            }
+            //Console.WriteLine(_command.Help());
+            //if (_command.ViewSample())
+            //{
+            //    WindowHelper.SetForeground("CovidReader");
+            //}
             
             while (true)
             {

@@ -102,6 +102,7 @@ namespace CovidReader.Api
         {
             var newline = Formats.NewLine;
             return
+                base.Help() + newline +
                 "update    : データ取得" + newline +
                 "autorun   : チャート表示";
         }

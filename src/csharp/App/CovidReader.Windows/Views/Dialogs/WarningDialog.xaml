@@ -5,8 +5,29 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CovidReader.Windows.Views.Dialogs"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             d:DesignHeight="70" d:DesignWidth="100">
+    <behaviors:Interaction.Triggers>
+        <behaviors:EventTrigger EventName="Loaded">
+            <behaviors:InvokeCommandAction Command="{Binding CloseDialogCommand}"/>
+        </behaviors:EventTrigger>
+    </behaviors:Interaction.Triggers>
+    <prism:Dialog.WindowStyle>
+        <Style TargetType="Window">
+            <Setter Property="prism:Dialog.WindowStartupLocation" Value="CenterScreen" />
+            <Setter Property="ShowInTaskbar" Value="False"/>
+            <Setter Property="SizeToContent" Value="WidthAndHeight"/>
+            <Setter Property="WindowStyle" Value="None"/>
+        </Style>
+    </prism:Dialog.WindowStyle>
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image  Margin="15,-10,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Source="pack://application:,,,/CovidReader.Windows.Infrastructure;Component/Assets/Photos/alter.png" Height="50" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <TextBlock Margin="8,-10,45,0"  Grid.Column="1" Text="{Binding Message}"  VerticalAlignment="Center"   FontSize="15" FontFamily="Open Sans"/>    
     </Grid>
 </UserControl>

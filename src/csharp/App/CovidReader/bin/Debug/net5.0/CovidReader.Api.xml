@@ -59,6 +59,11 @@
             
             </summary>
         </member>
+        <member name="M:CovidReader.Api.CommandBase.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:CovidReader.Api.CommandBase.Register(System.String,System.Collections.Generic.IEnumerable{System.String})">
             <summary>
             登録処理

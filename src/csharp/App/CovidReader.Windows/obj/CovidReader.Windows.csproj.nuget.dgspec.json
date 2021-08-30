@@ -842,11 +842,7 @@
         "frameworks": {
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
-            "projectReferences": {
-              "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\csharp\\Models\\CovidReader.Models\\CovidReader.Models.csproj": {
-                "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\csharp\\Models\\CovidReader.Models\\CovidReader.Models.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

@@ -6,6 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Fonts\iconfont.ttf" />
+    <None Remove="Assets\Photos\alter.png" />
+    <None Remove="Assets\Photos\home.png" />
+    <None Remove="Assets\Photos\push.png" />
+    <None Remove="Assets\Photos\success.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Themes\" />
     <Folder Include="Windows\Controls\" />
     <Folder Include="Behaiviors\" />
@@ -27,7 +35,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Models\CovidReader.Models\CovidReader.Models.csproj" />
+    <Resource Include="Assets\Fonts\iconfont.ttf" />
+    <Resource Include="Assets\Photos\alter.png" />
+    <Resource Include="Assets\Photos\home.png" />
+    <Resource Include="Assets\Photos\success.png" />
+    <Resource Include="Assets\Photos\push.png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -2,6 +2,7 @@
 using CovidReader.Windows.Infrastructure.CustomerRegionAdapters;
 using CovidReader.Windows.Infrastructure.Services;
 using CovidReader.Windows.ViewModels.Dialogs;
+using CovidReader.Windows.Views;
 using CovidReader.Windows.Views.Dialogs;
 using CovidReader.Windows.Views.Login;
 using NLog;
@@ -41,17 +42,17 @@ namespace CovidReader.Windows
 
 
         #region ロジック
-        public static void Close()
-        {
-            //App.Current.MainWindow.Close();
-        }
+        //public static void Close()
+        //{
+        //    //App.Current.MainWindow.Close();
+        //}
 
-        public static void BackupFile(string filePath, string dir)
-        {
-            var copyTo = Path.Combine(dir, filePath + ".backup");
+        //public static void BackupFile(string filePath, string dir)
+        //{
+        //    var copyTo = Path.Combine(dir, filePath + ".backup");
 
-            File.Copy(filePath, copyTo, true);
-        }
+        //    File.Copy(filePath, copyTo, true);
+        //}
 
         #endregion
 
@@ -106,7 +107,7 @@ namespace CovidReader.Windows
 
         protected override Window CreateShell()
         {
-            return Container.Resolve<LoginWindow>();
+            return Container.Resolve<MainWindow>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -125,12 +126,15 @@ namespace CovidReader.Windows
             ////注册导航
             containerRegistry.RegisterForNavigation<LoginMainContent>();
             containerRegistry.RegisterForNavigation<CreateAccount>();
+            containerRegistry.RegisterForNavigation<HomeView>();
+            containerRegistry.RegisterForNavigation<ChartView>();
+            containerRegistry.RegisterForNavigation<TableView>();
 
             ////注册对话框
-            //containerRegistry.RegisterDialog<AlertDialog, AlertDialogViewModel>();
-            //containerRegistry.RegisterDialog<SuccessDialog, SuccessDialogViewModel>();
-            //containerRegistry.RegisterDialog<WarningDialog, WarningDialogViewModel>();
-            //containerRegistry.RegisterDialogWindow<DialogWindow>();
+            containerRegistry.RegisterDialog<AlertDialog, AlertDialogViewModel>();
+            containerRegistry.RegisterDialog<SuccessDialog, SuccessDialogViewModel>();
+            containerRegistry.RegisterDialog<WarningDialog, WarningDialogViewModel>();
+            containerRegistry.RegisterDialogWindow<DialogWindow>();
         }
 
         protected override void ConfigureRegionAdapterMappings(RegionAdapterMappings regionAdapterMappings)
@@ -139,11 +143,11 @@ namespace CovidReader.Windows
             regionAdapterMappings.RegisterMapping(typeof(UniformGrid), Container.Resolve<UniformGridRegionAdapter>());
         }
 
-        protected override IModuleCatalog CreateModuleCatalog()
-        {
-            return new DirectoryModuleCatalog() { ModulePath = @".\Modules" };
-            //return new ConfigurationModuleCatalog();
-        }
+        //protected override IModuleCatalog CreateModuleCatalog()
+        //{
+        //    return new DirectoryModuleCatalog() { ModulePath = @".\Modules" };
+        //    //return new ConfigurationModuleCatalog();
+        //}
 
         #endregion
 

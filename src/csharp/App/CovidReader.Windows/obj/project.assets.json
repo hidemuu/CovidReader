@@ -1071,7 +1071,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "CovidReader.Models": "1.0.0",
           "LiveCharts.Wpf.NetCore3": "0.9.7",
           "MahApps.Metro": "2.4.7",
           "MaterialDesignColors": "2.0.1",

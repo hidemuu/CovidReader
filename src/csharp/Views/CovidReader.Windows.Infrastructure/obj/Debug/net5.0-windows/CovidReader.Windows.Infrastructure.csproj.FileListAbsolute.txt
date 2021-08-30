@@ -3,8 +3,6 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\bin\Debug\net5.0-windows\CovidReader.Windows.Infrastructure.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\bin\Debug\net5.0-windows\ref\CovidReader.Windows.Infrastructure.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\bin\Debug\net5.0-windows\CovidReader.Windows.Infrastructure.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\bin\Debug\net5.0-windows\CovidReader.Models.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\bin\Debug\net5.0-windows\CovidReader.Models.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\obj\Debug\net5.0-windows\CovidReader.Windows.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\obj\Debug\net5.0-windows\Assets\Styles\Button.baml
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\obj\Debug\net5.0-windows\Assets\Styles\Calendar.baml
@@ -43,7 +41,6 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\obj\Debug\net5.0-windows\CovidReader.Windows.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\obj\Debug\net5.0-windows\CovidReader.Windows.Infrastructure.AssemblyInfo.cs
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\obj\Debug\net5.0-windows\CovidReader.Windows.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\obj\Debug\net5.0-windows\CovidReader.Windows.Infrastructure.csproj.CopyComplete
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\obj\Debug\net5.0-windows\CovidReader.Windows.Infrastructure.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\obj\Debug\net5.0-windows\ref\CovidReader.Windows.Infrastructure.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Windows.Infrastructure\obj\Debug\net5.0-windows\CovidReader.Windows.Infrastructure.pdb

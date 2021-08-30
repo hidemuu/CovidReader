@@ -1,4 +1,5 @@
-﻿using CovidReader.Repository;
+﻿using CovidReader.Models;
+using CovidReader.Repository;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -39,6 +40,14 @@ namespace CovidReader.Api
         /// </summary>
         protected string _response = "";
         private static Process _process;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public CommandBase()
+        {
+
+        }
 
         /// <summary>
         /// 登録処理
@@ -117,7 +126,12 @@ namespace CovidReader.Api
         /// 
         /// </summary>
         /// <returns></returns>
-        public abstract string Help();
+        public virtual string Help()
+        {
+            var newline = Formats.NewLine;
+            return
+                "help      : ヘルプ取得";
+        }
         /// <summary>
         /// 
         /// </summary>

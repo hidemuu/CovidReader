@@ -4,9 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CovidReader.Windows.Views.Login"
+        xmlns:constants="clr-namespace:CovidReader.Windows.Infrastructure.Constants;assembly=CovidReader.Windows.Infrastructure"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Title="Login" Height="600" Width="400">
+    <behaviors:Interaction.Triggers>
+        <behaviors:EventTrigger EventName="Loaded">
+            <behaviors:InvokeCommandAction Command="{Binding LoginLoadingCommand}"/>
+        </behaviors:EventTrigger>
+    </behaviors:Interaction.Triggers>
     <Grid>
-        
+        <ContentControl prism:RegionManager.RegionName="{x:Static constants:RegionNames.LoginRegion}" Margin="5"/>
     </Grid>
 </Window>

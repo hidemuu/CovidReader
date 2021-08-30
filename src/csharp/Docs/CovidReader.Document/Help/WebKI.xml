@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AppCommand クラス" Url="html/a2cfd4f3-4172-801a-1f3f-488e605d1385.htm" />
+  <HelpKINode Title="AppCommand クラス、コンストラクター" Url="html/718e7346-cdaa-614e-6e52-99934a134eff.htm" />
+  <HelpKINode Title="AppCommand クラス、フィールド" Url="html/66c03d6d-e4b4-5b4b-1a24-620b57f3dc92.htm" />
+  <HelpKINode Title="AppCommand クラス、メソッド" Url="html/5eac084e-090e-f679-2f9e-f56732ec0ee3.htm" />
+  <HelpKINode Title="AppCommand.AppCommand コンストラクター" Url="html/718e7346-cdaa-614e-6e52-99934a134eff.htm" />
+  <HelpKINode Title="AppCommand.Help メソッド" Url="html/3743636c-50c7-adb7-78f0-f2ef55c7a8ef.htm" />
+  <HelpKINode Title="CommandBase クラス" Url="html/530a44a6-45bc-e5cb-9d08-fbebb6c71a8d.htm" />
+  <HelpKINode Title="CommandBase クラス、コンストラクター" Url="html/8667b7f3-b95f-b89a-4c1d-9d1928924cf1.htm" />
+  <HelpKINode Title="CommandBase クラス、フィールド" Url="html/4b9f48e0-7001-2e29-3149-10f0d6974fb9.htm" />
+  <HelpKINode Title="CommandBase クラス、メソッド" Url="html/5e5d03be-6851-ebaa-2989-80dbfd8fa62a.htm" />
+  <HelpKINode Title="CommandBase.CommandBase コンストラクター" Url="html/8667b7f3-b95f-b89a-4c1d-9d1928924cf1.htm" />
+  <HelpKINode Title="CommandBase.CommandHandler デリゲート" Url="html/cee7a820-7a11-c939-4638-af73b46654a1.htm" />
+  <HelpKINode Title="CommandBase.GetResponse メソッド" Url="html/d1713124-4442-8e58-af00-b3850561406e.htm" />
+  <HelpKINode Title="CommandBase.Help メソッド" Url="html/dc78cf11-094e-57c8-82eb-c324229e6bfd.htm" />
+  <HelpKINode Title="CommandBase.Invoke メソッド" Url="html/852be802-2aec-57d7-7343-a596c28353ec.htm" />
+  <HelpKINode Title="CommandBase.IsExist メソッド" Url="html/7f62bec1-6193-e98a-1089-07248cb9b977.htm" />
+  <HelpKINode Title="CommandBase.Register メソッド" Url="html/564cf176-c79a-4b9e-3563-510d68c1bbe5.htm" />
+  <HelpKINode Title="CommandBase.RunAsync メソッド" Url="html/a2de08d9-1ba3-4807-931d-b3c58cce1c1b.htm" />
+  <HelpKINode Title="CommandBase.ViewSample メソッド" Url="html/f04ad0b6-f221-4f03-1de7-40926a2de979.htm" />
+  <HelpKINode Title="CommandBase._command フィールド" Url="html/2f876a8f-d873-2775-f4fd-f2442ccf44d1.htm" />
+  <HelpKINode Title="CommandBase._handlers フィールド" Url="html/222188d9-c2ca-25b4-b79a-184fdd7bc12d.htm" />
+  <HelpKINode Title="CommandBase._parameters フィールド" Url="html/68a7ff53-3d32-6507-f70a-965f54a5a1e6.htm" />
+  <HelpKINode Title="CommandBase._response フィールド" Url="html/763af4c5-8a67-9134-6428-d79582e15941.htm" />
+  <HelpKINode Title="CommandBase._status フィールド" Url="html/00895859-822f-08a3-6aab-2b2e1c0366ac.htm" />
+  <HelpKINode Title="CovidReader.Api 名前空間" Url="html/881b1304-eb1f-c5c9-2d7e-2df600e84594.htm" />
+  <HelpKINode Title="CovidReader.Api.AppCommand クラス" Url="html/a2cfd4f3-4172-801a-1f3f-488e605d1385.htm" />
+  <HelpKINode Title="CovidReader.Api.CommandBase クラス" Url="html/530a44a6-45bc-e5cb-9d08-fbebb6c71a8d.htm" />
+  <HelpKINode Title="CovidReader.Api.CommandBase.CommandHandler デリゲート" Url="html/cee7a820-7a11-c939-4638-af73b46654a1.htm" />
+  <HelpKINode Title="GetResponse メソッド" Url="html/d1713124-4442-8e58-af00-b3850561406e.htm" />
+  <HelpKINode Title="Help メソッド">
+    <HelpKINode Title="AppCommand.Help メソッド " Url="html/3743636c-50c7-adb7-78f0-f2ef55c7a8ef.htm" />
+    <HelpKINode Title="CommandBase.Help メソッド " Url="html/dc78cf11-094e-57c8-82eb-c324229e6bfd.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Invoke メソッド" Url="html/852be802-2aec-57d7-7343-a596c28353ec.htm" />
+  <HelpKINode Title="IsExist メソッド" Url="html/7f62bec1-6193-e98a-1089-07248cb9b977.htm" />
+  <HelpKINode Title="Register メソッド" Url="html/564cf176-c79a-4b9e-3563-510d68c1bbe5.htm" />
+  <HelpKINode Title="RunAsync メソッド" Url="html/a2de08d9-1ba3-4807-931d-b3c58cce1c1b.htm" />
+  <HelpKINode Title="version">
+    <HelpKINode Title="1.0.0.0" Url="html/6877d56b-b1a5-4360-8c60-f7babf271244.htm" />
+    <HelpKINode Title="history" Url="html/50fe43ab-9638-4311-b727-b0100745883d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ViewSample メソッド" Url="html/f04ad0b6-f221-4f03-1de7-40926a2de979.htm" />
+  <HelpKINode Title="Welcome" Url="html/8acc81bd-6f95-4de0-8c2c-97a04f9176a2.htm" />
+  <HelpKINode Title="_command フィールド" Url="html/2f876a8f-d873-2775-f4fd-f2442ccf44d1.htm" />
+  <HelpKINode Title="_handlers フィールド" Url="html/222188d9-c2ca-25b4-b79a-184fdd7bc12d.htm" />
+  <HelpKINode Title="_parameters フィールド" Url="html/68a7ff53-3d32-6507-f70a-965f54a5a1e6.htm" />
+  <HelpKINode Title="_response フィールド" Url="html/763af4c5-8a67-9134-6428-d79582e15941.htm" />
+  <HelpKINode Title="_status フィールド" Url="html/00895859-822f-08a3-6aab-2b2e1c0366ac.htm" />
+</HelpKI>

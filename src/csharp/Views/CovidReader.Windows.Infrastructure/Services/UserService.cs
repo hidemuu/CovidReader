@@ -1,4 +1,4 @@
-﻿using CovidReader.Models.Account;
+﻿using CovidReader.Windows.Infrastructure.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +13,8 @@ namespace CovidReader.Windows.Infrastructure.Services
         {
             var allUsers = new List<User>()
            {
-               new User(){Id=1,LoginId="Admin",Password="Admin123"},
-               new User(){Id=1,LoginId="Ryzen",Password="123456"},
-               new User(){Id=1,LoginId="Test",Password="Test123"},
+               new User(){Id=1,LoginId="admin",Password="admin"},
+               new User(){Id=2,LoginId="test",Password="test"},
            };
             return allUsers;
         }

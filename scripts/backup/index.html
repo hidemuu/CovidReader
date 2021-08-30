@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="APIサービス" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <!--<link rel=stylesheet href="css/font-awesome.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index-grid.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="js/bootstrap-5.1.0-dist/bootstrap.js"></script>
+</head>
+<body>
+    <div class="grid_container">
+
+        <header class="grid_header">
+            <div class="grid_header_contents">
+                Index
+                <a href="#orderData">先頭</a>
+                <a href=Default.aspx>データベース一覧</a>
+                <a href="/swagger">Swagger</a>
+                <!--<a href="#pageLink">リンク</a>-->
+                <!--<a class="search-input">
+                    <label>取得URL <input type="text" name="getUrl"></label><input type="submit" value="検索" />
+                </a>-->
+            </div>
+        </header>
+        
+        <nav class="grid_nav">
+            
+            <p></p>
+            <div class="status-box">
+                <h1>ステータス</h1>
+                <p>going to goal 01</p>
+                <p>charge:50%</p>
+            </div>
+            
+           
+        </nav>
+        
+        <main class="grid_main">
+            <div class="contents" id="orderDataes">
+                <section>
+                    <article>
+                        <h2>オペレータ選択</h2>
+                        <form name="formMember">
+                            <select name="selectMember" id="selectMember" onChange="changeMemberCode()">
+                                <option value="00001" selected>User</option>
+                                <option value="00002">Administrator</option>
+                            </select>
+                        </form>
+                    </article>
+                </section>
+            </div>
+
+            
+        </main>
+        
+        <aside class="grid_aside">
+            
+        </aside>
+        
+        <footer class="grid_footer">
+            <small>©.com</small>
+        </footer>
+
+    </div>
+    
+    <script>
+        //----- ボタンイベントスクリプト --------------
+        (function () {
+            document.getElementById('btnNav01').addEventListener('click', function (e) {
+                window.alert('テスト')
+            })
+        })();
+
+    </script>
+
+</body>
+</html>

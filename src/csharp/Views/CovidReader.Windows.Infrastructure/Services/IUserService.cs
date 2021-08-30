@@ -1,4 +1,4 @@
-﻿using CovidReader.Models.Account;
+﻿using CovidReader.Windows.Infrastructure.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

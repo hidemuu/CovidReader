@@ -1,4 +1,4 @@
-﻿using CovidReader.Models.Account;
+﻿using CovidReader.Windows.Infrastructure.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Windows.Infrastructure.Constants
 {
-    public static class Grobal
+    public static class Global
     {
         private static List<User> _allUsers;
         public static List<User> AllUsers

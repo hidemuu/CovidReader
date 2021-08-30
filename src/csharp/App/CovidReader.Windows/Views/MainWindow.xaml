@@ -41,17 +41,16 @@
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="pack://application:,,,/CovidReader.Infrastructure;Component/Assets/Photos/home.png" Height="40"/>
+                    <Image Source="pack://application:,,,/CovidReader.Windows.Infrastructure;Component/Assets/Photos/home.png" Height="40"/>
                     <Label Content="Home" FontSize="35" FontWeight="Bold"/>
 
                 </StackPanel>
                 <StackPanel Grid.Row="1">
-                    <Button  Content="Load MedicineModule" FontSize="25"  Margin="5" Command="{Binding LoadMedicineModuleCommand}"/>
+                    <Button  Content="Load Module" FontSize="25"  Margin="5" Command="{Binding LoadModuleCommand}"/>
                     <UniformGrid Margin="5">
-                        <Button Content="ActivePaientList" Margin="5" Command="{Binding ActivePaientListCommand}"/>
-                        <Button Content="DeactivePaientList" Margin="5" Command="{Binding DeactivePaientListCommand}"/>
-                        <Button Content="ActiveMedicineList" Margin="5" Command="{Binding ActiveMedicineListCommand}"/>
-                        <Button Content="DeactiveMedicineList" Margin="5" Command="{Binding DeactiveMedicineListCommand}"/>
+                        <Button Content="Home" Margin="5" Command="{Binding ActiveHomeCommand}"/>
+                        <Button Content="Chart" Margin="5" Command="{Binding ActiveChartCommand}"/>
+                        <Button Content="Table" Margin="5" Command="{Binding ActiveTableCommand}"/>
                     </UniformGrid>
                 </StackPanel>
 
