@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Page Update="Assets\Styles\Button.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\Calendar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\CheckBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\ComboBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\ContextMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\Converters.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\DataGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\GridSplitter.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\Hyperlink.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\Label.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\ListBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\ListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\MenuItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\ModernUI.Dark.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\ModernUI.Light.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\ModernUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\PasswordBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\RadioButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\ScrollBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\Slider.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\TextBlock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\TextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\ToolTip.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Assets\Styles\TreeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\ChipBorderStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\MacLikeScrollBarStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\MaterialTextBlockStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\NavigationRailResource.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

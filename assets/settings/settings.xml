@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <root xmlns="http://schemas.datacontract.org/2004/07/CoronaReader.Models.Settings" > -->
+<root>
+  <Configs>
+    <Config>
+      <Id>1</Id>
+      <Name>ApiDB</Name>
+      <Val>Sql</Val>
+      <Default>Sql</Default>
+      <Description>APIデータベースタイプ</Description>
+    </Config>
+    <Config>
+      <Id>2</Id>
+      <Name>CovidDB</Name>
+      <Val>Sql</Val>
+      <Default>Sql</Default>
+      <Description>Covidデータベースタイプ</Description>
+    </Config>
+  </Configs>
+</root>

@@ -1,0 +1,9 @@
+C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Models\CovidReader.Repository.Google\bin\Debug\netstandard2.0\CovidReader.Repository.Google.deps.json
+C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Models\CovidReader.Repository.Google\bin\Debug\netstandard2.0\CovidReader.Repository.Google.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Models\CovidReader.Repository.Google\bin\Debug\netstandard2.0\CovidReader.Repository.Google.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Models\CovidReader.Repository.Google\obj\Debug\netstandard2.0\CovidReader.Repository.Google.csproj.AssemblyReference.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Models\CovidReader.Repository.Google\obj\Debug\netstandard2.0\CovidReader.Repository.Google.AssemblyInfoInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Models\CovidReader.Repository.Google\obj\Debug\netstandard2.0\CovidReader.Repository.Google.AssemblyInfo.cs
+C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Models\CovidReader.Repository.Google\obj\Debug\netstandard2.0\CovidReader.Repository.Google.csproj.CoreCompileInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Models\CovidReader.Repository.Google\obj\Debug\netstandard2.0\CovidReader.Repository.Google.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Models\CovidReader.Repository.Google\obj\Debug\netstandard2.0\CovidReader.Repository.Google.pdb

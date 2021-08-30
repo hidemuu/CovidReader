@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+　　 <title>グラフ</title> 
+</head>
+  <body>
+　　<h1>グラフ</h1>
+    <form name="myform">
+      <input name="myfile" type="file" />
+      <textarea name="output" cols="80" rows="10"></textarea>
+    </form>
+    <canvas id="myChart"></canvas>
+    <script type="text/javascript" src="js/node_modules/chart.js/dist/chart.js"></script>
+    <script type="text/javascript" src="js/node_modules/chart.js/dist/chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+      
+      //main_json();
+      main_json_file();
+      
+      function main_json() {
+        //var url = "http://localhost:81/chart_item.json";
+        var url = "http://localhost:81/chart_item.json?callback=?";
+        console.log(url);
+        $(function() {
+          $.getJSON(url, (json) => {
+              console.log(json);
+              var labels = getLabels(json);
+              var data = getData(json);
+              makeLineChart(data, labels);
+          });
+        });
+      }
+
+      function main_json_file() {
+        var form = document.forms.myform;
+        form.myfile.addEventListener('change', function(e) {
+          var result = e.target.files[0]; //読み込んだファイル情報を取得
+          console.log( result );
+          var reader = new FileReader();
+          reader.readAsText( result );  //読み込んだファイルの中身を取得する
+          //ファイルの中身を取得後に処理を行う
+          reader.addEventListener( 'load', function() {
+            form.output.textContent = reader.result; 
+            json = JSON.parse(reader.result);
+            console.log(json);
+            var labels = getLabels(json);
+            var data = getData(json);
+            makeLineChart(data, labels);
+          })
+        })
+           
+      }
+
+      function getLabels(json) {
+        var labels = [];
+        for (let i=0; i<json.length; i++){
+          labels[i] = json[i].date;
+          //console.log(`date=${data[i].日付}, death=${data[i].死亡者数}`);
+        }
+        return labels;
+      }
+
+      function getData(json) {
+        var data = [];
+        for (let i=0; i<json.length; i++){
+          data[i] = json[i].data;
+          //console.log(`date=${data[i].日付}, death=${data[i].死亡者数}`);
+        }
+        return data;
+      }
+
+      function makeLineChart(data, labels) {
+        var ctx = document.getElementById("myChart").getContext('2d');
+              var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: labels,
+                  datasets: [
+                    {
+                      label: "死亡者数", 
+                      data: data,
+                      borderColor: "rgba(255,0,0,1)",
+                      backgroundColor: "rgba(0,0,0,0)"
+                    },
+                  ]
+                },
+                options: {
+                   //responsive: true,
+                   //maintainAspectRatio: false,
+                   legend: {
+                       //display: false
+                   },
+                   title: {
+                       display: true,
+                       text: 'title'
+                   },
+                   scales: {
+                      yAxes: [{
+                        ticks: {
+                          suggestedMax: 40,
+                          suggestedMin: 0,
+                          stepSize: 10,
+                          callback: function(value, index, values){
+                            return  value +  ''
+                          }
+                        }
+                      }]
+                    },
+                }
+              });
+      }
+
+
+
+      function main_csv() {
+        var req = new XMLHttpRequest();
+        var filePath = 'data.csv'; //CSVファイルのパスは適宜変更してください。
+        req.open('GET', filePath, true);
+        req.onload = function() {
+            console.log(req.responseText);
+            var title = csv2Title(req.responseText);
+            var data = csv2Array(req.responseText);
+            console.log(data);
+            var tmpLabels = [], //ラベル（項目はひとつ）
+            tmpData1 = []; //データ系列の数だけ設定
+
+          for (var row in data) {
+              tmpLabels.push(data[row][0])
+              tmpData1.push(data[row][1]) //データ系列の数だけ設定
+
+          };
+          //tmpLabels = tmpLabels.slice(0, -1);
+          //エクセルでCSVファイルを作るとデータの最後にカンマ（,）が追加されて、グラフに空白列が増えてしまうので最後のカンマを削除する
+
+          var ctx = document.getElementById('myChart').getContext('2d');
+
+          var myChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: tmpLabels,
+                  datasets: [
+                      {
+                          label: title[0],
+                          data: tmpData1
+                      }  //データ系列の数だけ準備
+                      
+                  ]
+              },
+              options: {
+                
+              },       
+          });
+        }
+        req.send(null);
+      };
+
+      function csv2Title(str) {
+        var lines = str.split('\n');
+        return lines[0].split(',');
+      }
+
+      function csv2Array(str) { //
+        var csvData = [];
+        for (var i = 1; i < lines.length; ++i) {
+            var cells = lines[i].split(',');
+            csvData.push(cells);
+        };
+        return csvData;
+      };
+
+      
+    </script>
+
+  </body>
+</html>

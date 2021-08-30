@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoronaReader.Api</name>
+    </assembly>
+    <members>
+        <member name="T:CoronaReader.Api.AppCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CoronaReader.Api.AppCommand.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="apiType"></param>
+            <param name="covidType"></param>
+        </member>
+        <member name="M:CoronaReader.Api.AppCommand.Help">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CoronaReader.Api.CommandBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CoronaReader.Api.CommandBase.CommandHandler">
+            <summary>
+            
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="F:CoronaReader.Api.CommandBase._handlers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CoronaReader.Api.CommandBase._command">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CoronaReader.Api.CommandBase._parameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CoronaReader.Api.CommandBase._status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CoronaReader.Api.CommandBase._response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CoronaReader.Api.CommandBase.Register(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            登録処理
+            </summary>
+            <param name="command"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:CoronaReader.Api.CommandBase.RunAsync(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            起動処理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoronaReader.Api.CommandBase.IsExist(System.String)">
+            <summary>
+            存在確認
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoronaReader.Api.CommandBase.Invoke">
+            <summary>
+            インボーク処理
+            </summary>
+        </member>
+        <member name="M:CoronaReader.Api.CommandBase.GetResponse">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoronaReader.Api.CommandBase.Help">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoronaReader.Api.CommandBase.ViewSample">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

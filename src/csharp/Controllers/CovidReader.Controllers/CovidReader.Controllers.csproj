@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.17" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="92.0.4515.10700" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Models\CovidReader.Repository.Api\CovidReader.Repository.Api.csproj" />
+    <ProjectReference Include="..\..\Models\CovidReader.Repository.Covid\CovidReader.Repository.Covid.csproj" />
+    <ProjectReference Include="..\..\Models\CovidReader.Repository.Google\CovidReader.Repository.Google.csproj" />
+    <ProjectReference Include="..\..\Models\CovidReader.Repository.Settings\CovidReader.Repository.Settings.csproj" />
+    <ProjectReference Include="..\CovidReader.Core\CovidReader.Core.csproj" />
+    <ProjectReference Include="..\CovidReader.Log\CovidReader.Log.csproj" />
+  </ItemGroup>
+
+</Project>

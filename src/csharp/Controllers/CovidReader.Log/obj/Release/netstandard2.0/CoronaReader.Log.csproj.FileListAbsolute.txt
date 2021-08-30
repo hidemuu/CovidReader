@@ -1,0 +1,10 @@
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Controllers\CoronaReader.Log\bin\Release\netstandard2.0\NLog.config
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Controllers\CoronaReader.Log\bin\Release\netstandard2.0\CoronaReader.Log.deps.json
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Controllers\CoronaReader.Log\bin\Release\netstandard2.0\CoronaReader.Log.dll
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Controllers\CoronaReader.Log\bin\Release\netstandard2.0\CoronaReader.Log.pdb
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Controllers\CoronaReader.Log\obj\Release\netstandard2.0\CoronaReader.Log.csproj.AssemblyReference.cache
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Controllers\CoronaReader.Log\obj\Release\netstandard2.0\CoronaReader.Log.AssemblyInfoInputs.cache
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Controllers\CoronaReader.Log\obj\Release\netstandard2.0\CoronaReader.Log.AssemblyInfo.cs
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Controllers\CoronaReader.Log\obj\Release\netstandard2.0\CoronaReader.Log.csproj.CoreCompileInputs.cache
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Controllers\CoronaReader.Log\obj\Release\netstandard2.0\CoronaReader.Log.dll
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Controllers\CoronaReader.Log\obj\Release\netstandard2.0\CoronaReader.Log.pdb

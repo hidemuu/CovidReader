@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Configuration>
+  <DataAccess>
+    <Id>1</Id>
+    <Category>佐藤</Category>
+    <Val>北海道札幌市</Val>
+    <Default>28</Default>
+    <Description>28</Description>
+  </DataAccess>
+  <DataAccess>
+    <Id>2</Id>
+    <Category>佐藤</Category>
+    <Val>北海道札幌市</Val>
+    <Default>28</Default>
+    <Description>28</Description>
+  </DataAccess>
+</Configuration>

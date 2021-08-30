@@ -1,0 +1,15 @@
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\bin\Release\netstandard2.0\CoronaReader.Repository.Settings.deps.json
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\bin\Release\netstandard2.0\CoronaReader.Repository.Settings.dll
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\bin\Release\netstandard2.0\CoronaReader.Repository.Settings.pdb
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\bin\Release\netstandard2.0\CoronaReader.Models.dll
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\bin\Release\netstandard2.0\CoronaReader.Repository.dll
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\bin\Release\netstandard2.0\CoronaReader.Repository.pdb
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\bin\Release\netstandard2.0\CoronaReader.Models.pdb
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\obj\Release\netstandard2.0\CoronaReader.Repository.Settings.csproj.AssemblyReference.cache
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\obj\Release\netstandard2.0\CoronaReader.Repository.Settings.AssemblyInfoInputs.cache
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\obj\Release\netstandard2.0\CoronaReader.Repository.Settings.AssemblyInfo.cs
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\obj\Release\netstandard2.0\CoronaReader.Repository.Settings.csproj.CoreCompileInputs.cache
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\obj\Release\netstandard2.0\CoronaReader.Repository.Settings.csproj.CopyComplete
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\obj\Release\netstandard2.0\CoronaReader.Repository.Settings.dll
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\obj\Release\netstandard2.0\CoronaReader.Repository.Settings.pdb
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Models\CoronaReader.Repository.Settings\bin\Release\netstandard2.0\Constants.cs

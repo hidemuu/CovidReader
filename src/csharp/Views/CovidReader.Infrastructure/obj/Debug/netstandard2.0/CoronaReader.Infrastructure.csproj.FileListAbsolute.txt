@@ -1,0 +1,9 @@
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Views\CoronaReader.Infrastructure\bin\Debug\netstandard2.0\CoronaReader.Infrastructure.deps.json
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Views\CoronaReader.Infrastructure\bin\Debug\netstandard2.0\CoronaReader.Infrastructure.dll
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Views\CoronaReader.Infrastructure\bin\Debug\netstandard2.0\CoronaReader.Infrastructure.pdb
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Views\CoronaReader.Infrastructure\obj\Debug\netstandard2.0\CoronaReader.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Views\CoronaReader.Infrastructure\obj\Debug\netstandard2.0\CoronaReader.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Views\CoronaReader.Infrastructure\obj\Debug\netstandard2.0\CoronaReader.Infrastructure.AssemblyInfo.cs
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Views\CoronaReader.Infrastructure\obj\Debug\netstandard2.0\CoronaReader.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Views\CoronaReader.Infrastructure\obj\Debug\netstandard2.0\CoronaReader.Infrastructure.dll
+C:\Users\nando\Documents\GitHub\CoronaReader\src\csharp\Views\CoronaReader.Infrastructure\obj\Debug\netstandard2.0\CoronaReader.Infrastructure.pdb
