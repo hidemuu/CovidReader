@@ -1,9 +1,15 @@
 # Setting Examples
 
 # CSharp
+https://www.umayadia.com/Note/Note041TypeScriptReact.htm
+https://qiita.com/h0ge/items/5e8343ae16065ae41743
+https://zenn.dev/h0ge/articles/cd2f3e75259786
 
 # react
 https://qiita.com/TsutomuNakamura/items/72d8cf9f07a5a30be048
+https://qiita.com/koedamon/items/8fb75a7c001da40c7bea
+https://qiita.com/masafullversion/items/0238b7c069ebf4f1f072
+https://qiita.com/banban525/items/b66a439d588858ba3a11
 
 ### ディレクトリの作成
 $ mkdir js-react
@@ -29,9 +35,20 @@ $ npm install --save-dev webpack webpack-cli webpack-dev-server
 $ npm install -g webpack webpack-cli
 $ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader
 $ npm install --save-dev react react-dom
+$ npm install --save-dev babel-plugin-react-html-attrs
+$ npm install --save-dev @babel/compat-data
+
+### グローバルインストールの環境変数設定
+$ set NODE_PATH=C:\Users\nando\AppData\Roaming\npm\node_modules
 
 ### webpackコマンド
 $ webpack --mode development
+
+### Cromeで起動
+$ google-chrome-stable ./src/index.html
+
+### webpackサーバ起動
+npx webpack-dev-server
 
 # laravel
 

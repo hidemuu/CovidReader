@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CovidReader.Windows.Views.Login"
-             xmlns:constants="clr-namespace:CovidReader.Windows.Infrastructure.Constants;assembly=CovidReader.Windows.Infrastructure"
-             xmlns:converters="clr-namespace:CovidReader.Windows.Infrastructure.Converters;assembly=CovidReader.Windows.Infrastructure"
+             xmlns:constants="clr-namespace:CovidReader.Infrastructure.Wpf.Constants;assembly=CovidReader.Infrastructure.Wpf"
+             xmlns:converters="clr-namespace:CovidReader.Infrastructure.Wpf.Converters;assembly=CovidReader.Infrastructure.Wpf"
              xmlns:prism="http://prismlibrary.com/"
              xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
              prism:ViewModelLocator.AutoWireViewModel="True"
@@ -25,7 +25,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock Width="30" Height="30" HorizontalAlignment="Left" Text="&#xe60d;" FontWeight="Bold" FontFamily="pack://application:,,,/CovidReader.Windows.Infrastructure;Component/Assets/Fonts/#iconfont" FontSize="30" Margin="10">
+            <TextBlock Width="30" Height="30" HorizontalAlignment="Left" Text="&#xe60d;" FontWeight="Bold" FontFamily="pack://application:,,,/CovidReader.Infrastructure.Wpf;Component/Assets/Fonts/#iconfont" FontSize="30" Margin="10">
                     <behaviors:Interaction.Triggers>
                         <behaviors:EventTrigger EventName="MouseLeftButtonDown">
                             <behaviors:InvokeCommandAction Command="{Binding GoBackCommand}"/>

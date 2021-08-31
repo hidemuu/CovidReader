@@ -1,5 +1,5 @@
 ﻿using CovidReader.Models.Account;
-using CovidReader.Windows.Infrastructure.Constants;
+using CovidReader.Infrastructure.Wpf.Constants;
 using CovidReader.Windows.Views;
 using CovidReader.Windows.Views.Login;
 using Prism.Commands;

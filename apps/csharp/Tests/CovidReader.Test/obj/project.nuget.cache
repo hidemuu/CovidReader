@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4X0o43HrjUUPU3449Eu1hgOriakDk19nChGt88HQNvS2Vvb63mn44DhCoF4/PyGlp0QLqoxdojATEy0dCpdz+w==",
+  "dgSpecHash": "tzjEeimytYAdWPMP1SMaBD/Pfhxr6OMcaKJX41IIW7xqbfhyqqcS8ad9+v3eEA5ig76VkznV3IT/1YJHHNgC9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\Tests\\CovidReader.Test\\CovidReader.Test.csproj",
+  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\tests\\CovidReader.Test\\CovidReader.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nando\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",

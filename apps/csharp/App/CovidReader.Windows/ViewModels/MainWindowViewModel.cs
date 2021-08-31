@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using CovidReader.Windows.Infrastructure.Constants;
+using CovidReader.Infrastructure.Wpf.Constants;
 using CovidReader.Windows.Views;
 using Prism;
 using Prism.Commands;

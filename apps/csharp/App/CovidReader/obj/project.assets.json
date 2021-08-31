@@ -1792,58 +1792,58 @@
     },
     "CovidReader.Api/1.0.0": {
       "type": "project",
-      "path": "../../Api/CovidReader.Api/CovidReader.Api.csproj",
-      "msbuildProject": "../../Api/CovidReader.Api/CovidReader.Api.csproj"
+      "path": "../../src/api/CovidReader.Api/CovidReader.Api.csproj",
+      "msbuildProject": "../../src/api/CovidReader.Api/CovidReader.Api.csproj"
     },
     "CovidReader.Controllers/1.0.0": {
       "type": "project",
-      "path": "../../Controllers/CovidReader.Controllers/CovidReader.Controllers.csproj",
-      "msbuildProject": "../../Controllers/CovidReader.Controllers/CovidReader.Controllers.csproj"
+      "path": "../../src/controllers/CovidReader.Controllers/CovidReader.Controllers.csproj",
+      "msbuildProject": "../../src/controllers/CovidReader.Controllers/CovidReader.Controllers.csproj"
     },
     "CovidReader.Core/1.0.0": {
       "type": "project",
-      "path": "../../Controllers/CovidReader.Core/CovidReader.Core.csproj",
-      "msbuildProject": "../../Controllers/CovidReader.Core/CovidReader.Core.csproj"
+      "path": "../../src/controllers/CovidReader.Core/CovidReader.Core.csproj",
+      "msbuildProject": "../../src/controllers/CovidReader.Core/CovidReader.Core.csproj"
     },
     "CovidReader.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../../Views/CovidReader.Infrastructure/CovidReader.Infrastructure.csproj",
-      "msbuildProject": "../../Views/CovidReader.Infrastructure/CovidReader.Infrastructure.csproj"
+      "path": "../../src/views/CovidReader.Infrastructure/CovidReader.Infrastructure.csproj",
+      "msbuildProject": "../../src/views/CovidReader.Infrastructure/CovidReader.Infrastructure.csproj"
     },
     "CovidReader.Log/1.0.0": {
       "type": "project",
-      "path": "../../Controllers/CovidReader.Log/CovidReader.Log.csproj",
-      "msbuildProject": "../../Controllers/CovidReader.Log/CovidReader.Log.csproj"
+      "path": "../../src/controllers/CovidReader.Log/CovidReader.Log.csproj",
+      "msbuildProject": "../../src/controllers/CovidReader.Log/CovidReader.Log.csproj"
     },
     "CovidReader.Models/1.0.0": {
       "type": "project",
-      "path": "../../Models/CovidReader.Models/CovidReader.Models.csproj",
-      "msbuildProject": "../../Models/CovidReader.Models/CovidReader.Models.csproj"
+      "path": "../../src/models/CovidReader.Models/CovidReader.Models.csproj",
+      "msbuildProject": "../../src/models/CovidReader.Models/CovidReader.Models.csproj"
     },
     "CovidReader.Repository/1.0.0": {
       "type": "project",
-      "path": "../../Models/CovidReader.Repository/CovidReader.Repository.csproj",
-      "msbuildProject": "../../Models/CovidReader.Repository/CovidReader.Repository.csproj"
+      "path": "../../src/models/CovidReader.Repository/CovidReader.Repository.csproj",
+      "msbuildProject": "../../src/models/CovidReader.Repository/CovidReader.Repository.csproj"
     },
     "CovidReader.Repository.Api/1.0.0": {
       "type": "project",
-      "path": "../../Models/CovidReader.Repository.Api/CovidReader.Repository.Api.csproj",
-      "msbuildProject": "../../Models/CovidReader.Repository.Api/CovidReader.Repository.Api.csproj"
+      "path": "../../src/models/CovidReader.Repository.Api/CovidReader.Repository.Api.csproj",
+      "msbuildProject": "../../src/models/CovidReader.Repository.Api/CovidReader.Repository.Api.csproj"
     },
     "CovidReader.Repository.Covid/1.0.0": {
       "type": "project",
-      "path": "../../Models/CovidReader.Repository.Covid/CovidReader.Repository.Covid.csproj",
-      "msbuildProject": "../../Models/CovidReader.Repository.Covid/CovidReader.Repository.Covid.csproj"
+      "path": "../../src/models/CovidReader.Repository.Covid/CovidReader.Repository.Covid.csproj",
+      "msbuildProject": "../../src/models/CovidReader.Repository.Covid/CovidReader.Repository.Covid.csproj"
     },
     "CovidReader.Repository.Google/1.0.0": {
       "type": "project",
-      "path": "../../Models/CovidReader.Repository.Google/CovidReader.Repository.Google.csproj",
-      "msbuildProject": "../../Models/CovidReader.Repository.Google/CovidReader.Repository.Google.csproj"
+      "path": "../../src/models/CovidReader.Repository.Google/CovidReader.Repository.Google.csproj",
+      "msbuildProject": "../../src/models/CovidReader.Repository.Google/CovidReader.Repository.Google.csproj"
     },
     "CovidReader.Repository.Settings/1.0.0": {
       "type": "project",
-      "path": "../../Models/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj",
-      "msbuildProject": "../../Models/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj"
+      "path": "../../src/models/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj",
+      "msbuildProject": "../../src/models/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1864,11 +1864,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\App\\CovidReader\\CovidReader.csproj",
+      "projectUniqueName": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\app\\CovidReader\\CovidReader.csproj",
       "projectName": "CovidReader",
-      "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\App\\CovidReader\\CovidReader.csproj",
+      "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\app\\CovidReader\\CovidReader.csproj",
       "packagesPath": "C:\\Users\\nando\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\App\\CovidReader\\obj\\",
+      "outputPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\app\\CovidReader\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -1892,11 +1892,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\Api\\CovidReader.Api\\CovidReader.Api.csproj": {
-              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\Api\\CovidReader.Api\\CovidReader.Api.csproj"
+            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\src\\api\\CovidReader.Api\\CovidReader.Api.csproj": {
+              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\src\\api\\CovidReader.Api\\CovidReader.Api.csproj"
             },
-            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\Views\\CovidReader.Infrastructure\\CovidReader.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\Views\\CovidReader.Infrastructure\\CovidReader.Infrastructure.csproj"
+            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\src\\views\\CovidReader.Infrastructure\\CovidReader.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\src\\views\\CovidReader.Infrastructure\\CovidReader.Infrastructure.csproj"
             }
           }
         }

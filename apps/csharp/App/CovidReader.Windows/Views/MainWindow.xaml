@@ -11,7 +11,7 @@
     xmlns:local="clr-namespace:CovidReader.Windows"
     xmlns:uc="clr-namespace:CovidReader.Windows.Views"
     xmlns:vm="clr-namespace:CovidReader.Windows.ViewModels"
-    xmlns:constants="clr-namespace:CovidReader.Windows.Infrastructure.Constants;assembly=CovidReader.Windows.Infrastructure"
+    xmlns:constants="clr-namespace:CovidReader.Infrastructure.Wpf.Constants;assembly=CovidReader.Infrastructure.Wpf"
     mc:Ignorable="d"
     prism:RegionManager.RegionManager="{Binding RegionManager}"    
     prism:ViewModelLocator.AutoWireViewModel="True"
@@ -41,7 +41,7 @@
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="pack://application:,,,/CovidReader.Windows.Infrastructure;Component/Assets/Photos/home.png" Height="40"/>
+                    <Image Source="pack://application:,,,/CovidReader.Infrastructure.Wpf;Component/Assets/Photos/home.png" Height="40"/>
                     <Label Content="Home" FontSize="35" FontWeight="Bold"/>
 
                 </StackPanel>

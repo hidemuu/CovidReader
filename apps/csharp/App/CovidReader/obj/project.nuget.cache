@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g0+G70ioGiTKaOtgo95UH4HbUkHTrjr2wQR/+9dNM1hf+bU94SBG30YHVLO9qUC3p813rOQaZXxElxP1IHuUUw==",
+  "dgSpecHash": "bxUzNAqtDfHgTgrPyB4nFs3iaQzd1I+wCjeqLgubLViXNuHbyMle1zcRmlzQEn0xs3W9U9hKVUAzu7heR4/Gfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\App\\CovidReader\\CovidReader.csproj",
+  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\app\\CovidReader\\CovidReader.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nando\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\google.apis\\1.53.0\\google.apis.1.53.0.nupkg.sha512",

@@ -1,6 +1,6 @@
-﻿using CovidReader.Windows.Infrastructure;
-using CovidReader.Windows.Infrastructure.CustomerRegionAdapters;
-using CovidReader.Windows.Infrastructure.Services;
+﻿using CovidReader.Infrastructure.Wpf;
+using CovidReader.Infrastructure.Wpf.CustomerRegionAdapters;
+using CovidReader.Infrastructure.Wpf.Services;
 using CovidReader.Windows.ViewModels.Dialogs;
 using CovidReader.Windows.Views;
 using CovidReader.Windows.Views.Dialogs;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FxYswnHMXsyhccEgCUP7uZSc3KcdKH8XhI/MfyVRgBMPCaxyuvkimAi/5kEBHLRXvakHshTaScG9+0qQrcnjLA==",
+  "dgSpecHash": "MmHGxOHsBo9QbIeXa/DM8AmOst6oruhBhpWLyYRjvpBAXU0Z4YfXqS4ikCW5MQjY1BjYrmuA5zkvHSi61gO77w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\App\\CovidReader.Windows\\CovidReader.Windows.csproj",
+  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\csharp\\app\\CovidReader.Windows\\CovidReader.Windows.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nando\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",

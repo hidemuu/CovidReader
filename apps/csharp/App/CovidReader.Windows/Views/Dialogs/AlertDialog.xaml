@@ -27,7 +27,7 @@
                 <ColumnDefinition Width="70"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image Source="pack://application:,,,/CovidReader.Windows.Infrastructure;Component/Assets/Photos/alter.png" Height="40" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality"/>
+            <Image Source="pack://application:,,,/CovidReader.Infrastructure.Wpf;Component/Assets/Photos/alter.png" Height="40" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality"/>
             <TextBlock  Grid.Column="1" Text="{Binding Message}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" TextWrapping="Wrap"  FontSize="15" FontFamily="Open Sans"/>
         </Grid>
         <Grid Grid.Row="1">

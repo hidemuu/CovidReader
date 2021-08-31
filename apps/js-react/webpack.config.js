@@ -1,6 +1,7 @@
 var debug   = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 var path    = require('path');
+const outputPath = path.resolve(__dirname, 'public');
 
 module.exports = {
   mode: 'development',
@@ -9,23 +10,31 @@ module.exports = {
   entry: "./js/client.js",
   module: {
     rules: [{
-      test: /\.jsx?$/,
-      exclude: /(node_modules|bower_components)/,
+      test: /\.js[x]?$/,
+      exclude: /node_modules/,
       use: [{
         loader: 'babel-loader',
         options: {
-          plugins: ['react-html-attrs'],
-          presets: ['react', 'env', 'stage-2']
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react' //ReactのPresetを追加
+          ],
+          plugins: ['@babel/plugin-syntax-jsx'] //JSXパース用
         }
       }]
     }]
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']  // .jsxも省略可能対象にする
+  },
   output: {
-    path: path.join(__dirname, "src"),
+    path: outputPath,
     filename: "client.min.js",
     publicPath: '/'
   },
   devServer: {
+    //contentBase: outputPath,
+    open: true,
     historyApiFallback: true
   },
   plugins: debug ? [] : [
@@ -34,8 +43,8 @@ module.exports = {
     /* Assign the module nad chunk ids by occurrence count.
        Ids that are used often get lower (shorter) ids.
        This make ids predictable reduces total file size and is recommended. */
-    new webpack.optimize.OccurrenceOrderPlugin(),
+    //new webpack.optimize.OccurrenceOrderPlugin(),
     /* UglifyJS Webpack Plugin */
-    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+    //new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
   ],
 };

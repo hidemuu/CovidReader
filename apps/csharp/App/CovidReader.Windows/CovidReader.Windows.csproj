@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Api\CovidReader.Api\CovidReader.Api.csproj" />
-    <ProjectReference Include="..\..\Views\CovidReader.Windows.Infrastructure\CovidReader.Windows.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\api\CovidReader.Api\CovidReader.Api.csproj" />
+    <ProjectReference Include="..\..\src\views\CovidReader.Infrastructure.Wpf\CovidReader.Infrastructure.Wpf.csproj" />
   </ItemGroup>
 
 </Project>

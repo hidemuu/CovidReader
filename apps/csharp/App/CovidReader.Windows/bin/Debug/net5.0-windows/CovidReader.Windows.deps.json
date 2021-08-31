@@ -9,7 +9,7 @@
       "CovidReader.Windows/1.0.0": {
         "dependencies": {
           "CovidReader.Api": "1.0.0",
-          "CovidReader.Windows.Infrastructure": "1.0.0",
+          "CovidReader.Infrastructure.Wpf": "1.0.0",
           "Prism.Unity": "8.1.97"
         },
         "runtime": {
@@ -737,6 +737,23 @@
           "CovidReader.Core.dll": {}
         }
       },
+      "CovidReader.Infrastructure.Wpf/1.0.0": {
+        "dependencies": {
+          "LiveCharts.Wpf.NetCore3": "0.9.7",
+          "MahApps.Metro": "2.4.7",
+          "MaterialDesignColors": "2.0.1",
+          "MaterialDesignThemes": "4.1.0",
+          "MaterialDesignThemes.MahApps": "0.1.7",
+          "NLog.Config": "4.7.11",
+          "Prism.Wpf": "8.1.97",
+          "ReactiveProperty": "7.12.0",
+          "ReactiveProperty.WPF": "7.12.0",
+          "Unity.Interception": "5.11.1"
+        },
+        "runtime": {
+          "CovidReader.Infrastructure.Wpf.dll": {}
+        }
+      },
       "CovidReader.Log/1.0.0": {
         "dependencies": {
           "NLog.Config": "4.7.11"
@@ -797,23 +814,6 @@
         },
         "runtime": {
           "CovidReader.Repository.Settings.dll": {}
-        }
-      },
-      "CovidReader.Windows.Infrastructure/1.0.0": {
-        "dependencies": {
-          "LiveCharts.Wpf.NetCore3": "0.9.7",
-          "MahApps.Metro": "2.4.7",
-          "MaterialDesignColors": "2.0.1",
-          "MaterialDesignThemes": "4.1.0",
-          "MaterialDesignThemes.MahApps": "0.1.7",
-          "NLog.Config": "4.7.11",
-          "Prism.Wpf": "8.1.97",
-          "ReactiveProperty": "7.12.0",
-          "ReactiveProperty.WPF": "7.12.0",
-          "Unity.Interception": "5.11.1"
-        },
-        "runtime": {
-          "CovidReader.Windows.Infrastructure.dll": {}
         }
       }
     }
@@ -1350,6 +1350,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "CovidReader.Infrastructure.Wpf/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "CovidReader.Log/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1381,11 +1386,6 @@
       "sha512": ""
     },
     "CovidReader.Repository.Settings/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CovidReader.Windows.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
