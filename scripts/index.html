@@ -1,18 +1,101 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ja">
 <head>
     <meta charset="utf-8" />
     <meta name="description" content="APIサービス" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>CovidReader</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap-5.1.0-dist/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-5.1.0-dist/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
     <!--<link rel=stylesheet href="css/font-awesome.min.css">-->
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <!--<link rel="stylesheet" href="css/index.css">-->
+    <!-- Scripts -->
+    <!--<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!--<script type="text/javascript" src="js/bootstrap-5.1.0-dist/bootstrap.js"></script>-->
+    <script type="text/javascript" src="js/node_modules/chart.js/dist/chart.js"></script>
+    <script type="text/javascript" src="js/node_modules/chart.js/dist/chart.min.js"></script>
+    <script type="text/javascript" src="js/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
-    <script type="text/javascript" src="js/bootstrap-5.1.0-dist/bootstrap.js"></script>
+    <script type="text/javascript" src="chart_draw.js"></script>
+    <script type="text/javascript" src="table.js"></script>
+
 </head>
 <body>
-    <a href="chart.html">Chart</a>
-    <a href="table.html">Table</a>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light text-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand text-white" href="#">CovidReader</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" href="#chart">Chart <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#table">Table</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+    
+    
+    <div class="container my-5" id="chart">
+        <h2 class= "py-4 text-dark">Chart</h2>
+        <canvas id="myChart"></canvas>
+    </div>
 
+    <div class="container my-5" id="table">
+        <h2 class="py-4 text-dark">Table</h2>
+        <table class="table table-striped">
+            <caption>ChartTable</caption>
+            <thead id="mythead">
+                <!--<tr><td>Date<td>Data-->
+            </thead>
+            <tbody id="mytable">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container my-5" id="contact">
+        <h2 class="py-4 text-dark">Contact</h2>
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+   
+      <!-- フッター -->
+      <footer class="bg-dark text-center">
+        <div class="container">
+            <p class="my-0 text-white py-3">CovidReader</p>
+        </div>
+      </footer>
 </body>
 </html>

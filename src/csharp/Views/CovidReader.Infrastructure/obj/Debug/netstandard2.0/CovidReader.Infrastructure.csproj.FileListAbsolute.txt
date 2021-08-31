@@ -1,9 +1,0 @@
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Infrastructure\bin\Debug\netstandard2.0\CovidReader.Infrastructure.deps.json
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Infrastructure\bin\Debug\netstandard2.0\CovidReader.Infrastructure.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Infrastructure\bin\Debug\netstandard2.0\CovidReader.Infrastructure.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Infrastructure\obj\Debug\netstandard2.0\CovidReader.Infrastructure.csproj.AssemblyReference.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Infrastructure\obj\Debug\netstandard2.0\CovidReader.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Infrastructure\obj\Debug\netstandard2.0\CovidReader.Infrastructure.AssemblyInfo.cs
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Infrastructure\obj\Debug\netstandard2.0\CovidReader.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Infrastructure\obj\Debug\netstandard2.0\CovidReader.Infrastructure.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Views\CovidReader.Infrastructure\obj\Debug\netstandard2.0\CovidReader.Infrastructure.pdb

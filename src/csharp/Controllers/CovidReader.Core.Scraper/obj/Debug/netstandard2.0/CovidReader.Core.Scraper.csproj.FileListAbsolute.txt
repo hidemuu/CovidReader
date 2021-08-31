@@ -1,9 +1,0 @@
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Controllers\CovidReader.Core.Scraper\bin\Debug\netstandard2.0\CovidReader.Core.Scraper.deps.json
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Controllers\CovidReader.Core.Scraper\bin\Debug\netstandard2.0\CovidReader.Core.Scraper.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Controllers\CovidReader.Core.Scraper\bin\Debug\netstandard2.0\CovidReader.Core.Scraper.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Controllers\CovidReader.Core.Scraper\obj\Debug\netstandard2.0\CovidReader.Core.Scraper.csproj.AssemblyReference.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Controllers\CovidReader.Core.Scraper\obj\Debug\netstandard2.0\CovidReader.Core.Scraper.AssemblyInfoInputs.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Controllers\CovidReader.Core.Scraper\obj\Debug\netstandard2.0\CovidReader.Core.Scraper.AssemblyInfo.cs
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Controllers\CovidReader.Core.Scraper\obj\Debug\netstandard2.0\CovidReader.Core.Scraper.csproj.CoreCompileInputs.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Controllers\CovidReader.Core.Scraper\obj\Debug\netstandard2.0\CovidReader.Core.Scraper.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\csharp\Controllers\CovidReader.Core.Scraper\obj\Debug\netstandard2.0\CovidReader.Core.Scraper.pdb
