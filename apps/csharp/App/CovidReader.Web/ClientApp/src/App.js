@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
-import { Layout } from './components/Layout';
-import { Home } from './components/Home';
-import { FetchData } from './components/FetchData';
-import { Counter } from './components/Counter';
-import { ChartData } from './components/ChartData';
-import { Chart } from './components/Chart';
+import { Layout } from './pages/Layout';
+import { Home } from './pages/Home';
+import { FetchData } from './pages/FetchData';
+import { Counter } from './pages/Counter';
 
+import 'bootstrap/dist/css/bootstrap.css';
 import './custom.css'
 
 export default class App extends Component {
@@ -18,8 +17,6 @@ export default class App extends Component {
         <Route exact path='/' component={Home} />
         <Route path='/counter' component={Counter} />
         <Route path='/fetch-data' component={FetchData} />
-        <Route path='/chart-data' component={ChartData} />
-        <Route path='/chart' component={Chart} />
       </Layout>
     );
   }

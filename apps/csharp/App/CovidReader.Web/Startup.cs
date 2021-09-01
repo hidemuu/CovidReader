@@ -1,5 +1,3 @@
-using CovidReader.Repository.Api;
-using CovidReader.Repository.Api.Sql;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,11 +13,9 @@ namespace CovidReader.Web
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            Repository = ApiRepositoryUseCase.UseSqlite();
         }
 
         public IConfiguration Configuration { get; }
-        public IApiRepository Repository { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)

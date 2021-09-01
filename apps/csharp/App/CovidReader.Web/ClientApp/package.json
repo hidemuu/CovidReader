@@ -1,5 +1,5 @@
 {
-  "name": "coronareader.web",
+  "name": "covidreader.web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -25,7 +25,9 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
-    "nan": "^2.14.1"
+    "nan": "^2.14.1",
+    "webpack": "~4.42.0",
+    "webpack-cli": "~3.3.11"
   },
   "eslintConfig": {
     "extends": "react-app"

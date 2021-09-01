@@ -5,6 +5,21 @@ https://www.umayadia.com/Note/Note041TypeScriptReact.htm
 https://qiita.com/h0ge/items/5e8343ae16065ae41743
 https://zenn.dev/h0ge/articles/cd2f3e75259786
 
+# CSharp React
+
+### パッケージインストール
+$ cd .\ClientApp\
+$ npm install (念の為)
+$ npm install --save-dev babel-plugin-react-html-attrs
+$ npm install --save react-chartjs-2 chart.js
+$ npm install --save react-bootstrap-table-next
+
+### webpackコマンド
+$ webpack --mode development
+
+### Visual Studio Codeから実行
+$ dotnet run (.csprojファイルのディレクトリで)
+
 # react
 https://qiita.com/TsutomuNakamura/items/72d8cf9f07a5a30be048
 https://qiita.com/koedamon/items/8fb75a7c001da40c7bea
@@ -37,6 +52,12 @@ $ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel
 $ npm install --save-dev react react-dom
 $ npm install --save-dev babel-plugin-react-html-attrs
 $ npm install --save-dev @babel/compat-data
+$ npm install --save-dev react-router react-router-dom
+$ npm install --save react-chartjs-2 chart.js
+$ npm install --save moment react-moment
+$ npm install --save react-bootstrap-table-next
+$ npm install --save react-bootstrap-table2-editor
+$ npm install --save reactstrap
 
 ### グローバルインストールの環境変数設定
 $ set NODE_PATH=C:\Users\nando\AppData\Roaming\npm\node_modules
@@ -48,7 +69,8 @@ $ webpack --mode development
 $ google-chrome-stable ./src/index.html
 
 ### webpackサーバ起動
-npx webpack-dev-server
+$ npx webpack-dev-server
+$ npm start (package.jsonで設定)
 
 # laravel
 
