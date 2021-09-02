@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import { Line } from 'react-chartjs-2';
+import getItems from "../components/functions/getItems";
+import getChartConfigs from "../components/functions/getChartConfigs";
 
 export default class Charts extends React.Component {
 
@@ -23,7 +25,7 @@ export default class Charts extends React.Component {
       .then((json) => {
         console.log(json);
         this.setState({
-          data: this.getChartItem(json),
+          data: getItems(json),
           loadingitem: true
         });
         
@@ -38,7 +40,7 @@ export default class Charts extends React.Component {
       .then((json) => {
         console.log(json);
         this.setState({
-          config: this.getChartConfig(json),
+          config: getChartConfigs(json),
           loadingconfig: true
         });
 
@@ -55,57 +57,7 @@ export default class Charts extends React.Component {
   //   }
   // }
 
-  // getData() {
-  //   const { data, labels } = fetchData(this.state.date); //日付に基づいた何らかのデータ取得処理
-  //   this.setState({ data: data, labels: labels });
-  // }
-
-  getChartItem(dt) {
-    const keys = Object.keys(dt[0]);
-    console.log(keys);
-    let result = [];
-    for(let row in dt) {
-      const item = dt[row];
-      let unit = [];
-      //ラベルデータ格納
-      unit.push(item['date']);
-      //チャートデータ格納
-      for(let col in keys) {
-        const key = keys[col];
-        if(key != 'data') { continue; }
-        //配列かどうかで分岐 配列ならforで詰め込む
-        if(Array.isArray(item[key])) { for(let v in item[key]) { unit.push(item[key][v]); } }
-        else if(item[key].indexOf(',') >= 0) { unit.push(item[key].split(',')); }
-        else { unit.push(item[key]); }//title[col] == "data"
-      }
-      result.push(unit);//["2020/2/14","1","0","1","54"]
-    }
-    console.log('--- result : getChartData ---');
-    console.log(result);
-    return result;
-  }
   
-  getChartConfig(dt) {
-    const keys = Object.keys(dt[0]);
-    console.log(keys);
-    let result = [];
-    for(let row in dt) {
-      const item = dt[row];
-      result.push([
-        item['id'],
-        item['name'],
-        item['chart_type'],
-        item['background_color'],
-        item['border_color'],
-        item['border_width']
-      ]);//["id","name","type","color",…]
-    }
-    console.log('--- result : getChartConfig ---');
-    console.log(result);
-    return result;
-      
-  }
-
   
 
   render() {
@@ -155,13 +107,57 @@ export default class Charts extends React.Component {
         labels: chartLabels,
         datasets: [
           {
-            data: chartData[0],
-            // 省略
+            label: chartTitles[0],
+					  data: chartData[0],
+					  borderColor: chartBorderColors[0],
+					  backgroundColor: chartBackgroundColors[0],
+					  borderWidth: chartBorderWidthes[0]
           },
+          {
+            label: chartTitles[1],
+            data: chartData[1],
+            borderColor: chartBorderColors[1],
+            backgroundColor: chartBackgroundColors[1],
+            borderWidth: chartBorderWidthes[1]
+          },
+          {
+            label: chartTitles[2],
+            data: chartData[2],
+            borderColor: chartBorderColors[2],
+            backgroundColor: chartBackgroundColors[2],
+            borderWidth: chartBorderWidthes[2]
+          },
+          {
+            label: chartTitles[3],
+            data: chartData[3],
+            borderColor: chartBorderColors[3],
+            backgroundColor: chartBackgroundColors[3],
+            borderWidth: chartBorderWidthes[3]
+          }
         ],
       };
       const options = {
-        // 省略
+        //responsive: true,
+        //maintainAspectRatio: false,
+			legend: {
+        //display: false
+              },
+              title: {
+                display: true,
+                text: 'title'
+              },
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      suggestedMax: 40,
+                      suggestedMin: 0,
+                      stepSize: 10,
+                      callback: (value, index, values) => { return value + ''; }
+                    }
+                  }
+                ]
+              }
       };
       return (
         <Line  

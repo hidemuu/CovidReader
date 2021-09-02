@@ -35,8 +35,8 @@ export default class NavMenu extends React.Component {
                 </div>
                 <div class={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                    <li class={homeClass}>
-                        <Link to="/" onClick={this.toggleCollapse.bind(this)}>Covid Reader</Link>
+                    <li class={chartsClass}>
+                        <Link to="/charts" onClick={this.toggleCollapse.bind(this)}>Covid Reader</Link>
                     </li>
                     <li class={chartsClass}>
                         <Link to="/charts" onClick={this.toggleCollapse.bind(this)}>Charts</Link>
@@ -44,12 +44,12 @@ export default class NavMenu extends React.Component {
                     <li class={tablesClass}>
                         <Link to="/tables" onClick={this.toggleCollapse.bind(this)}>Tables</Link>
                     </li>
-                    <li class={archivesClass}>
+                    {/* <li class={archivesClass}>
                         <Link to="/archives/news?date=today&filter=none" onClick={this.toggleCollapse.bind(this)}>Archives</Link>
                     </li>
                     <li class={settingsClass}>
                         <Link to="/settings" onClick={this.toggleCollapse.bind(this)}>Settings</Link>
-                    </li>
+                    </li> */}
                     
                     </ul>
                 </div>
