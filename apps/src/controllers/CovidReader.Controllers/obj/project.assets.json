@@ -668,7 +668,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "CovidReader.Repository": "1.0.0"
+          "CovidReader.Log": "1.0.0",
+          "CovidReader.Plugins": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CovidReader.Core.dll": {}
@@ -703,6 +704,19 @@
         },
         "runtime": {
           "bin/placeholder/CovidReader.Models.dll": {}
+        }
+      },
+      "CovidReader.Plugins/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CovidReader.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.Plugins.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.Plugins.dll": {}
         }
       },
       "CovidReader.Repository/1.0.0": {
@@ -2090,6 +2104,11 @@
       "path": "../../models/CovidReader.Models/CovidReader.Models.csproj",
       "msbuildProject": "../../models/CovidReader.Models/CovidReader.Models.csproj"
     },
+    "CovidReader.Plugins/1.0.0": {
+      "type": "project",
+      "path": "../CovidReader.Plugins/CovidReader.Plugins.csproj",
+      "msbuildProject": "../CovidReader.Plugins/CovidReader.Plugins.csproj"
+    },
     "CovidReader.Repository/1.0.0": {
       "type": "project",
       "path": "../../models/CovidReader.Repository/CovidReader.Repository.csproj",
@@ -2119,7 +2138,6 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "CovidReader.Core >= 1.0.0",
-      "CovidReader.Log >= 1.0.0",
       "CovidReader.Repository.Api >= 1.0.0",
       "CovidReader.Repository.Covid >= 1.0.0",
       "CovidReader.Repository.Google >= 1.0.0",
@@ -2169,9 +2187,6 @@
           "projectReferences": {
             "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\src\\controllers\\CovidReader.Core\\CovidReader.Core.csproj": {
               "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\src\\controllers\\CovidReader.Core\\CovidReader.Core.csproj"
-            },
-            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\src\\controllers\\CovidReader.Log\\CovidReader.Log.csproj": {
-              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\src\\controllers\\CovidReader.Log\\CovidReader.Log.csproj"
             },
             "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\src\\Models\\CovidReader.Repository.Api\\CovidReader.Repository.Api.csproj": {
               "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\apps\\src\\Models\\CovidReader.Repository.Api\\CovidReader.Repository.Api.csproj"

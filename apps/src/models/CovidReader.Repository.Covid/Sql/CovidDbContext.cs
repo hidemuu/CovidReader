@@ -42,15 +42,16 @@ namespace CovidReader.Repository.Covid.Sql
             //modelBuilder.Entity<MShop>()
             //    .HasOne(s => s.Area)
             //    .WithMany(a => a.Shops);
-            //modelBuilder.Entity<CovidLineItem>()
-            //.HasOne(b => b.Death)
-            //.WithOne(i => i.CovidLineItem)
-            //.HasForeignKey<Death>(b => b.Date);
 
-            //modelBuilder.Entity<CovidLineItem>()
-            //.HasOne(b => b.Hospitalization)
-            //.WithOne(i => i.CovidLineItem)
-            //.HasForeignKey<Hospitalization>(b => b.Date);
+            modelBuilder.Entity<CovidLineItem>()
+            .HasOne(b => b.Death)
+            .WithOne()
+            .HasForeignKey<Death>(b => b.Date);
+
+            modelBuilder.Entity<CovidLineItem>()
+            .HasOne(b => b.Hospitalization)
+            .WithOne()
+            .HasForeignKey<Hospitalization>(b => b.Date);
         }
     }
 }

@@ -5,12 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Scraper\" />
-    <Folder Include="Crewler\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Models\CovidReader.Repository\CovidReader.Repository.csproj" />
+    <ProjectReference Include="..\CovidReader.Log\CovidReader.Log.csproj" />
+    <ProjectReference Include="..\CovidReader.Plugins\CovidReader.Plugins.csproj" />
   </ItemGroup>
 
 </Project>

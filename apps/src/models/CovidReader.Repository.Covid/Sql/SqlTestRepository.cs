@@ -9,18 +9,8 @@ namespace CovidReader.Repository.Covid.Sql
 {
     public class SqlTestRepository : SqlCovidRepositoryBase<Test>, ITestRepository
     {
-        //private readonly CovidDbContext _db;
 
-        public SqlTestRepository(CovidDbContext db) : base(db, db.Tests)
-        {
-            
-        }
+        public SqlTestRepository(CovidDbContext db) : base(db, db.Tests) { }
 
-        //public async Task<IEnumerable<Test>> GetAsync()
-        //{
-        //    return await _db.Tests
-        //        .AsNoTracking()
-        //        .ToListAsync();
-        //}
     }
 }

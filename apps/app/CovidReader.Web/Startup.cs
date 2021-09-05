@@ -1,5 +1,5 @@
-using CovidReader.Api;
 using CovidReader.Controllers;
+using CovidReader.Controllers.UseCases;
 using CovidReader.Repository;
 using CovidReader.Repository.Api;
 using CovidReader.Repository.Api.Sql;
@@ -20,11 +20,11 @@ namespace CovidReader.Web
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            Command = new AppCommand("sql", "rest");
+            WebController = new WebController(ApiRepositoryUseCase.UseSqlite(), CovidRepositoryUseCase.UseSqlite());
         }
 
         public IConfiguration Configuration { get; }
-        public CommandBase Command { get; }
+        public IController WebController { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -43,7 +43,7 @@ namespace CovidReader.Web
             });
 
             var db = new ApiDbContext(new DbContextOptionsBuilder<ApiDbContext>()
-                .UseSqlite(Urls.SqlLocalConnectionString).Options);
+                .UseSqlite("Data Source=" + Urls.SqlLocalConnectionString).Options);
             services.AddScoped<IVirusRepository, SqlVirusRepository>(_ => new SqlVirusRepository(db));
             services.AddScoped<IChartItemRepository, SqlChartItemRepository>(_ => new SqlChartItemRepository(db));
             services.AddScoped<IChartConfigRepository, SqlChartConfigRepository>(_ => new SqlChartConfigRepository(db));

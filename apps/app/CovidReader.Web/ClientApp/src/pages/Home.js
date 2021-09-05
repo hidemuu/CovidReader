@@ -16,7 +16,7 @@ export default class Home extends Component {
                 alert(data);
             })
             .catch((error) => {
-                alert("ÉGÉâÅ[");
+                alert("error");
                 console.log(error);
             })
     }

@@ -39,5 +39,8 @@ namespace CovidReader.Repository.Covid.Sql
 
         public ITestDetailRepository TestDetails => new SqlTestDetailRepository(
             new CovidDbContext(_dbOptions));
+
+        public ICovidLineItemRepository CovidLineItems => new SqlCovidLineItemRepository(
+            new CovidDbContext(_dbOptions));
     }
 }

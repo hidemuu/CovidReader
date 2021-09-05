@@ -9,18 +9,8 @@ namespace CovidReader.Repository.Covid.Sql
 {
     public class SqlSevereRepository : SqlCovidRepositoryBase<Severe>, ISevereRepository
     {
-        //private readonly CovidDbContext _db;
 
-        public SqlSevereRepository(CovidDbContext db) : base(db, db.Severes)
-        {
-            
-        }
+        public SqlSevereRepository(CovidDbContext db) : base(db, db.Severes) { }
 
-        //public async Task<IEnumerable<Severe>> GetAsync()
-        //{
-        //    return await _db.Severes
-        //        .AsNoTracking()
-        //        .ToListAsync();
-        //}
     }
 }

@@ -36,5 +36,8 @@ namespace CovidReader.Repository.Covid.Csv
         public ITestRepository Tests =>
             new CsvTestRepository(_path + @"pcr_tested_daily.csv", _encode);
 
+        public ICovidLineItemRepository CovidLineItems =>
+           new CsvCovidLineItemRepository(_path + @"line_item.csv", _encode);
+
     }
 }

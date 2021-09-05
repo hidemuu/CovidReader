@@ -24,22 +24,28 @@ namespace CovidReader.Web.Controllers
         /// Gets all items.
         /// </summary>
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IEnumerable<ChartItem>> Get()
         {
-            return Ok(await _repository.GetAsync());
+            //var task = Task.Run(() => _repository.GetAsync());
+            //Task.WaitAll(task);
+            //return Ok(task.Result);
+            //return Ok(await _repository.GetAsync());
+            return await _repository.GetAsync();
         }
 
         /// <summary>
         /// Gets the with the given date.
         /// </summary>
         [HttpGet("{date}")]
-        public async Task<IActionResult> Get(string date)
+        public IActionResult Get(string date)
         {
             if (date == string.Empty)
             {
                 return BadRequest();
             }
-            var result = await _repository.GetAsync(date);
+            var task = Task.Run(() => _repository.GetAsync(date));
+            Task.WaitAll(task);
+            var result = task.Result;
             if (result == null)
             {
                 return NotFound();
@@ -51,9 +57,10 @@ namespace CovidReader.Web.Controllers
         /// Creates a new item or updates an existing one.
         /// </summary>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] ChartItem item)
+        public IActionResult Post([FromBody] ChartItem item)
         {
-            await _repository.PostAsync(item);
+            var task = Task.Run(() => _repository.PostAsync(item));
+            Task.WaitAll(task);
             return Ok();
         }
 
@@ -61,9 +68,10 @@ namespace CovidReader.Web.Controllers
         /// Deletes an order.
         /// </summary>
         [HttpDelete("{date}")]
-        public async Task<IActionResult> Delete(ChartItem item)
+        public IActionResult Delete(ChartItem item)
         {
-            await _repository.DeleteAsync(item.Date);
+            var task = Task.Run(() => _repository.DeleteAsync(item.Date));
+            Task.WaitAll(task);
             return Ok();
         }
 

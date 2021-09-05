@@ -35,7 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\api\CovidReader.Api\CovidReader.Api.csproj" />
+    <ProjectReference Include="..\..\src\controllers\CovidReader.Controllers\CovidReader.Controllers.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

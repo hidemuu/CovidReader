@@ -18,4 +18,7 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgNLog_Config Condition=" '$(PkgNLog_Config)' == '' ">C:\Users\nando\.nuget\packages\nlog.config\4.7.10</PkgNLog_Config>
+  </PropertyGroup>
 </Project>

@@ -16,7 +16,6 @@
     <ProjectReference Include="..\..\Models\CovidReader.Repository.Google\CovidReader.Repository.Google.csproj" />
     <ProjectReference Include="..\..\Models\CovidReader.Repository.Settings\CovidReader.Repository.Settings.csproj" />
     <ProjectReference Include="..\CovidReader.Core\CovidReader.Core.csproj" />
-    <ProjectReference Include="..\CovidReader.Log\CovidReader.Log.csproj" />
   </ItemGroup>
 
 </Project>

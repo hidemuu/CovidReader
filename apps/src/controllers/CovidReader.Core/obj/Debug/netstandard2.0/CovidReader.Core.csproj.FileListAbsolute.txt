@@ -58,3 +58,8 @@ C:\Users\nando\Documents\GitHub\CovidReader\apps\src\controllers\CovidReader.Cor
 C:\Users\nando\Documents\GitHub\CovidReader\apps\src\controllers\CovidReader.Core\obj\Debug\netstandard2.0\CovidReader.Core.csproj.CopyComplete
 C:\Users\nando\Documents\GitHub\CovidReader\apps\src\controllers\CovidReader.Core\obj\Debug\netstandard2.0\CovidReader.Core.dll
 C:\Users\nando\Documents\GitHub\CovidReader\apps\src\controllers\CovidReader.Core\obj\Debug\netstandard2.0\CovidReader.Core.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\apps\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\NLog.config
+C:\Users\nando\Documents\GitHub\CovidReader\apps\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Log.dll
+C:\Users\nando\Documents\GitHub\CovidReader\apps\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Plugins.dll
+C:\Users\nando\Documents\GitHub\CovidReader\apps\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Log.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\apps\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Plugins.pdb

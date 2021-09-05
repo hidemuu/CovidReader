@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CovidReader.Repository.Covid.Rest;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -29,6 +30,8 @@ namespace CovidReader.Repository.Covid
         public ITestRepository Tests => new RestTestRepository(_url, _key);
 
         public ITestDetailRepository TestDetails => new RestTestDetailRepository(_url, _key);
+
+        public ICovidLineItemRepository CovidLineItems => new RestCovidLineItemRepository(_url, _key);
 
     }
 }

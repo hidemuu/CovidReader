@@ -49,3 +49,18 @@ XAMPPをインストールし、Apache ポートを81にして起動する
 
 - リレーションシップ
   https://docs.microsoft.com/ja-jp/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key
+
+- パッケージインストール
+
+  $ cd .\ClientApp\
+  $ npm install (念の為)
+  $ npm install --save-dev babel-plugin-react-html-attrs
+  $ npm install --save react-chartjs-2 chart.js
+  $ npm install --save react-bootstrap-table-next
+
+- webpackコマンド
+  $ webpack --mode development
+
+- Visual Studio Codeから実行
+  $ dotnet run (.csprojファイルのディレクトリで)
+  $ npm run wstart

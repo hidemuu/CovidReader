@@ -20,5 +20,7 @@ namespace CovidReader.Repository.Covid
 
         ITestDetailRepository TestDetails { get; }
 
+        ICovidLineItemRepository CovidLineItems { get; }
+
     }
 }

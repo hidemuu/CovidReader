@@ -4,24 +4,6 @@
         <name>CovidReader.Api</name>
     </assembly>
     <members>
-        <member name="T:CovidReader.Api.AppCommand">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:CovidReader.Api.AppCommand.#ctor(System.String,System.String)">
-            <summary>
-            
-            </summary>
-            <param name="apiType"></param>
-            <param name="covidType"></param>
-        </member>
-        <member name="M:CovidReader.Api.AppCommand.Help">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:CovidReader.Api.CommandBase">
             <summary>
             
@@ -106,6 +88,29 @@
             
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:CovidReader.Api.ConsoleCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Api.ConsoleCommand.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="apiType"></param>
+            <param name="covidType"></param>
+        </member>
+        <member name="M:CovidReader.Api.ConsoleCommand.Help">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Api.NativeCommand">
+            <summary>
+            
+            </summary>
         </member>
     </members>
 </doc>

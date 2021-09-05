@@ -36,6 +36,8 @@ namespace CovidReader.Repository.Covid.Json
         public ITestRepository Tests =>
             new JsonTestRepository(_path + @"test.json", _encode);
 
+        public ICovidLineItemRepository CovidLineItems =>
+            new JsonCovidLineItemRepository(_path + @"line_item.json", _encode);
 
     }
 }

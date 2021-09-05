@@ -15,5 +15,11 @@ namespace CovidReader.Web.Controllers
         {
             
         }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok("Hello React!!!!"); //HTTPステータスコード200を返す
+        }
     }
 }

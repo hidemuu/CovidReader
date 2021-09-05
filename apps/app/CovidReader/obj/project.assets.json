@@ -609,7 +609,6 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CovidReader.Core": "1.0.0",
-          "CovidReader.Log": "1.0.0",
           "CovidReader.Repository.Api": "1.0.0",
           "CovidReader.Repository.Covid": "1.0.0",
           "CovidReader.Repository.Google": "1.0.0",
@@ -629,7 +628,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "CovidReader.Repository": "1.0.0"
+          "CovidReader.Log": "1.0.0",
+          "CovidReader.Plugins": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CovidReader.Core.dll": {}
@@ -674,6 +674,19 @@
         },
         "runtime": {
           "bin/placeholder/CovidReader.Models.dll": {}
+        }
+      },
+      "CovidReader.Plugins/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CovidReader.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.Plugins.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.Plugins.dll": {}
         }
       },
       "CovidReader.Repository/1.0.0": {
@@ -1819,6 +1832,11 @@
       "type": "project",
       "path": "../../src/models/CovidReader.Models/CovidReader.Models.csproj",
       "msbuildProject": "../../src/models/CovidReader.Models/CovidReader.Models.csproj"
+    },
+    "CovidReader.Plugins/1.0.0": {
+      "type": "project",
+      "path": "../../src/controllers/CovidReader.Plugins/CovidReader.Plugins.csproj",
+      "msbuildProject": "../../src/controllers/CovidReader.Plugins/CovidReader.Plugins.csproj"
     },
     "CovidReader.Repository/1.0.0": {
       "type": "project",

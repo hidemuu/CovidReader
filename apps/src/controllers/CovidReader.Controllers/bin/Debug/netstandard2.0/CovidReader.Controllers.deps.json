@@ -10,7 +10,6 @@
       "CovidReader.Controllers/1.0.0": {
         "dependencies": {
           "CovidReader.Core": "1.0.0",
-          "CovidReader.Log": "1.0.0",
           "CovidReader.Repository.Api": "1.0.0",
           "CovidReader.Repository.Covid": "1.0.0",
           "CovidReader.Repository.Google": "1.0.0",
@@ -528,7 +527,8 @@
       },
       "CovidReader.Core/1.0.0": {
         "dependencies": {
-          "CovidReader.Repository": "1.0.0"
+          "CovidReader.Log": "1.0.0",
+          "CovidReader.Plugins": "1.0.0"
         },
         "runtime": {
           "CovidReader.Core.dll": {}
@@ -550,6 +550,14 @@
         },
         "runtime": {
           "CovidReader.Models.dll": {}
+        }
+      },
+      "CovidReader.Plugins/1.0.0": {
+        "dependencies": {
+          "CovidReader.Repository": "1.0.0"
+        },
+        "runtime": {
+          "CovidReader.Plugins.dll": {}
         }
       },
       "CovidReader.Repository/1.0.0": {
@@ -972,6 +980,11 @@
       "sha512": ""
     },
     "CovidReader.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CovidReader.Plugins/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

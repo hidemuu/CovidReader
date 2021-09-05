@@ -19,36 +19,39 @@ export default class Charts extends React.Component {
   // }
 
   componentDidMount() {
+    this.populateChartItemAsync();  
+  }
 
-    fetch('chart_item.json')
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);
-        this.setState({
-          data: getItems(json),
-          loadingitem: true
-        });
-        
-      })
-      .catch((error) =>{
-        console.error('--- fetch error 01 ---');
-        console.error(error);
+  async populateChartItemAsync(){
+    await fetch('api/chartitem')
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      this.setState({
+        data: getItems(json),
+        loadingitem: true
+      });
+      
+    })
+    .catch((error) =>{
+      console.error('--- fetch error api/ChartItem ---');
+      console.error(error);
+    });
+
+    await fetch('api/chartconfig')
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      this.setState({
+        config: getChartConfigs(json),
+        loadingconfig: true
       });
 
-    fetch('chart_config.json')
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);
-        this.setState({
-          config: getChartConfigs(json),
-          loadingconfig: true
-        });
-
-      })
-      .catch((error) =>{
-        console.error('--- fetch error 02 ---');
-        console.error(error);
-      });
+    })
+    .catch((error) =>{
+      console.error('--- fetch error api/ChartConfig ---');
+      console.error(error);
+    });
   }
 
   // componentDidUpdate(prevProps, prevState) {
