@@ -10,8 +10,7 @@ export default class Tables extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      loadingitem: false,
-      loadingconfig: false,
+      loading:false,
     };
   }
 
@@ -21,13 +20,19 @@ export default class Tables extends React.Component {
   }
 
   async populateChartItemAsync(){
+    
     await fetch('api/chartitem')
-    .then((response) => response.json())
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else {
+        throw new Error();
+      }
+    })
     .then((json) => {
       console.log(json);
       this.setState({
         data: getItems(json),
-        loadingitem: true
       });
       
     })
@@ -37,12 +42,17 @@ export default class Tables extends React.Component {
     });
 
     await fetch('api/chartconfig')
-    .then((response) => response.json())
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else {
+        throw new Error();
+      }
+    })
     .then((json) => {
       console.log(json);
       this.setState({
         config: getTableConfigs(json),
-        loadingconfig: true
       });
 
     })
@@ -50,13 +60,18 @@ export default class Tables extends React.Component {
       console.error('--- fetch error api/ChartConfig ---');
       console.error(error);
     });
+
+    this.setState({
+      loading: true
+    })
+
   }
 
   
 
   render() {
 
-    if(this.state.loadingitem && this.state.loadingconfig){
+    if(this.state.loading){
     console.log('draw start');
       
     const configs = this.state.config;

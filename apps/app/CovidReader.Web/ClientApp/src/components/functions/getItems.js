@@ -1,5 +1,5 @@
 export default function getItems(df) {
-    const keys = Object.keys(df[0]);
+  const keys = Object.keys(df[0]);
     console.log(keys);
     let result = [];
     for(let row in df) {
@@ -21,4 +21,6 @@ export default function getItems(df) {
     console.log('--- result : getChartData ---');
     console.log(result);
     return result;
-  }
+}
+
+

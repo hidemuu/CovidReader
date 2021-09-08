@@ -43,6 +43,7 @@ namespace CovidReader.Api
                 case "rest": covid = CovidRepositoryUseCase.UseRest(); break;
                 case "csv": covid = CovidRepositoryUseCase.UseCsv(); break;
                 case "json": covid = CovidRepositoryUseCase.UseJson(); break;
+                case "inmemory": covid = CovidRepositoryUseCase.UseInMemory(); break;
                 default: covid = CovidRepositoryUseCase.UseSqlite(); break;
             }
 

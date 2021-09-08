@@ -18,7 +18,7 @@ export class Layout extends Component {
           <div>
               <NavMenu location={location} />
               <div class="container" style={containerStyle}>
-                  <Header />
+                  {/* <Header /> */}
                   <div class="row">
                       <div class="col-lg-12">
                           {this.props.children}

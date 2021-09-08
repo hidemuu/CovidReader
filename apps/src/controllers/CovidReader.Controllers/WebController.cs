@@ -1,4 +1,5 @@
-﻿using CovidReader.Core;
+﻿using CovidReader.Controllers.UseCases;
+using CovidReader.Core;
 using CovidReader.Repository.Api;
 using CovidReader.Repository.Covid;
 using OpenQA.Selenium.Chrome;
@@ -34,9 +35,21 @@ namespace CovidReader.Controllers
             return _covidRepository;
         }
 
+        public async Task ImportAsync()
+        {
+            await _apiService.ImportCovidAsync(CovidRepositoryUseCase.UseCsv());
+        }
+
         public async Task UpdateAsync()
         {
-            await Task.Run(() => { });
+            await ImportAsync();
+            await _apiService.PostCovidToApiAsync();
+            await GetChartItemAsync();
+        }
+
+        public async Task GetChartItemAsync()
+        {
+            await _apiService.PostVirusToChartItemAsync();
         }
 
         public async Task AutoRunAsync()

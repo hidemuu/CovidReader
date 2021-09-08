@@ -47,6 +47,7 @@ namespace CovidReader.Plugins.Charts
                 BackgroundColor = "rgba(0, 0, 0, 0)",
                 BorderColor = "rgba(255,0,0,1)",
                 BorderWidth = 1,
+                Category = 0,
             });
 
             result.Add(new ChartConfig
@@ -58,6 +59,7 @@ namespace CovidReader.Plugins.Charts
                 BackgroundColor = "rgba(0, 0, 0, 0)",
                 BorderColor = "rgba(0,255,0,1)",
                 BorderWidth = 1,
+                Category = 0,
             });
 
             result.Add(new ChartConfig
@@ -69,6 +71,7 @@ namespace CovidReader.Plugins.Charts
                 BackgroundColor = "rgba(0, 0, 0, 0)",
                 BorderColor = "rgba(0,0,255,1)",
                 BorderWidth = 1,
+                Category = 0,
             });
 
             result.Add(new ChartConfig
@@ -80,6 +83,7 @@ namespace CovidReader.Plugins.Charts
                 BackgroundColor = "rgba(0, 0, 0, 0)",
                 BorderColor = "rgba(128,128,0,1)",
                 BorderWidth = 1,
+                Category = 0,
             });
 
             result.Add(new ChartConfig
@@ -89,8 +93,9 @@ namespace CovidReader.Plugins.Charts
                 Name = "Severe",
                 ChartType = "line",
                 BackgroundColor = "rgba(0, 0, 0, 0)",
-                BorderColor = "rgba(128,128,0,1)",
+                BorderColor = "rgba(0,128,128,1)",
                 BorderWidth = 1,
+                Category = 0,
             });
 
             result.Add(new ChartConfig
@@ -100,8 +105,9 @@ namespace CovidReader.Plugins.Charts
                 Name = "Test",
                 ChartType = "line",
                 BackgroundColor = "rgba(0, 0, 0, 0)",
-                BorderColor = "rgba(128,128,0,1)",
+                BorderColor = "rgba(128,0,128,1)",
                 BorderWidth = 1,
+                Category = 0,
             });
 
             result.Add(new ChartConfig
@@ -111,8 +117,9 @@ namespace CovidReader.Plugins.Charts
                 Name = "NationalTest",
                 ChartType = "line",
                 BackgroundColor = "rgba(0, 0, 0, 0)",
-                BorderColor = "rgba(128,128,0,1)",
+                BorderColor = "rgba(128,128,128,1)",
                 BorderWidth = 1,
+                Category = 1,
             });
 
             result.Add(new ChartConfig
@@ -122,8 +129,9 @@ namespace CovidReader.Plugins.Charts
                 Name = "QuarantineTest",
                 ChartType = "line",
                 BackgroundColor = "rgba(0, 0, 0, 0)",
-                BorderColor = "rgba(128,128,0,1)",
+                BorderColor = "rgba(255,255,0,1)",
                 BorderWidth = 1,
+                Category = 1,
             });
 
             result.Add(new ChartConfig
@@ -133,8 +141,9 @@ namespace CovidReader.Plugins.Charts
                 Name = "CareCenterTest",
                 ChartType = "line",
                 BackgroundColor = "rgba(0, 0, 0, 0)",
-                BorderColor = "rgba(128,128,0,1)",
+                BorderColor = "rgba(0,255,255,1)",
                 BorderWidth = 1,
+                Category = 1,
             });
 
             result.Add(new ChartConfig
@@ -144,8 +153,9 @@ namespace CovidReader.Plugins.Charts
                 Name = "CivilCenterTest",
                 ChartType = "line",
                 BackgroundColor = "rgba(0, 0, 0, 0)",
-                BorderColor = "rgba(128,128,0,1)",
+                BorderColor = "rgba(255,0,255,1)",
                 BorderWidth = 1,
+                Category = 1,
             });
 
             result.Add(new ChartConfig
@@ -155,8 +165,9 @@ namespace CovidReader.Plugins.Charts
                 Name = "CollegeTestNumber",
                 ChartType = "line",
                 BackgroundColor = "rgba(0, 0, 0, 0)",
-                BorderColor = "rgba(128,128,0,1)",
+                BorderColor = "rgba(255,128,0,1)",
                 BorderWidth = 1,
+                Category = 1,
             });
 
             result.Add(new ChartConfig
@@ -166,8 +177,9 @@ namespace CovidReader.Plugins.Charts
                 Name = "MedicalTestNumber",
                 ChartType = "line",
                 BackgroundColor = "rgba(0, 0, 0, 0)",
-                BorderColor = "rgba(128,128,0,1)",
+                BorderColor = "rgba(0,255,128,1)",
                 BorderWidth = 1,
+                Category = 1,
             });
 
             return result;

@@ -30,6 +30,10 @@ namespace CovidReader.Models.Api
         [JsonProperty("border_width")]
         [DisplayName("ボーダーサイズ")]
         public int BorderWidth { get; set; }
+        [Name("category")]
+        [JsonProperty("category")]
+        [DisplayName("カテゴリ")]
+        public int Category { get; set; } = 0;
 
         public override string ToString() =>
             Date.ToString() + Formats.Delimiter +
@@ -37,7 +41,8 @@ namespace CovidReader.Models.Api
             ChartType.ToString() + Formats.Delimiter +
             BackgroundColor.ToString() + Formats.Delimiter +
             BorderColor.ToString() + Formats.Delimiter +
-            BorderWidth.ToString();
+            BorderWidth.ToString() + Formats.Delimiter +
+            Category.ToString();
 
         public static string GetHeader() =>
             "日付" + Formats.Delimiter +
@@ -45,6 +50,7 @@ namespace CovidReader.Models.Api
             "チャートタイプ" + Formats.Delimiter +
             "バックグラウンドカラー" + Formats.Delimiter +
             "ボーダーカラー" + Formats.Delimiter +
-            "ボーダーサイズ";
+            "ボーダーサイズ" + Formats.Delimiter +
+            "カテゴリ";
     }
 }

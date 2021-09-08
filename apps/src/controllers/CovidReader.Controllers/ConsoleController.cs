@@ -62,7 +62,7 @@ namespace CovidReader.Controllers
 
         public async Task UpdateAsync()
         {
-            //await _apiService.ImportCovidAsync(CovidRepositoryUseCase.UseCsv());
+            await ImportAsync();
             await _apiService.PostCovidToApiAsync();
             await GetChartItemAsync();
         }

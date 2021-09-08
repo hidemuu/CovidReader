@@ -4,13 +4,22 @@ export default function getChartConfigs(df) {
     let result = [];
     for(let row in df) {
       const item = df[row];
+      // result.push({
+      //   id: item['id'],
+      //   name: item['name'],
+      //   chartType: item['chartType'],
+      //   backgroundColor: item['backgroundColor'],
+      //   borderColor: item['borderColor'],
+      //   borderWidth: item['borderWidth']
+      // });//["id","name","type","color",…]
       result.push([
         item['id'],
         item['name'],
-        item['chart_type'],
-        item['background_color'],
-        item['border_color'],
-        item['border_width']
+        item['chartType'],
+        item['backgroundColor'],
+        item['borderColor'],
+        item['borderWidth'],
+        item['category']
       ]);//["id","name","type","color",…]
     }
     console.log('--- result : getChartConfig ---');

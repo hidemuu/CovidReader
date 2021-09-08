@@ -24,23 +24,18 @@ namespace CovidReader.Web.Controllers
         /// Gets all items.
         /// </summary>
         [HttpGet]
-        public async Task<IEnumerable<ChartConfig>> Get()
+        public async Task<IActionResult> Get()
         {
-            //var task = Task.Run(() => _repository.GetAsync());
-            //Task.WaitAll(task);
-            //return Ok(task.Result);
-            //return Ok(await _repository.GetAsync());
-            return await _repository.GetAsync();
+            return Ok(await _repository.GetAsync());
         }
 
         /// <summary>
         /// Creates a new item or updates an existing one.
         /// </summary>
         [HttpPost]
-        public IActionResult Post([FromBody] IEnumerable<ChartConfig> item)
+        public async Task<IActionResult> Post([FromBody] IEnumerable<ChartConfig> item)
         {
-            var task = Task.Run(() => _repository.PostAsync(item));
-            Task.WaitAll(task);
+            await _repository.PostAsync(item);
             return Ok();
         }
 

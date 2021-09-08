@@ -13,21 +13,7 @@ namespace CovidReader.Controllers.UseCases
 {
     public class ApiRepositoryUseCase
     {
-        public static IApiRepository UseData(DbTypeKeys key)
-        {
-            IApiRepository data;
-            switch (key)
-            {
-                case DbTypeKeys.Csv: data = UseCsv(); break;
-                case DbTypeKeys.Json: data = UseJson(); break;
-                case DbTypeKeys.Sql: data = UseSqlite(); break;
-                default: 
-                    Console.WriteLine("登録されていないパラメータです");
-                    data = UseSqlite();
-                    break;
-            }
-            return data;
-        }
+        
 
         public static IApiRepository UseSqlite()
         {

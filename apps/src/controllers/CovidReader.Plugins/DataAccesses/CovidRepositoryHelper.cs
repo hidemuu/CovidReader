@@ -68,7 +68,7 @@ namespace CovidReader.Plugins.DataAccesses
             }
             
             result += Formats.NewLine;
-            var query = items.OrderByDescending(x => x.Date);
+            var query = items.OrderByDescending(x => DateTime.Parse(x.Date));
             foreach (var item in query)
             {
                 result += item.ToString() + Formats.NewLine;

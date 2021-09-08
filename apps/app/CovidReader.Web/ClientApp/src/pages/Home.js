@@ -3,8 +3,14 @@ import React, { Component } from 'react';
 export default class Home extends Component {
   static displayName = Home.name;
 
+  constructor(props) {
+    super(props);
+    this.state = { currentCount: 0 };
+    this.incrementCounter = this.incrementCounter.bind(this);
+  }
+
     handleButtonClick() {
-        fetch('api/test')
+        fetch('api/home')
             .then((response) => {
                 if (response.status === 200) {
                     return response.text();
@@ -19,6 +25,12 @@ export default class Home extends Component {
                 alert("error");
                 console.log(error);
             })
+    }
+
+    incrementCounter() {
+      this.setState({
+        currentCount: this.state.currentCount + 1
+      });
     }
 
   render () {
@@ -38,7 +50,9 @@ export default class Home extends Component {
           <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration produces minified, efficiently bundled JavaScript files.</li>
         </ul>
             <p>The <code>ClientApp</code> subdirectory is a standard React application based on the <code>create-react-app</code> template. If you open a command prompt in that directory, you can run <code>npm</code> commands such as <code>npm test</code> or <code>npm install</code>.</p>
-            <button onClick={this.handleButtonClick}>API Test</button>
+            <button className="btn btn-primary" onClick={this.handleButtonClick}>API Test</button>
+            <p aria-live="polite">Current count: <strong>{this.state.currentCount}</strong></p>
+            <button className="btn btn-primary" onClick={this.incrementCounter}>Increment</button>
       </div>
     );
   }

@@ -3,15 +3,13 @@ import { Route } from 'react-router';
 
 import Layout from './pages/Layout';
 import Home from './pages/Home';
-import FetchData from './pages/FetchData';
-import Counter from './pages/Counter';
 import Charts from "./pages/Charts";
 import Tables from "./pages/Tables";
+import VirusCharts from "./pages/VirusCharts";
+import VirusTables from "./pages/VirusTables";
 import Archives from "./pages/Archives";
 import Settings from "./pages/Settings";
-
-//import 'bootstrap/dist/css/bootstrap.css';
-//import './custom.css'
+import Content from "./pages/Content";
 
 export default class App extends Component {
   static displayName = App.name;
@@ -20,12 +18,13 @@ export default class App extends Component {
     return (
       <Layout>
         <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetch-data' component={FetchData} />
         <Route path="/charts" component={Charts}></Route>
         <Route path="/tables" component={Tables}></Route>
+        <Route path="/viruscharts" component={VirusCharts}></Route>
+        <Route path="/virustables" component={VirusTables}></Route>
         <Route path="/archives/:article" component={Archives}></Route>
         <Route path="/settings" component={Settings}></Route>
+        <Route path="/contents" component={Content}></Route>
       </Layout>
     );
   }

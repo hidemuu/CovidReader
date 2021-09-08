@@ -23,6 +23,9 @@ export default class Charts extends React.Component {
   }
 
   async populateChartItemAsync(){
+    // this.setState({
+    //   data: await getItems('api/chartitem'),
+    // });
     await fetch('api/chartitem')
     .then((response) => response.json())
     .then((json) => {
@@ -60,7 +63,24 @@ export default class Charts extends React.Component {
   //   }
   // }
 
-  
+  mappingChartData(config) {
+    let chartData;
+    // chartData.push({
+      //   label: config.name,
+      //   data: [],
+      //   borderColor: config.borderColor,
+      //   backgroundColor: config.backgroundColor,
+      //   borderWidth: config.borderWidth
+      // });  
+      chartData = {
+        label: config[1],
+        data: [],
+        borderColor: config[3],
+        backgroundColor: config[4],
+        borderWidth: config[5]
+      };  
+      return chartData;
+  }
   
 
   render() {
@@ -70,28 +90,41 @@ export default class Charts extends React.Component {
       const items = this.state.data;
       const configs = this.state.config;
 
-      let chartLabels = [], chartData = [];//オブジェクト配列形式に変更
+      //個別チャート
+      // let eachChartData = [];
+      // let eachChartLabels = [];
+      // let count = 0;
+      // for(let row in configs){
+      //   const config = configs[row];
+      //   let data = [];
+      //   data.push(this.mappingChartData(config));
+      //   eachChartData.push(data);
+      //   count++;
+      // }
+      // for(let row in items){
+      //   const item = items[row];
+      //   const date = item[0];
+      //   const datas = item[1]; //コンマ区切り配列
+      //   eachChartLabels.push(date);
+      //   for(let i in datas) { 
+          
+      //     eachchartData[i].data.push(datas[i]);
+      //   }
+      // }
 
-      //コンフィグ成形
+      //全部入りチャート
+      let chartData = [];
+      let chartLabels = [];
       for(let row in configs) {
         const config = configs[row];//id,title,type,bg,color,width
-        chartData.push({
-          label: config[1],
-          data: [],
-          borderColor: config[3],
-          backgroundColor: config[4],
-          borderWidth: config[5]
-        });  
+        chartData.push(this.mappingChartData(config));
       }
-      
-      //データ成形
-      //	ラベル（項目はひとつ）
-      //	データ系列の数だけ設定
       for(let row in items) {
         const item = items[row];
-        chartLabels.push(item[0]);
-        //データ系列の数だけ設定
-        for(let i in item[1]) { chartData[i].data.push(item[1][i]); }
+        const date = item[0];
+        const datas = item[1]; //コンマ区切り配列
+        chartLabels.push(date);
+        for(let i in datas) { chartData[i].data.push(datas[i]); }
       };
       console.log('--- drawData : chartLabels -----');
       console.log(chartLabels);
@@ -102,6 +135,12 @@ export default class Charts extends React.Component {
         labels: chartLabels,
         datasets: chartData,
       };
+
+      // const data01 = {
+      //   labels: chartLabels,
+      //   datasets: chartData[0],
+      // };
+
       const options = {
         //responsive: true,
         //maintainAspectRatio: false,
@@ -126,16 +165,19 @@ export default class Charts extends React.Component {
               }
       };
       return (
-        <Line  
+        <div>
+          <Line  
           data={data} 
-          // border_color={this.state.chartBorderColors[0]} 
-          // background_color={this.state.chartBackgroundColors[0]} 
-          // border_width={this.chartBorderWidthes[0]}
           options={options}/>
-        // <Fragment>
-        //   <DatePicker date={date} onDateChange={ (newDate) => { return this.setState({ date: newDate }); }} /> //何らかの日付変更処理
-        //   <Line data={data} options={options} />
-        // </Fragment>
+          {/* <Line  
+          data={data01} 
+          options={options}/> */}
+        </div>
+        //<Fragment>
+          //   <DatePicker date={date} onDateChange={ (newDate) => { return this.setState({ date: newDate }); }} /> //何らかの日付変更処理
+          //   <Line data={data} options={options} />
+          // </Fragment>
+        
       );
     }else{
       

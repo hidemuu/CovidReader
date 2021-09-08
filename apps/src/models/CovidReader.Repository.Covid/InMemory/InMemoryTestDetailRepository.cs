@@ -1,10 +1,12 @@
-﻿using System;
+﻿using CovidReader.Models.Covid;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CovidReader.Repository.Covid.InMemory
 {
-    class InMemoryTestDetailRepository
+    public class InMemoryTestDetailRepository : InMemoryCovidRepositoryBase<TestDetail>, ITestDetailRepository
     {
+
     }
 }

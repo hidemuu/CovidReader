@@ -91,7 +91,7 @@ namespace CovidReader.Plugins.DataAccesses
         /// <param name="exports">出力先外部データ</param>
         /// <param name="items">出力対象テーブル</param>
         /// <returns></returns>
-        public async Task ExportAsync(IApiRepository exports, IEnumerable<ChartItem> items)
+        public async Task PostAsync(IApiRepository exports, IEnumerable<ChartItem> items)
         {
             await exports.ChartItems.PostAsync(items);
         }
@@ -101,7 +101,7 @@ namespace CovidReader.Plugins.DataAccesses
         /// <param name="exports">出力先外部データ</param>
         /// <param name="configs">出力対象テーブル</param>
         /// <returns></returns>
-        public async Task ExportAsync(IApiRepository exports, IEnumerable<ChartConfig> configs)
+        public async Task PostAsync(IApiRepository exports, IEnumerable<ChartConfig> configs)
         {
             await exports.ChartConfigs.PostAsync(configs);
         }
@@ -111,7 +111,7 @@ namespace CovidReader.Plugins.DataAccesses
         /// <param name="exports">出力先外部データ</param>
         /// <param name="viruses">出力対象テーブル</param>
         /// <returns></returns>
-        public async Task ExportAsync(IApiRepository exports, IEnumerable<Virus> viruses)
+        public async Task PostAsync(IApiRepository exports, IEnumerable<Virus> viruses)
         {
             await exports.Viruses.PostAsync(viruses);
         }

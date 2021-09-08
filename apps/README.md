@@ -3,7 +3,7 @@
 
 
 # Prerequisites
-
+* 厚生労働省 (https://corona.go.jp/dashboard/)
 * OpenApi (https://portal.opendata.go.jp/)
 * NHK (https://www3.nhk.or.jp/news/special/coronavirus/data-widget/)
 * 行動解析 (https://it.impress.co.jp/articles/-/20332 https://medicalnote.jp/contents/201014-009-EZ)
@@ -57,6 +57,10 @@ XAMPPをインストールし、Apache ポートを81にして起動する
   $ npm install --save-dev babel-plugin-react-html-attrs
   $ npm install --save react-chartjs-2 chart.js
   $ npm install --save react-bootstrap-table-next
+  $ npm install @material-ui/core
+  $ npm install @material-ui/icons
+  $ npm install react-hook-form
+  $ npm install elemental --save
 
 - webpackコマンド
   $ webpack --mode development

@@ -26,7 +26,7 @@ namespace CovidReader.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _repository.GetAsync());
+            return Ok((await _repository.GetAsync()).OrderBy(x => DateTime.Parse(x.Date)));
         }
 
         /// <summary>

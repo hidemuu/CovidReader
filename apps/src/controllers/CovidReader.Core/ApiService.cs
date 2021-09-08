@@ -97,8 +97,12 @@ namespace CovidReader.Core
             var chartItems = ChartItemBuilder.GetChartItems(viruses);
             
             Console.WriteLine("Exporting...");
-            await _apihelper.ExportAsync(_apiRepository, chartItems);
-            await _apihelper.ExportAsync(_apiRepository, chartConfigs);
+            if ((await _apiRepository.ChartConfigs.GetAsync()).Count() == 0)
+            {
+                await _apihelper.PostAsync(_apiRepository, chartConfigs);
+            }
+            await _apihelper.PostAsync(_apiRepository, chartItems);
+            
         }
 
         /// <summary>
@@ -110,8 +114,8 @@ namespace CovidReader.Core
         {
 
             Console.WriteLine("Exporting...");
-            await _apihelper.ExportAsync(repository, await _apiRepository.ChartItems.GetAsync());
-            await _apihelper.ExportAsync(repository, await _apiRepository.ChartConfigs.GetAsync());
+            await _apihelper.PostAsync(repository, await _apiRepository.ChartItems.GetAsync());
+            await _apihelper.PostAsync(repository, await _apiRepository.ChartConfigs.GetAsync());
         }
 
         /// <summary>
@@ -166,7 +170,7 @@ namespace CovidReader.Core
 
             Console.WriteLine("Posting[Covid->Api-Viruses]...");
             //var data = ApiRepositoryUseCase.UseData(key);
-            await _apihelper.ExportAsync(_apiRepository, items);
+            await _apihelper.PostAsync(_apiRepository, items);
         }
 
         private static int CovidDbObjectToInt(CovidDbObject obj)

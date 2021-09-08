@@ -1,6 +1,7 @@
 ﻿using CovidReader.Repository;
 using CovidReader.Repository.Covid;
 using CovidReader.Repository.Covid.Csv;
+using CovidReader.Repository.Covid.InMemory;
 using CovidReader.Repository.Covid.Json;
 using CovidReader.Repository.Covid.Sql;
 using Microsoft.EntityFrameworkCore;
@@ -13,21 +14,7 @@ namespace CovidReader.Controllers.UseCases
     public class CovidRepositoryUseCase
     {
 
-        public static ICovidRepository UseData(DbTypeKeys key)
-        {
-            ICovidRepository data;
-            switch (key)
-            {
-                case DbTypeKeys.Csv: data = UseCsv(); break;
-                case DbTypeKeys.Sql: data = UseSqlite(); break;
-                case DbTypeKeys.Rest: data = UseRest(); break;
-                default: 
-                    Console.WriteLine("登録されていないパラメータです");
-                    data = UseSqlite();
-                    break;
-            }
-            return data;
-        }
+        
 
         public static ICovidRepository UseSqlite()
         {
@@ -56,6 +43,11 @@ namespace CovidReader.Controllers.UseCases
         public static ICovidRepository UseJson(string path = @"assets\covid")
         {
             return new JsonCovidRepository(path, "shift-jis");
+        }
+
+        public static ICovidRepository UseInMemory()
+        {
+            return new InMemoryCovidRepository();
         }
 
     }
