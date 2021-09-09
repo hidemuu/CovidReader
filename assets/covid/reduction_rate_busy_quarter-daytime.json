@@ -1,0 +1,282 @@
+[
+  {
+    "date": "2021年09月08日",
+    "dataType": "11",
+    "dataName": "すすきの駅",
+    "comparisonPreDay": "-15.5",
+    "comparisonPreDeclare": "-16.8",
+    "comparisonPreSpread": "-40.6"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "11",
+    "dataName": "大通駅",
+    "comparisonPreDay": "3.9",
+    "comparisonPreDeclare": "-5.9",
+    "comparisonPreSpread": "-23.7"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "11",
+    "dataName": "中央弘前駅<br>（鍛冶町）",
+    "comparisonPreDay": "58.5",
+    "comparisonPreDeclare": "39.0",
+    "comparisonPreSpread": "30.4"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "11",
+    "dataName": "勾当台公園駅<br>（国分町）",
+    "comparisonPreDay": "-10.7",
+    "comparisonPreDeclare": "-14.2",
+    "comparisonPreSpread": "-23.1"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "東武宇都宮駅<br>（オリオン通り、ユニオン通り）",
+    "comparisonPreDay": "-6.6",
+    "comparisonPreDeclare": "-2.2",
+    "comparisonPreSpread": "-12.2"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "中央前橋駅<br>（千代田町）",
+    "comparisonPreDay": "13.7",
+    "comparisonPreDeclare": "17.8",
+    "comparisonPreSpread": "27.7"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "渋谷駅",
+    "comparisonPreDay": "-10.5",
+    "comparisonPreDeclare": "8.1",
+    "comparisonPreSpread": "-47.1"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "渋谷センター街",
+    "comparisonPreDay": "1.2",
+    "comparisonPreDeclare": "16.9",
+    "comparisonPreSpread": "-48.1"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "原宿駅",
+    "comparisonPreDay": "-0.8",
+    "comparisonPreDeclare": "-7.6",
+    "comparisonPreSpread": "-45.5"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "新宿　歌舞伎町",
+    "comparisonPreDay": "-15.5",
+    "comparisonPreDeclare": "-6.0",
+    "comparisonPreSpread": "-40.8"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "池袋駅",
+    "comparisonPreDay": "-5.0",
+    "comparisonPreDeclare": "-5.7",
+    "comparisonPreSpread": "-36.3"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "東京駅",
+    "comparisonPreDay": "-6.8",
+    "comparisonPreDeclare": "-5.1",
+    "comparisonPreSpread": "-49.2"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "新橋駅",
+    "comparisonPreDay": "-9.9",
+    "comparisonPreDeclare": "-28.3",
+    "comparisonPreSpread": "-66.1"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "品川駅",
+    "comparisonPreDay": "-6.3",
+    "comparisonPreDeclare": "-39.5",
+    "comparisonPreSpread": "-66.7"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "上野駅",
+    "comparisonPreDay": "3.6",
+    "comparisonPreDeclare": "9.6",
+    "comparisonPreSpread": "-40.9"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "銀座駅",
+    "comparisonPreDay": "-11.9",
+    "comparisonPreDeclare": "-13.8",
+    "comparisonPreSpread": "-50.5"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "六本木駅",
+    "comparisonPreDay": "-9.1",
+    "comparisonPreDeclare": "6.9",
+    "comparisonPreSpread": "-43.4"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "吉祥寺駅",
+    "comparisonPreDay": "-12.3",
+    "comparisonPreDeclare": "-18.6",
+    "comparisonPreSpread": "-35.8"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "元町・中華街駅",
+    "comparisonPreDay": "11.4",
+    "comparisonPreDeclare": "19.1",
+    "comparisonPreSpread": "3.8"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "桜木町駅",
+    "comparisonPreDay": "-3.0",
+    "comparisonPreDeclare": "20.5",
+    "comparisonPreSpread": "-3.4"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "12",
+    "dataName": "関内駅",
+    "comparisonPreDay": "-3.6",
+    "comparisonPreDeclare": "-13.6",
+    "comparisonPreSpread": "-17.8"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "13",
+    "dataName": "浜松駅<br>（千歳町）",
+    "comparisonPreDay": "-5.2",
+    "comparisonPreDeclare": "7.0",
+    "comparisonPreSpread": "-29.9"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "13",
+    "dataName": "栄駅",
+    "comparisonPreDay": "-5.3",
+    "comparisonPreDeclare": "-3.5",
+    "comparisonPreSpread": "-28.9"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "13",
+    "dataName": "伏見駅",
+    "comparisonPreDay": "-11.5",
+    "comparisonPreDeclare": "-20.4",
+    "comparisonPreSpread": "-33.9"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "15",
+    "dataName": "河原町駅",
+    "comparisonPreDay": "-2.7",
+    "comparisonPreDeclare": "35.1",
+    "comparisonPreSpread": "-15.9"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "15",
+    "dataName": "心斎橋駅",
+    "comparisonPreDay": "0.3",
+    "comparisonPreDeclare": "7.2",
+    "comparisonPreSpread": "-23.4"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "15",
+    "dataName": "なんば駅",
+    "comparisonPreDay": "-9.5",
+    "comparisonPreDeclare": "15.9",
+    "comparisonPreSpread": "-26.7"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "15",
+    "dataName": "北新地駅",
+    "comparisonPreDay": "-8.9",
+    "comparisonPreDeclare": "-7.2",
+    "comparisonPreSpread": "-43.0"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "16",
+    "dataName": "田町駅<br>（田町、中央町、柳町）",
+    "comparisonPreDay": "-10.5",
+    "comparisonPreDeclare": "-9.4",
+    "comparisonPreSpread": "-20.0"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "16",
+    "dataName": "八丁堀駅<br>（八丁堀、紙屋町）",
+    "comparisonPreDay": "-5.8",
+    "comparisonPreDeclare": "-6.2",
+    "comparisonPreSpread": "-26.5"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "16",
+    "dataName": "瓦町駅<br>（常磐町商店街、南新町商店街、田町商店街）",
+    "comparisonPreDay": "-8.2",
+    "comparisonPreDeclare": "5.8",
+    "comparisonPreSpread": "-8.9"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "17",
+    "dataName": "博多駅",
+    "comparisonPreDay": "7.9",
+    "comparisonPreDeclare": "8.9",
+    "comparisonPreSpread": "-26.4"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "17",
+    "dataName": "中洲川端駅",
+    "comparisonPreDay": "-12.9",
+    "comparisonPreDeclare": "-13.9",
+    "comparisonPreSpread": "-37.4"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "17",
+    "dataName": "観光通り駅<br>（浜町、銅座町）",
+    "comparisonPreDay": "-4.2",
+    "comparisonPreDeclare": "-20.3",
+    "comparisonPreSpread": "-32.4"
+  },
+  {
+    "date": "2021年09月08日",
+    "dataType": "17",
+    "dataName": "牧志駅",
+    "comparisonPreDay": "-4.7",
+    "comparisonPreDeclare": "-12.8",
+    "comparisonPreSpread": "-24.6"
+  }
+]

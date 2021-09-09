@@ -1,0 +1,170 @@
+[
+  {
+    "date": "2021年9月8日",
+    "dataType": "11",
+    "area": "北海道",
+    "dataName": "函館駅前周辺",
+    "comparisonPreDay": "1.0",
+    "comparisonPreYear": "-28.7"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "11",
+    "area": "北海道",
+    "dataName": "小樽運河周辺",
+    "comparisonPreDay": "-9.9",
+    "comparisonPreYear": "-50.1"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "12",
+    "area": "東京都",
+    "dataName": "浅草雷門周辺",
+    "comparisonPreDay": "-15.2",
+    "comparisonPreYear": "-36.5"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "12",
+    "area": "栃木県",
+    "dataName": "日光東照宮周辺",
+    "comparisonPreDay": "-33.3",
+    "comparisonPreYear": "-38.3"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "12",
+    "area": "神奈川県",
+    "dataName": "江の島周辺",
+    "comparisonPreDay": "-27.4",
+    "comparisonPreYear": "-48.9"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "12",
+    "area": "神奈川県",
+    "dataName": "鎌倉駅周辺",
+    "comparisonPreDay": "37.5",
+    "comparisonPreYear": "-25.6"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "12",
+    "area": "神奈川県",
+    "dataName": "箱根湯本駅周辺",
+    "comparisonPreDay": "-18.9",
+    "comparisonPreYear": "-51.8"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "14",
+    "area": "石川県",
+    "dataName": "金沢市 兼六園周辺",
+    "comparisonPreDay": "-21.5",
+    "comparisonPreYear": "-34.2"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "14",
+    "area": "長野県",
+    "dataName": "松本駅周辺",
+    "comparisonPreDay": "-17.2",
+    "comparisonPreYear": "-39.6"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "14",
+    "area": "長野県",
+    "dataName": "軽井沢駅周辺",
+    "comparisonPreDay": "-17.1",
+    "comparisonPreYear": "-46.8"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "13",
+    "area": "静岡県",
+    "dataName": "浜名湖舘山寺温泉周辺",
+    "comparisonPreDay": "20.0",
+    "comparisonPreYear": "-39.2"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "13",
+    "area": "三重県",
+    "dataName": "伊勢神宮周辺",
+    "comparisonPreDay": "37.5",
+    "comparisonPreYear": "-77.5"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "15",
+    "area": "京都府",
+    "dataName": "京都円山公園周辺",
+    "comparisonPreDay": "-2.8",
+    "comparisonPreYear": "-42.4"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "15",
+    "area": "兵庫県",
+    "dataName": "神戸市メリケンパーク周辺",
+    "comparisonPreDay": "-3.5",
+    "comparisonPreYear": "-42.3"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "15",
+    "area": "兵庫県",
+    "dataName": "淡路島 明石海峡大橋周辺",
+    "comparisonPreDay": "38.9",
+    "comparisonPreYear": "-26.3"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "15",
+    "area": "奈良県",
+    "dataName": "奈良市 大和西大寺周辺",
+    "comparisonPreDay": "8.6",
+    "comparisonPreYear": "-32.6"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "16",
+    "area": "広島県",
+    "dataName": "広島市 本通り周辺",
+    "comparisonPreDay": "-3.6",
+    "comparisonPreYear": "-39.7"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "16",
+    "area": "愛媛県",
+    "dataName": "道後温泉周辺",
+    "comparisonPreDay": "8.7",
+    "comparisonPreYear": "-38.8"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "17",
+    "area": "長崎県",
+    "dataName": "長崎市 南山手周辺",
+    "comparisonPreDay": "-13.2",
+    "comparisonPreYear": "-35.5"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "17",
+    "area": "大分県",
+    "dataName": "由布院周辺",
+    "comparisonPreDay": "-3.6",
+    "comparisonPreYear": "-34.7"
+  },
+  {
+    "date": "2021年9月8日",
+    "dataType": "17",
+    "area": "沖縄県",
+    "dataName": "石垣島 ゆいロード周辺",
+    "comparisonPreDay": "2.5",
+    "comparisonPreYear": "-36.8"
+  }
+]

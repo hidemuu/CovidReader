@@ -136,7 +136,6 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\ne
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Models.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Plugins.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.Api.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.Covid.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.Google.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.Settings.dll
@@ -147,7 +146,6 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\ne
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Plugins.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.Api.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.Covid.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.Google.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.Settings.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\obj\Debug\netstandard2.0\CovidReader.Api.csproj.AssemblyReference.cache
@@ -157,3 +155,5 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\obj\Debug\ne
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\obj\Debug\netstandard2.0\CovidReader.Api.csproj.CopyComplete
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\obj\Debug\netstandard2.0\CovidReader.Api.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\obj\Debug\netstandard2.0\CovidReader.Api.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.Covid19.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\api\CovidReader.Api\bin\Debug\netstandard2.0\CovidReader.Repository.Covid19.pdb

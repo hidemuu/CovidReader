@@ -1,9 +1,11 @@
 ﻿using CovidReader.Repository;
-using CovidReader.Repository.Covid;
-using CovidReader.Repository.Covid.Csv;
-using CovidReader.Repository.Covid.InMemory;
-using CovidReader.Repository.Covid.Json;
-using CovidReader.Repository.Covid.Sql;
+using CovidReader.Repository.Covid19;
+using CovidReader.Repository.Covid19.MHLW;
+using CovidReader.Repository.Covid19.MHLW.Csv;
+using CovidReader.Repository.Covid19.MHLW.InMemory;
+using CovidReader.Repository.Covid19.MHLW.Json;
+using CovidReader.Repository.Covid19.MHLW.Rest;
+using CovidReader.Repository.Covid19.MHLW.Sql;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

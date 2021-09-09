@@ -1,7 +1,7 @@
 ﻿using CovidReader.Controllers.UseCases;
 using CovidReader.Core;
 using CovidReader.Repository.Api;
-using CovidReader.Repository.Covid;
+using CovidReader.Repository.Covid19.MHLW;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;

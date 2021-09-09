@@ -1,5 +1,5 @@
 ﻿using CovidReader.Models.Api;
-using CovidReader.Models.Covid;
+using CovidReader.Models.Covid19;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

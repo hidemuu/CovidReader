@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Models\CovidReader.Repository.Api\CovidReader.Repository.Api.csproj" />
-    <ProjectReference Include="..\..\Models\CovidReader.Repository.Covid\CovidReader.Repository.Covid.csproj" />
+    <ProjectReference Include="..\..\models\CovidReader.Repository.Covid19\CovidReader.Repository.Covid19.csproj" />
     <ProjectReference Include="..\..\Models\CovidReader.Repository.Google\CovidReader.Repository.Google.csproj" />
     <ProjectReference Include="..\..\Models\CovidReader.Repository.Settings\CovidReader.Repository.Settings.csproj" />
     <ProjectReference Include="..\CovidReader.Core\CovidReader.Core.csproj" />

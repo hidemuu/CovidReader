@@ -1,0 +1,418 @@
+[
+  {
+    "date": "2021/09/08",
+    "dataType": "11",
+    "dataName": "北海道<br>札幌駅周辺",
+    "comparisonPreDay": "1.5",
+    "comparisonPreDeclare": "-6.3",
+    "comparisonPreSpread": "-13.8"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "2",
+    "dataName": "北海道<br>札幌駅周辺",
+    "comparisonPreDay": "1.5",
+    "comparisonPreDeclare": "-6.3",
+    "comparisonPreSpread": "-13.8"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "11",
+    "dataName": "青森県<br>青森駅周辺",
+    "comparisonPreDay": "-3.4",
+    "comparisonPreDeclare": "-13.0",
+    "comparisonPreSpread": "-21.8"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "11",
+    "dataName": "岩手県<br>盛岡駅北周辺",
+    "comparisonPreDay": "2.2",
+    "comparisonPreDeclare": "-3.6",
+    "comparisonPreSpread": "-23.3"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "11",
+    "dataName": "宮城県<br>仙台駅西周辺",
+    "comparisonPreDay": "-1.9",
+    "comparisonPreDeclare": "5.3",
+    "comparisonPreSpread": "-14.9"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "11",
+    "dataName": "秋田県<br>秋田駅周辺",
+    "comparisonPreDay": "-3.9",
+    "comparisonPreDeclare": "2.6",
+    "comparisonPreSpread": "-13.0"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "11",
+    "dataName": "山形県<br>山形駅周辺",
+    "comparisonPreDay": "2.5",
+    "comparisonPreDeclare": "10.3",
+    "comparisonPreSpread": "-14.3"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "11",
+    "dataName": "福島県<br>福島駅周辺",
+    "comparisonPreDay": "-0.6",
+    "comparisonPreDeclare": "13.5",
+    "comparisonPreSpread": "-16.2"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "12",
+    "dataName": "茨城県<br>水戸駅周辺",
+    "comparisonPreDay": "-1.2",
+    "comparisonPreDeclare": "-4.7",
+    "comparisonPreSpread": "-15.7"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "12",
+    "dataName": "栃木県<br>宇都宮駅周辺",
+    "comparisonPreDay": "-0.8",
+    "comparisonPreDeclare": "7.4",
+    "comparisonPreSpread": "-24.1"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "12",
+    "dataName": "群馬県<br>高崎駅西周辺",
+    "comparisonPreDay": "-1.8",
+    "comparisonPreDeclare": "0.0",
+    "comparisonPreSpread": "-11.1"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "12",
+    "dataName": "埼玉県<br>大宮駅西周辺",
+    "comparisonPreDay": "-4.5",
+    "comparisonPreDeclare": "11.7",
+    "comparisonPreSpread": "-16.0"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "2",
+    "dataName": "埼玉県<br>大宮駅西周辺",
+    "comparisonPreDay": "-4.5",
+    "comparisonPreDeclare": "11.7",
+    "comparisonPreSpread": "-16.0"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "12",
+    "dataName": "千葉県<br>千葉駅周辺",
+    "comparisonPreDay": "-0.6",
+    "comparisonPreDeclare": "9.7",
+    "comparisonPreSpread": "-11.6"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "2",
+    "dataName": "千葉県<br>千葉駅周辺",
+    "comparisonPreDay": "-0.6",
+    "comparisonPreDeclare": "9.7",
+    "comparisonPreSpread": "-11.6"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "12",
+    "dataName": "東京都<br>新宿駅周辺",
+    "comparisonPreDay": "2.6",
+    "comparisonPreDeclare": "18.1",
+    "comparisonPreSpread": "-19.6"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "2",
+    "dataName": "東京都<br>新宿駅周辺",
+    "comparisonPreDay": "2.6",
+    "comparisonPreDeclare": "18.1",
+    "comparisonPreSpread": "-19.6"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "12",
+    "dataName": "神奈川県<br>横浜駅周辺",
+    "comparisonPreDay": "2.7",
+    "comparisonPreDeclare": "23.0",
+    "comparisonPreSpread": "-7.4"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "2",
+    "dataName": "神奈川県<br>横浜駅周辺",
+    "comparisonPreDay": "2.7",
+    "comparisonPreDeclare": "23.0",
+    "comparisonPreSpread": "-7.4"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "14",
+    "dataName": "新潟県<br>新潟駅周辺",
+    "comparisonPreDay": "-1.9",
+    "comparisonPreDeclare": "-3.0",
+    "comparisonPreSpread": "-20.3"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "14",
+    "dataName": "富山県<br>富山駅周辺",
+    "comparisonPreDay": "0.1",
+    "comparisonPreDeclare": "8.1",
+    "comparisonPreSpread": "-11.6"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "14",
+    "dataName": "石川県<br>金沢駅周辺",
+    "comparisonPreDay": "4.3",
+    "comparisonPreDeclare": "7.7",
+    "comparisonPreSpread": "-36.0"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "14",
+    "dataName": "福井県<br>福井駅周辺",
+    "comparisonPreDay": "0.9",
+    "comparisonPreDeclare": "19.4",
+    "comparisonPreSpread": "-25.2"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "14",
+    "dataName": "山梨県<br>甲府駅南周辺",
+    "comparisonPreDay": "4.1",
+    "comparisonPreDeclare": "7.4",
+    "comparisonPreSpread": "4.4"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "14",
+    "dataName": "長野県<br>長野駅周辺",
+    "comparisonPreDay": "3.8",
+    "comparisonPreDeclare": "10.6",
+    "comparisonPreSpread": "-8.2"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "13",
+    "dataName": "岐阜県<br>岐阜駅周辺",
+    "comparisonPreDay": "4.8",
+    "comparisonPreDeclare": "-7.0",
+    "comparisonPreSpread": "-31.9"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "13",
+    "dataName": "静岡県<br>静岡駅周辺",
+    "comparisonPreDay": "-5.9",
+    "comparisonPreDeclare": "-5.8",
+    "comparisonPreSpread": "-20.9"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "13",
+    "dataName": "愛知県<br>名古屋駅周辺",
+    "comparisonPreDay": "-0.4",
+    "comparisonPreDeclare": "3.3",
+    "comparisonPreSpread": "-29.0"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "13",
+    "dataName": "三重県<br>津駅周辺",
+    "comparisonPreDay": "4.4",
+    "comparisonPreDeclare": "-10.2",
+    "comparisonPreSpread": "-25.0"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "15",
+    "dataName": "滋賀県<br>草津駅西口周辺",
+    "comparisonPreDay": "-1.4",
+    "comparisonPreDeclare": "1.0",
+    "comparisonPreSpread": "-9.9"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "15",
+    "dataName": "京都府<br>京都駅周辺",
+    "comparisonPreDay": "-9.3",
+    "comparisonPreDeclare": "16.1",
+    "comparisonPreSpread": "-24.3"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "15",
+    "dataName": "大阪府<br>梅田周辺",
+    "comparisonPreDay": "1.8",
+    "comparisonPreDeclare": "16.3",
+    "comparisonPreSpread": "-29.1"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "15",
+    "dataName": "兵庫県<br>三ノ宮駅周辺",
+    "comparisonPreDay": "0.4",
+    "comparisonPreDeclare": "17.2",
+    "comparisonPreSpread": "-15.2"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "15",
+    "dataName": "奈良県<br>近鉄奈良駅周辺",
+    "comparisonPreDay": "8.0",
+    "comparisonPreDeclare": "4.4",
+    "comparisonPreSpread": "-16.7"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "15",
+    "dataName": "和歌山県<br>和歌山駅周辺",
+    "comparisonPreDay": "5.7",
+    "comparisonPreDeclare": "4.7",
+    "comparisonPreSpread": "-19.8"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "16",
+    "dataName": "鳥取県<br>晩稲周辺",
+    "comparisonPreDay": "-10.0",
+    "comparisonPreDeclare": "44.4",
+    "comparisonPreSpread": "43.9"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "16",
+    "dataName": "島根県<br>松江駅周辺",
+    "comparisonPreDay": "-8.4",
+    "comparisonPreDeclare": "14.4",
+    "comparisonPreSpread": "-18.7"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "16",
+    "dataName": "岡山県<br>岡山駅周辺",
+    "comparisonPreDay": "0.9",
+    "comparisonPreDeclare": "-3.3",
+    "comparisonPreSpread": "-27.0"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "16",
+    "dataName": "広島県<br>広島駅周辺",
+    "comparisonPreDay": "-3.2",
+    "comparisonPreDeclare": "-13.5",
+    "comparisonPreSpread": "-13.0"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "16",
+    "dataName": "山口県<br>下関駅周辺",
+    "comparisonPreDay": "-3.7",
+    "comparisonPreDeclare": "-1.2",
+    "comparisonPreSpread": "-31.0"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "16",
+    "dataName": "徳島県<br>徳島駅周辺",
+    "comparisonPreDay": "-7.0",
+    "comparisonPreDeclare": "-17.6",
+    "comparisonPreSpread": "-21.5"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "16",
+    "dataName": "香川県<br>高松市フェリー通り周辺",
+    "comparisonPreDay": "-1.6",
+    "comparisonPreDeclare": "-8.7",
+    "comparisonPreSpread": "-28.8"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "16",
+    "dataName": "愛媛県<br>松山市駅東側周辺",
+    "comparisonPreDay": "-1.0",
+    "comparisonPreDeclare": "4.6",
+    "comparisonPreSpread": "-12.7"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "16",
+    "dataName": "高知県<br>はりまや橋周辺",
+    "comparisonPreDay": "1.1",
+    "comparisonPreDeclare": "-10.9",
+    "comparisonPreSpread": "-25.3"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "17",
+    "dataName": "福岡県<br>天神周辺",
+    "comparisonPreDay": "1.5",
+    "comparisonPreDeclare": "5.7",
+    "comparisonPreSpread": "-22.8"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "17",
+    "dataName": "佐賀県<br>佐賀駅周辺",
+    "comparisonPreDay": "0.6",
+    "comparisonPreDeclare": "-6.7",
+    "comparisonPreSpread": "-14.5"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "17",
+    "dataName": "長崎県<br>長崎駅周辺",
+    "comparisonPreDay": "-3.0",
+    "comparisonPreDeclare": "0.3",
+    "comparisonPreSpread": "-26.4"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "17",
+    "dataName": "熊本県<br>通町筋周辺",
+    "comparisonPreDay": "-1.3",
+    "comparisonPreDeclare": "2.1",
+    "comparisonPreSpread": "-20.0"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "17",
+    "dataName": "大分県<br>大分駅付近周辺",
+    "comparisonPreDay": "-1.1",
+    "comparisonPreDeclare": "1.9",
+    "comparisonPreSpread": "-22.8"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "17",
+    "dataName": "宮崎県<br>新別府町周辺",
+    "comparisonPreDay": "-9.0",
+    "comparisonPreDeclare": "8.1",
+    "comparisonPreSpread": "-14.2"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "17",
+    "dataName": "鹿児島県<br>天文館周辺",
+    "comparisonPreDay": "-1.2",
+    "comparisonPreDeclare": "0.9",
+    "comparisonPreSpread": "-12.7"
+  },
+  {
+    "date": "2021/09/08",
+    "dataType": "17",
+    "dataName": "沖縄県<br>県庁前周辺",
+    "comparisonPreDay": "-4.6",
+    "comparisonPreDeclare": "-5.2",
+    "comparisonPreSpread": "-5.8"
+  }
+]

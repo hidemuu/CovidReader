@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7uSaObkxoHy7VzkQ0ES9diuXPzV6YeXFH60Gmb1ELTGuiBx0ub3Mb1RaAc3LYWhjEX8Uqnw6jkBSBDaSa8QIzA==",
+  "dgSpecHash": "BDxWEDaaH32pMNFsoFctCnxiiVlhKaIBEPDWI+RLlQE41dcVbFL3B4zS11tjkLQhnexZso2uaGbZf4HPPExqqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers\\CovidReader.Controllers.csproj",
   "expectedPackageFiles": [

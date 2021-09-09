@@ -10,7 +10,8 @@ import VirusTables from "./pages/VirusTables";
 import Archives from "./pages/Archives";
 import Settings from "./pages/Settings";
 import Register from "./pages/Register";
-import Management from "./pages/Management";
+import Dashboard from "./pages/Dashboard";
+import DashboardSummary from "./pages/DashboardSummary";
 
 export default class App extends Component {
   static displayName = App.name;
@@ -25,8 +26,9 @@ export default class App extends Component {
         <Route path="/virustables" component={VirusTables}></Route>
         <Route path="/archives/:article" component={Archives}></Route>
         <Route path="/settings" component={Settings}></Route>
-        <Route path="/registers" component={Register}></Route>
-        <Route path="/managements" component={Management}></Route>
+        <Route path="/register" component={Register}></Route>
+        <Route path="/dashboard" component={Dashboard}></Route>
+        <Route path="/dashboardsummary" component={DashboardSummary}></Route>
       </Layout>
     );
   }

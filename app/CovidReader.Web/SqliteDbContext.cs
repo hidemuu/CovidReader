@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CovidReader.Models.Covid;
+using CovidReader.Models.Covid19;
 using CovidReader.Repository;
 using CovidReader.Repository.Api.Sql;
-using CovidReader.Repository.Covid.Sql;
+using CovidReader.Repository.Covid19.MHLW.Sql;
 using Microsoft.EntityFrameworkCore;
 
 namespace CovidReader.Web

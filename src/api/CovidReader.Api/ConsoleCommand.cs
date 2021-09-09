@@ -3,7 +3,7 @@ using CovidReader.Controllers.UseCases;
 using CovidReader.Models;
 using CovidReader.Repository;
 using CovidReader.Repository.Api;
-using CovidReader.Repository.Covid;
+using CovidReader.Repository.Covid19.MHLW;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

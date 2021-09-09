@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Windows", "app\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.WebApi", "src\api\CovidReader.WebApi\CovidReader.WebApi.csproj", "{515D9086-7BED-423E-859C-C48537B35313}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository.Covid", "src\models\CovidReader.Repository.Covid\CovidReader.Repository.Covid.csproj", "{1AB1F34B-F60E-456A-B2FC-158A0F12E05E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository.Covid19", "src\models\CovidReader.Repository.Covid19\CovidReader.Repository.Covid19.csproj", "{1AB1F34B-F60E-456A-B2FC-158A0F12E05E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository.Api", "src\models\CovidReader.Repository.Api\CovidReader.Repository.Api.csproj", "{4E2E456D-B843-41C6-A5DF-8E931876DC1C}"
 EndProject

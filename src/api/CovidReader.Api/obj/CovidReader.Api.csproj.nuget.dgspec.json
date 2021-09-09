@@ -109,8 +109,8 @@
               "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\Models\\CovidReader.Repository.Api\\CovidReader.Repository.Api.csproj": {
                 "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\Models\\CovidReader.Repository.Api\\CovidReader.Repository.Api.csproj"
               },
-              "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\Models\\CovidReader.Repository.Covid\\CovidReader.Repository.Covid.csproj": {
-                "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\Models\\CovidReader.Repository.Covid\\CovidReader.Repository.Covid.csproj"
+              "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\models\\CovidReader.Repository.Covid19\\CovidReader.Repository.Covid19.csproj": {
+                "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\models\\CovidReader.Repository.Covid19\\CovidReader.Repository.Covid19.csproj"
               },
               "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\Models\\CovidReader.Repository.Google\\CovidReader.Repository.Google.csproj": {
                 "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\Models\\CovidReader.Repository.Google\\CovidReader.Repository.Google.csproj"
@@ -519,14 +519,14 @@
         }
       }
     },
-    "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\models\\CovidReader.Repository.Covid\\CovidReader.Repository.Covid.csproj": {
+    "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\models\\CovidReader.Repository.Covid19\\CovidReader.Repository.Covid19.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\models\\CovidReader.Repository.Covid\\CovidReader.Repository.Covid.csproj",
-        "projectName": "CovidReader.Repository.Covid",
-        "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\models\\CovidReader.Repository.Covid\\CovidReader.Repository.Covid.csproj",
+        "projectUniqueName": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\models\\CovidReader.Repository.Covid19\\CovidReader.Repository.Covid19.csproj",
+        "projectName": "CovidReader.Repository.Covid19",
+        "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\models\\CovidReader.Repository.Covid19\\CovidReader.Repository.Covid19.csproj",
         "packagesPath": "C:\\Users\\nando\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\models\\CovidReader.Repository.Covid\\obj\\",
+        "outputPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\models\\CovidReader.Repository.Covid19\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

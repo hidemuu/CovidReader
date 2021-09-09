@@ -522,7 +522,7 @@
         "dependencies": {
           "CovidReader.Core": "1.0.0",
           "CovidReader.Repository.Api": "1.0.0",
-          "CovidReader.Repository.Covid": "1.0.0",
+          "CovidReader.Repository.Covid19": "1.0.0",
           "CovidReader.Repository.Google": "1.0.0",
           "CovidReader.Repository.Settings": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.17",
@@ -587,13 +587,13 @@
           "CovidReader.Repository.Api.dll": {}
         }
       },
-      "CovidReader.Repository.Covid/1.0.0": {
+      "CovidReader.Repository.Covid19/1.0.0": {
         "dependencies": {
           "CovidReader.Repository": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.17"
         },
         "runtime": {
-          "CovidReader.Repository.Covid.dll": {}
+          "CovidReader.Repository.Covid19.dll": {}
         }
       },
       "CovidReader.Repository.Google/1.0.0": {
@@ -1012,7 +1012,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CovidReader.Repository.Covid/1.0.0": {
+    "CovidReader.Repository.Covid19/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

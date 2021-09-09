@@ -1,7 +1,7 @@
 ﻿using CovidReader.Models.Api;
 using CovidReader.Repository;
 using CovidReader.Repository.Api;
-using CovidReader.Repository.Covid;
+using CovidReader.Repository.Covid19.MHLW;
 using CovidReader.Repository.Settings;
 using CovidReader.Repository.Settings.Xml;
 using System;
@@ -11,7 +11,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
-using CovidReader.Models.Covid;
+using CovidReader.Models.Covid19.MHLW;
 using System.Linq;
 using CovidReader.Models;
 using CovidReader.Core;

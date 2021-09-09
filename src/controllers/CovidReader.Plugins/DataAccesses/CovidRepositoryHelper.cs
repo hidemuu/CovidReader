@@ -1,6 +1,6 @@
 ﻿using CovidReader.Models;
-using CovidReader.Models.Covid;
-using CovidReader.Repository.Covid;
+using CovidReader.Models.Covid19.MHLW;
+using CovidReader.Repository.Covid19.MHLW;
 using System;
 using System.Collections.Generic;
 using System.Linq;
