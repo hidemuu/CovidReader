@@ -323,9 +323,7 @@ C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\Cov
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Controllers.dll
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Core.dll
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Infrastructure.dll
-C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Log.dll
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Models.dll
-C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Plugins.dll
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Repository.Api.dll
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Repository.dll
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Repository.Google.dll
@@ -335,9 +333,7 @@ C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\Cov
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Infrastructure.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Controllers.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Core.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Log.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Models.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Plugins.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Repository.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Repository.Api.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader\bin\Debug\net5.0\CovidReader.Repository.Google.pdb

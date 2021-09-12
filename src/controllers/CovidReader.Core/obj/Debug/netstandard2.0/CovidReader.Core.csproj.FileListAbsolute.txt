@@ -68,12 +68,8 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin
 C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Core.deps.json
 C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Core.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Core.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Log.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Models.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Plugins.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Repository.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Log.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Plugins.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Models.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\bin\Debug\netstandard2.0\CovidReader.Repository.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Core\obj\Debug\netstandard2.0\CovidReader.Core.csproj.AssemblyReference.cache

@@ -61,7 +61,7 @@ namespace CovidReader.Windows.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CovidReader.Windows;component/views/tableview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CovidReader.Windows;V1.0.0.0;component/views/tableview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\TableView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

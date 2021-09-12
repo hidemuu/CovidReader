@@ -730,8 +730,8 @@
       },
       "CovidReader.Core/1.0.0": {
         "dependencies": {
-          "CovidReader.Log": "1.0.0",
-          "CovidReader.Plugins": "1.0.0"
+          "CovidReader.Repository": "1.0.0",
+          "NLog.Config": "4.7.11"
         },
         "runtime": {
           "CovidReader.Core.dll": {}
@@ -754,14 +754,6 @@
           "CovidReader.Infrastructure.Wpf.dll": {}
         }
       },
-      "CovidReader.Log/1.0.0": {
-        "dependencies": {
-          "NLog.Config": "4.7.11"
-        },
-        "runtime": {
-          "CovidReader.Log.dll": {}
-        }
-      },
       "CovidReader.Models/1.0.0": {
         "dependencies": {
           "CsvHelper": "27.1.1",
@@ -770,14 +762,6 @@
         },
         "runtime": {
           "CovidReader.Models.dll": {}
-        }
-      },
-      "CovidReader.Plugins/1.0.0": {
-        "dependencies": {
-          "CovidReader.Repository": "1.0.0"
-        },
-        "runtime": {
-          "CovidReader.Plugins.dll": {}
         }
       },
       "CovidReader.Repository/1.0.0": {
@@ -1363,17 +1347,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CovidReader.Log/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "CovidReader.Models/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CovidReader.Plugins/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

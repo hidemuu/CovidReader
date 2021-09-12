@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/Hx7pJbuO/0Xt6heCdRoevN6aMC97KTmEYYqD7MyGDiwJJ8r3rEEe210rX4pTWSJ/E4/4qrV+E5E3tSI65ZVgw==",
+  "dgSpecHash": "7/iGrETr1hZDFqOQr55HPRoQX8JKfwuBZpI3bWpVcMyINn6o/v68wvD66jGNpwVYO0hurdUvhD6zbVu3qMJL+A==",
   "success": true,
   "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\api\\CovidReader.Api\\CovidReader.Api.csproj",
   "expectedPackageFiles": [
@@ -35,9 +35,9 @@
     "C:\\Users\\nando\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\nlog\\4.7.10\\nlog.4.7.10.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\nlog.config\\4.7.10\\nlog.config.4.7.10.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\nlog.schema\\4.7.10\\nlog.schema.4.7.10.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\nlog.config\\4.7.11\\nlog.config.4.7.11.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\nlog.schema\\4.7.11\\nlog.schema.4.7.11.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\selenium.webdriver.chromedriver\\92.0.4515.10700\\selenium.webdriver.chromedriver.92.0.4515.10700.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.2\\sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",

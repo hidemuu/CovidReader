@@ -1,9 +1,9 @@
-﻿using CovidReader.Models;
+﻿using CovidReader.Core.Plugins.Accesses;
+using CovidReader.Core.Plugins.Charts;
+using CovidReader.Core.Plugins.Utilities;
+using CovidReader.Models;
 using CovidReader.Models.Api;
 using CovidReader.Models.Covid19.MHLW;
-using CovidReader.Plugins.Charts;
-using CovidReader.Plugins.DataAccesses;
-using CovidReader.Plugins.Utilities;
 using CovidReader.Repository;
 using CovidReader.Repository.Api;
 using CovidReader.Repository.Covid19.MHLW;

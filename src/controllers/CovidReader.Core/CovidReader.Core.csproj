@@ -5,8 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CovidReader.Log\CovidReader.Log.csproj" />
-    <ProjectReference Include="..\CovidReader.Plugins\CovidReader.Plugins.csproj" />
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog.Config" Version="4.7.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\models\CovidReader.Repository\CovidReader.Repository.csproj" />
   </ItemGroup>
 
 </Project>

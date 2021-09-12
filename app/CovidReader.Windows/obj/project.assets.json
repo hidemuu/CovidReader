@@ -960,8 +960,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "CovidReader.Log": "1.0.0",
-          "CovidReader.Plugins": "1.0.0"
+          "CovidReader.Repository": "1.0.0",
+          "NLog.Config": "4.7.11"
         },
         "compile": {
           "bin/placeholder/CovidReader.Core.dll": {}
@@ -995,19 +995,6 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "CovidReader.Log/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "NLog.Config": "4.7.10"
-        },
-        "compile": {
-          "bin/placeholder/CovidReader.Log.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CovidReader.Log.dll": {}
-        }
-      },
       "CovidReader.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1021,19 +1008,6 @@
         },
         "runtime": {
           "bin/placeholder/CovidReader.Models.dll": {}
-        }
-      },
-      "CovidReader.Plugins/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "CovidReader.Repository": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/CovidReader.Plugins.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CovidReader.Plugins.dll": {}
         }
       },
       "CovidReader.Repository/1.0.0": {
@@ -3087,20 +3061,10 @@
       "path": "../../src/views/CovidReader.Infrastructure.Wpf/CovidReader.Infrastructure.Wpf.csproj",
       "msbuildProject": "../../src/views/CovidReader.Infrastructure.Wpf/CovidReader.Infrastructure.Wpf.csproj"
     },
-    "CovidReader.Log/1.0.0": {
-      "type": "project",
-      "path": "../../src/controllers/CovidReader.Log/CovidReader.Log.csproj",
-      "msbuildProject": "../../src/controllers/CovidReader.Log/CovidReader.Log.csproj"
-    },
     "CovidReader.Models/1.0.0": {
       "type": "project",
       "path": "../../src/models/CovidReader.Models/CovidReader.Models.csproj",
       "msbuildProject": "../../src/models/CovidReader.Models/CovidReader.Models.csproj"
-    },
-    "CovidReader.Plugins/1.0.0": {
-      "type": "project",
-      "path": "../../src/controllers/CovidReader.Plugins/CovidReader.Plugins.csproj",
-      "msbuildProject": "../../src/controllers/CovidReader.Plugins/CovidReader.Plugins.csproj"
     },
     "CovidReader.Repository/1.0.0": {
       "type": "project",

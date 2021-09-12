@@ -1,5 +1,4 @@
 import React from "react";
-import {Button} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -9,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import MaterialTable from 'material-table';
+
 
 export default class VirusTables extends React.Component {
 
@@ -129,7 +129,11 @@ export default class VirusTables extends React.Component {
                 //showTitle: false,
                 paging: false,
                 maxBodyHeight: 700,
-                headerStyle: { position: 'sticky', top: 0 },
+                headerStyle: { 
+                  position: 'sticky', 
+                  top: 0,
+                  minWidth: 150,
+                 },
               }}
             />
             <p></p>

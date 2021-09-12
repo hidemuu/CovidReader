@@ -47,7 +47,7 @@
     - infectedNum
     - deceasedNum
 
-* 全国医療機関の医療提供体制の状況 (https://opendata.corona.go.jp/api/covid19DailySurvey) 
+* 全国医療機関の医療提供体制の状況 (https://opendata.corona.go.jp/api/covid19DailySurvey) -> covid19DailySurvey.json
   - facilityId
   - facilityName
   - zipCode
@@ -158,6 +158,7 @@
   % npm install --save material-table
   $ npm install react-hook-form
   $ npm install elemental --save
+  $ npm install node-sass
 
 - webpackコマンド
   $ webpack --mode development

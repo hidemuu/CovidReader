@@ -9,9 +9,9 @@
     ".NETStandard,Version=v2.0/": {
       "CovidReader.Core/1.0.0": {
         "dependencies": {
-          "CovidReader.Log": "1.0.0",
-          "CovidReader.Plugins": "1.0.0",
-          "NETStandard.Library": "2.0.3"
+          "CovidReader.Repository": "1.0.0",
+          "NETStandard.Library": "2.0.3",
+          "NLog.Config": "4.7.11"
         },
         "runtime": {
           "CovidReader.Core.dll": {}
@@ -228,21 +228,21 @@
           }
         }
       },
-      "NLog/4.7.10": {
+      "NLog/4.7.11": {
         "runtime": {
           "lib/netstandard2.0/NLog.dll": {
             "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.7.10.13013"
+            "fileVersion": "4.7.11.13229"
           }
         }
       },
-      "NLog.Config/4.7.10": {
+      "NLog.Config/4.7.11": {
         "dependencies": {
-          "NLog": "4.7.10",
-          "NLog.Schema": "4.7.10"
+          "NLog": "4.7.11",
+          "NLog.Schema": "4.7.11"
         }
       },
-      "NLog.Schema/4.7.10": {},
+      "NLog.Schema/4.7.11": {},
       "System.Buffers/4.5.1": {
         "runtime": {
           "lib/netstandard2.0/System.Buffers.dll": {
@@ -332,14 +332,6 @@
           }
         }
       },
-      "CovidReader.Log/1.0.0": {
-        "dependencies": {
-          "NLog.Config": "4.7.10"
-        },
-        "runtime": {
-          "CovidReader.Log.dll": {}
-        }
-      },
       "CovidReader.Models/1.0.0": {
         "dependencies": {
           "CsvHelper": "27.1.1",
@@ -348,14 +340,6 @@
         },
         "runtime": {
           "CovidReader.Models.dll": {}
-        }
-      },
-      "CovidReader.Plugins/1.0.0": {
-        "dependencies": {
-          "CovidReader.Repository": "1.0.0"
-        },
-        "runtime": {
-          "CovidReader.Plugins.dll": {}
         }
       },
       "CovidReader.Repository/1.0.0": {
@@ -523,26 +507,26 @@
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
-    "NLog/4.7.10": {
+    "NLog/4.7.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rcegW7kYOCjl7wX0SzsqpPBqnJ51JKi1WkYb6QBVX0Wc5IgH19Pv4t/co+T0s06OS0Ne44xgkY/mHg0PdrmJow==",
-      "path": "nlog/4.7.10",
-      "hashPath": "nlog.4.7.10.nupkg.sha512"
+      "sha512": "sha512-A7EpoOjWesV5BPx1cOiBndazZq1VGdagIs6oK8ttcRDl5adCMtHiTqnsD5yYaOrMxOQeCjHBf/w3nKzCmhGbgw==",
+      "path": "nlog/4.7.11",
+      "hashPath": "nlog.4.7.11.nupkg.sha512"
     },
-    "NLog.Config/4.7.10": {
+    "NLog.Config/4.7.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/XohRf2gTEUzOF64WI/slTGbFekGT9XmP4Idx9LdcMSMDM+ot3dwtysnzukvOjysPJuIReCTBEXJ6JdCXnUx2A==",
-      "path": "nlog.config/4.7.10",
-      "hashPath": "nlog.config.4.7.10.nupkg.sha512"
+      "sha512": "sha512-p9N8dsMVdyXNN+KU2BsBFZ1aR+usL8JWPKe1YuXlKjPEQsltYO43tajlkX2Kilai+PAE1zw9UC8AaBq5r78x3A==",
+      "path": "nlog.config/4.7.11",
+      "hashPath": "nlog.config.4.7.11.nupkg.sha512"
     },
-    "NLog.Schema/4.7.10": {
+    "NLog.Schema/4.7.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SgsNWHO8rA/cVMMjuFNnuun0VlR+m79vuh5trIat43qtIw882vxCIJvgLNef7LtrePrF7r9TXIz4XOy5xjZ6tw==",
-      "path": "nlog.schema/4.7.10",
-      "hashPath": "nlog.schema.4.7.10.nupkg.sha512"
+      "sha512": "sha512-9mmj/hApaSmX9jP2PxLyqywesdEI1nIT2TVWgsdoqb1yIpxvUM+1b6aMD2zJkpGN8y71jmVO2d/FKTwQXIfpSw==",
+      "path": "nlog.schema/4.7.11",
+      "hashPath": "nlog.schema.4.7.11.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",
@@ -607,17 +591,7 @@
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
-    "CovidReader.Log/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "CovidReader.Models/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CovidReader.Plugins/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

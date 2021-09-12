@@ -12,6 +12,8 @@ import Settings from "./pages/Settings";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import DashboardSummary from "./pages/DashboardSummary";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 export default class App extends Component {
   static displayName = App.name;
@@ -29,6 +31,8 @@ export default class App extends Component {
         <Route path="/register" component={Register}></Route>
         <Route path="/dashboard" component={Dashboard}></Route>
         <Route path="/dashboardsummary" component={DashboardSummary}></Route>
+        <Route path="/signin" component={SignIn}></Route>
+        <Route path="/signup" component={SignUp}></Route>
       </Layout>
     );
   }
