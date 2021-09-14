@@ -18,6 +18,10 @@ namespace CovidReader.Repository.Api.Sql
         }
 
         public DbSet<Virus> Viruses { get; set; }
+        public DbSet<Infection> Infections { get; set; }
+        public DbSet<ViralTest> ViralTests { get; set; }
+        public DbSet<InfectionTotal> InfectionTotals { get; set; }
+        public DbSet<ViralTestTotal> ViralTestTotals { get; set; }
         public DbSet<ChartItem> ChartItems { get; set; }
         public DbSet<ChartConfig> ChartConfigs { get; set; }
 

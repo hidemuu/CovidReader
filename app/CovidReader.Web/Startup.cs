@@ -44,6 +44,10 @@ namespace CovidReader.Web
             var db = new ApiDbContext(new DbContextOptionsBuilder<ApiDbContext>()
                 .UseSqlite("Data Source=" + Urls.SqlLocalConnectionString).Options);
             services.AddScoped<IVirusRepository, SqlVirusRepository>(_ => new SqlVirusRepository(db));
+            services.AddScoped<IInfectionRepository, SqlInfectionRepository>(_ => new SqlInfectionRepository(db));
+            services.AddScoped<IViralTestRepository, SqlViralTestRepository>(_ => new SqlViralTestRepository(db));
+            services.AddScoped<IInfectionTotalRepository, SqlInfectionTotalRepository>(_ => new SqlInfectionTotalRepository(db));
+            services.AddScoped<IViralTestTotalRepository, SqlViralTestTotalRepository>(_ => new SqlViralTestTotalRepository(db));
             services.AddScoped<IChartItemRepository, SqlChartItemRepository>(_ => new SqlChartItemRepository(db));
             services.AddScoped<IChartConfigRepository, SqlChartConfigRepository>(_ => new SqlChartConfigRepository(db));
             services.AddMvc();

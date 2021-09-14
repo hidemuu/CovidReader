@@ -12,4 +12,8 @@
     <ProjectReference Include="..\CovidReader.Repository\CovidReader.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="InMemory\" />
+  </ItemGroup>
+
 </Project>

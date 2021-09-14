@@ -17,9 +17,10 @@ namespace CovidReader.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok("Hello React!!!!"); //HTTPステータスコード200を返す
+            await Program.WebController.UpdateAsync();
+            return Ok("Updated!!!!"); //HTTPステータスコード200を返す
         }
     }
 }

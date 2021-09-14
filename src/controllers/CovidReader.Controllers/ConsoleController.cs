@@ -52,24 +52,24 @@ namespace CovidReader.Controllers
 
         public async Task GetAsync()
         {
-            var items = await _apiService.GetCovidAsync("death");
+            await Task.Run(() => { });
         }
 
         public async Task ImportAsync()
         {
-            await _apiService.ImportCovidAsync(CovidRepositoryUseCase.UseCsv());
+            await _apiService.ImportAsync(CovidRepositoryUseCase.UseCsv());
         }
 
         public async Task UpdateAsync()
         {
             await ImportAsync();
-            await _apiService.PostCovidToApiAsync();
+            await _apiService.CovidToApiAsync();
             await GetChartItemAsync();
         }
 
         public async Task GetChartItemAsync()
         {
-            await _apiService.PostVirusToChartItemAsync();
+            await _apiService.ToChartItemAsync();
         }
 
         public async Task AutoRunAsync()
@@ -88,7 +88,7 @@ namespace CovidReader.Controllers
 
         public async Task<bool> ViewChartAsync()
         {
-            await _apiService.ExportChartItemAsync(ApiRepositoryUseCase.UseJson(@"dist"));
+            await _apiService.ExportAsync(ApiRepositoryUseCase.UseJson(@"dist"));
             //データをdist / サーバにコピー
             //File.Copy(
             //    Urls.RootPath + @"assets\api\chart_item.json",

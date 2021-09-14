@@ -35,23 +35,15 @@ namespace CovidReader.Controllers
             return _covidRepository;
         }
 
-        public async Task ImportAsync()
-        {
-            await _apiService.ImportCovidAsync(CovidRepositoryUseCase.UseCsv());
-        }
-
+        
         public async Task UpdateAsync()
         {
-            await ImportAsync();
-            await _apiService.PostCovidToApiAsync();
-            await GetChartItemAsync();
+            await _apiService.ImportAsync(CovidRepositoryUseCase.UseCsv());
+            await _apiService.CovidToApiAsync();
+            await _apiService.ToChartItemAsync();
         }
 
-        public async Task GetChartItemAsync()
-        {
-            await _apiService.PostVirusToChartItemAsync();
-        }
-
+        
         public async Task AutoRunAsync()
         {
             await Task.Run(() => { });

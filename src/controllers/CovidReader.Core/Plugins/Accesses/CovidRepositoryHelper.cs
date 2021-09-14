@@ -1,4 +1,5 @@
 ﻿using CovidReader.Models;
+using CovidReader.Models.Covid19;
 using CovidReader.Models.Covid19.MHLW;
 using CovidReader.Repository.Covid19.MHLW;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Core.Plugins.Accesses
 {
-    public class CovidRepositoryHelper
+    public class CovidRepositoryHelper : IRepositoryHelper<ICovidRepository>
     {
         private ICovidRepository _repository;
 
@@ -22,60 +23,7 @@ namespace CovidReader.Core.Plugins.Accesses
         {
             return _repository;
         }
-        public async Task<IEnumerable<T>> GetAsync<T>() where T : CovidDbObject
-        {
-            var result = "";
-            IEnumerable<T> items;
-            if (typeof(T) == typeof(Death))
-            {
-                items = (IEnumerable<T>)await _repository.Deathes.GetAsync();
-                result = Death.GetHeader();
-            }
-            else if(typeof(T) == typeof(Hospitalization))
-            {
-                items = (IEnumerable<T>)await _repository.Hospitalizations.GetAsync(); 
-                result = Hospitalization.GetHeader();
-            }
-            else if (typeof(T) == typeof(Positive))
-            {
-                items = (IEnumerable<T>)await _repository.Positives.GetAsync(); 
-                result = Positive.GetHeader();
-            }
-            else if (typeof(T) == typeof(Recovery))
-            {
-                items = (IEnumerable<T>)await _repository.Recoveries.GetAsync();
-                result = Recovery.GetHeader();
-            }
-            else if (typeof(T) == typeof(Test))
-            {
-                items = (IEnumerable<T>)await _repository.Tests.GetAsync();
-                result = Test.GetHeader();
-            }
-            else if (typeof(T) == typeof(TestDetail))
-            {
-                items = (IEnumerable<T>)await _repository.TestDetails.GetAsync();
-                result = Test.GetHeader();
-            }
-            else if (typeof(T) == typeof(CovidLineItem))
-            {
-                items = (IEnumerable<T>)await _repository.CovidLineItems.GetAsync();
-                result = Test.GetHeader();
-            }
-            else
-            {
-                Console.WriteLine("登録されていないパラメータです");
-                return null;
-            }
-            
-            result += Formats.NewLine;
-            var query = items.OrderByDescending(x => DateTime.Parse(x.Date));
-            foreach (var item in query)
-            {
-                result += item.ToString() + Formats.NewLine;
-            }
-            Console.WriteLine(result);
-            return items;
-        }
+        
 
         public async Task ImportAsync(ICovidRepository imports)
         {
@@ -150,6 +98,63 @@ namespace CovidReader.Core.Plugins.Accesses
             await exports.Tests.PostAsync(await _repository.Tests.GetAsync());
             await exports.TestDetails.PostAsync(await _repository.TestDetails.GetAsync());
         }
+
+        #region no-use
+        private async Task<IEnumerable<T>> GetAsync<T>() where T : CovidDbObject
+        {
+            var result = "";
+            IEnumerable<T> items;
+            if (typeof(T) == typeof(Death))
+            {
+                items = (IEnumerable<T>)await _repository.Deathes.GetAsync();
+                result = Death.GetHeader();
+            }
+            else if (typeof(T) == typeof(Hospitalization))
+            {
+                items = (IEnumerable<T>)await _repository.Hospitalizations.GetAsync();
+                result = Hospitalization.GetHeader();
+            }
+            else if (typeof(T) == typeof(Positive))
+            {
+                items = (IEnumerable<T>)await _repository.Positives.GetAsync();
+                result = Positive.GetHeader();
+            }
+            else if (typeof(T) == typeof(Recovery))
+            {
+                items = (IEnumerable<T>)await _repository.Recoveries.GetAsync();
+                result = Recovery.GetHeader();
+            }
+            else if (typeof(T) == typeof(Test))
+            {
+                items = (IEnumerable<T>)await _repository.Tests.GetAsync();
+                result = Test.GetHeader();
+            }
+            else if (typeof(T) == typeof(TestDetail))
+            {
+                items = (IEnumerable<T>)await _repository.TestDetails.GetAsync();
+                result = Test.GetHeader();
+            }
+            else if (typeof(T) == typeof(CovidLineItem))
+            {
+                items = (IEnumerable<T>)await _repository.CovidLineItems.GetAsync();
+                result = Test.GetHeader();
+            }
+            else
+            {
+                Console.WriteLine("登録されていないパラメータです");
+                return null;
+            }
+
+            result += Formats.NewLine;
+            var query = items.OrderByDescending(x => DateTime.Parse(x.Date));
+            foreach (var item in query)
+            {
+                result += item.ToString() + Formats.NewLine;
+            }
+            Console.WriteLine(result);
+            return items;
+        }
+        #endregion
 
     }
 }

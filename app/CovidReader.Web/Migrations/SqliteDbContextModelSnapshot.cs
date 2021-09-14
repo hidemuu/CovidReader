@@ -29,6 +29,9 @@ namespace CovidReader.Web.Migrations
                     b.Property<int>("BorderWidth")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("Category")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("ChartType")
                         .HasColumnType("TEXT");
 
@@ -59,6 +62,89 @@ namespace CovidReader.Web.Migrations
                     b.ToTable("ChartItems");
                 });
 
+            modelBuilder.Entity("CovidReader.Models.Api.Infection", b =>
+                {
+                    b.Property<string>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CityName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CountryName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("CureNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("DeathNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("NumberType")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PatientNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("PrefName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RecoveryNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SevereNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Date");
+
+                    b.ToTable("Infections");
+                });
+
+            modelBuilder.Entity("CovidReader.Models.Api.InfectionTotal", b =>
+                {
+                    b.Property<string>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CityName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CountryName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("CureNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("DeathNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PatientNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("PrefName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RecoveryNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SevereNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Date");
+
+                    b.ToTable("InfectionTotals");
+                });
+
             modelBuilder.Entity("CovidReader.Models.Api.LineItem", b =>
                 {
                     b.Property<string>("Date")
@@ -70,6 +156,74 @@ namespace CovidReader.Web.Migrations
                     b.HasKey("Date");
 
                     b.ToTable("LineItems");
+                });
+
+            modelBuilder.Entity("CovidReader.Models.Api.ViralTest", b =>
+                {
+                    b.Property<string>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("CareCenterTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CivilCenterTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CollegeTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CountryName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MedicalTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("NationalTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("QuarantineTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Date");
+
+                    b.ToTable("ViralTests");
+                });
+
+            modelBuilder.Entity("CovidReader.Models.Api.ViralTestTotal", b =>
+                {
+                    b.Property<string>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("CareCenterTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CivilCenterTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CollegeTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CountryName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MedicalTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("NationalTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("QuarantineTestNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Date");
+
+                    b.ToTable("ViralTestTotals");
                 });
 
             modelBuilder.Entity("CovidReader.Models.Api.Virus", b =>

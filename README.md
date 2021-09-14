@@ -13,6 +13,8 @@
 * MaterialDesignUI (https://material-ui.com/)
 * Chart.js (https://qiita.com/HRKN/items/2d11897bc2652efdc7da)
 * locationMind (https://locationmind.com/products/xpop/)
+* React Hook Form (https://react-hook-form.com/jp/)
+* Natural Earth (https://www.naturalearthdata.com/)
 
 # assets
 
@@ -159,6 +161,12 @@
   $ npm install react-hook-form
   $ npm install elemental --save
   $ npm install node-sass
+
+  $ npm i -g topojson
+  $ npm install -g koko
+
+- マップサーバー
+  https://www.gisinternals.com/release.php
 
 - webpackコマンド
   $ webpack --mode development

@@ -7,6 +7,6 @@ namespace CovidReader.Repository.Covid19.MHLW.InMemory
 {
     public class InMemoryHospitalizationRepository : InMemoryCovidRepositoryBase<Hospitalization>, IHospitalizationRepository
     {
-
+        public InMemoryHospitalizationRepository() : base() { }
     }
 }

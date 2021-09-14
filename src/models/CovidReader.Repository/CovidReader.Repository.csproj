@@ -19,10 +19,6 @@
     </Compile>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Covid19\CS\" />
-  </ItemGroup>
-
   
 
 </Project>

@@ -1,8 +1,8 @@
 ﻿using CovidReader.Core.Plugins.Accesses;
-using CovidReader.Core.Plugins.Charts;
 using CovidReader.Core.Plugins.Utilities;
 using CovidReader.Models;
 using CovidReader.Models.Api;
+using CovidReader.Models.Covid19;
 using CovidReader.Models.Covid19.MHLW;
 using CovidReader.Repository;
 using CovidReader.Repository.Api;
@@ -19,59 +19,25 @@ namespace CovidReader.Core
 
     public class ApiService
     {
-        private ApiRepositoryHelper _apihelper;
-        private CovidRepositoryHelper _covidhelper;
-        private IApiRepository _apiRepository;
-        private ICovidRepository _covidRepository;
+        private ApiRepositoryHelper _api;
+        private CovidRepositoryHelper _covid;
 
         public ApiService(IApiRepository repository, ICovidRepository covids)
         {
-            _apiRepository = repository;
-            _covidRepository = covids;
-            _apihelper = new ApiRepositoryHelper(repository);
-            _covidhelper = new CovidRepositoryHelper(covids);
+            _api = new ApiRepositoryHelper(repository);
+            _covid = new CovidRepositoryHelper(covids);
         }
 
-        public async Task<IEnumerable<DbObject>> GetApiAsync(string table)
-        {
-            switch (table)
-            {
-                case "virus": return await _apihelper.GetAsync<Virus>();
-                case "chartitem": return await _apihelper.GetAsync<ChartItem>();
-                case "chartconfig": return await _apihelper.GetAsync<ChartConfig>();
-                default: return await _apihelper.GetAsync<Virus>();
-            }
-        }
-
-        public async Task<IEnumerable<CovidDbObject>> GetCovidAsync(string table)
-        {
-            switch (table)
-            {
-                case "death": return await _covidhelper.GetAsync<Death>();
-                case "hospitalization": return await _covidhelper.GetAsync<Hospitalization>();
-                default: return await _covidhelper.GetAsync<Death>();
-            }
-        }
-
+        
         /// <summary>
         /// 外部データをリポジトリにインポート
         /// </summary>
         /// <param name="repository">インポート元外部データ</param>
         /// <returns></returns>
-        public async Task ImportCovidAsync(ICovidRepository repository)
+        public async Task ImportAsync(ICovidRepository repository)
         {
             Console.WriteLine("Importing...");
-            await _covidhelper.ImportAsync(repository);
-        }
-        /// <summary>
-        /// リポジトリデータを外部にエクスポート
-        /// </summary>
-        /// <param name="repository">エクスポート先外部データ</param>
-        /// <returns></returns>
-        public async Task ExportApiAsync(IApiRepository repository)
-        {
-            Console.WriteLine("Exporting...");
-            await _apihelper.ExportAsync(repository);
+            await _covid.ImportAsync(repository);
         }
 
         /// <summary>
@@ -79,98 +45,203 @@ namespace CovidReader.Core
         /// </summary>
         /// <param name="repository">エクスポート先外部データ</param>
         /// <returns></returns>
-        public async Task ExportCovidAsync(ICovidRepository repository)
+        public async Task ExportAsync(ICovidRepository repository)
         {
             Console.WriteLine("Exporting...");
-            await _covidhelper.ExportAsync(repository);
+            await _covid.ExportAsync(repository);
+        }
+
+        /// <summary>
+        /// リポジトリデータを外部にエクスポート
+        /// </summary>
+        /// <param name="repository">エクスポート先外部データ</param>
+        /// <returns></returns>
+        public async Task ExportAsync(IApiRepository repository)
+        {
+            Console.WriteLine("Exporting...");
+            await _api.ExportAsync(repository);
+        }
+
+        
+        /// <summary>
+        /// CovidデータベースデータをApiデータベーステーブルに格納
+        /// </summary>
+        /// <returns></returns>
+        public async Task CovidToApiAsync()
+        {
+            //キーデータ取得
+            var lineItems = (await _covid.GetRepository().CovidLineItems.GetAsync()).OrderBy(x => DateTime.Parse(x.Date));
+            var dates = new List<string>();
+            foreach (var item in lineItems)
+            {
+                dates.Add(item.Date);
+            }
+
+            var count = 0;
+
+            //感染データ取得
+            var deathNumbers = new int[dates.Count];
+            var cureNumbers = new int[dates.Count];
+            var patientNumbers = new int[dates.Count];
+            var recoveryNumbers = new int[dates.Count];
+            var severeNumbers = new int[dates.Count];
+            var testNumbers = new int[dates.Count];
+            count = 0;
+            foreach (var date in dates)
+            {
+                deathNumbers[count] = CovidDbObjectToInt((await _covid.GetRepository().Deathes.GetAsync()).FirstOrDefault(x => x.Date == date));
+                cureNumbers[count] = CovidDbObjectToInt((await _covid.GetRepository().Hospitalizations.GetAsync()).FirstOrDefault(x => x.Date == date));
+                patientNumbers[count] = CovidDbObjectToInt((await _covid.GetRepository().Positives.GetAsync()).FirstOrDefault(x => x.Date == date));
+                recoveryNumbers[count] = CovidDbObjectToInt((await _covid.GetRepository().Recoveries.GetAsync()).FirstOrDefault(x => x.Date == date));
+                severeNumbers[count] = CovidDbObjectToInt((await _covid.GetRepository().Severes.GetAsync()).FirstOrDefault(x => x.Date == date));
+                testNumbers[count] = CovidDbObjectToInt((await _covid.GetRepository().Tests.GetAsync()).FirstOrDefault(x => x.Date == date));
+                count++;
+            }
+            deathNumbers = (int[])DataConverter.SumToUnit(deathNumbers);
+            recoveryNumbers = (int[])DataConverter.SumToUnit(recoveryNumbers);
+
+            //感染累計データ取得
+            var deathSums = (int[])DataConverter.UnitToSum(deathNumbers);
+            var cureSums = (int[])DataConverter.UnitToSum(cureNumbers);
+            var patientSums = (int[])DataConverter.UnitToSum(patientNumbers);
+            var recoverySums = (int[])DataConverter.UnitToSum(recoveryNumbers);
+            var severeSums = (int[])DataConverter.UnitToSum(severeNumbers);
+            var testSums = (int[])DataConverter.UnitToSum(testNumbers);
+
+            //検査詳細データ取得
+            var nationalTestNumbers = new int[dates.Count];
+            var quarantineTestNumbers = new int[dates.Count];
+            var careCenterTestNumbers = new int[dates.Count];
+            var civilCenterTestNumbers = new int[dates.Count];
+            var collegeTestNumbers = new int[dates.Count];
+            var medicalTestNumbers = new int[dates.Count];
+            count = 0;
+            foreach (var date in dates)
+            {
+                var testDetail = (await _covid.GetRepository().TestDetails.GetAsync()).FirstOrDefault(x => x.Date == date);
+
+                if (testDetail != null)
+                {
+                    nationalTestNumbers[count] = DataConverter.StringToInt(testDetail.Number);
+                    quarantineTestNumbers[count] = DataConverter.StringToInt(testDetail.QuarantineNumber);
+                    careCenterTestNumbers[count] = DataConverter.StringToInt(testDetail.CareCenterNumber);
+                    civilCenterTestNumbers[count] = DataConverter.StringToInt(testDetail.CivilCenterNumber);
+                    collegeTestNumbers[count] = DataConverter.StringToInt(testDetail.CollegeNumber);
+                    medicalTestNumbers[count] = DataConverter.StringToInt(testDetail.MedicalNumber);
+                }
+                count++;
+            }
+
+            //検査詳細累計データ取得
+            var nationalTestSums = (int[])DataConverter.UnitToSum(nationalTestNumbers);
+            var quarantineTestSums = (int[])DataConverter.UnitToSum(quarantineTestNumbers);
+            var careCenterTestSums = (int[])DataConverter.UnitToSum(careCenterTestNumbers);
+            var civilCenterTestSums = (int[])DataConverter.UnitToSum(civilCenterTestNumbers);
+            var collegeTestSums = (int[])DataConverter.UnitToSum(collegeTestNumbers);
+            var medicalTestSums = (int[])DataConverter.UnitToSum(medicalTestNumbers);
+
+            //感染データ登録
+            Console.WriteLine("Covid->Api...");
+            
+
+            //List<Virus> viruses = new List<Virus>();
+            //foreach (var date in dates)
+            //{
+            //    viruses.Add(new Virus
+            //    {
+            //        Id = count,
+            //        Date = date,
+            //        Name = "",
+            //        DeathNumber = deathNumber,
+            //        HospitalizationNumber = cureNumber,
+            //        PositiveNumber = patientNumber,
+            //        RecoveryNumber = recoveryNumber,
+            //        SevereNumber = severeNumber,
+            //        TestNumber = testNumber,
+            //        NationalTestNumber = nationalTestNumber,
+            //        QuarantineTestNumber = quarantineTestNumber,
+            //        CareCenterTestNumber = careCenterTestNumber,
+            //        CivilCenterTestNumber = civilCenterTestNumber,
+            //        CollegeTestNumber = collegeTestNumber,
+            //        MedicalTestNumber = medicalTestNumber,
+            //    });
+            //    count++;
+            //}
+            //await _api.GetRepository().Viruses.PostAsync(viruses);
+
+            var infections = new List<Infection>();
+            var vitalTests = new List<ViralTest>();
+            var infectionSums = new List<InfectionTotal>();
+            var vitalTestSums = new List<ViralTestTotal>();
+            count = 0;
+            foreach (var date in dates)
+            {
+                infections.Add(new Infection {
+                    Id = count,
+                    Date = date,
+                    CountryName = "Japan",
+                    DeathNumber = deathNumbers[count],
+                    CureNumber = cureNumbers[count],
+                    PatientNumber = patientNumbers[count],
+                    RecoveryNumber = recoveryNumbers[count],
+                    SevereNumber = severeNumbers[count],
+                    TestNumber = testNumbers[count],
+                });
+
+                vitalTests.Add(new ViralTest {
+                    Id = count,
+                    Date = date,
+                    CountryName = "Japan",
+                    NationalTestNumber = nationalTestNumbers[count],
+                    QuarantineTestNumber = quarantineTestNumbers[count],
+                    CareCenterTestNumber = careCenterTestNumbers[count],
+                    CivilCenterTestNumber = civilCenterTestNumbers[count],
+                    CollegeTestNumber = collegeTestNumbers[count],
+                    MedicalTestNumber = medicalTestNumbers[count],
+                });
+
+                infectionSums.Add(new InfectionTotal
+                {
+                    Id = count,
+                    Date = date,
+                    CountryName = "Japan",
+                    DeathNumber = deathSums[count],
+                    CureNumber = cureSums[count],
+                    PatientNumber = patientSums[count],
+                    RecoveryNumber = recoverySums[count],
+                    SevereNumber = severeSums[count],
+                    TestNumber = testSums[count],
+                });
+
+                vitalTestSums.Add(new ViralTestTotal
+                {
+                    Id = count,
+                    Date = date,
+                    CountryName = "Japan",
+                    NationalTestNumber = nationalTestSums[count],
+                    QuarantineTestNumber = quarantineTestSums[count],
+                    CareCenterTestNumber = careCenterTestSums[count],
+                    CivilCenterTestNumber = civilCenterTestSums[count],
+                    CollegeTestNumber = collegeTestSums[count],
+                    MedicalTestNumber = medicalTestSums[count],
+                });
+
+                count++;
+            }
+            await _api.GetRepository().Infections.PostAsync(infections);
+            await _api.GetRepository().ViralTests.PostAsync(vitalTests);
+            await _api.GetRepository().InfectionTotals.PostAsync(infectionSums);
+            await _api.GetRepository().ViralTestTotals.PostAsync(vitalTestSums);
+
         }
 
         /// <summary>
         /// VirusテーブルデータをChartItemテーブルに変換して格納 / ChartConfigテーブルデータを更新
         /// </summary>
         /// <returns></returns>
-        public async Task PostVirusToChartItemAsync()
+        public async Task ToChartItemAsync()
         {
-
-            var chartConfigs = ChartItemBuilder.GetChartConfigs();
-            var viruses = await _apihelper.GetAsync<Virus>();
-            var chartItems = ChartItemBuilder.GetChartItems(viruses);
-            
-            Console.WriteLine("Exporting...");
-            if ((await _apiRepository.ChartConfigs.GetAsync()).Count() == 0)
-            {
-                await _apihelper.PostAsync(_apiRepository, chartConfigs);
-            }
-            await _apihelper.PostAsync(_apiRepository, chartItems);
-            
-        }
-
-        /// <summary>
-        /// ChartItem / ChartConfigを指定外部データにエクスポート
-        /// </summary>
-        /// <param name="repository">出力先データ</param>
-        /// <returns></returns>
-        public async Task ExportChartItemAsync(IApiRepository repository)
-        {
-
-            Console.WriteLine("Exporting...");
-            await _apihelper.PostAsync(repository, await _apiRepository.ChartItems.GetAsync());
-            await _apihelper.PostAsync(repository, await _apiRepository.ChartConfigs.GetAsync());
-        }
-
-        /// <summary>
-        /// CovidデータベースデータをApiデータベースのVirusテーブルに格納
-        /// </summary>
-        /// <returns></returns>
-        public async Task PostCovidToApiAsync()
-        {
-            List<Virus> items = new List<Virus>();
-            var lineItems = await _covidhelper.GetAsync<CovidLineItem>();
-            
-            var count = 0;
-            foreach (var item in lineItems)
-            {
-
-                var testDetail = (await _covidhelper.GetAsync<TestDetail>()).FirstOrDefault(x => x.Date == item.Date);
-                var nationalTestNumber = 0;
-                var quarantineTestNumber = 0;
-                var careCenterTestNumber = 0;
-                var civilCenterTestNumber = 0;
-                var collegeTestNumber = 0;
-                var medicalTestNumber = 0;
-                if(testDetail != null)
-                {
-                    nationalTestNumber = DataConverter.StringToInt(testDetail.Number);
-                    quarantineTestNumber = DataConverter.StringToInt(testDetail.QuarantineNumber);
-                    careCenterTestNumber = DataConverter.StringToInt(testDetail.CareCenterNumber);
-                    civilCenterTestNumber = DataConverter.StringToInt(testDetail.CivilCenterNumber);
-                    collegeTestNumber = DataConverter.StringToInt(testDetail.CollegeNumber);
-                    medicalTestNumber = DataConverter.StringToInt(testDetail.MedicalNumber);
-                }
-
-                items.Add(new Virus
-                {
-                    Id = count,
-                    Date = item.Date,
-                    Name = "",
-                    DeathNumber = CovidDbObjectToInt((await _covidhelper.GetAsync<Death>()).FirstOrDefault(x => x.Date == item.Date)),
-                    HospitalizationNumber = CovidDbObjectToInt((await _covidhelper.GetAsync<Hospitalization>()).FirstOrDefault(x => x.Date == item.Date)),
-                    PositiveNumber = CovidDbObjectToInt((await _covidhelper.GetAsync<Positive>()).FirstOrDefault(x => x.Date == item.Date)),
-                    RecoveryNumber = CovidDbObjectToInt((await _covidhelper.GetAsync<Recovery>()).FirstOrDefault(x => x.Date == item.Date)),
-                    TestNumber = CovidDbObjectToInt((await _covidhelper.GetAsync<Test>()).FirstOrDefault(x => x.Date == item.Date)),
-                    NationalTestNumber = nationalTestNumber,
-                    QuarantineTestNumber = quarantineTestNumber,
-                    CareCenterTestNumber = careCenterTestNumber,
-                    CivilCenterTestNumber = civilCenterTestNumber,
-                    CollegeTestNumber = collegeTestNumber,
-                    MedicalTestNumber = medicalTestNumber,
-                });
-                count++;
-            }
-
-            Console.WriteLine("Posting[Covid->Api-Viruses]...");
-            //var data = ApiRepositoryUseCase.UseData(key);
-            await _apihelper.PostAsync(_apiRepository, items);
+            await _api.ToChartItemAsync();
         }
 
         private static int CovidDbObjectToInt(CovidDbObject obj)

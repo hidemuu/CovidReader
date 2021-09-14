@@ -9,6 +9,10 @@ namespace CovidReader.Models.Api
 {
     public class ViralTest : DbObject
     {
+        [Name("country_name")]
+        [JsonProperty("country_name")]
+        [DisplayName("国名")]
+        public string CountryName { get; set; } = "";
         [Name("national_test_number")]
         [JsonProperty("national_test_number")]
         [DisplayName("国立感染症研究所 検査件数")]

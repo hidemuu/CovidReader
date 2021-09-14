@@ -1,4 +1,5 @@
-﻿using CovidReader.Models.Covid19.MHLW;
+﻿using CovidReader.Models.Covid19;
+using CovidReader.Models.Covid19.MHLW;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ namespace CovidReader.Repository.Covid19.MHLW.InMemory
 {
     public class InMemoryCovidRepositoryBase<T> where T : CovidDbObject
     {
-        private IEnumerable<T> _items;
+        private IList<T> _items;
 
         public InMemoryCovidRepositoryBase()
         {
-            _items = new List<T>();
+            if (_items == null) _items = new List<T>();
         }
 
         public async Task<IEnumerable<T>> GetAsync()
@@ -28,16 +29,17 @@ namespace CovidReader.Repository.Covid19.MHLW.InMemory
 
         public async Task PostAsync(T item)
         {
-            await Task.Run(() => _items.ToList().Add(item));
+            await Task.Run(() => _items.Add(item));
         }
 
         public async Task PostAsync(IEnumerable<T> items) 
         {
+            
             await Task.Run(() => 
             {
                 foreach(var item in items)
                 {
-                    _items.ToList().Add(item);
+                    _items.Add(item);
                 }  
             });
         }

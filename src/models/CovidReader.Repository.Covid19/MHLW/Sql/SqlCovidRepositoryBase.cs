@@ -1,4 +1,5 @@
-﻿using CovidReader.Models.Covid19.MHLW;
+﻿using CovidReader.Models.Covid19;
+using CovidReader.Models.Covid19.MHLW;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

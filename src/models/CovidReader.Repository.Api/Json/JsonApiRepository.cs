@@ -18,6 +18,18 @@ namespace CovidReader.Repository.Api.Json
         public IVirusRepository Viruses =>
             new JsonVirusRepository(_path + @"virus.json", _encode);
 
+        public IInfectionRepository Infections =>
+            new JsonInfectionRepository(_path + @"infection.json", _encode);
+
+        public IViralTestRepository ViralTests =>
+            new JsonViralTestRepository(_path + @"viral_test.json", _encode);
+
+        public IInfectionTotalRepository InfectionTotals =>
+            new JsonInfectionTotalRepository(_path + @"infection_total.json", _encode);
+
+        public IViralTestTotalRepository ViralTestTotals =>
+            new JsonViralTestTotalRepository(_path + @"viral_test_total.json", _encode);
+
         public IChartItemRepository ChartItems =>
             new JsonChartItemRepository(_path + @"chart_item.json", _encode);
 

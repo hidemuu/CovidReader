@@ -99,12 +99,12 @@ export default class Home extends Component {
       <div>
         <h1>新型コロナウイルス データ解析</h1>
         <div className={useStyles.root}>
-          <GridList cellHeight={500} className={useStyles.gridList}>
+          <GridList cellHeight={400} className={useStyles.gridList}>
             <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-              <ListSubheader component="div">APIデータ</ListSubheader>
+              {/* <ListSubheader component="div">APIデータ</ListSubheader> */}
             </GridListTile>
-            <GridListTile cols={1}>
-              <p>参照元データHP</p>
+            <GridListTile cols={2}>
+              <p>参照元データ <button className="btn btn-primary" onClick={this.handleButtonClick}>API Update</button></p>
               <ul>
                 <li>政府機関 : <a href='https://corona.go.jp/dashboard/'>内閣官房</a> / <a href='https://portal.opendata.go.jp/'>厚生労働省</a></li>
                 <li>ニュース : <a href='https://www3.nhk.or.jp/news/special/coronavirus/data-widget/'>NHK</a></li>
@@ -117,9 +117,9 @@ export default class Home extends Component {
                 <li><strong>全国医療機関の医療提供体制の状況</strong> : <a href='https://opendata.corona.go.jp/api/covid19DailySurvey'>covid19DailySurvey.json</a></li>
               </ul>
             </GridListTile>
-            <GridListTile cols={1}>
+            {/* <GridListTile cols={1}>
               <SignIn></SignIn>
-            </GridListTile>
+            </GridListTile> */}
           </GridList>
         </div>
         
@@ -144,9 +144,6 @@ export default class Home extends Component {
           <GridList cellHeight={100} className={useStyles.gridList}>
             <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
               <ListSubheader component="div"> <code>ClientApp</code> テストコマンド</ListSubheader>
-            </GridListTile>
-            <GridListTile cols={1}>
-              <button className="btn btn-primary" onClick={this.handleButtonClick}>API Test</button>
             </GridListTile>
             <GridListTile cols={1}>
               <p aria-live="polite">Current count: <strong>{this.state.currentCount}</strong></p>

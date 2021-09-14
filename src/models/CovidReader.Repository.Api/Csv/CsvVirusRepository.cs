@@ -7,9 +7,6 @@ namespace CovidReader.Repository.Api.Csv
 {
     public class CsvVirusRepository : CsvApiRepositoryBase<Virus>, IVirusRepository
     {
-        public CsvVirusRepository(string filename, string encode = "utf-8") : base(filename, encode)
-        {
-
-        }
+        public CsvVirusRepository(string filename, string encode = "utf-8") : base(filename, encode) { }
     }
 }

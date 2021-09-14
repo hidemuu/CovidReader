@@ -8,24 +8,31 @@ namespace CovidReader.Repository.Covid19.MHLW.InMemory
     {
         public InMemoryCovidRepository()
         {
-
+            Deathes = new InMemoryDeathRepository();
+            Hospitalizations = new InMemoryHospitalizationRepository();
+            Positives = new InMemoryPositiveRepository();
+            Recoveries = new InMemoryRecoveryRepository();
+            Severes = new InMemorySevereRepository();
+            Tests = new InMemoryTestRepository();
+            TestDetails = new InMemoryTestDetailRepository();
+            CovidLineItems = new InMemoryCovidLineItemRepository();
         }
 
-        public IDeathRepository Deathes => new InMemoryDeathRepository();
+        public IDeathRepository Deathes { get; }
 
-        public IHospitalizationRepository Hospitalizations => new InMemoryHospitalizationRepository();
+        public IHospitalizationRepository Hospitalizations { get; }
 
-        public IPositiveRepository Positives => new InMemoryPositiveRepository();
+        public IPositiveRepository Positives { get; }
 
-        public IRecoveryRepository Recoveries => new InMemoryRecoveryRepository();
+        public IRecoveryRepository Recoveries { get; }
 
-        public ISevereRepository Severes => new InMemorySevereRepository();
+        public ISevereRepository Severes { get; }
 
-        public ITestRepository Tests => new InMemoryTestRepository();
+        public ITestRepository Tests { get; }
 
-        public ITestDetailRepository TestDetails => new InMemoryTestDetailRepository();
+        public ITestDetailRepository TestDetails { get; }
 
-        public ICovidLineItemRepository CovidLineItems => new InMemoryCovidLineItemRepository();
+        public ICovidLineItemRepository CovidLineItems { get; }
 
     }
 }

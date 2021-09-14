@@ -7,6 +7,6 @@ namespace CovidReader.Repository.Covid19.MHLW.InMemory
 {
     public class InMemoryTestRepository : InMemoryCovidRepositoryBase<Test>, ITestRepository
     {
-
+        public InMemoryTestRepository() : base() { }
     }
 }
