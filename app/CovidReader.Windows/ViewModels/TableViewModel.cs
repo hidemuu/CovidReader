@@ -17,11 +17,17 @@ namespace CovidReader.Windows.ViewModels
 
         public bool KeepAlive => true;
 
-        public ObservableCollection<Virus> Models { get; }
+        public ObservableCollection<Infection> Models { get; }
 
         public TableViewModel()
         {
-            Models = new ObservableCollection<Virus>();
+            Models = new ObservableCollection<Infection>();
+            var task = App.NativeController.ApiRepository.Infections.GetAsync();
+            Task.WaitAll(task);
+            foreach (var item in task.Result)
+            {
+                Models.Add(item);
+            }
         }
 
         public bool IsNavigationTarget(NavigationContext navigationContext)

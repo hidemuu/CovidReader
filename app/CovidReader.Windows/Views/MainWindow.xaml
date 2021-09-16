@@ -42,21 +42,21 @@
                 </Grid.RowDefinitions>
                 <StackPanel Orientation="Horizontal">
                     <Image Source="pack://application:,,,/CovidReader.Infrastructure.Wpf;Component/Assets/Photos/home.png" Height="40"/>
-                    <Label Content="Home" FontSize="35" FontWeight="Bold"/>
-
+                    <!--<Label Content="Home" FontSize="35" FontWeight="Bold"/>-->
+                    <Button Content="Home" FontSize="20" Margin="5" Command="{Binding ActiveHomeCommand}"/>
+                    <Button Content="Chart" FontSize="20" Margin="5" Command="{Binding ActiveChartCommand}"/>
+                    <Button Content="Table" FontSize="20" Margin="5" Command="{Binding ActiveTableCommand}"/>
+                    <Button  Content="Load" FontSize="20" Margin="5" Command="{Binding LoadModuleCommand}"/>
                 </StackPanel>
-                <StackPanel Grid.Row="1">
-                    <Button  Content="Load Module" FontSize="25"  Margin="5" Command="{Binding LoadModuleCommand}"/>
+                <!--<StackPanel Grid.Row="1">
+                    
                     <UniformGrid Margin="5">
-                        <Button Content="Home" Margin="5" Command="{Binding ActiveHomeCommand}"/>
-                        <Button Content="Chart" Margin="5" Command="{Binding ActiveChartCommand}"/>
-                        <Button Content="Table" Margin="5" Command="{Binding ActiveTableCommand}"/>
+                        
                     </UniformGrid>
-                </StackPanel>
-
-                <ContentControl x:Name="homeRegion" Grid.Row="2" Margin="10" prism:RegionManager.RegionName="{x:Static constants:RegionNames.HomeRegion}"/>
-                <ContentControl x:Name="tableRegion" Grid.Row="3" prism:RegionManager.RegionName="{x:Static constants:RegionNames.TableRegion}"/>
-                <ContentControl x:Name="chartRegion" Grid.Row="4" prism:RegionManager.RegionName="{x:Static constants:RegionNames.ChartRegion}"/>
+                </StackPanel>-->
+                <ContentControl x:Name="homeRegion" Grid.Row="1" prism:RegionManager.RegionName="{x:Static constants:RegionNames.HomeRegion}"/>
+                <ContentControl x:Name="tableRegion" Grid.Row="2" prism:RegionManager.RegionName="{x:Static constants:RegionNames.TableRegion}"/>
+                <ContentControl x:Name="chartRegion" Grid.Row="3" prism:RegionManager.RegionName="{x:Static constants:RegionNames.ChartRegion}"/>
             </Grid>
         </Grid>
     </metro:MetroContentControl>

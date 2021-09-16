@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CS\Json\" />
     <Folder Include="CS\InMemory\" />
   </ItemGroup>
 

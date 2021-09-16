@@ -45,6 +45,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Infrastructure.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution_items", "solution_items", "{1A9DEF3A-E9FC-4ADC-BE27-28242CAD7449}"
 	ProjectSection(SolutionItems) = preProject
+		docs\Memo.md = docs\Memo.md
 		README.md = README.md
 	EndProjectSection
 EndProject

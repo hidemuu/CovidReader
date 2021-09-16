@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Api.Csv
 {
-    public class CsvApiRepositoryBase<T> where T : DbObject
+    public class CsvApiRepositoryBase<T> where T : DailyDbObject
     {
         private readonly CsvFileHelper _csv;
 

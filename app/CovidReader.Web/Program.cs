@@ -13,7 +13,7 @@ namespace CovidReader.Web
 {
     public class Program
     {
-        public static IController WebController { get; private set; }
+        public static IAppController WebController { get; private set; }
 
         public static void Main(string[] args)
         {

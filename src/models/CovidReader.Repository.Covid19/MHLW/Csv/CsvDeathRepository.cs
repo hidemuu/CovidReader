@@ -9,7 +9,7 @@ using CsvHelper.Configuration;
 
 namespace CovidReader.Repository.Covid19.MHLW.Csv
 {
-    public class CsvDeathRepository : CsvCovidRepositoryBase<Death>, IDeathRepository
+    public class CsvDeathRepository : CsvCovid19RepositoryBase<Death>, IDeathRepository
     {
 
         public CsvDeathRepository(string fileName, string encode = "utf-8") : base(fileName, encode) { }

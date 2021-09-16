@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW.Csv
 {
-    public class CsvPositiveRepository : CsvCovidRepositoryBase<Positive>, IPositiveRepository
+    public class CsvPositiveRepository : CsvCovid19RepositoryBase<Positive>, IPositiveRepository
     {
 
         public CsvPositiveRepository(string fileName, string encode = "utf-8") : base(fileName, encode) { }

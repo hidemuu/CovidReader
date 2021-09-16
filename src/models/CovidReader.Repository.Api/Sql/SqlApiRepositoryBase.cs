@@ -2,12 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Api.Sql
 {
-    public class SqlApiRepositoryBase<T> where T : DbObject
+    public class SqlApiRepositoryBase<T> where T : DailyDbObject
     {
         private readonly ApiDbContext _db;
         private readonly DbSet<T> _ts;
@@ -36,15 +37,19 @@ namespace CovidReader.Repository.Api.Sql
 
         public async Task PostAsync(T item)
         {
-            var current = await _ts.FirstOrDefaultAsync(_m => _m.Date == item.Date);
+            //var current = await _ts.FirstOrDefaultAsync(_m => _m.Id == item.Id);
+            var current = await _ts.Where(x => x.Date == item.Date).FirstOrDefaultAsync(_m => _m.Calc == item.Calc);
             if (null == current)
             {
                 _ts.Add(item);
             }
             else
             {
-                _db.Entry(current).CurrentValues.SetValues(item);
+                var value = item;
+                value.Id = current.Id;
+                _db.Entry(current).CurrentValues.SetValues(value);
             }
+
             await _db.SaveChangesAsync();
         }
 
@@ -62,12 +67,17 @@ namespace CovidReader.Repository.Api.Sql
 
         public async Task DeleteAsync(string date)
         {
-            var item = await _ts.FirstOrDefaultAsync(_m => _m.Date == date);
-            if (null != item)
+            var query = _ts.Where(x => x.Date == date);
+            foreach(var q in query)
             {
-                _ts.Remove(item);
-                await _db.SaveChangesAsync();
+                var item = await _ts.FirstOrDefaultAsync(_m => _m.Id == q.Id);
+                if (null != item)
+                {
+                    _ts.Remove(item);
+                    await _db.SaveChangesAsync();
+                }
             }
+            
         }
 
     }

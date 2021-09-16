@@ -7,7 +7,7 @@ using System.Text;
 
 namespace CovidReader.Models.Api
 {
-    public class Infection : DbObject
+    public class Infection : DailyDbObject
     {
         [Name("country_name")]
         [JsonProperty("country_name")]
@@ -21,10 +21,7 @@ namespace CovidReader.Models.Api
         [JsonProperty("city_name")]
         [DisplayName("市名")]
         public string CityName { get; set; } = "";
-        [Name("number_type")]
-        [JsonProperty("number_type")]
-        [DisplayName("集計方法")]
-        public string NumberType { get; set; } = "Daily";
+        
         [Name("death_number")]
         [JsonProperty("death_number")]
         [DisplayName("死亡者数")]
@@ -54,5 +51,23 @@ namespace CovidReader.Models.Api
         [JsonProperty("test_number")]
         [DisplayName("検査件数")]
         public int TestNumber { get; set; } = 0;
+
+        public override string ToString() =>
+            Date.ToString() + Formats.Delimiter +
+            DeathNumber.ToString() + Formats.Delimiter +
+            CureNumber.ToString() + Formats.Delimiter +
+            PatientNumber.ToString() + Formats.Delimiter +
+            RecoveryNumber.ToString() + Formats.Delimiter +
+            SevereNumber.ToString() + Formats.Delimiter +
+            TestNumber.ToString();
+        public static string GetHeader() =>
+            "日付" + Formats.Delimiter +
+            "名称" + Formats.Delimiter +
+            "死亡者数" + Formats.Delimiter +
+            "入院者数" + Formats.Delimiter +
+            "陽性者数" + Formats.Delimiter +
+            "退院者数" + Formats.Delimiter +
+            "重傷者数" + Formats.Delimiter +
+            "検査件数";
     }
 }

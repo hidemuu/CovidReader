@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Grid, Typography, Modal, Paper, TextField, Fade } from '@material-ui/core';
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import { Line, Bar } from 'react-chartjs-2';
+import chartjsPluginDatalabels from 'chartjs-plugin-datalabels';
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 export default class VirusCharts extends React.Component {
@@ -20,15 +21,13 @@ export default class VirusCharts extends React.Component {
     };
   }
 
-  
-
   componentDidMount() {
     this.populateChartItemAsync();  
   }
 
   async populateChartItemAsync(){
 
-    await fetch('api/infection')
+    await fetch('api/infection/calc/daily')
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
@@ -43,7 +42,7 @@ export default class VirusCharts extends React.Component {
       console.error(error);
     });
 
-    await fetch('api/infectiontotal')
+    await fetch('api/infection/calc/total')
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
@@ -58,7 +57,7 @@ export default class VirusCharts extends React.Component {
       console.error(error);
     });
 
-    await fetch('api/viraltest')
+    await fetch('api/inspection/calc/daily')
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
@@ -73,7 +72,7 @@ export default class VirusCharts extends React.Component {
       console.error(error);
     });
 
-    await fetch('api/viraltesttotal')
+    await fetch('api/inspection/calc/total')
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
@@ -150,6 +149,8 @@ export default class VirusCharts extends React.Component {
 
       let chartData = [];  
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: deathLabel,
         data: infections.map(infection => { return infection.deathNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -157,6 +158,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: cureLabel,
         data: infections.map(infection => { return infection.cureNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -164,6 +167,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: patientlabel,
         data: infections.map(infection => { return infection.patientNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -171,6 +176,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: recoveryLabel,
         data: infections.map(infection => { return infection.recoveryNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -178,6 +185,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: severeLabel,
         data: infections.map(infection => { return infection.severeNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -185,6 +194,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: testLabel,
         data: infections.map(infection => { return infection.testNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -192,6 +203,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: nationalTestLabel,
         data: viraltests.map(viraltest => { return viraltest.nationalTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -199,6 +212,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: quarantineTestLabel,
         data: viraltests.map(viraltest => { return viraltest.quarantineTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -206,6 +221,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: careCenterTestLabel,
         data: viraltests.map(viraltest => { return viraltest.careCenterTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -213,6 +230,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: civilCenterTestLabel,
         data: viraltests.map(viraltest => { return viraltest.civilCenterTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -220,6 +239,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: collegeTestLabel,
         data: viraltests.map(viraltest => { return viraltest.collegeTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -227,6 +248,8 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'bar',
+        yAxisID: 'y-axis-daily',
         label: medicalTestLabel,
         data: viraltests.map(viraltest => { return viraltest.medicalTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
@@ -234,88 +257,136 @@ export default class VirusCharts extends React.Component {
         borderWidth: 1
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: deathTotalLabel,
         data: infectiontotals.map(infection => { return infection.deathNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(255,0,0,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: cureTotalLabel,
         data: infectiontotals.map(infection => { return infection.cureNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(0,255,0,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: patientTotallabel,
         data: infectiontotals.map(infection => { return infection.patientNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(0,0,255,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: recoveryTotalLabel,
         data: infectiontotals.map(infection => { return infection.recoveryNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(255,255,0,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: severeTotalLabel,
         data: infectiontotals.map(infection => { return infection.severeNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(0,255,255,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: testTotalLabel,
         data: infectiontotals.map(infection => { return infection.testNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(255,0,255,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: nationalTestTotalLabel,
         data: viraltesttotals.map(viraltest => { return viraltest.nationalTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(128,0,0,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: quarantineTestTotalLabel,
         data: viraltesttotals.map(viraltest => { return viraltest.quarantineTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(0,128,0,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: careCenterTestTotalLabel,
         data: viraltesttotals.map(viraltest => { return viraltest.careCenterTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(0,0,128,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: civilCenterTestTotalLabel,
         data: viraltesttotals.map(viraltest => { return viraltest.civilCenterTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(128,128,0,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: collegeTestTotalLabel,
         data: viraltesttotals.map(viraltest => { return viraltest.collegeTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(0,128,128,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
       chartData.push({
+        type: 'line',
+        yAxisID: 'y-axis-total',
         label: medicalTestTotalLabel,
         data: viraltesttotals.map(viraltest => { return viraltest.medicalTestNumber; }),
         borderColor: 'rgba(0, 0, 0, 0)',
         backgroundColor: 'rgba(128,0,128,1)',
-        borderWidth: 1
+        borderWidth: 1,
+        lineTension: 0,
+        fill: false,
       });
 
       console.log('--- drawData : chartData -----');
@@ -328,7 +399,7 @@ export default class VirusCharts extends React.Component {
 
       const dataInfection = {
         labels: chartLabels,
-        datasets: chartData.filter(d => {return d.label == deathLabel || d.label == cureLabel || d.label == patientlabel || d.label == recoveryLabel || d.label == severeLabel || d.label == testLabel}),
+        datasets: chartData.filter(d => {return d.label == deathTotalLabel || d.label == cureLabel || d.label == patientlabel || d.label == recoveryTotalLabel || d.label == severeLabel || d.label == testLabel}),
       };
 
       const dataDeath = {
@@ -466,29 +537,103 @@ export default class VirusCharts extends React.Component {
         datasets: chartData.filter(d => {return d.label == medicalTestTotalLabel}),
       };
 
-      const options = {
-        //responsive: true,
-        //maintainAspectRatio: false,
-			legend: {
-        //display: false
-              },
-              title: {
-                display: true,
-                text: 'title'
-              },
-              scales: {
-                yAxes: [
-                  {
-                    ticks: {
-                      suggestedMax: 40,
-                      suggestedMin: 0,
-                      stepSize: 10,
-                      callback: (value, index, values) => { return value + ''; }
-                    }
-                  }
-                ]
+      const singleoptions = {
+        legend: {
+          //display: false
+        },
+        title: {
+          display: true,
+          text: 'title'
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                suggestedMax: 40,
+                suggestedMin: 0,
+                stepSize: 10,
+                callback: (value, index, values) => { return value + ''; }
               }
+            }
+          ]
+        }
       };
+
+      const dualoptions = {
+        responsive: true,
+        //maintainAspectRatio: false,
+			  // legend: {
+        //   //display: false
+        // },
+        // title: {
+        //         display: true,
+        //         text: 'title'
+        // },
+        scales: {
+          // xAxes: [
+          //   {
+          //     scaleLabel: {
+          //       display: true,
+          //       labelString: '日付',
+          //     },
+          //   },
+          // ],
+          yAxes: [
+            {
+              id: 'y-axis-daily',
+              position: 'left',
+              scaleLabel: {
+                display: true,
+                labelString: '日報',
+              },
+              ticks: {
+                beginAtZero: true,
+                suggestedMax: 40,
+                suggestedMin: 0,
+                stepSize: 10,
+                callback: (value, index, values) => { return value + ''; }
+              },
+            },
+            {
+              id: 'y-axis-total',
+              position: 'right',
+              scaleLabel: {
+                display: true,
+                labelString: '累計',
+              },
+              ticks: {
+                beginAtZero: true,
+                suggestedMax: 40,
+                suggestedMin: 0,
+                stepSize: 10,
+                callback: (value, index, values) => { return value + ''; }
+              },
+              gridLines: {
+                drawOnChartArea: false, 
+              },
+            },
+          ],
+        }, 
+        plugins: {
+          datalabels: {
+            display: true,
+            anchor: 'end',
+            align: 'right',
+            formatter(value) {
+              if (value === null || value === 0) {
+                return '';
+              }
+              return `${value}%`
+            },
+          },
+          layout: {
+            padding: {
+              right: 50,
+            },
+          },
+        },    
+      };
+
       return (
         <div>
           {/* <Typography variant="h3" align="center" className={useStyles.typography}>
@@ -502,7 +647,7 @@ export default class VirusCharts extends React.Component {
           </Typography>
           <Line  
               data={dataInfection} 
-              options={options}/>
+              options={dualoptions}/>
           <Typography variant="h3" align="center" className={useStyles.typography}>
             <div>全国感染データ : 個別</div>
           </Typography>
@@ -510,32 +655,32 @@ export default class VirusCharts extends React.Component {
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataDeath} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataCure} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataPatient} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataRecovery} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataSevere} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataTest} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
           </Grid>
           <Typography variant="h3" align="center" className={useStyles.typography}>
@@ -543,7 +688,7 @@ export default class VirusCharts extends React.Component {
           </Typography>
           <Line  
               data={dataInfectionTotal} 
-              options={options}/>
+              options={dualoptions}/>
           <Typography variant="h3" align="center" className={useStyles.typography}>
             <div>累計全国感染データ : 個別</div>
           </Typography>
@@ -551,32 +696,32 @@ export default class VirusCharts extends React.Component {
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataDeathTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataCureTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataPatientTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataRecoveryTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataSevereTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataTestTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
           </Grid>
           <Typography variant="h3" align="center" className={useStyles.typography}>
@@ -584,7 +729,7 @@ export default class VirusCharts extends React.Component {
           </Typography>
           <Line  
               data={dataViralTest} 
-              options={options}/>
+              options={dualoptions}/>
           <Typography variant="h3" align="center" className={useStyles.typography}>
             <div>全国検査データ : 個別</div>
           </Typography>
@@ -592,32 +737,32 @@ export default class VirusCharts extends React.Component {
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataNationalTest} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataQuarantineTest} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataCareCenterTest} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataCivilCenterTest} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataCollegeTest} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataMedicalTest} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
           </Grid>
           <Typography variant="h3" align="center" className={useStyles.typography}>
@@ -625,7 +770,7 @@ export default class VirusCharts extends React.Component {
           </Typography>
           <Line  
               data={dataViralTestTotal} 
-              options={options}/>
+              options={dualoptions}/>
           <Typography variant="h3" align="center" className={useStyles.typography}>
             <div>累計全国検査データ : 個別</div>
           </Typography>
@@ -633,32 +778,32 @@ export default class VirusCharts extends React.Component {
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataNationalTestTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataQuarantineTestTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataCareCenterTestTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataCivilCenterTestTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataCollegeTestTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={dataMedicalTestTotal} 
-              options={options}/>
+              options={singleoptions}/>
             </Grid>
           </Grid>
         </div>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW.Rest
 {
-    public class RestDeathRepository : RestCovidRepositoryBase<Death>, IDeathRepository
+    public class RestDeathRepository : RestCovid19RepositoryBase<Death>, IDeathRepository
     {
 
         public RestDeathRepository(string url, string key) : base(url, key, "death-cases")

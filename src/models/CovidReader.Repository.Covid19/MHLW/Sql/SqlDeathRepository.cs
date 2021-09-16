@@ -8,10 +8,10 @@ using System.Linq;
 
 namespace CovidReader.Repository.Covid19.MHLW.Sql
 {
-    public class SqlDeathRepository : SqlCovidRepositoryBase<Death>, IDeathRepository
+    public class SqlDeathRepository : SqlCovid19RepositoryBase<Death>, IDeathRepository
     {
 
-        public SqlDeathRepository(CovidDbContext db) : base(db, db.Deathes) { }
+        public SqlDeathRepository(Covid19DbContext db) : base(db, db.Deathes) { }
 
         
 

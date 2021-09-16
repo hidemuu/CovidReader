@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Api.Json
 {
-    public abstract class JsonApiRepositoryBase<T> where T : DbObject
+    public abstract class JsonApiRepositoryBase<T> where T : DailyDbObject
     {
         private readonly JsonFileHelper _json;
 

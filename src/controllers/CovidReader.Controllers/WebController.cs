@@ -11,36 +11,23 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Controllers
 {
-    public class WebController : IController
+    public class WebController : ApiController, IAppController
     {
 
-        private ApiService _apiService;
         private IApiRepository _apiRepository;
-        private ICovidRepository _covidRepository;
+        private ICovid19Repository _covidRepository;
 
-        public WebController(IApiRepository repository, ICovidRepository covids)
+        public WebController(IApiRepository api, ICovid19Repository covids) : base(api, covids)
         {
-            _apiRepository = repository;
+            _apiRepository = api;
             _covidRepository = covids;
-            _apiService = new ApiService(repository, covids);
         }
-
-        public IApiRepository GetApiRepository()
-        {
-            return _apiRepository;
-        }
-
-        public ICovidRepository GetCovidRepository()
-        {
-            return _covidRepository;
-        }
-
         
         public async Task UpdateAsync()
         {
-            await _apiService.ImportAsync(CovidRepositoryUseCase.UseCsv());
-            await _apiService.CovidToApiAsync();
-            await _apiService.ToChartItemAsync();
+            await ImportAsync(CovidRepositoryUseCase.UseCsv());
+            await CovidToApiAsync();
+            await ToChartItemAsync();
         }
 
         

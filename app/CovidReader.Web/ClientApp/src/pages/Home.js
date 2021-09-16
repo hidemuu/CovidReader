@@ -12,7 +12,6 @@ import img02 from '../img/img02.jpg';
 import img03 from '../img/img03.jpg';
 import img04 from '../img/img04.jpg';
 import img05 from '../img/img05.jpg';
-//import CommonDialog from '../components/CommonDialog';
 
 export default class Home extends Component {
   static displayName = Home.name;
@@ -68,28 +67,28 @@ export default class Home extends Component {
     const tileData = [
       {
         img: img01,
-        title: 'ウイルス',
-        author: '---',
+        title: 'ダッシュボード',
+        author: '',
       },
       {
         img: img02,
-        title: '検温',
-        author: '---',
+        title: '感染データチャート',
+        author: '',
       },
       {
         img: img03,
-        title: '洗浄',
-        author: '---',
+        title: '感染データテーブル',
+        author: '',
       },
       {
         img: img04,
-        title: '防御',
-        author: '---',
+        title: '登録',
+        author: '',
       },
       {
         img: img05,
         title: 'モチーフ',
-        author: '---',
+        author: '',
       },
     ];
 
@@ -104,12 +103,14 @@ export default class Home extends Component {
               {/* <ListSubheader component="div">APIデータ</ListSubheader> */}
             </GridListTile>
             <GridListTile cols={2}>
-              <p>参照元データ <button className="btn btn-primary" onClick={this.handleButtonClick}>API Update</button></p>
+              <p><button className="btn btn-primary" onClick={this.handleButtonClick}>API Update</button> <Link to="/signin" className="btn btn-primary">SignIn</Link> <Link to="/signup" className="btn btn-primary">SignUp</Link></p>
+              <h3>ベースデータ</h3>
               <ul>
                 <li>政府機関 : <a href='https://corona.go.jp/dashboard/'>内閣官房</a> / <a href='https://portal.opendata.go.jp/'>厚生労働省</a></li>
                 <li>ニュース : <a href='https://www3.nhk.or.jp/news/special/coronavirus/data-widget/'>NHK</a></li>
               </ul>
-              <p>収集データ</p>
+              <p></p> 
+              <h3>APIリスト</h3>
               <ul>
                 <li><strong>全国の感染状況</strong> : <a href='https://opendata.corona.go.jp/api/Covid19JapanAll'>Covid19JapanAll.json</a> <code> itemList </code><em> date </em> <em> name_jp </em> <em> npatient </em> </li>
                 <li><strong>全国累積死亡者数</strong> : <a href='https://opendata.corona.go.jp/api/Covid19JapanNdeaths'>Covid19JapanNdeaths.json</a> <code>itemList</code> <em> date </em> <em> ndeaths </em></li>
@@ -122,25 +123,25 @@ export default class Home extends Component {
             </GridListTile> */}
           </GridList>
         </div>
-        
+        <h3>コンテンツリスト</h3>
         <div className={useStyles.root}>
           <GridList cellHeight={200} className={useStyles.gridList}>
             <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-              <ListSubheader component="div">タイルリスト</ListSubheader>
+              {/* <ListSubheader component="div">タイルリスト</ListSubheader> */}
             </GridListTile>
             {tileData.map((tile) => (
               <GridListTile key={tile.img}>
                 <img src={tile.img} alt={tile.title} />
                 <GridListTileBar
                   title={tile.title}
-                  subtitle={<span>by: {tile.author}</span>}
+                  subtitle={<span>{tile.author}</span>}
                 />
               </GridListTile>
             ))}
           </GridList>
         </div>
         
-        <div className={useStyles.root}>
+        {/* <div className={useStyles.root}>
           <GridList cellHeight={100} className={useStyles.gridList}>
             <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
               <ListSubheader component="div"> <code>ClientApp</code> テストコマンド</ListSubheader>
@@ -157,14 +158,9 @@ export default class Home extends Component {
               <p><NoticeScreen></NoticeScreen></p>
             </GridListTile>
           </GridList>
-        </div>
+        </div> */}
 
-            {/* <CommonDialog
-              msg={"登録しますか？"}
-              isOpen={commDlg}
-              doYes={execute}
-              doNo={() => {setCommDlg(false)}}
-            /> */}
+           
       </div>
     );
   }

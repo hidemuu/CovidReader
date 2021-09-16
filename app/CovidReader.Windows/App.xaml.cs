@@ -1,6 +1,9 @@
-﻿using CovidReader.Infrastructure.Wpf;
+﻿using CovidReader.Controllers;
+using CovidReader.Controllers.UseCases;
+using CovidReader.Infrastructure.Wpf;
 using CovidReader.Infrastructure.Wpf.CustomerRegionAdapters;
 using CovidReader.Infrastructure.Wpf.Services;
+using CovidReader.Windows.ViewModels;
 using CovidReader.Windows.ViewModels.Dialogs;
 using CovidReader.Windows.Views;
 using CovidReader.Windows.Views.Dialogs;
@@ -10,6 +13,7 @@ using NLog.Config;
 using NLog.Targets;
 using Prism.Ioc;
 using Prism.Modularity;
+using Prism.Mvvm;
 using Prism.Regions;
 using Prism.Unity;
 using System;
@@ -40,70 +44,15 @@ namespace CovidReader.Windows
         //private static readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
         //private IList<Task> _tasks = new List<Task>();
 
+        public static NativeController NativeController { get; set; }
 
-        #region ロジック
-        //public static void Close()
-        //{
-        //    //App.Current.MainWindow.Close();
-        //}
-
-        //public static void BackupFile(string filePath, string dir)
-        //{
-        //    var copyTo = Path.Combine(dir, filePath + ".backup");
-
-        //    File.Copy(filePath, copyTo, true);
-        //}
-
-        #endregion
-
-        #region イベントハンドラ
-
-        /// <summary>
-        /// 起動時イベント
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnStartup(StartupEventArgs e)
+        public App()
         {
-            //InitializeLogger();
-
-            //_logger.Info("アプリケーションの開始");
-
-            //if (_mutex.WaitOne(0, false) == false)
-            //{
-            //    // 起動済みのウィンドウをアクティブにする
-            //    ShowPrevProcess();
-
-            //    // ここまで
-            //    _mutex.Close();
-            //    _mutex = null;
-            //    Shutdown();
-
-            //    _logger.Info("二重起動のため終了します");
-            //    return;
-            //}
-
-            //DispatcherUnhandledException += App_DispatcherUnhandledException;
-
-            base.OnStartup(e);
-
-
-            //var task = RunControllerAsync();
-            //_tasks.Add(task);
-
+            NativeController = new NativeController(ApiRepositoryUseCase.UseSqlite(), CovidRepositoryUseCase.UseInMemory());
         }
 
 
-        /// <summary>
-        /// 終了時イベント
-        /// </summary>
-        /// <param name="e"></param>
-        //protected override void OnExit(ExitEventArgs e)
-        //{
-        //    _logger.Info("アプリケーションの終了");
-        //    Task.WhenAll(_tasks);
-        //    NLog.LogManager.Shutdown(); // Flush and close down internal threads and timers
-        //    base.OnExit(e);
-        //}
+        #region イベントハンドラ
 
         protected override Window CreateShell()
         {
@@ -119,18 +68,15 @@ namespace CovidReader.Windows
                 .RegisterType<ITableService, TableService>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<PolicyInjectionBehavior>())
                 .RegisterType<IUserService, UserService>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<PolicyInjectionBehavior>());
 
-            ////注册全局命令
             containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
             containerRegistry.RegisterInstance<IFlyoutService>(Container.Resolve<FlyoutService>());
 
-            ////注册导航
             containerRegistry.RegisterForNavigation<LoginMainContent>();
             containerRegistry.RegisterForNavigation<CreateAccount>();
             containerRegistry.RegisterForNavigation<HomeView>();
             containerRegistry.RegisterForNavigation<ChartView>();
             containerRegistry.RegisterForNavigation<TableView>();
 
-            ////注册对话框
             containerRegistry.RegisterDialog<AlertDialog, AlertDialogViewModel>();
             containerRegistry.RegisterDialog<SuccessDialog, SuccessDialogViewModel>();
             containerRegistry.RegisterDialog<WarningDialog, WarningDialogViewModel>();
@@ -149,15 +95,21 @@ namespace CovidReader.Windows
         //    //return new ConfigurationModuleCatalog();
         //}
 
-        #endregion
+        protected override void ConfigureViewModelLocator()
+        {
+             base.ConfigureViewModelLocator(); 
+             ViewModelLocationProvider.Register<MainWindow, MainWindowViewModel>();
+        }
+
+    #endregion
 
 
-        #region 内部ロジック
+    #region 内部ロジック
 
-        /// <summary>
-        /// ログ初期設定
-        /// </summary>
-        private void InitializeLogger()
+    /// <summary>
+    /// ログ初期設定
+    /// </summary>
+    private void InitializeLogger()
         {
             var conf = new LoggingConfiguration();
             //ファイル出力定義
@@ -165,9 +117,9 @@ namespace CovidReader.Windows
             {
                 Encoding = System.Text.Encoding.UTF8,
                 Layout = "${longdate} [${threadid:padding=2}] [${uppercase:${level:padding=-5}}] ${callsite}() - ${message}${exception:format=ToString}",
-                FileName = "${basedir}/logs/MachineLinkApp_${date:format=yyyyMMdd}.log",
+                FileName = "${basedir}/logs/CovidReaderApp_${date:format=yyyyMMdd}.log",
                 ArchiveNumbering = ArchiveNumberingMode.Date,
-                ArchiveFileName = "${basedir}/logs/MachineLinkApp.log.{#}",
+                ArchiveFileName = "${basedir}/logs/CovidReaderApp.log.{#}",
                 ArchiveEvery = FileArchivePeriod.None,
                 MaxArchiveFiles = 10
             };

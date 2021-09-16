@@ -19,33 +19,21 @@ using CovidReader.Controllers.UseCases;
 
 namespace CovidReader.Controllers
 {
-    public class ConsoleController : IController
+    public class ConsoleController : ApiController, IAppController
     {
         //private ISettingRepository _settingRepository;
-        private ApiService _apiService;
         private static Process _process;
         private ChromeDriver _chrome;
         private IApiRepository _apiRepository;
-        private ICovidRepository _covidRepository;
+        private ICovid19Repository _covidRepository;
 
-        public ConsoleController(IApiRepository repository, ICovidRepository covids)
+        public ConsoleController(IApiRepository api, ICovid19Repository covids) : base(api, covids)
         {
             //_settingRepository = new XmlSettingRepository(Constants.RootPath + @"assets\settings");
             //Task.WaitAll(InitializeAsync());
-            _apiRepository = repository;
+            _apiRepository = api;
             _covidRepository = covids;
-            _apiService = new ApiService(repository, covids);
 
-        }
-
-        public IApiRepository GetApiRepository()
-        {
-            return _apiRepository;
-        }
-
-        public ICovidRepository GetCovidRepository()
-        {
-            return _covidRepository;
         }
 
         #region APIコマンド
@@ -57,19 +45,19 @@ namespace CovidReader.Controllers
 
         public async Task ImportAsync()
         {
-            await _apiService.ImportAsync(CovidRepositoryUseCase.UseCsv());
+            await ImportAsync(CovidRepositoryUseCase.UseCsv());
         }
 
         public async Task UpdateAsync()
         {
             await ImportAsync();
-            await _apiService.CovidToApiAsync();
+            await CovidToApiAsync();
             await GetChartItemAsync();
         }
 
         public async Task GetChartItemAsync()
         {
-            await _apiService.ToChartItemAsync();
+            await ToChartItemAsync();
         }
 
         public async Task AutoRunAsync()
@@ -88,7 +76,7 @@ namespace CovidReader.Controllers
 
         public async Task<bool> ViewChartAsync()
         {
-            await _apiService.ExportAsync(ApiRepositoryUseCase.UseJson(@"dist"));
+            await ExportAsync(ApiRepositoryUseCase.UseJson(@"dist"));
             //データをdist / サーバにコピー
             //File.Copy(
             //    Urls.RootPath + @"assets\api\chart_item.json",

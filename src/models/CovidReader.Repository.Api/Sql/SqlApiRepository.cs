@@ -21,17 +21,10 @@ namespace CovidReader.Repository.Api.Sql
             _db = new ApiDbContext(_dbOptions);
         }
 
-        
-
-        public IVirusRepository Viruses => new SqlVirusRepository(_db);
 
         public IInfectionRepository Infections => new SqlInfectionRepository(_db);
 
-        public IViralTestRepository ViralTests => new SqlViralTestRepository(_db);
-
-        public IInfectionTotalRepository InfectionTotals => new SqlInfectionTotalRepository(_db);
-
-        public IViralTestTotalRepository ViralTestTotals => new SqlViralTestTotalRepository(_db);
+        public IInspectionRepository Inspections => new SqlInspectionRepository(_db);
 
         public IChartItemRepository ChartItems => new SqlChartItemRepository(_db);
 

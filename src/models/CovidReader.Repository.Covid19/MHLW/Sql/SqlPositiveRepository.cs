@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW.Sql
 {
-    public class SqlPositiveRepository : SqlCovidRepositoryBase<Positive>, IPositiveRepository
+    public class SqlPositiveRepository : SqlCovid19RepositoryBase<Positive>, IPositiveRepository
     {
-        public SqlPositiveRepository(CovidDbContext db) : base(db, db.Positives) { }
+        public SqlPositiveRepository(Covid19DbContext db) : base(db, db.Positives) { }
 
     }
 }

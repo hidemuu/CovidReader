@@ -8,7 +8,7 @@ using System.Text;
 
 namespace CovidReader.Models.Api
 {
-    public class ChartItem : DbObject
+    public class ChartItem : DailyDbObject
     {
         
 

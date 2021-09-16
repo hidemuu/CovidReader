@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CovidReader.Models.Api
 {
-    public class LineItem : DbObject
+    public class LineItem : DailyDbObject
     {
 
     }

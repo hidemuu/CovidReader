@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,11 @@ namespace CovidReader.Web.Controllers
     [ApiController]
     public class HomeController : ControllerBase
     {
-        public HomeController()
+        private readonly ILogger<WeatherForecastController> _logger;
+
+        public HomeController(ILogger<WeatherForecastController> logger)
         {
-            
+            _logger = logger;
         }
 
         [HttpGet]

@@ -47,14 +47,21 @@ namespace CovidReader.Web.Controllers
             return Ok(result);
         }
 
-        /// <summary>
-        /// Gets all customers with a data field matching the start of the given string.
-        /// </summary>
-        //[HttpGet("search")]
-        //public async Task<IActionResult> Search(string value)
-        //{
-        //    return Ok(await _repository.GetAsync(value));
-        //}
+        [HttpGet("calc/{calc}")]
+        public async Task<IActionResult> GetByCalc(string calc)
+        {
+            if (calc == string.Empty)
+            {
+                return BadRequest();
+            }
+            var result = await _repository.GetAsync();
+            if (result == null)
+            {
+                return NotFound();
+            }
+            var query = result.Where(x => x.Calc == calc);
+            return Ok(query);
+        }
 
         /// <summary>
         /// Creates a new item or updates an existing one.

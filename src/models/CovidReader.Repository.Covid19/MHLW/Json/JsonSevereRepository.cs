@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CovidReader.Repository.Covid19.MHLW.Json
 {
-    public class JsonSevereRepository : JsonCovidRepositoryBase<Severe>, ISevereRepository
+    public class JsonSevereRepository : JsonCovid19RepositoryBase<Severe>, ISevereRepository
     {
         public JsonSevereRepository(string filename, string encode = "utf-8") : base(filename, encode)
         {

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW.Sql
 {
-    public class SqlTestDetailRepository : SqlCovidRepositoryBase<TestDetail>, ITestDetailRepository
+    public class SqlTestDetailRepository : SqlCovid19RepositoryBase<TestDetail>, ITestDetailRepository
     {
 
-        public SqlTestDetailRepository(CovidDbContext db) : base(db, db.TestDetails) { }
+        public SqlTestDetailRepository(Covid19DbContext db) : base(db, db.TestDetails) { }
 
     }
 }

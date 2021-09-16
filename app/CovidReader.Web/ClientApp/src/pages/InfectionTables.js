@@ -24,7 +24,7 @@ export default class VirusTables extends React.Component {
 
   async populateChartItemAsync(){
     
-    await fetch('api/infection')
+    await fetch('api/infection/calc/daily')
     .then((response) => {
       if (response.status === 200) {
         return response.json();
@@ -44,7 +44,7 @@ export default class VirusTables extends React.Component {
       console.error(error);
     });
 
-    await fetch('api/infectiontotal')
+    await fetch('api/infection/calc/total')
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
@@ -59,7 +59,7 @@ export default class VirusTables extends React.Component {
       console.error(error);
     });
 
-    await fetch('api/viraltest')
+    await fetch('api/inspection/calc/daily')
     .then((response) => {
       if (response.status === 200) {
         return response.json();
@@ -79,7 +79,7 @@ export default class VirusTables extends React.Component {
       console.error(error);
     });
 
-    await fetch('api/viraltesttotal')
+    await fetch('api/inspection/calc/total')
     .then((response) => response.json())
     .then((json) => {
       console.log(json);

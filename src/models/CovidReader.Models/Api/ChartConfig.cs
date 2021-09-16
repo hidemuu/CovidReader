@@ -8,7 +8,7 @@ using System.Text;
 
 namespace CovidReader.Models.Api
 {
-    public class ChartConfig : DbObject
+    public class ChartConfig : DailyDbObject
     {
         [Name("name")]
         [JsonProperty("name")]

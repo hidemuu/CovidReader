@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CovidReader.Repository.Covid19.MHLW.InMemory
 {
-    public class InMemoryDeathRepository : InMemoryCovidRepositoryBase<Death> , IDeathRepository
+    public class InMemoryDeathRepository : InMemoryCovid19RepositoryBase<Death> , IDeathRepository
     {
         public InMemoryDeathRepository() : base() { }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW.Rest
 {
-    public class RestPositiveRepository : RestCovidRepositoryBase<Positive>, IPositiveRepository
+    public class RestPositiveRepository : RestCovid19RepositoryBase<Positive>, IPositiveRepository
     {
 
 

@@ -16,14 +16,10 @@ namespace CovidReader.Repository.Api.Rest
             _key = auth;
         }
 
-        public IVirusRepository Viruses => new RestVirusRepository(_url, _key);
 
         public IInfectionRepository Infections => new RestInfectionRepository(_url, _key);
 
-        public IViralTestRepository ViralTests => new RestViralTestRepository(_url, _key);
-        public IInfectionTotalRepository InfectionTotals => new RestInfectionTotalRepository(_url, _key);
-
-        public IViralTestTotalRepository ViralTestTotals => new RestViralTestTotalRepository(_url, _key);
+        public IInspectionRepository Inspections => new RestInspectionRepository(_url, _key);
 
         public IChartItemRepository ChartItems => new RestChartItemRepository(_url, _key);
 

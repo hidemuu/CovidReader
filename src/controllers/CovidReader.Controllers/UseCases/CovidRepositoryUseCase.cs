@@ -18,7 +18,7 @@ namespace CovidReader.Controllers.UseCases
 
         
 
-        public static ICovidRepository UseSqlite()
+        public static ICovid19Repository UseSqlite()
         {
             var connection = Urls.SqlCovidConnectionString;
             //var backupconnection = "";
@@ -26,30 +26,30 @@ namespace CovidReader.Controllers.UseCases
             //{
             //    File.Copy(backupconnection, connection);
             //}
-            var dbOptions = new DbContextOptionsBuilder<CovidDbContext>().UseSqlite(
+            var dbOptions = new DbContextOptionsBuilder<Covid19DbContext>().UseSqlite(
                 "Data Source=" + connection);
-            var r = new SqlCovidRepository(dbOptions);
+            var r = new SqlCovid19Repository(dbOptions);
             return r;
         }
 
-        public static ICovidRepository UseRest(string url = @"https://api.opendata.go.jp/mhlw/", string key = "PTUGzjZjYAmAtX5uEEVhHXilmAkVZX3y")
+        public static ICovid19Repository UseRest(string url = @"https://api.opendata.go.jp/mhlw/", string key = "PTUGzjZjYAmAtX5uEEVhHXilmAkVZX3y")
         {
-            return new RestCovidRepository(url, key);
+            return new RestCovid19Repository(url, key);
         }
 
-        public static ICovidRepository UseCsv(string path = @"assets\covid")
+        public static ICovid19Repository UseCsv(string path = @"assets\covid")
         {
-            return new CsvCovidRepository(path, "shift-jis");
+            return new CsvCovid19Repository(path, "shift-jis");
         }
 
-        public static ICovidRepository UseJson(string path = @"assets\covid")
+        public static ICovid19Repository UseJson(string path = @"assets\covid")
         {
-            return new JsonCovidRepository(path, "shift-jis");
+            return new JsonCovid19Repository(path, "shift-jis");
         }
 
-        public static ICovidRepository UseInMemory()
+        public static ICovid19Repository UseInMemory()
         {
-            return new InMemoryCovidRepository();
+            return new InMemoryCovid19Repository();
         }
 
     }

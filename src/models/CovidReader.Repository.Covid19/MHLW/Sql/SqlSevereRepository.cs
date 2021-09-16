@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW.Sql
 {
-    public class SqlSevereRepository : SqlCovidRepositoryBase<Severe>, ISevereRepository
+    public class SqlSevereRepository : SqlCovid19RepositoryBase<Severe>, ISevereRepository
     {
 
-        public SqlSevereRepository(CovidDbContext db) : base(db, db.Severes) { }
+        public SqlSevereRepository(Covid19DbContext db) : base(db, db.Severes) { }
 
     }
 }

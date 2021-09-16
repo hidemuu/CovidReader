@@ -36,7 +36,7 @@ namespace CovidReader.Api
                 case "json": api = ApiRepositoryUseCase.UseJson(); break;
                 default: api = ApiRepositoryUseCase.UseSqlite(); break;
             }
-            ICovidRepository covid;
+            ICovid19Repository covid;
             switch (covidType)
             {
                 case "sql": covid = CovidRepositoryUseCase.UseSqlite(); break;
