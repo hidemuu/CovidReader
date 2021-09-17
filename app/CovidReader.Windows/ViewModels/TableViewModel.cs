@@ -22,7 +22,7 @@ namespace CovidReader.Windows.ViewModels
         public TableViewModel()
         {
             Models = new ObservableCollection<Infection>();
-            var task = App.NativeController.ApiRepository.Infections.GetAsync();
+            var task = App.NativeController.Api.Infection.GetAsync();
             Task.WaitAll(task);
             foreach (var item in task.Result)
             {

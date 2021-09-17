@@ -13,11 +13,11 @@ namespace CovidReader.Web
 {
     public class Program
     {
-        public static IAppController WebController { get; private set; }
+        public static WebController WebController { get; private set; }
 
         public static void Main(string[] args)
         {
-            WebController = new WebController(ApiRepositoryUseCase.UseSqlite(), CovidRepositoryUseCase.UseInMemory());
+            WebController = new WebController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));
             CreateHostBuilder(args).Build().Run();
         }
 

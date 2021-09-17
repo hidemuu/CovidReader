@@ -403,7 +403,6 @@ C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\obj\Debug\net
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\obj\Debug\net5.0\CovidReader.Test.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\obj\Debug\net5.0\CovidReader.Test.genruntimeconfig.cache
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\CoverletSourceRootsMapping
-C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\NLog.config
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\Constants.cs
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\CsvHelper.dll
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -421,7 +420,6 @@ C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
-C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\NLog.dll
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\CovidReader.Core.dll
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\CovidReader.Models.dll
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\CovidReader.Repository.dll
@@ -430,3 +428,5 @@ C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\CovidReader.Repository.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\Castle.Core.dll
 C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\Moq.dll
+C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\CovidReader.Service.dll
+C:\Users\nando\Documents\GitHub\CovidReader\tests\CovidReader.Test\bin\Debug\net5.0\CovidReader.Service.pdb

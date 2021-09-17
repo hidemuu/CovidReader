@@ -22,7 +22,7 @@ namespace CovidReader
 
         static void Main(string[] args)
         {
-            _command = new ConsoleCommand("sql", "inmemory");
+            _command = new ConsoleCommand();
 
            Console.WriteLine(_command.Help());
             //if (_command.ViewSample())

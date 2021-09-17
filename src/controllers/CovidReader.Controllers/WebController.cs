@@ -1,7 +1,5 @@
-﻿using CovidReader.Controllers.UseCases;
-using CovidReader.Core;
-using CovidReader.Repository.Api;
-using CovidReader.Repository.Covid19.MHLW;
+﻿using CovidReader.Core;
+using CovidReader.Core.Service;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
@@ -11,29 +9,13 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Controllers
 {
-    public class WebController : ApiController, IAppController
+    public class WebController : ApiController
     {
 
-        private IApiRepository _apiRepository;
-        private ICovid19Repository _covidRepository;
-
-        public WebController(IApiRepository api, ICovid19Repository covids) : base(api, covids)
+        public WebController(IApiService api, ICovid19Service covid19) : base(api, covid19)
         {
-            _apiRepository = api;
-            _covidRepository = covids;
+           
         }
         
-        public async Task UpdateAsync()
-        {
-            await ImportAsync(CovidRepositoryUseCase.UseCsv());
-            await CovidToApiAsync();
-            await ToChartItemAsync();
-        }
-
-        
-        public async Task AutoRunAsync()
-        {
-            await Task.Run(() => { });
-        }
     }
 }

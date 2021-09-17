@@ -9,11 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NLog.Config" Version="4.7.11" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\models\CovidReader.Repository\CovidReader.Repository.csproj" />
+    <ProjectReference Include="..\..\models\CovidReader.Models\CovidReader.Models.csproj" />
   </ItemGroup>
 
 </Project>

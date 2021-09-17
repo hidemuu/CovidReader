@@ -48,7 +48,8 @@ namespace CovidReader.Windows
 
         public App()
         {
-            NativeController = new NativeController(ApiRepositoryUseCase.UseSqlite(), CovidRepositoryUseCase.UseInMemory());
+
+            NativeController = new NativeController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));
         }
 
 

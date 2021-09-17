@@ -24,36 +24,16 @@ namespace CovidReader.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="apiType"></param>
-        /// <param name="covidType"></param>
-        public ConsoleCommand(string apiType, string covidType)
+        public ConsoleCommand()
         {
-            IApiRepository api;
-            switch (apiType)
-            {
-                case "sql": api = ApiRepositoryUseCase.UseSqlite(); break;
-                case "csv": api = ApiRepositoryUseCase.UseCsv(); break;
-                case "json": api = ApiRepositoryUseCase.UseJson(); break;
-                default: api = ApiRepositoryUseCase.UseSqlite(); break;
-            }
-            ICovid19Repository covid;
-            switch (covidType)
-            {
-                case "sql": covid = CovidRepositoryUseCase.UseSqlite(); break;
-                case "rest": covid = CovidRepositoryUseCase.UseRest(); break;
-                case "csv": covid = CovidRepositoryUseCase.UseCsv(); break;
-                case "json": covid = CovidRepositoryUseCase.UseJson(); break;
-                case "inmemory": covid = CovidRepositoryUseCase.UseInMemory(); break;
-                default: covid = CovidRepositoryUseCase.UseSqlite(); break;
-            }
-
-            _controller = new ConsoleController(api, covid);
+            
+            _controller = new ConsoleController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));
             
             _handlers = new Dictionary<string, CommandHandler>
             {
                 {"get", GetAsync },
-                {"import", ImportAsync },
-                {"update", UpdateAsync },
+                //{"import", ImportAsync },
+                //{"update", UpdateAsync },
                 {"getchart", GetChartAsync },
                 {"autorun", AutoRunAsync },
                 {"scrap", ScrapingAsync },
@@ -62,17 +42,17 @@ namespace CovidReader.Api
             };
         }
 
-        private async Task<string> ImportAsync(IEnumerable<string> parameters)
-        {
-            await _controller.ImportAsync();
-            return "";
-        }
+        //private async Task<string> ImportAsync(IEnumerable<string> parameters)
+        //{
+        //    await _controller.ImportAsync();
+        //    return "";
+        //}
 
-        private async Task<string> UpdateAsync(IEnumerable<string> parameters)
-        {
-            await _controller.UpdateAsync();
-            return "";
-        }
+        //private async Task<string> UpdateAsync(IEnumerable<string> parameters)
+        //{
+        //    await _controller.UpdateAsync();
+        //    return "";
+        //}
 
         private async Task<string> GetAsync(IEnumerable<string> parameters)
         {

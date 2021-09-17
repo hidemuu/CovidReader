@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\controllers\CovidReader.Core\CovidReader.Core.csproj" />
+    <ProjectReference Include="..\..\src\controllers\CovidReader.Service\CovidReader.Service.csproj" />
   </ItemGroup>
 
 </Project>

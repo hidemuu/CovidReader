@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "Autofac/6.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.7.1"
+        },
+        "compile": {
+          "lib/net5.0/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Autofac.dll": {}
+        }
+      },
       "ControlzEx/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -230,6 +242,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/3.1.17": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.17"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/3.1.17": {
@@ -484,6 +508,33 @@
             "codeLanguage": "any",
             "copyToOutput": false
           }
+        }
+      },
+      "Npgsql/4.1.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Npgsql.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Npgsql.dll": {}
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/3.1.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.11",
+          "Microsoft.EntityFrameworkCore.Abstractions": "3.1.11",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.11",
+          "Npgsql": "4.1.8"
+        },
+        "compile": {
+          "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
         }
       },
       "Prism.Core/8.1.97": {
@@ -818,7 +869,7 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "System.Runtime.CompilerServices.Unsafe/4.6.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -923,29 +974,14 @@
           "lib/netcoreapp2.0/Unity.Interception.dll": {}
         }
       },
-      "CovidReader.Api/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "CovidReader.Controllers": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/CovidReader.Api.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CovidReader.Api.dll": {}
-        }
-      },
       "CovidReader.Controllers/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CovidReader.Core": "1.0.0",
-          "CovidReader.Repository.Api": "1.0.0",
-          "CovidReader.Repository.Covid19": "1.0.0",
-          "CovidReader.Repository.Google": "1.0.0",
-          "CovidReader.Repository.Settings": "1.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "3.1.17",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.17",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.11",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "92.0.4515.10700"
         },
@@ -956,12 +992,30 @@
           "bin/placeholder/CovidReader.Controllers.dll": {}
         }
       },
+      "CovidReader.Controllers.UseCases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Autofac": "6.2.0",
+          "CovidReader.Controllers": "1.0.0",
+          "CovidReader.Repository.Api": "1.0.0",
+          "CovidReader.Repository.Covid19": "1.0.0",
+          "CovidReader.Repository.Google": "1.0.0",
+          "CovidReader.Repository.Settings": "1.0.0",
+          "CovidReader.Service": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.Controllers.UseCases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.Controllers.UseCases.dll": {}
+        }
+      },
       "CovidReader.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "CovidReader.Repository": "1.0.0",
-          "NLog.Config": "4.7.11"
+          "CovidReader.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CovidReader.Core.dll": {}
@@ -1078,10 +1132,45 @@
         "runtime": {
           "bin/placeholder/CovidReader.Repository.Settings.dll": {}
         }
+      },
+      "CovidReader.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CovidReader.Core": "1.0.0",
+          "CovidReader.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.Service.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Autofac/6.2.0": {
+      "sha512": "BX8IM0GANE38uSr4QwXL4PgA8vWWYt2P5cZzipn/vDnf0fDbPSGKSHEroJ09rB7ANxdyf7MdEgVs+pvL8kwYCg==",
+      "type": "package",
+      "path": "autofac/6.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofac.6.2.0.nupkg.sha512",
+        "autofac.nuspec",
+        "icon.png",
+        "lib/net5.0/Autofac.dll",
+        "lib/net5.0/Autofac.pdb",
+        "lib/net5.0/Autofac.xml",
+        "lib/netstandard2.0/Autofac.dll",
+        "lib/netstandard2.0/Autofac.pdb",
+        "lib/netstandard2.0/Autofac.xml",
+        "lib/netstandard2.1/Autofac.dll",
+        "lib/netstandard2.1/Autofac.pdb",
+        "lib/netstandard2.1/Autofac.xml"
+      ]
+    },
     "ControlzEx/4.4.0": {
       "sha512": "pZ5z4hYWwE4R13UMCVs6vII//nL7hz+Nwn4oJlnsZJRGqJNy6Z9KnJiTZfly6lKFu0pMc1aWBZpx+VqFTQKP1Q==",
       "type": "package",
@@ -1481,6 +1570,20 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.InMemory/3.1.17": {
+      "sha512": "IsfhVVrw1Sb9jnyQY0IwK7Gk0qygQaUBBJXgSoQpu0GgP+Or1fTwYfaH6XEt3BhqXuu5qSeWB05n+Wb0iA36qQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/3.1.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.3.1.17.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.Relational/3.1.17": {
       "sha512": "VHxAWaC6734XRcOQpVXo+HRNgCGDfQY1KafvAPhza3Ed+8A5HpRGnjECs/NNPF+9CkEBaDJqhJuBI8rKw4HTlQ==",
       "type": "package",
@@ -1864,6 +1967,39 @@
         "contentFiles/any/any/NLog.xsd",
         "nlog.schema.4.7.11.nupkg.sha512",
         "nlog.schema.nuspec"
+      ]
+    },
+    "Npgsql/4.1.8": {
+      "sha512": "tD9bcC80LpPi62y+fGBwdQQpIVq9eJ8SLkJ0M5t0ISox8u3lzGWsn9rDquaYbMXw3eZPYmw0aMFKktVWHuK12Q==",
+      "type": "package",
+      "path": "npgsql/4.1.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Npgsql.dll",
+        "lib/net461/Npgsql.xml",
+        "lib/netcoreapp3.0/Npgsql.dll",
+        "lib/netcoreapp3.0/Npgsql.xml",
+        "lib/netstandard2.0/Npgsql.dll",
+        "lib/netstandard2.0/Npgsql.xml",
+        "lib/netstandard2.1/Npgsql.dll",
+        "lib/netstandard2.1/Npgsql.xml",
+        "npgsql.4.1.8.nupkg.sha512",
+        "npgsql.nuspec",
+        "postgresql.png"
+      ]
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/3.1.11": {
+      "sha512": "xYWfA0RX7Km6Vkf9SHWZVgj9GePLmQXDSsl4s1xQh6cW9MF+ZrIvowJc5rjfCRtqocu3UesljrypkZa92NPuIg==",
+      "type": "package",
+      "path": "npgsql.entityframeworkcore.postgresql/3.1.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll",
+        "npgsql.entityframeworkcore.postgresql.3.1.11.nupkg.sha512",
+        "npgsql.entityframeworkcore.postgresql.nuspec",
+        "postgresql.png"
       ]
     },
     "Prism.Core/8.1.97": {
@@ -2699,10 +2835,10 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
-      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+    "System.Runtime.CompilerServices.Unsafe/4.6.0": {
+      "sha512": "HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "path": "system.runtime.compilerservices.unsafe/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2718,7 +2854,7 @@
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -3041,15 +3177,15 @@
         "unity.interception.nuspec"
       ]
     },
-    "CovidReader.Api/1.0.0": {
-      "type": "project",
-      "path": "../../src/api/CovidReader.Api/CovidReader.Api.csproj",
-      "msbuildProject": "../../src/api/CovidReader.Api/CovidReader.Api.csproj"
-    },
     "CovidReader.Controllers/1.0.0": {
       "type": "project",
       "path": "../../src/controllers/CovidReader.Controllers/CovidReader.Controllers.csproj",
       "msbuildProject": "../../src/controllers/CovidReader.Controllers/CovidReader.Controllers.csproj"
+    },
+    "CovidReader.Controllers.UseCases/1.0.0": {
+      "type": "project",
+      "path": "../../src/controllers/CovidReader.Controllers.UseCases/CovidReader.Controllers.UseCases.csproj",
+      "msbuildProject": "../../src/controllers/CovidReader.Controllers.UseCases/CovidReader.Controllers.UseCases.csproj"
     },
     "CovidReader.Core/1.0.0": {
       "type": "project",
@@ -3090,11 +3226,16 @@
       "type": "project",
       "path": "../../src/models/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj",
       "msbuildProject": "../../src/models/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj"
+    },
+    "CovidReader.Service/1.0.0": {
+      "type": "project",
+      "path": "../../src/controllers/CovidReader.Service/CovidReader.Service.csproj",
+      "msbuildProject": "../../src/controllers/CovidReader.Service/CovidReader.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "CovidReader.Api >= 1.0.0",
+      "CovidReader.Controllers.UseCases >= 1.0.0",
       "CovidReader.Infrastructure.Wpf >= 1.0.0",
       "Prism.Unity >= 8.1.97"
     ]
@@ -3136,8 +3277,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\api\\CovidReader.Api\\CovidReader.Api.csproj": {
-              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\api\\CovidReader.Api\\CovidReader.Api.csproj"
+            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.Controllers.UseCases.csproj": {
+              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.Controllers.UseCases.csproj"
             },
             "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\views\\CovidReader.Infrastructure.Wpf\\CovidReader.Infrastructure.Wpf.csproj": {
               "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\views\\CovidReader.Infrastructure.Wpf\\CovidReader.Infrastructure.Wpf.csproj"

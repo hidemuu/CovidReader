@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\models\CovidReader.Repository.Api\CovidReader.Repository.Api.csproj" />
+    <ProjectReference Include="..\..\models\CovidReader.Repository.Covid19\CovidReader.Repository.Covid19.csproj" />
+    <ProjectReference Include="..\..\models\CovidReader.Repository.Google\CovidReader.Repository.Google.csproj" />
+    <ProjectReference Include="..\..\models\CovidReader.Repository.Settings\CovidReader.Repository.Settings.csproj" />
+    <ProjectReference Include="..\CovidReader.Controllers\CovidReader.Controllers.csproj" />
+    <ProjectReference Include="..\CovidReader.Service\CovidReader.Service.csproj" />
+  </ItemGroup>
+
+</Project>
