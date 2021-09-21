@@ -8,6 +8,9 @@ using System.Text;
 
 namespace CovidReader.Repository
 {
+    /// <summary>
+    /// CSV入出力ロジック
+    /// </summary>
     public class CsvFileHelper
     {
         private string _fileName;
@@ -15,10 +18,10 @@ namespace CovidReader.Repository
         EncodingProvider provider = System.Text.CodePagesEncodingProvider.Instance;
 
         /// <summary>
-        /// 
+        /// コンストラクタ
         /// </summary>
-        /// <param name="fileName"></param>
-        /// <param name="encode"></param>
+        /// <param name="fileName">ファイル名</param>
+        /// <param name="encode">エンコード</param>
         public CsvFileHelper(string fileName, string encode)
         {
             _fileName = fileName;
@@ -26,7 +29,7 @@ namespace CovidReader.Repository
         }
 
         /// <summary>
-        /// 
+        /// データをシリアライズしてファイルに書き込み
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
@@ -51,7 +54,7 @@ namespace CovidReader.Repository
         }
 
         /// <summary>
-        /// 
+        /// データをファイルから読み出して指定クラスにデシリアライズ
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>

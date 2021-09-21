@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gu5hNkz1tSIxxly/XtD5GHQojEli+ynsGCpzmPXDrwQ2QYMv8yeTUSKvXq0cgPf2kodNNoSqJIGUInYDENcPhw==",
+  "dgSpecHash": "1YshFrPzcn38rrgmzehBMkEuDVyCcg+BTfFaSxkri/F1EJmiLuUF73kyFUAfKAoEpclJAY6HTA5o/u61rpYoQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Core\\CovidReader.Core.csproj",
+  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Core\\CovidReader.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nando\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",

@@ -66,6 +66,7 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Se
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\bin\Debug\netstandard2.0\CovidReader.Repository.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\bin\Debug\netstandard2.0\CovidReader.Repository.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\bin\Debug\netstandard2.0\CovidReader.Models.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\bin\Debug\netstandard2.0\CovidReader.Models.xml
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\obj\Debug\netstandard2.0\CovidReader.Repository.Settings.csproj.AssemblyReference.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\obj\Debug\netstandard2.0\CovidReader.Repository.Settings.AssemblyInfoInputs.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\obj\Debug\netstandard2.0\CovidReader.Repository.Settings.AssemblyInfo.cs
@@ -73,3 +74,4 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Se
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\obj\Debug\netstandard2.0\CovidReader.Repository.Settings.csproj.CopyComplete
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\obj\Debug\netstandard2.0\CovidReader.Repository.Settings.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\obj\Debug\netstandard2.0\CovidReader.Repository.Settings.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Settings\bin\Debug\netstandard2.0\CovidReader.Repository.xml

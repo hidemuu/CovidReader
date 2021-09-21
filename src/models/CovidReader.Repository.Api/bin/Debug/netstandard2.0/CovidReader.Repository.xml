@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CovidReader.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:CovidReader.Repository.Api.IApiItemRepository`1">
+            <summary>
+            アプリケーションAPIの共通リポジトリアクセス処理
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.Api.IApiItemRepository`1.GetAsync">
+            <summary>
+            すべてのデータを取得し指定クラスにデシリアライズ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Api.IApiItemRepository`1.GetAsync(System.String)">
+            <summary>
+            指定日付のデータを取得し、指定クラスにデシリアライズ
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Api.IApiItemRepository`1.PostAsync(`0)">
+            <summary>
+            データをシリアライズしリポジトリに登録
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Api.IApiItemRepository`1.PostAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            データリストをシリアライズしリポジトリに登録
+            </summary>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Api.IApiItemRepository`1.DeleteAsync(System.String)">
+            <summary>
+            指定日付のデータを削除
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Repository.Api.IApiRepository">
+            <summary>
+            アプリケーションAPIリポジトリ
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Api.IApiRepository.Infections">
+            <summary>
+            感染データリポジトリ
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Api.IApiRepository.Inspections">
+            <summary>
+            検査データリポジトリ
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Api.IApiRepository.ChartItems">
+            <summary>
+            チャート表示データリポジトリ（現在不使用）
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Api.IApiRepository.ChartConfigs">
+            <summary>
+            チャート設定データリポジトリ（現在不使用）
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Api.IChartConfigRepository">
+            <summary>
+            チャート設定データリポジトリ
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.Api.IChartConfigRepository.GetAsync">
+            <summary>
+            すべてのデータを取得しデシリアライズ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Api.IChartConfigRepository.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.ChartConfig})">
+            <summary>
+            データをシリアライズしリポジトリに登録
+            </summary>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Repository.Api.IChartItemRepository">
+            <summary>
+            チャート表示項目リポジトリ
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Api.IInfectionRepository">
+            <summary>
+            感染データリポジトリ
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Api.IInspectionRepository">
+            <summary>
+            検査データリポジトリ
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Constants">
+            <summary>
+            グローバル参照定数
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Constants.RootName">
+            <summary>
+            ルート名（アプリケーション実行ファイル直下から指定文字列のフォルダを検索し、一致したパスをルートパスとする）
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.ICovid19ItemRepository`1">
+            <summary>
+            Covid19 APIリポジトリの共通リポジトリアクセス処理
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CovidReader.Repository.Covid19.MHLW.ICovid19ItemRepository`1.GetAsync">
+            <summary>
+            すべてのデータを取得し指定クラスにデシリアライズ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Covid19.MHLW.ICovid19ItemRepository`1.GetAsync(System.String)">
+            <summary>
+            指定日付のデータを取得し、指定クラスにデシリアライズ
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Covid19.MHLW.ICovid19ItemRepository`1.PostAsync(`0)">
+            <summary>
+            データをシリアライズしリポジトリに登録
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Covid19.MHLW.ICovid19ItemRepository`1.PostAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            データリストをシリアライズしリポジトリに登録
+            </summary>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Covid19.MHLW.ICovid19ItemRepository`1.DeleteAsync(System.String)">
+            <summary>
+            指定日付のデータを削除
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.ICovid19LineItemRepository">
+            <summary>
+            Covid19リポジトリ　各データ一覧（リレーション）
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.Covid19.MHLW.ICovid19LineItemRepository.GetAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Covid19.MHLW.ICovid19LineItemRepository.GetAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Covid19.MHLW.ICovid19LineItemRepository.PostAsync(CovidReader.Models.Covid19.MHLW.Covid19LineItem)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Covid19.MHLW.ICovid19LineItemRepository.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Covid19LineItem})">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.ICovid19Repository">
+            <summary>
+            Covid19 APIリポジトリ
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Covid19.MHLW.ICovid19Repository.Deathes">
+            <summary>
+            死亡者数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Covid19.MHLW.ICovid19Repository.Hospitalizations">
+            <summary>
+            入院治療者数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Covid19.MHLW.ICovid19Repository.Positives">
+            <summary>
+            陽性者数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Covid19.MHLW.ICovid19Repository.Recoveries">
+            <summary>
+            治療済者数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Covid19.MHLW.ICovid19Repository.Severes">
+            <summary>
+            重傷者数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Covid19.MHLW.ICovid19Repository.Tests">
+            <summary>
+            検査件数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Covid19.MHLW.ICovid19Repository.TestDetails">
+            <summary>
+            検査件数詳細
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Covid19.MHLW.ICovid19Repository.CovidLineItems">
+            <summary>
+            一覧
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.IDeathRepository">
+            <summary>
+            死亡者数
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.IHospitalizationRepository">
+            <summary>
+            入院治療者数
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.IPositiveRepository">
+            <summary>
+            陽性者数
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.IRecoveryRepository">
+            <summary>
+            治癒者数
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.ISevereRepository">
+            <summary>
+            重傷者数
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.ITestDetailRepository">
+            <summary>
+            検査件数詳細
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.ITestRepository">
+            <summary>
+            検査件数
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.CsvFileHelper">
+            <summary>
+            CSV入出力ロジック
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.CsvFileHelper.#ctor(System.String,System.String)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="fileName">ファイル名</param>
+            <param name="encode">エンコード</param>
+        </member>
+        <member name="M:CovidReader.Repository.CsvFileHelper.Write``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            データをシリアライズしてファイルに書き込み
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+        </member>
+        <member name="M:CovidReader.Repository.CsvFileHelper.Read``1">
+            <summary>
+            データをファイルから読み出して指定クラスにデシリアライズ
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Repository.HttpHelper">
+            <summary>
+            HTTP通信ロジック
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.HttpHelper._url">
+            <summary>           
+            The Base URL for the API.
+            /// </summary>
+        </member>
+        <member name="M:CovidReader.Repository.HttpHelper.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:CovidReader.Repository.HttpHelper.GetAsync``1(System.String)">
+            <summary>
+            HTTP GET 要求生成 to the given controller and returns the deserialized response content.
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.HttpHelper.PostAsync``2(System.String,``0)">
+            <summary>
+            Makes an HTTP POST request to the given controller with the given object as the body.
+            Returns the deserialized response content.
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.HttpHelper.PutAsync``2(System.String,``0)">
+            <summary>
+            Makes an HTTP PUT request to the given controller with the given object as the body.
+            Returns the deserialized response content.
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.HttpHelper.DeleteAsync(System.String,System.Guid)">
+            <summary>
+            Makes an HTTP DELETE request to the given controller and includes all the given
+            object's properties as URL parameters. Returns the deserialized response content.
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.HttpHelper.DeleteAsync(System.String,System.String)">
+            <summary>
+            Makes an HTTP DELETE request to the given controller and includes all the given
+            object's properties as URL parameters. Returns the deserialized response content.
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.HttpHelper.BaseClient">
+            <summary>
+            Constructs the base HTTP client, including correct authorization and API version headers.
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.HttpHelper.JsonStringContent">
+            <summary>
+            Helper class for formatting <see cref="T:System.Net.Http.StringContent"/> as UTF8 application/json. 
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.HttpHelper.JsonStringContent.#ctor(System.Object)">
+            <summary>
+            Creates <see cref="T:System.Net.Http.StringContent"/> formatted as UTF8 application/json.
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.JsonFileHelper">
+            <summary>
+            JSONファイル入出力ロジック
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.JsonFileHelper.#ctor(System.String,System.String)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="fileName">ファイル名</param>
+            <param name="encode">エンコード</param>
+        </member>
+        <member name="M:CovidReader.Repository.JsonFileHelper.Read``1">
+            <summary>
+            データをファイルから読み出して指定クラスにデシリアライズ
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.JsonFileHelper.Write``1(``0)">
+            <summary>
+            データをシリアライズしてファイルに書き込み
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+        </member>
+        <member name="M:CovidReader.Repository.JsonFileHelper.WriteStream(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="json"></param>
+            <param name="isappend">追記モード（falseなら上書き保存）</param>
+        </member>
+        <member name="T:CovidReader.Repository.PathHelper">
+            <summary>
+            絶対パス取得ロジック
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.PathHelper.GetCurrentRootPath(System.String)">
+            <summary>
+            指定文字列に一致するフォルダを実行ファイル直下から検索し、絶対パスとして返す
+            </summary>
+            <param name="solutionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.PathHelper.GetFilesMostDeep(System.String,System.String)">
+            <summary>
+            指定した検索パターンに一致するファイルを最下層まで検索しすべて返す
+            </summary>
+            <param name="rootPath">
+            検索を開始する最上層のディレクトリへのパス
+            ex) @"C:\Hoge\ 
+            </param>
+            <param name="pattern">
+            パス内のファイル名と対応させる検索文字列
+            ex) *Hoge*.txt
+            </param>
+            <returns>
+            検索パターンに一致したすべてのファイルパス
+            </returns>
+        </member>
+        <member name="T:CovidReader.Repository.Settings.ICommentRepository">
+            <summary>
+            UIコメント
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Settings.IConfigRepository">
+            <summary>
+            コンフィグレーション設定
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.Settings.IConfigRepository.GetAsync">
+            <summary>
+            一括で取得しデシリアライズ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Settings.IConfigRepository.GetAsync(System.String)">
+            <summary>
+            名称が一致するものを取得しデシリアライズ
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Repository.Settings.ISettingRepository">
+            <summary>
+            ユーザー設定
+            </summary>
+        </member>
+        <member name="P:CovidReader.Repository.Settings.ISettingRepository.Configs">
+            <summary>
+            コンフィグレーション
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.Urls">
+            <summary>
+            URL一覧
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Urls.RootPath">
+            <summary>
+            ルートパス（絶対パス）
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Urls.SqlLocalConnectionString">
+            <summary>
+            アプリケーションAPI用ローカルデータベースコネクション文字列
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Urls.SqlCovidConnectionString">
+            <summary>
+            Covid19 API用ローカルデータベースコネクション文字列
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Urls.ServerPath">
+            <summary>
+            ローカルサーバー用パス（XAMPPを使用する場合のみ）
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Urls.ServerUrl">
+            <summary>
+            ローカルサーバーURL（XAMPPを使用する場合のみ）
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Urls.ApiUrl">
+            <summary>
+            Base URL for the app's API service. A live test service is provided for convenience; 
+            however, you cannot modify any data on the server or deploy your own updates. 
+            To see the full functionality, deploy Contoso.Service using your own Azure account.
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Urls.AccountClientId">
+            <summary>
+            The Azure Active Directory (AAD) client id.
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Urls.SqlAzureConnectionString">
+            <summary>
+            Connection string for a server-side SQL database.
+            </summary>
+        </member>
+        <member name="T:CovidReader.Repository.XmlFileHelper">
+            <summary>
+            XMLファイル入出力ロジック
+            </summary>
+        </member>
+        <member name="M:CovidReader.Repository.XmlFileHelper.#ctor(System.String)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="path">ファイルパス</param>
+        </member>
+        <member name="M:CovidReader.Repository.XmlFileHelper.Read``1">
+            <summary>
+            データをファイルから読み出して指定クラスにデシリアライズ
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.XmlFileHelper.Write``1(``0)">
+            <summary>
+            シリアライズしてファイルに書き込み
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+        </member>
+    </members>
+</doc>

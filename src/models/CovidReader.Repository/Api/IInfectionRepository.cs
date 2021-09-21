@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Api
 {
-    public interface IInfectionRepository
+    /// <summary>
+    /// 感染データリポジトリ
+    /// </summary>
+    public interface IInfectionRepository : IApiItemRepository<Infection>
     {
-        Task<IEnumerable<Infection>> GetAsync();
-        Task<Infection> GetAsync(string date);
-        Task PostAsync(Infection item);
-        Task PostAsync(IEnumerable<Infection> items);
-        Task DeleteAsync(string date);
+        
     }
 }

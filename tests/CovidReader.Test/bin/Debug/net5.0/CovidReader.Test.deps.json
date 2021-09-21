@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "CovidReader.Test/1.0.0": {
         "dependencies": {
-          "CovidReader.Core": "1.0.0",
           "CovidReader.Service": "1.0.0",
+          "CovidReader.Service.Api": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.9.4",
           "Moq": "4.16.1",
           "NUnit": "3.13.1",
@@ -1017,14 +1017,6 @@
           }
         }
       },
-      "CovidReader.Core/1.0.0": {
-        "dependencies": {
-          "CovidReader.Models": "1.0.0"
-        },
-        "runtime": {
-          "CovidReader.Core.dll": {}
-        }
-      },
       "CovidReader.Models/1.0.0": {
         "dependencies": {
           "CsvHelper": "27.1.1",
@@ -1047,11 +1039,25 @@
       },
       "CovidReader.Service/1.0.0": {
         "dependencies": {
-          "CovidReader.Core": "1.0.0",
-          "CovidReader.Repository": "1.0.0"
+          "CovidReader.Models": "1.0.0"
         },
         "runtime": {
           "CovidReader.Service.dll": {}
+        }
+      },
+      "CovidReader.Service.Api/1.0.0": {
+        "dependencies": {
+          "CovidReader.Repository": "1.0.0",
+          "CovidReader.Service": "1.0.0",
+          "CovidReader.Utilities": "1.0.0"
+        },
+        "runtime": {
+          "CovidReader.Service.Api.dll": {}
+        }
+      },
+      "CovidReader.Utilities/1.0.0": {
+        "runtime": {
+          "CovidReader.Utilities.dll": {}
         }
       }
     }
@@ -1657,11 +1663,6 @@
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
-    "CovidReader.Core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "CovidReader.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1673,6 +1674,16 @@
       "sha512": ""
     },
     "CovidReader.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CovidReader.Service.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CovidReader.Utilities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

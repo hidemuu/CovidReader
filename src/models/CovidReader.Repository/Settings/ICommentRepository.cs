@@ -4,6 +4,9 @@ using System.Text;
 
 namespace CovidReader.Repository.Settings
 {
+    /// <summary>
+    /// UIコメント
+    /// </summary>
     public interface ICommentRepository
     {
 

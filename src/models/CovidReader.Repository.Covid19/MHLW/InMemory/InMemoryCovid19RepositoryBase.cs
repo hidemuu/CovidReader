@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW.InMemory
 {
-    public class InMemoryCovid19RepositoryBase<T> where T : CovidDbObject
+    public class InMemoryCovid19RepositoryBase<T> where T : Covid19DbObject
     {
         private IList<T> _items;
 

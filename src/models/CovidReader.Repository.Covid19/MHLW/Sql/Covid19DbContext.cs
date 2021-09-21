@@ -30,7 +30,7 @@ namespace CovidReader.Repository.Covid19.MHLW.Sql
 
         public DbSet<TestDetail> TestDetails { get; set; }
 
-        public DbSet<CovidLineItem> CovidLineItems { get; set; }
+        public DbSet<Covid19LineItem> CovidLineItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -43,12 +43,12 @@ namespace CovidReader.Repository.Covid19.MHLW.Sql
             //    .HasOne(s => s.Area)
             //    .WithMany(a => a.Shops);
 
-            modelBuilder.Entity<CovidLineItem>()
+            modelBuilder.Entity<Covid19LineItem>()
             .HasOne(b => b.Death)
             .WithOne()
             .HasForeignKey<Death>(b => b.Date);
 
-            modelBuilder.Entity<CovidLineItem>()
+            modelBuilder.Entity<Covid19LineItem>()
             .HasOne(b => b.Hospitalization)
             .WithOne()
             .HasForeignKey<Hospitalization>(b => b.Date);

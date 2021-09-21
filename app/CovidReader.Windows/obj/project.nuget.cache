@@ -1,16 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7RA8ono97amaqrjx6OAC97CSKM5C9pdi4G5TJ3c+1ouxSesh1caKUqTNk1VymtRPBPf8GP4SWCaz1nGsVh/PtQ==",
+  "dgSpecHash": "dNxJd55A+J3H32OCBj4ndu9gxzwrgqUyCEEBCCLL6vPDrTTOxKu6vEpe8NHRHzG5YgJ0lzfgQbqkwspl+VKypA==",
   "success": true,
   "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\app\\CovidReader.Windows\\CovidReader.Windows.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nando\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\google.apis\\1.53.0\\google.apis.1.53.0.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\google.apis.auth\\1.53.0\\google.apis.auth.1.53.0.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\google.apis.calendar.v3\\1.53.0.2382\\google.apis.calendar.v3.1.53.0.2382.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\google.apis.core\\1.53.0\\google.apis.core.1.53.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\livecharts.wpf.netcore3\\0.9.7\\livecharts.wpf.netcore3.0.9.7.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\mahapps.metro\\2.4.7\\mahapps.metro.2.4.7.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\materialdesigncolors\\2.0.1\\materialdesigncolors.2.0.1.nupkg.sha512",

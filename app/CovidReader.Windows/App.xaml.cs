@@ -44,12 +44,12 @@ namespace CovidReader.Windows
         //private static readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
         //private IList<Task> _tasks = new List<Task>();
 
-        public static NativeController NativeController { get; set; }
+        public static NativeAppController NativeController { get; set; }
 
         public App()
         {
 
-            NativeController = new NativeController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));
+            NativeController = new NativeAppController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));
         }
 
 
@@ -102,15 +102,20 @@ namespace CovidReader.Windows
              ViewModelLocationProvider.Register<MainWindow, MainWindowViewModel>();
         }
 
-    #endregion
+        //protected override IModuleCatalog CreateModuleCatalog()
+        //{
+        //    return new ConfigurationModuleCatalog();
+        //}
+
+        #endregion
 
 
-    #region 内部ロジック
+        #region 内部ロジック
 
-    /// <summary>
-    /// ログ初期設定
-    /// </summary>
-    private void InitializeLogger()
+        /// <summary>
+        /// ログ初期設定
+        /// </summary>
+        private void InitializeLogger()
         {
             var conf = new LoggingConfiguration();
             //ファイル出力定義

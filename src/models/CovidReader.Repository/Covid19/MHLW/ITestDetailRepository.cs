@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW
 {
-    public interface ITestDetailRepository
+    /// <summary>
+    /// 検査件数詳細
+    /// </summary>
+    public interface ITestDetailRepository : ICovid19ItemRepository<TestDetail>
     {
-        Task<IEnumerable<TestDetail>> GetAsync();
-        Task<TestDetail> GetAsync(string date);
-        Task PostAsync(TestDetail test);
-        Task PostAsync(IEnumerable<TestDetail> items);
-        Task DeleteAsync(string date);
+        
     }
 }

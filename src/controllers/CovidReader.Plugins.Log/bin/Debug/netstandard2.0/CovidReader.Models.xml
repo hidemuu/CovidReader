@@ -1,0 +1,716 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CovidReader.Models</name>
+    </assembly>
+    <members>
+        <member name="T:CovidReader.Models.Api.DailyDbObject">
+            <summary>
+            日集計データ共通項目
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.DailyDbObject.Index">
+            <summary>
+            インデックス番号
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.DailyDbObject.Date">
+            <summary>
+            日付
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.DailyDbObject.Calc">
+            <summary>
+            集計方法（単日 / 累計）
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Api.DbObject">
+            <summary>
+            データベース共通項目
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.DbObject.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Api.Account">
+            <summary>
+            ログイン用アカウント
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Account.LoginId">
+            <summary>
+            ログインID
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Account.Password">
+            <summary>
+            パスワード
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Api.Order">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Api.Infection">
+            <summary>
+            感染状況
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Infection.CountryName">
+            <summary>
+            国名
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Infection.PrefName">
+            <summary>
+            都道府県名
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Infection.CityName">
+            <summary>
+            市名
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Infection.DeathNumber">
+            <summary>
+            死亡者数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Infection.CureNumber">
+            <summary>
+            入院者数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Infection.PatientNumber">
+            <summary>
+            陽性者数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Infection.RecoveryNumber">
+            <summary>
+            退院者数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Infection.SevereNumber">
+            <summary>
+            重傷者数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Infection.TestNumber">
+            <summary>
+            検査件数
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Api.Infection.ToString">
+            <summary>
+            文字列取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Api.Infection.GetHeader">
+            <summary>
+            ヘッダー文字列取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Api.Inspection">
+            <summary>
+            検査件数データ
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Inspection.CountryName">
+            <summary>
+            国名
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Inspection.NationalTestNumber">
+            <summary>
+            国立感染症研究所 検査件数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Inspection.QuarantineTestNumber">
+            <summary>
+            検疫所 検査件数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Inspection.CareCenterTestNumber">
+            <summary>
+            地方衛生研究所・保健所 検査件数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Inspection.CivilCenterTestNumber">
+            <summary>
+            民間検査会社 検査件数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Inspection.CollegeTestNumber">
+            <summary>
+            大学等 検査件数
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.Inspection.MedicalTestNumber">
+            <summary>
+            医療機関 検査件数
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Api.Inspection.ToString">
+            <summary>
+            文字列取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Api.Inspection.GetHeader">
+            <summary>
+            ヘッダー文字列取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Api.LineItem">
+            <summary>
+            一覧データ
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Api.ChartConfig">
+            <summary>
+            チャート各カラムのコンフィグ（オプション）データ
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.Name">
+            <summary>
+            名称（表示用）
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.ChartType">
+            <summary>
+            チャートタイプ（ライン/バー等）
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.BackgroundColor">
+            <summary>
+            背景色
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.BorderColor">
+            <summary>
+            ボーダー色
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.BorderWidth">
+            <summary>
+            ボーダー幅
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.Category">
+            <summary>
+            カテゴリ（区分用）
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Api.ChartConfig.ToString">
+            <summary>
+            文字列取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Api.ChartConfig.GetHeader">
+            <summary>
+            ヘッダー文字列取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Api.ChartItem">
+            <summary>
+            チャート表示項目
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartItem.Data">
+            <summary>
+            表示データ（コンマ区切り）
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Api.ChartItem.ToString">
+            <summary>
+            文字列取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Api.ChartItem.GetHeader">
+            <summary>
+            ヘッダー文字列取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Api.ChartItem.ToArray">
+            <summary>
+            表示データを配列に変換
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.CS.CovidDbObject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.CovidDbObject.Date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.CovidDbObject.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.CS.DailySurvey">
+            <summary>
+            日報
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.FacilityId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.FacilityName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.ZipCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.PrefName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.FacilityAddr">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.FacilityTel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.Latitude">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.Longitude">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.SubmitDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.FacilityType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.AnsType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.LocalGovCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.CityName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DailySurvey.FacilityCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.CS.DeathsJapan">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.DeathsJapan.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.CS.ErrorInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.ErrorInfo.ErrorFlag">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.ErrorInfo.ErrorCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.ErrorInfo.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.CS.OccurrenceJapan">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.OccurrenceJapan.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.OccurrenceJapan.Area">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.CS.OccurrenceOversea">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.OccurrenceOversea.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.OccurrenceOversea.DeathNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.CS.OccurrenceOversea.Area">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.MHLW.CovidDbObject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.CovidDbObject.Date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.CovidDbObject.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.MHLW.CovidLineItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.CovidLineItem.Death">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.CovidLineItem.Hospitalization">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.MHLW.Death">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.Death.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Death.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Death.GetHeader">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.MHLW.Hospitalization">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.Hospitalization.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Hospitalization.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Hospitalization.GetHeader">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.MHLW.Positive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.Positive.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Positive.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Positive.GetHeader">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.MHLW.Recovery">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.Recovery.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Recovery.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Recovery.GetHeader">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.MHLW.Severe">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.Severe.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Severe.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Severe.GetHeader">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.MHLW.Test">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.Test.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Test.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.Test.GetHeader">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Covid19.MHLW.TestDetail">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.TestDetail.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.TestDetail.QuarantineNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.TestDetail.CareCenterNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.TestDetail.CivilCenterNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.TestDetail.CollegeNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Covid19.MHLW.TestDetail.MedicalNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.TestDetail.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Covid19.MHLW.TestDetail.GetHeader">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Models.Formats">
+            <summary>
+            定型コード
+            </summary>
+        </member>
+        <member name="F:CovidReader.Models.Formats.NewLine">
+            <summary>
+            改行コード
+            </summary>
+        </member>
+        <member name="F:CovidReader.Models.Formats.Delimiter">
+            <summary>
+            デリミタ
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Google.Calendar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Google.GoogleDbObject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Google.Map">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Settings.Comment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Settings.Comment.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Settings.Comment.Val">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Settings.Comment.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Settings.Config">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Settings.Config.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Settings.Config.Val">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Settings.Config.Default">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Settings.Config.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Settings.Configs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Models.Settings.SettingDbObject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Settings.SettingDbObject.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Settings.SettingDbObject.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Settings.SettingDbObject.Val">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

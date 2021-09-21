@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CovidReader.Controllers</name>
+    </assembly>
+    <members>
+        <member name="T:CovidReader.Controllers.AppController">
+            <summary>
+            アプリケーション用コントローラー基本クラス
+            </summary>
+        </member>
+        <member name="P:CovidReader.Controllers.AppController.Api">
+            <summary>
+            アプリケーションAPI アクセスサービス
+            </summary>
+        </member>
+        <member name="P:CovidReader.Controllers.AppController.Covid19">
+            <summary>
+            Covid19 APIアクセスサービス
+            </summary>
+        </member>
+        <member name="M:CovidReader.Controllers.AppController.#ctor(CovidReader.Service.IApiService,CovidReader.Service.ICovid19Service)">
+            <summary>
+            アプリケーションAPI / Covid19 API アクセスサービスを取り込み、API全体の処理を構築
+            </summary>
+            <param name="api"></param>
+            <param name="covid19"></param>
+        </member>
+        <member name="M:CovidReader.Controllers.AppController.UpdateAsync">
+            <summary>
+            アップデート処理
+            Covid19 APIデータをインポート → アプリケーションAPIに反映
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Controllers.AppController.ImportCovid19Async">
+            <summary>
+            Covid19データをインポート
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Controllers.AppController.CovidToApiAsync">
+            <summary>
+            Covid19 APIデータをアプリケーションAPIデータベーステーブルに反映
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Controllers.AppController.ToChartItemAsync">
+            <summary>
+            アプリケーションAPIの感染データをChartItemテーブルに変換して格納 / ChartConfigテーブルデータを更新
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Controllers.ConsoleAppController">
+            <summary>
+            コンソールアプリケーション用コントローラー
+            </summary>
+        </member>
+        <member name="M:CovidReader.Controllers.ConsoleAppController.#ctor(CovidReader.Service.IApiService,CovidReader.Service.ICovid19Service)">
+            <summary>
+            
+            </summary>
+            <param name="api"></param>
+            <param name="covid19"></param>
+        </member>
+        <member name="M:CovidReader.Controllers.ConsoleAppController.AutoRunAsync">
+            <summary>
+            自動実行処理
+            XAMPPサーバーにChart表示用データとスクリプトファイルを保存し、サーバ起動＋ブラウザ起動
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Controllers.ConsoleAppController.ScrapingAsync">
+            <summary>
+            スクレイピング処理（テスト用）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Controllers.ConsoleAppController.ViewChartAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Controllers.NativeAppController">
+            <summary>
+            ネイティブアプリケーション用コントローラー
+            </summary>
+        </member>
+        <member name="M:CovidReader.Controllers.NativeAppController.#ctor(CovidReader.Service.IApiService,CovidReader.Service.ICovid19Service)">
+            <summary>
+            
+            </summary>
+            <param name="api"></param>
+            <param name="covid19"></param>
+        </member>
+        <member name="T:CovidReader.Controllers.WebAppController">
+            <summary>
+            Webアプリケーション用コントローラー
+            </summary>
+        </member>
+        <member name="M:CovidReader.Controllers.WebAppController.#ctor(CovidReader.Service.IApiService,CovidReader.Service.ICovid19Service)">
+            <summary>
+            
+            </summary>
+            <param name="api"></param>
+            <param name="covid19"></param>
+        </member>
+    </members>
+</doc>

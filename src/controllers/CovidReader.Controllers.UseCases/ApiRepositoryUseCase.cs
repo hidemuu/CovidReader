@@ -11,10 +11,16 @@ using System.Text;
 
 namespace CovidReader.Controllers.UseCases
 {
+    /// <summary>
+    /// アプリケーションAPIリポジトリ生成のユースケース
+    /// </summary>
     public class ApiRepositoryUseCase
     {
         
-
+        /// <summary>
+        /// SQLite連携のリポジトリを生成
+        /// </summary>
+        /// <returns></returns>
         public static IApiRepository UseSqlite()
         {
             var connection = Urls.SqlLocalConnectionString;
@@ -29,16 +35,32 @@ namespace CovidReader.Controllers.UseCases
             return r;
         }
 
+        /// <summary>
+        /// RestAPI連携のリポジトリを生成（将来拡張用）
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public static IApiRepository UseREST(string url = "", string key = "")
         {
             return new RestApiRepository(url,key);
         }
 
+        /// <summary>
+        /// Csvファイル連携のリポジトリを生成
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public static IApiRepository UseCsv(string path = @"assets\api")
         {
             return new CsvApiRepository(path, "shift-jis");
         }
 
+        /// <summary>
+        /// Jsonファイル連携のリポジトリを生成
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public static IApiRepository UseJson(string path = @"assets\api")
         {
             return new JsonApiRepository(path, "shift-jis");

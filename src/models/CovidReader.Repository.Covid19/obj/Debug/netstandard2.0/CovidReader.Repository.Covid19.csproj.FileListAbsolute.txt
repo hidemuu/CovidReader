@@ -6,6 +6,7 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Co
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\bin\Debug\netstandard2.0\CovidReader.Repository.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\bin\Debug\netstandard2.0\CovidReader.Repository.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\bin\Debug\netstandard2.0\CovidReader.Models.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\bin\Debug\netstandard2.0\CovidReader.Models.xml
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\obj\Debug\netstandard2.0\CovidReader.Repository.Covid19.csproj.AssemblyReference.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\obj\Debug\netstandard2.0\CovidReader.Repository.Covid19.AssemblyInfoInputs.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\obj\Debug\netstandard2.0\CovidReader.Repository.Covid19.AssemblyInfo.cs
@@ -13,3 +14,4 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Co
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\obj\Debug\netstandard2.0\CovidReader.Repository.Covid19.csproj.CopyComplete
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\obj\Debug\netstandard2.0\CovidReader.Repository.Covid19.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\obj\Debug\netstandard2.0\CovidReader.Repository.Covid19.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\models\CovidReader.Repository.Covid19\bin\Debug\netstandard2.0\CovidReader.Repository.xml

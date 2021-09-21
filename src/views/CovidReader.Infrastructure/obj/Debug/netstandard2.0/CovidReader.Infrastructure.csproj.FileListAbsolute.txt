@@ -42,4 +42,3 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure
 C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure\obj\Debug\netstandard2.0\CovidReader.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure\obj\Debug\netstandard2.0\CovidReader.Infrastructure.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure\obj\Debug\netstandard2.0\CovidReader.Infrastructure.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure\obj\Debug\netstandard2.0\CovidReader.Infrastructure.csproj.AssemblyReference.cache

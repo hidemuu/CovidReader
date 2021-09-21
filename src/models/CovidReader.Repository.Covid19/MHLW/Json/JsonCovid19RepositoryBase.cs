@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW.Json
 {
-    public abstract class JsonCovid19RepositoryBase<T> where T : CovidDbObject
+    public abstract class JsonCovid19RepositoryBase<T> where T : Covid19DbObject
     {
         private readonly JsonFileHelper _json;
 

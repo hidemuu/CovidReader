@@ -8,18 +8,30 @@ using System.IO;
 
 namespace CovidReader.Repository
 {
+    /// <summary>
+    /// XMLファイル入出力ロジック
+    /// </summary>
     public class XmlFileHelper
     {
 
         private string _path;
         //private XElement _xml;
 
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="path">ファイルパス</param>
         public XmlFileHelper(string path)
         {
             _path = path;
             //_xml = XElement.Load(path);
         }
 
+        /// <summary>
+        /// データをファイルから読み出して指定クラスにデシリアライズ
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public T Read<T>()
         {
             using (var stream = new StreamReader(_path, new UTF8Encoding(false)))
@@ -34,6 +46,11 @@ namespace CovidReader.Repository
 
         }
 
+        /// <summary>
+        /// シリアライズしてファイルに書き込み
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
         public void Write<T>(T obj)
         {
             XmlSerializer se = new XmlSerializer(typeof(T));

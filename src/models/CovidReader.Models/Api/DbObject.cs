@@ -8,8 +8,14 @@ using System.Text;
 
 namespace CovidReader.Models.Api
 { 
+    /// <summary>
+    /// データベース共通項目
+    /// </summary>
     public class DbObject
     {
+        /// <summary>
+        /// ID
+        /// </summary>
         [Name("id")]
         [JsonProperty("id")]
         [DisplayName("id")]

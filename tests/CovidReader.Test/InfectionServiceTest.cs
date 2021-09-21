@@ -1,4 +1,4 @@
-﻿using CovidReader.Core.Services;
+﻿using CovidReader.Service;
 using CovidReader.Models.Api;
 using CovidReader.Repository.Api;
 using Moq;

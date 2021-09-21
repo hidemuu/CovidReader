@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CovidReader.Service.Covid19</name>
+    </assembly>
+    <members>
+        <member name="T:CovidReader.Service.Covid19.Covid19Service">
+            <summary>
+            Covid19 APIデータアクセスサービス実装クラス
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.Covid19.Covid19Service.#ctor(CovidReader.Repository.Covid19.MHLW.ICovid19Repository,CovidReader.Repository.Covid19.MHLW.ICovid19Repository)">
+            <summary>
+            コンストラクタ
+            リポジトリとマッパーを注入
+            </summary>
+            <param name="repository"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:CovidReader.Service.Covid19.Covid19Service.MapperToRepositoryAsync">
+            <summary>
+            マッパーデータをリポジトリに全反映
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.Covid19.Covid19Service.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Death},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Hospitalization},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Positive},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Recovery},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Severe},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Test},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.TestDetail})">
+            <summary>
+            リポジトリにデータを登録
+            </summary>
+            <param name="deaths">死亡者数</param>
+            <param name="hospitalizations">入院治療者数</param>
+            <param name="positives">陽性者数</param>
+            <param name="recoveries">治癒者数</param>
+            <param name="severes">重傷者数</param>
+            <param name="tests">検査件数</param>
+            <param name="testDetails">検査詳細</param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.Covid19.Covid19Service.GetAsync``1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

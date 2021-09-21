@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW
 {
-    public interface ISevereRepository
+    /// <summary>
+    /// 重傷者数
+    /// </summary>
+    public interface ISevereRepository : ICovid19ItemRepository<Severe>
     {
-        Task<IEnumerable<Severe>> GetAsync();
-        Task<Severe> GetAsync(string date);
-        Task PostAsync(Severe severe);
-        Task PostAsync(IEnumerable<Severe> items);
-        Task DeleteAsync(string date);
+        
     }
 }

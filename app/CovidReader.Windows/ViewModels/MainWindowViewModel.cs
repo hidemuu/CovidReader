@@ -103,6 +103,7 @@ namespace CovidReader.Windows.ViewModels
             RegionManager = regionManager;
             _dialogService = dialogService;
             _moduleManager.LoadModuleCompleted += _moduleManager_LoadModuleCompleted;
+
         }
 
 

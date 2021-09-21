@@ -4,10 +4,13 @@ using System.Text;
 
 namespace CovidReader.Repository
 {
+    /// <summary>
+    /// 絶対パス取得ロジック
+    /// </summary>
     public class PathHelper
     {
         /// <summary>
-        /// 
+        /// 指定文字列に一致するフォルダを実行ファイル直下から検索し、絶対パスとして返す
         /// </summary>
         /// <param name="solutionName"></param>
         /// <returns></returns>
@@ -33,18 +36,18 @@ namespace CovidReader.Repository
         }
 
         /// <summary>
-        /// 指定した検索パターンに一致するファイルを最下層まで検索しすべて返します。
+        /// 指定した検索パターンに一致するファイルを最下層まで検索しすべて返す
         /// </summary>
         /// <param name="rootPath">
-        /// 検索を開始する最上層のディレクトリへのパス。
+        /// 検索を開始する最上層のディレクトリへのパス
         /// ex) @"C:\Hoge\ 
         /// </param>
         /// <param name="pattern">
-        /// パス内のファイル名と対応させる検索文字列。
+        /// パス内のファイル名と対応させる検索文字列
         /// ex) *Hoge*.txt
         /// </param>
         /// <returns>
-        /// 検索パターンに一致したすべてのファイルパス。
+        /// 検索パターンに一致したすべてのファイルパス
         /// </returns>
         public static string[] GetFilesMostDeep(string rootPath, string pattern)
         {

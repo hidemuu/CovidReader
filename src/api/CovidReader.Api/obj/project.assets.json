@@ -32,58 +32,6 @@
           "lib/netstandard2.0/CsvHelper.dll": {}
         }
       },
-      "Google.Apis/1.53.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Apis.Core": "1.53.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Apis.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.dll": {}
-        }
-      },
-      "Google.Apis.Auth/1.53.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Apis": "1.53.0",
-          "Google.Apis.Core": "1.53.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
-          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
-          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
-        }
-      },
-      "Google.Apis.Calendar.v3/1.53.0.2382": {
-        "type": "package",
-        "dependencies": {
-          "Google.Apis": "1.53.0",
-          "Google.Apis.Auth": "1.53.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Apis.Calendar.v3.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.Calendar.v3.dll": {}
-        }
-      },
-      "Google.Apis.Core/1.53.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Apis.Core.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.Core.dll": {}
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -701,7 +649,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "CovidReader.Core": "1.0.0",
+          "CovidReader.Plugins": "1.0.0",
+          "CovidReader.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.17",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.17",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.11",
@@ -723,28 +672,15 @@
           "CovidReader.Controllers": "1.0.0",
           "CovidReader.Repository.Api": "1.0.0",
           "CovidReader.Repository.Covid19": "1.0.0",
-          "CovidReader.Repository.Google": "1.0.0",
           "CovidReader.Repository.Settings": "1.0.0",
-          "CovidReader.Service": "1.0.0"
+          "CovidReader.Service.Api": "1.0.0",
+          "CovidReader.Service.Covid19": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CovidReader.Controllers.UseCases.dll": {}
         },
         "runtime": {
           "bin/placeholder/CovidReader.Controllers.UseCases.dll": {}
-        }
-      },
-      "CovidReader.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "CovidReader.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/CovidReader.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CovidReader.Core.dll": {}
         }
       },
       "CovidReader.Models/1.0.0": {
@@ -760,6 +696,16 @@
         },
         "runtime": {
           "bin/placeholder/CovidReader.Models.dll": {}
+        }
+      },
+      "CovidReader.Plugins/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CovidReader.Plugins.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.Plugins.dll": {}
         }
       },
       "CovidReader.Repository/1.0.0": {
@@ -805,19 +751,6 @@
           "bin/placeholder/CovidReader.Repository.Covid19.dll": {}
         }
       },
-      "CovidReader.Repository.Google/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Google.Apis.Calendar.v3": "1.53.0.2382"
-        },
-        "compile": {
-          "bin/placeholder/CovidReader.Repository.Google.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CovidReader.Repository.Google.dll": {}
-        }
-      },
       "CovidReader.Repository.Settings/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -835,14 +768,53 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "CovidReader.Core": "1.0.0",
-          "CovidReader.Repository": "1.0.0"
+          "CovidReader.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CovidReader.Service.dll": {}
         },
         "runtime": {
           "bin/placeholder/CovidReader.Service.dll": {}
+        }
+      },
+      "CovidReader.Service.Api/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CovidReader.Repository": "1.0.0",
+          "CovidReader.Service": "1.0.0",
+          "CovidReader.Utilities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.Service.Api.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.Service.Api.dll": {}
+        }
+      },
+      "CovidReader.Service.Covid19/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CovidReader.Repository": "1.0.0",
+          "CovidReader.Service": "1.0.0",
+          "CovidReader.Utilities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.Service.Covid19.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.Service.Covid19.dll": {}
+        }
+      },
+      "CovidReader.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CovidReader.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.Utilities.dll": {}
         }
       }
     }
@@ -889,108 +861,6 @@
         "lib/netstandard2.0/CsvHelper.xml",
         "lib/netstandard2.1/CsvHelper.dll",
         "lib/netstandard2.1/CsvHelper.xml"
-      ]
-    },
-    "Google.Apis/1.53.0": {
-      "sha512": "nLVl91WLUHuU/WVQfGXXf2UcNguTRvVorZujT06q6fjYKk/Q6UJDgEcO5Ti00vdb40sT1GQwnqUpPeSKjLSn2Q==",
-      "type": "package",
-      "path": "google.apis/1.53.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "NuGetIcon.png",
-        "google.apis.1.53.0.nupkg.sha512",
-        "google.apis.nuspec",
-        "lib/net45/Google.Apis.PlatformServices.dll",
-        "lib/net45/Google.Apis.dll",
-        "lib/net45/Google.Apis.pdb",
-        "lib/net45/Google.Apis.xml",
-        "lib/netstandard1.3/Google.Apis.dll",
-        "lib/netstandard1.3/Google.Apis.pdb",
-        "lib/netstandard1.3/Google.Apis.xml",
-        "lib/netstandard2.0/Google.Apis.dll",
-        "lib/netstandard2.0/Google.Apis.pdb",
-        "lib/netstandard2.0/Google.Apis.xml"
-      ]
-    },
-    "Google.Apis.Auth/1.53.0": {
-      "sha512": "f8MhaaP9aRoVpybRNfMKzBFrNh/Hw3z1TUBFsWWXYZOgcXFFUuFCFmAxyIjixdYxDG+DCwkoVnf5lSIXEy3QdA==",
-      "type": "package",
-      "path": "google.apis.auth/1.53.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "NuGetIcon.png",
-        "google.apis.auth.1.53.0.nupkg.sha512",
-        "google.apis.auth.nuspec",
-        "lib/net45/Google.Apis.Auth.PlatformServices.dll",
-        "lib/net45/Google.Apis.Auth.dll",
-        "lib/net45/Google.Apis.Auth.pdb",
-        "lib/net45/Google.Apis.Auth.xml",
-        "lib/net461/Google.Apis.Auth.PlatformServices.dll",
-        "lib/net461/Google.Apis.Auth.dll",
-        "lib/net461/Google.Apis.Auth.pdb",
-        "lib/net461/Google.Apis.Auth.xml",
-        "lib/netstandard1.3/Google.Apis.Auth.PlatformServices.dll",
-        "lib/netstandard1.3/Google.Apis.Auth.dll",
-        "lib/netstandard1.3/Google.Apis.Auth.pdb",
-        "lib/netstandard1.3/Google.Apis.Auth.xml",
-        "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
-        "lib/netstandard2.0/Google.Apis.Auth.dll",
-        "lib/netstandard2.0/Google.Apis.Auth.pdb",
-        "lib/netstandard2.0/Google.Apis.Auth.xml"
-      ]
-    },
-    "Google.Apis.Calendar.v3/1.53.0.2382": {
-      "sha512": "Tp1FB2N1Sd4Mt1/Dg/QKLmSBFQ8L65H7nwL8HsKF9o+sRJgsk6PF1BAdTOZ4jNSP5zycb0eCAp2khai2qlO9kQ==",
-      "type": "package",
-      "path": "google.apis.calendar.v3/1.53.0.2382",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "NuGetIcon.png",
-        "google.apis.calendar.v3.1.53.0.2382.nupkg.sha512",
-        "google.apis.calendar.v3.nuspec",
-        "lib/net40/Google.Apis.Calendar.v3.dll",
-        "lib/net40/Google.Apis.Calendar.v3.pdb",
-        "lib/net40/Google.Apis.Calendar.v3.xml",
-        "lib/net45/Google.Apis.Calendar.v3.dll",
-        "lib/net45/Google.Apis.Calendar.v3.pdb",
-        "lib/net45/Google.Apis.Calendar.v3.xml",
-        "lib/netstandard1.0/Google.Apis.Calendar.v3.dll",
-        "lib/netstandard1.0/Google.Apis.Calendar.v3.pdb",
-        "lib/netstandard1.0/Google.Apis.Calendar.v3.xml",
-        "lib/netstandard1.3/Google.Apis.Calendar.v3.dll",
-        "lib/netstandard1.3/Google.Apis.Calendar.v3.pdb",
-        "lib/netstandard1.3/Google.Apis.Calendar.v3.xml",
-        "lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
-        "lib/netstandard2.0/Google.Apis.Calendar.v3.pdb",
-        "lib/netstandard2.0/Google.Apis.Calendar.v3.xml"
-      ]
-    },
-    "Google.Apis.Core/1.53.0": {
-      "sha512": "6pTO2f75pwYag0DenUz4A3fPBi2t8qHhlPAVXP6hsSWU5lP7pPqsxV8Oc2sgcBwVquMIL6DVw23Woc2vC73E9A==",
-      "type": "package",
-      "path": "google.apis.core/1.53.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "NuGetIcon.png",
-        "google.apis.core.1.53.0.nupkg.sha512",
-        "google.apis.core.nuspec",
-        "lib/net45/Google.Apis.Core.dll",
-        "lib/net45/Google.Apis.Core.pdb",
-        "lib/net45/Google.Apis.Core.xml",
-        "lib/netstandard1.3/Google.Apis.Core.dll",
-        "lib/netstandard1.3/Google.Apis.Core.pdb",
-        "lib/netstandard1.3/Google.Apis.Core.xml",
-        "lib/netstandard2.0/Google.Apis.Core.dll",
-        "lib/netstandard2.0/Google.Apis.Core.pdb",
-        "lib/netstandard2.0/Google.Apis.Core.xml"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
@@ -2207,15 +2077,15 @@
       "path": "../../controllers/CovidReader.Controllers.UseCases/CovidReader.Controllers.UseCases.csproj",
       "msbuildProject": "../../controllers/CovidReader.Controllers.UseCases/CovidReader.Controllers.UseCases.csproj"
     },
-    "CovidReader.Core/1.0.0": {
-      "type": "project",
-      "path": "../../controllers/CovidReader.Core/CovidReader.Core.csproj",
-      "msbuildProject": "../../controllers/CovidReader.Core/CovidReader.Core.csproj"
-    },
     "CovidReader.Models/1.0.0": {
       "type": "project",
       "path": "../../models/CovidReader.Models/CovidReader.Models.csproj",
       "msbuildProject": "../../models/CovidReader.Models/CovidReader.Models.csproj"
+    },
+    "CovidReader.Plugins/1.0.0": {
+      "type": "project",
+      "path": "../../controllers/CovidReader.Plugins/CovidReader.Plugins.csproj",
+      "msbuildProject": "../../controllers/CovidReader.Plugins/CovidReader.Plugins.csproj"
     },
     "CovidReader.Repository/1.0.0": {
       "type": "project",
@@ -2232,11 +2102,6 @@
       "path": "../../models/CovidReader.Repository.Covid19/CovidReader.Repository.Covid19.csproj",
       "msbuildProject": "../../models/CovidReader.Repository.Covid19/CovidReader.Repository.Covid19.csproj"
     },
-    "CovidReader.Repository.Google/1.0.0": {
-      "type": "project",
-      "path": "../../models/CovidReader.Repository.Google/CovidReader.Repository.Google.csproj",
-      "msbuildProject": "../../models/CovidReader.Repository.Google/CovidReader.Repository.Google.csproj"
-    },
     "CovidReader.Repository.Settings/1.0.0": {
       "type": "project",
       "path": "../../models/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj",
@@ -2246,6 +2111,21 @@
       "type": "project",
       "path": "../../controllers/CovidReader.Service/CovidReader.Service.csproj",
       "msbuildProject": "../../controllers/CovidReader.Service/CovidReader.Service.csproj"
+    },
+    "CovidReader.Service.Api/1.0.0": {
+      "type": "project",
+      "path": "../../controllers/CovidReader.Service.Api/CovidReader.Service.Api.csproj",
+      "msbuildProject": "../../controllers/CovidReader.Service.Api/CovidReader.Service.Api.csproj"
+    },
+    "CovidReader.Service.Covid19/1.0.0": {
+      "type": "project",
+      "path": "../../controllers/CovidReader.Service.Covid19/CovidReader.Service.Covid19.csproj",
+      "msbuildProject": "../../controllers/CovidReader.Service.Covid19/CovidReader.Service.Covid19.csproj"
+    },
+    "CovidReader.Utilities/1.0.0": {
+      "type": "project",
+      "path": "../../controllers/CovidReader.Utilities/CovidReader.Utilities.csproj",
+      "msbuildProject": "../../controllers/CovidReader.Utilities/CovidReader.Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {

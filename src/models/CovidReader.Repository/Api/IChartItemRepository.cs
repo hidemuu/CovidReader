@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Api
 {
-    public interface IChartItemRepository
+    /// <summary>
+    /// チャート表示項目リポジトリ
+    /// </summary>
+    public interface IChartItemRepository : IApiItemRepository<ChartItem>
     {
-        Task<IEnumerable<ChartItem>> GetAsync();
-        Task<ChartItem> GetAsync(string date);
-        Task PostAsync(ChartItem item);
-        Task PostAsync(IEnumerable<ChartItem> items);
-        Task DeleteAsync(string date);
+        
     }
 }

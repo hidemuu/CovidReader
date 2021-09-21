@@ -80,16 +80,16 @@ export default class Home extends Component {
         title: '感染データテーブル',
         author: '',
       },
-      {
-        img: img04,
-        title: '登録',
-        author: '',
-      },
-      {
-        img: img05,
-        title: 'モチーフ',
-        author: '',
-      },
+      // {
+      //   img: img04,
+      //   title: '登録',
+      //   author: '',
+      // },
+      // {
+      //   img: img05,
+      //   title: 'モチーフ',
+      //   author: '',
+      // },
     ];
 
     // const [commDlg, setCommDlg] = React.useState(false);

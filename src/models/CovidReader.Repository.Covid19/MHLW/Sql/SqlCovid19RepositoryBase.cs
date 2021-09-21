@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW.Sql
 {
-    public abstract class SqlCovid19RepositoryBase<T> where T : CovidDbObject
+    public abstract class SqlCovid19RepositoryBase<T> where T : Covid19DbObject
     {
         private readonly Covid19DbContext _db;
         private readonly DbSet<T> _ts;

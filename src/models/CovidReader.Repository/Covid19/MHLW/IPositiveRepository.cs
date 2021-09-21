@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW
 {
-    public interface IPositiveRepository
+    /// <summary>
+    /// 陽性者数
+    /// </summary>
+    public interface IPositiveRepository : ICovid19ItemRepository<Positive>
     {
-        Task<IEnumerable<Positive>> GetAsync();
-        Task<Positive> GetAsync(string date);
-        Task PostAsync(Positive positive);
-        Task PostAsync(IEnumerable<Positive> items);
-        Task DeleteAsync(string date);
+        
     }
 }

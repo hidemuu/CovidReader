@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository
 {
+    /// <summary>
+    /// HTTP通信ロジック
+    /// </summary>
     public class HttpHelper
     {
         /// <summary>           

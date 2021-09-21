@@ -18,7 +18,7 @@ namespace CovidReader.Api
     /// </summary>
     public class ConsoleCommand : CommandBase
     {
-        private ConsoleController _controller;
+        private ConsoleAppController _controller;
 
 
         /// <summary>
@@ -27,14 +27,11 @@ namespace CovidReader.Api
         public ConsoleCommand()
         {
             
-            _controller = new ConsoleController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));
+            _controller = new ConsoleAppController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));
             
             _handlers = new Dictionary<string, CommandHandler>
             {
-                {"get", GetAsync },
                 //{"import", ImportAsync },
-                //{"update", UpdateAsync },
-                {"getchart", GetChartAsync },
                 {"autorun", AutoRunAsync },
                 {"scrap", ScrapingAsync },
                 {"viewchart", ViewChartAsync },
@@ -42,24 +39,7 @@ namespace CovidReader.Api
             };
         }
 
-        //private async Task<string> ImportAsync(IEnumerable<string> parameters)
-        //{
-        //    await _controller.ImportAsync();
-        //    return "";
-        //}
-
-        //private async Task<string> UpdateAsync(IEnumerable<string> parameters)
-        //{
-        //    await _controller.UpdateAsync();
-        //    return "";
-        //}
-
-        private async Task<string> GetAsync(IEnumerable<string> parameters)
-        {
-            await _controller.GetAsync();
-            return "";
-        }
-
+        
         private async Task<string> AutoRunAsync(IEnumerable<string> parameters)
         {
             await _controller.AutoRunAsync();
@@ -72,11 +52,7 @@ namespace CovidReader.Api
             return "";
         }
 
-        private async Task<string> GetChartAsync(IEnumerable<string> parameters)
-        {
-            await _controller.GetChartItemAsync();
-            return "";
-        }
+        
 
         private async Task<string> ViewChartAsync(IEnumerable<string> parameters)
         {

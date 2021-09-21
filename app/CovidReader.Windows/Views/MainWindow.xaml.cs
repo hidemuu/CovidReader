@@ -40,6 +40,8 @@ namespace CovidReader.Windows.Views
                 SetRegionManager(regionManager, this.rightWindowCommandsRegion, "ShowSearchPatientRegion");
             }
 
+            //this.Loaded += MainWindow_Loaded;
+
         }
 
         private void SetRegionManager(IRegionManager regionManager, DependencyObject regionTarget, string regionName)

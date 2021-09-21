@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Covid19.MHLW.Csv
 {
-    public abstract class CsvCovid19RepositoryBase<T> where T : CovidDbObject
+    public abstract class CsvCovid19RepositoryBase<T> where T : Covid19DbObject
     {
 
         private readonly CsvFileHelper _csv;

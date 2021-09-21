@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CovidReader.Service</name>
+    </assembly>
+    <members>
+        <member name="T:CovidReader.Service.Api.IAccountFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Service.IAccountService`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:CovidReader.Service.ICommands`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CovidReader.Service.ICommands`1.SaveAsync(`0)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.ICommands`1.DeleteAsync(`0)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.IQueries`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CovidReader.Service.IQueries`1.ReadAsync(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.IQueries`1.ReadAllAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.ISettingService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Service.IApiService">
+            <summary>
+            アプリケーションAPIアクセスサービス
+            </summary>
+        </member>
+        <member name="P:CovidReader.Service.IApiService.ChartConfig">
+            <summary>
+            チャート設定
+            </summary>
+        </member>
+        <member name="P:CovidReader.Service.IApiService.ChartItem">
+            <summary>
+            チャート表示アイテム
+            </summary>
+        </member>
+        <member name="P:CovidReader.Service.IApiService.Infection">
+            <summary>
+            感染データ
+            </summary>
+        </member>
+        <member name="P:CovidReader.Service.IApiService.Inspection">
+            <summary>
+            検査データ
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.IApiService.CopyChartItem">
+            <summary>
+            ChartItemをXAMPPサーバ内にコピー
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.IApiService.RunServerProcess">
+            <summary>
+            XAMPPサーバを起動
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.IInfectionService">
+            <summary>
+            感染データアクセスサービス
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.IInfectionService.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.Infection})">
+            <summary>
+            感染データをシリアライズして更新・追加
+            </summary>
+            <param name="items">更新・追加データ</param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.IInfectionService.GetAsync">
+            <summary>
+            感染データを取得してデシリアライズ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.IInfectionService.CreateAsync(System.Collections.Generic.IList{System.String},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Death},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Hospitalization},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Positive},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Recovery},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Severe},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Test})">
+            <summary>
+            Covid19 APIから取得した各感染データで、アプリケーションデータベースを生成（全更新）
+            </summary>
+            <param name="dates">日付</param>
+            <param name="deaths">死亡者数</param>
+            <param name="hospitalizations">入院治療者数</param>
+            <param name="positives">陽性者数</param>
+            <param name="recoveries">治癒者数</param>
+            <param name="severes">重傷者数</param>
+            <param name="tests">検査件数</param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.IInspectionService">
+            <summary>
+            検査データアクセスサービス
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.IInspectionService.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.Inspection})">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.IInspectionService.GetAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.IInspectionService.CreateAsync(System.Collections.Generic.IList{System.String},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.TestDetail})">
+            <summary>
+            Covid19 APIから取得した各検査データで、アプリケーションデータベースを生成（全更新）
+            </summary>
+            <param name="dates"></param>
+            <param name="testDetails"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.IChartConfigService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.IChartConfigService.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.ChartConfig})">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.IChartConfigService.GetAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.IChartConfigService.CreateAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.IChartItemService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.IChartItemService.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.ChartItem})">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.IChartItemService.GetAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.IChartItemService.CreateAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.Infection})">
+            <summary>
+            
+            </summary>
+            <param name="infections"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.ICovid19Service">
+            <summary>
+            Covid19 APIアクセスサービス
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.ICovid19Service.MapperToRepositoryAsync">
+            <summary>
+            マッパーデータをリポジトリに全て反映する
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.ICovid19Service.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Death},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Hospitalization},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Positive},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Recovery},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Severe},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Test},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.TestDetail})">
+            <summary>
+            リポジトリを更新（追加）
+            </summary>
+            <param name="deaths">死亡者数</param>
+            <param name="hospitalizations">入院治療者数</param>
+            <param name="positives">陽性者数</param>
+            <param name="recoveries">治癒者数</param>
+            <param name="severes">重傷者数</param>
+            <param name="tests">検査件数</param>
+            <param name="testDetails">検査詳細</param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.ICovid19Service.GetAsync``1">
+            <summary>
+            データ取得
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -6,6 +6,17 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
+      "Autofac/6.2.0": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.7.1"
+        },
+        "runtime": {
+          "lib/net5.0/Autofac.dll": {
+            "assemblyVersion": "6.2.0.0",
+            "fileVersion": "6.2.0.0"
+          }
+        }
+      },
       "ControlzEx/4.4.0": {
         "dependencies": {
           "Microsoft.Xaml.Behaviors.Wpf": "1.1.31",
@@ -203,6 +214,17 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/3.1.17": {},
+      "Microsoft.EntityFrameworkCore.InMemory/3.1.17": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.17"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "3.1.17.0",
+            "fileVersion": "3.100.1721.31601"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/3.1.17": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.17"
@@ -397,6 +419,31 @@
         }
       },
       "NLog.Schema/4.7.11": {},
+      "Npgsql/4.1.8": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Npgsql.dll": {
+            "assemblyVersion": "4.1.8.0",
+            "fileVersion": "4.1.8.0"
+          }
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/3.1.11": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.17",
+          "Microsoft.EntityFrameworkCore.Abstractions": "3.1.17",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.17",
+          "Npgsql": "4.1.8"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "assemblyVersion": "3.1.11.0",
+            "fileVersion": "3.1.11.0"
+          }
+        }
+      },
       "Prism.Core/8.1.97": {
         "runtime": {
           "lib/net5.0/Prism.dll": {
@@ -678,11 +725,11 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "System.Runtime.CompilerServices.Unsafe/4.6.0": {
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "assemblyVersion": "4.0.4.1",
-            "fileVersion": "4.6.26919.2"
+            "assemblyVersion": "4.0.5.0",
+            "fileVersion": "4.700.19.46214"
           }
         }
       },
@@ -741,7 +788,7 @@
       },
       "Unity.Container/5.11.11": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0",
           "Unity.Abstractions": "5.11.7"
         },
         "runtime": {
@@ -766,6 +813,13 @@
     }
   },
   "libraries": {
+    "Autofac/6.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BX8IM0GANE38uSr4QwXL4PgA8vWWYt2P5cZzipn/vDnf0fDbPSGKSHEroJ09rB7ANxdyf7MdEgVs+pvL8kwYCg==",
+      "path": "autofac/6.2.0",
+      "hashPath": "autofac.6.2.0.nupkg.sha512"
+    },
     "ControlzEx/4.4.0": {
       "type": "package",
       "serviceable": true,
@@ -891,6 +945,13 @@
       "sha512": "sha512-7D94SZqJ9GhU6stIya8Ou5LydeTGZYV4mE6Uv/sTVyLRztMxVi6BM6sZufFsby7Eo+60BDVPSy0DRqCnb9FSVg==",
       "path": "microsoft.entityframeworkcore.analyzers/3.1.17",
       "hashPath": "microsoft.entityframeworkcore.analyzers.3.1.17.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/3.1.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IsfhVVrw1Sb9jnyQY0IwK7Gk0qygQaUBBJXgSoQpu0GgP+Or1fTwYfaH6XEt3BhqXuu5qSeWB05n+Wb0iA36qQ==",
+      "path": "microsoft.entityframeworkcore.inmemory/3.1.17",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.3.1.17.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/3.1.17": {
       "type": "package",
@@ -1045,6 +1106,20 @@
       "sha512": "sha512-9mmj/hApaSmX9jP2PxLyqywesdEI1nIT2TVWgsdoqb1yIpxvUM+1b6aMD2zJkpGN8y71jmVO2d/FKTwQXIfpSw==",
       "path": "nlog.schema/4.7.11",
       "hashPath": "nlog.schema.4.7.11.nupkg.sha512"
+    },
+    "Npgsql/4.1.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tD9bcC80LpPi62y+fGBwdQQpIVq9eJ8SLkJ0M5t0ISox8u3lzGWsn9rDquaYbMXw3eZPYmw0aMFKktVWHuK12Q==",
+      "path": "npgsql/4.1.8",
+      "hashPath": "npgsql.4.1.8.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/3.1.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xYWfA0RX7Km6Vkf9SHWZVgj9GePLmQXDSsl4s1xQh6cW9MF+ZrIvowJc5rjfCRtqocu3UesljrypkZa92NPuIg==",
+      "path": "npgsql.entityframeworkcore.postgresql/3.1.11",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.3.1.11.nupkg.sha512"
     },
     "Prism.Core/8.1.97": {
       "type": "package",
@@ -1214,12 +1289,12 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+    "System.Runtime.CompilerServices.Unsafe/4.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
-      "path": "system.runtime.compilerservices.unsafe/4.5.2",
-      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+      "sha512": "sha512-HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
+      "path": "system.runtime.compilerservices.unsafe/4.6.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
     },
     "System.Text.Encoding/4.3.0": {
       "type": "package",

@@ -4,16 +4,30 @@ using System.Text;
 
 namespace CovidReader.Repository
 {
+    /// <summary>
+    /// URL一覧
+    /// </summary>
     public static class Urls
     {
+        /// <summary>
+        /// ルートパス（絶対パス）
+        /// </summary>
         public static readonly string RootPath = PathHelper.GetCurrentRootPath(Constants.RootName);
-
+        /// <summary>
+        /// アプリケーションAPI用ローカルデータベースコネクション文字列
+        /// </summary>
         public static readonly string SqlLocalConnectionString = RootPath + @"assets\api\db.sqlite";
-
+        /// <summary>
+        /// Covid19 API用ローカルデータベースコネクション文字列
+        /// </summary>
         public static readonly string SqlCovidConnectionString = RootPath + @"assets\covid\covid.sqlite";
-
+        /// <summary>
+        /// ローカルサーバー用パス（XAMPPを使用する場合のみ）
+        /// </summary>
         public static readonly string ServerPath = @"C:\xampp\htdocs\covid_reader\csharp\";
-
+        /// <summary>
+        /// ローカルサーバーURL（XAMPPを使用する場合のみ）
+        /// </summary>
         public static readonly string ServerUrl = @"http://localhost:81/covid_reader/csharp/";
 
         /// <summary>

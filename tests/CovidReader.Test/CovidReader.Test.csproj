@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\controllers\CovidReader.Core\CovidReader.Core.csproj" />
+    <ProjectReference Include="..\..\src\controllers\CovidReader.Service.Api\CovidReader.Service.Api.csproj" />
     <ProjectReference Include="..\..\src\controllers\CovidReader.Service\CovidReader.Service.csproj" />
   </ItemGroup>
 

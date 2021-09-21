@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FRdi3pL4Wdw2L5SpqbTpXPrMeSxD/jgiGefBCJ6jevhXIR+YLnF3GFtl2mjN/kermIteYMPLlhaFPIR1Bw3TrQ==",
+  "dgSpecHash": "4T1lCXJjOP3YmDLMCSAfMieLVzhZVfqzTUzITHliprl/iB5j+ehcQp23BU2pMkK4j1BaM1em/+HFA6WFOeImPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.Controllers.UseCases.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nando\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\google.apis\\1.53.0\\google.apis.1.53.0.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\google.apis.auth\\1.53.0\\google.apis.auth.1.53.0.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\google.apis.calendar.v3\\1.53.0.2382\\google.apis.calendar.v3.1.53.0.2382.nupkg.sha512",
-    "C:\\Users\\nando\\.nuget\\packages\\google.apis.core\\1.53.0\\google.apis.core.1.53.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

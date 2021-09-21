@@ -9,7 +9,8 @@
     ".NETStandard,Version=v2.0/": {
       "CovidReader.Controllers/1.0.0": {
         "dependencies": {
-          "CovidReader.Core": "1.0.0",
+          "CovidReader.Plugins": "1.0.0",
+          "CovidReader.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.17",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.17",
           "NETStandard.Library": "2.0.3",
@@ -489,14 +490,6 @@
         }
       },
       "System.ValueTuple/4.5.0": {},
-      "CovidReader.Core/1.0.0": {
-        "dependencies": {
-          "CovidReader.Models": "1.0.0"
-        },
-        "runtime": {
-          "CovidReader.Core.dll": {}
-        }
-      },
       "CovidReader.Models/1.0.0": {
         "dependencies": {
           "CsvHelper": "27.1.1",
@@ -505,6 +498,19 @@
         },
         "runtime": {
           "CovidReader.Models.dll": {}
+        }
+      },
+      "CovidReader.Plugins/1.0.0": {
+        "runtime": {
+          "CovidReader.Plugins.dll": {}
+        }
+      },
+      "CovidReader.Service/1.0.0": {
+        "dependencies": {
+          "CovidReader.Models": "1.0.0"
+        },
+        "runtime": {
+          "CovidReader.Service.dll": {}
         }
       }
     }
@@ -844,12 +850,17 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "CovidReader.Core/1.0.0": {
+    "CovidReader.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "CovidReader.Models/1.0.0": {
+    "CovidReader.Plugins/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CovidReader.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

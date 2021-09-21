@@ -1,0 +1,16 @@
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\bin\Debug\netstandard2.0\NLog.config
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\bin\Debug\netstandard2.0\CovidReader.Log.deps.json
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\bin\Debug\netstandard2.0\CovidReader.Log.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\bin\Debug\netstandard2.0\CovidReader.Log.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\bin\Debug\netstandard2.0\CovidReader.Core.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\bin\Debug\netstandard2.0\CovidReader.Models.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\bin\Debug\netstandard2.0\CovidReader.Core.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\bin\Debug\netstandard2.0\CovidReader.Models.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\obj\Debug\netstandard2.0\CovidReader.Log.csproj.AssemblyReference.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\obj\Debug\netstandard2.0\CovidReader.Log.AssemblyInfoInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\obj\Debug\netstandard2.0\CovidReader.Log.AssemblyInfo.cs
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\obj\Debug\netstandard2.0\CovidReader.Log.csproj.CoreCompileInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\obj\Debug\netstandard2.0\CovidReader.Log.csproj.CopyComplete
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\obj\Debug\netstandard2.0\CovidReader.Log.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\obj\Debug\netstandard2.0\CovidReader.Log.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\controllers\CovidReader.Log\bin\Debug\netstandard2.0\CovidReader.Models.xml

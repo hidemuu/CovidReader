@@ -7,8 +7,14 @@ using System.Text;
 
 namespace CovidReader.Models.Covid19.CS
 {
-    public class DeathsJapan : CovidDbObject
+    /// <summary>
+    /// 累積死亡者数
+    /// </summary>
+    public class DeathsJapan : Covid19DbObject
     {
+        /// <summary>
+        /// 累積死亡者数
+        /// </summary>
         [Index(1)]
         [Name("ndeaths")]
         [JsonProperty("ndeaths")]

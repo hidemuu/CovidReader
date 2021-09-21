@@ -747,9 +747,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Core\\CovidReader.Core.csproj",
-      "projectName": "CovidReader.Core",
-      "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Core\\CovidReader.Core.csproj",
+      "projectUniqueName": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Core\\CovidReader.Service.csproj",
+      "projectName": "CovidReader.Service",
+      "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Core\\CovidReader.Service.csproj",
       "packagesPath": "C:\\Users\\nando\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Core\\obj\\",
       "projectStyle": "PackageReference",

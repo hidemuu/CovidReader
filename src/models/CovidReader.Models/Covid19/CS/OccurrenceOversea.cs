@@ -7,19 +7,30 @@ using System.Text;
 
 namespace CovidReader.Models.Covid19.CS
 {
-    public class OccurrenceOversea : CovidDbObject
+    /// <summary>
+    /// 世界の地域別の感染者数、死亡者数
+    /// </summary>
+    public class OccurrenceOversea : Covid19DbObject
     {
+        /// <summary>
+        /// 感染者数
+        /// </summary>
         [Index(1)]
         [Name("infectedNum")]
         [JsonProperty("infectedNum")]
         [DisplayName("感染者数")]
         public override string Number { get; set; }
+        /// <summary>
+        /// 死亡者数
+        /// </summary>
         [Index(2)]
         [Name("deceasedNum")]
         [JsonProperty("deceasedNum")]
         [DisplayName("死亡者数")]
         public string DeathNumber { get; set; }
-
+        /// <summary>
+        /// 国名
+        /// </summary>
         [Index(3)]
         [Name("dataName")]
         [JsonProperty("dataname")]
