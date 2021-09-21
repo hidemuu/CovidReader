@@ -3,6 +3,7 @@
 一般公開されているコロナウイルス感染データを収集し、視点別に集計しグラフ化
 
 # ソリューション構造
+```
 CovidReader<br>
 | CovidReader.sln<br>  
 |<br>
@@ -65,6 +66,7 @@ CovidReader<br>
 |<br>
 └─builds<br>
    | CovidReader.Setup : インストーラ生成<br>
+```
 
 # モデル構造
 * Infection
