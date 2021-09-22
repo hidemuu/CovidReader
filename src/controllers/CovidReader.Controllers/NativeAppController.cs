@@ -1,4 +1,6 @@
 ﻿using CovidReader.Service;
+using CovidReader.Service.Api;
+using CovidReader.Service.Covid19;
 using System;
 using System.Collections.Generic;
 using System.Text;

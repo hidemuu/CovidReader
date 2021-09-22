@@ -19,7 +19,7 @@
             Covid19 APIアクセスサービス
             </summary>
         </member>
-        <member name="M:CovidReader.Controllers.AppController.#ctor(CovidReader.Service.IApiService,CovidReader.Service.ICovid19Service)">
+        <member name="M:CovidReader.Controllers.AppController.#ctor(CovidReader.Service.Api.IApiService,CovidReader.Service.Covid19.ICovid19Service)">
             <summary>
             アプリケーションAPI / Covid19 API アクセスサービスを取り込み、API全体の処理を構築
             </summary>
@@ -56,7 +56,7 @@
             コンソールアプリケーション用コントローラー
             </summary>
         </member>
-        <member name="M:CovidReader.Controllers.ConsoleAppController.#ctor(CovidReader.Service.IApiService,CovidReader.Service.ICovid19Service)">
+        <member name="M:CovidReader.Controllers.ConsoleAppController.#ctor(CovidReader.Service.Api.IApiService,CovidReader.Service.Covid19.ICovid19Service)">
             <summary>
             
             </summary>
@@ -87,7 +87,7 @@
             ネイティブアプリケーション用コントローラー
             </summary>
         </member>
-        <member name="M:CovidReader.Controllers.NativeAppController.#ctor(CovidReader.Service.IApiService,CovidReader.Service.ICovid19Service)">
+        <member name="M:CovidReader.Controllers.NativeAppController.#ctor(CovidReader.Service.Api.IApiService,CovidReader.Service.Covid19.ICovid19Service)">
             <summary>
             
             </summary>
@@ -99,7 +99,7 @@
             Webアプリケーション用コントローラー
             </summary>
         </member>
-        <member name="M:CovidReader.Controllers.WebAppController.#ctor(CovidReader.Service.IApiService,CovidReader.Service.ICovid19Service)">
+        <member name="M:CovidReader.Controllers.WebAppController.#ctor(CovidReader.Service.Api.IApiService,CovidReader.Service.Covid19.ICovid19Service)">
             <summary>
             
             </summary>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CovidReader.Service
+namespace CovidReader.Service.Api
 {
     /// <summary>
     /// アプリケーションAPIアクセスサービス

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CovidReader.Service
+namespace CovidReader.Service.Api
 {
     /// <summary>
     /// 検査データアクセスサービス

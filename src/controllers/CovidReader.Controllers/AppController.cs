@@ -1,10 +1,11 @@
-﻿using CovidReader.Service;
-using CovidReader.Models.Covid19.MHLW;
+﻿using CovidReader.Models.Covid19.MHLW;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CovidReader.Service.Api;
+using CovidReader.Service.Covid19;
 
 namespace CovidReader.Controllers
 {

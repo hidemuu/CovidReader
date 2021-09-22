@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using System.Linq;
 using CovidReader.Service;
+using CovidReader.Service.Api;
+using CovidReader.Service.Covid19;
 
 namespace CovidReader.Controllers
 {

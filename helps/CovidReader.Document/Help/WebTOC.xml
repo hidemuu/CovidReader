@@ -2,36 +2,73 @@
 <HelpTOC>
 
   <HelpTOCNode Title="Welcome to the [TODO: Add project name]" Url="html/8acc81bd-6f95-4de0-8c2c-97a04f9176a2.htm" />
-  <HelpTOCNode Id="4c88591f-c44e-4277-a665-f1239813eecc" Title="Version History" Url="html/50fe43ab-9638-4311-b727-b0100745883d.htm">
+  <HelpTOCNode Id="6b807b63-8236-42ac-94eb-376b8f04e339" Title="Version History" Url="html/50fe43ab-9638-4311-b727-b0100745883d.htm">
     <HelpTOCNode Title="Version 1.0.0.0" Url="html/6877d56b-b1a5-4360-8c60-f7babf271244.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="0012083c-9f20-47a0-9ef9-d854137c3c55" Title="CovidReader.Api" Url="html/881b1304-eb1f-c5c9-2d7e-2df600e84594.htm">
-    <HelpTOCNode Id="391845c2-4847-45c9-9a47-5328999404e9" Title="AppCommand クラス" Url="html/a2cfd4f3-4172-801a-1f3f-488e605d1385.htm">
-      <HelpTOCNode Title="AppCommand コンストラクター " Url="html/718e7346-cdaa-614e-6e52-99934a134eff.htm" />
-      <HelpTOCNode Id="fafca27b-8536-4d9f-8cc0-906abea16256" Title="AppCommand メソッド" Url="html/5eac084e-090e-f679-2f9e-f56732ec0ee3.htm">
-        <HelpTOCNode Title="Help メソッド " Url="html/3743636c-50c7-adb7-78f0-f2ef55c7a8ef.htm" />
+  <HelpTOCNode Id="35fe74e5-221c-49a5-a9e1-7eda667b843c" Title="CovidReader.Service" Url="html/3b93c5f9-b787-2f9b-a458-38bbe40e7ccf.htm">
+    <HelpTOCNode Title="IAccountService(T) インターフェイス" Url="html/ab865fc0-f100-eb2c-190b-7d0d500c2c01.htm" />
+    <HelpTOCNode Id="2c4229d6-206a-41f5-b0df-064e58483679" Title="IApiService インターフェイス" Url="html/18fb7b15-c207-e45b-a369-f1f85d9d6b3a.htm">
+      <HelpTOCNode Id="3f9b4a98-ee0c-4bba-ada4-d8728eec81c1" Title="IApiService プロパティ" Url="html/76e7b850-bd64-0647-56e4-34cd48a6bb8d.htm">
+        <HelpTOCNode Title="ChartConfig プロパティ " Url="html/058ce320-4e62-dc78-55b9-a1b139a092be.htm" />
+        <HelpTOCNode Title="ChartItem プロパティ " Url="html/9a7a5b9e-7406-d9c7-4c2a-077b69e01fc1.htm" />
+        <HelpTOCNode Title="Infection プロパティ " Url="html/b542edbb-8fbd-7e21-2bb3-96f7f1e39a55.htm" />
+        <HelpTOCNode Title="Inspection プロパティ " Url="html/da446df5-77d3-c562-ac91-a36828cc359c.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="AppCommand フィールド" Url="html/66c03d6d-e4b4-5b4b-1a24-620b57f3dc92.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="a21c5a06-c450-45ad-a452-66e023ef7be3" Title="CommandBase クラス" Url="html/530a44a6-45bc-e5cb-9d08-fbebb6c71a8d.htm">
-      <HelpTOCNode Title="CommandBase コンストラクター " Url="html/8667b7f3-b95f-b89a-4c1d-9d1928924cf1.htm" />
-      <HelpTOCNode Id="4cb57bc1-3e77-4d06-ba22-2797cc2c01e5" Title="CommandBase メソッド" Url="html/5e5d03be-6851-ebaa-2989-80dbfd8fa62a.htm">
-        <HelpTOCNode Title="GetResponse メソッド " Url="html/d1713124-4442-8e58-af00-b3850561406e.htm" />
-        <HelpTOCNode Title="Help メソッド " Url="html/dc78cf11-094e-57c8-82eb-c324229e6bfd.htm" />
-        <HelpTOCNode Title="Invoke メソッド " Url="html/852be802-2aec-57d7-7343-a596c28353ec.htm" />
-        <HelpTOCNode Title="IsExist メソッド " Url="html/7f62bec1-6193-e98a-1089-07248cb9b977.htm" />
-        <HelpTOCNode Title="Register メソッド " Url="html/564cf176-c79a-4b9e-3563-510d68c1bbe5.htm" />
-        <HelpTOCNode Title="RunAsync メソッド " Url="html/a2de08d9-1ba3-4807-931d-b3c58cce1c1b.htm" />
-        <HelpTOCNode Title="ViewSample メソッド " Url="html/f04ad0b6-f221-4f03-1de7-40926a2de979.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="46954c0e-a992-4540-aaba-4ea6e85a36b1" Title="CommandBase フィールド" Url="html/4b9f48e0-7001-2e29-3149-10f0d6974fb9.htm">
-        <HelpTOCNode Title="_command フィールド" Url="html/2f876a8f-d873-2775-f4fd-f2442ccf44d1.htm" />
-        <HelpTOCNode Title="_handlers フィールド" Url="html/222188d9-c2ca-25b4-b79a-184fdd7bc12d.htm" />
-        <HelpTOCNode Title="_parameters フィールド" Url="html/68a7ff53-3d32-6507-f70a-965f54a5a1e6.htm" />
-        <HelpTOCNode Title="_response フィールド" Url="html/763af4c5-8a67-9134-6428-d79582e15941.htm" />
-        <HelpTOCNode Title="_status フィールド" Url="html/00895859-822f-08a3-6aab-2b2e1c0366ac.htm" />
+      <HelpTOCNode Id="efdbdc37-e55b-4768-8dca-f280acfb86c9" Title="IApiService メソッド" Url="html/4ab585ad-123c-43e6-cef9-0d9c2d18ec07.htm">
+        <HelpTOCNode Title="CopyChartItem メソッド " Url="html/d20dbecd-395c-5b58-5735-202fee85cb57.htm" />
+        <HelpTOCNode Title="RunServerProcess メソッド " Url="html/7cac00a8-880b-6e89-34ab-30a357bc4a4c.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Title="CommandBase.CommandHandler デリゲート" Url="html/cee7a820-7a11-c939-4638-af73b46654a1.htm" />
+    <HelpTOCNode Id="8fd389c5-9313-402c-9dc3-3bcf95d8cfc8" Title="IChartConfigService インターフェイス" Url="html/a8815f83-6f23-56cf-411f-e1f085b3bed2.htm">
+      <HelpTOCNode Id="ed8ab25b-1a48-4e7a-8d39-ffbd4bab31fb" Title="IChartConfigService メソッド" Url="html/ec28efb9-6748-6015-8b98-bad763c71639.htm">
+        <HelpTOCNode Title="CreateAsync メソッド " Url="html/bd33ac46-9ef5-5741-ba4f-b954a2376062.htm" />
+        <HelpTOCNode Title="GetAsync メソッド " Url="html/f6ab1372-ad83-b773-d3a1-7c1b83289be5.htm" />
+        <HelpTOCNode Title="PostAsync メソッド " Url="html/ba79afcf-c1b7-4dd4-e7d1-e3e59312eb07.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="af6c648d-372f-4eb2-a189-1d92dbdb3ad4" Title="IChartItemService インターフェイス" Url="html/b5015ebf-1171-f0a2-9705-ff008df7a01a.htm">
+      <HelpTOCNode Id="94b92c66-4149-46e5-9502-36f257f0c15e" Title="IChartItemService メソッド" Url="html/3c446426-a248-f8c2-931e-cac98016c638.htm">
+        <HelpTOCNode Title="CreateAsync メソッド " Url="html/3f89bb9b-a00d-312d-30b2-38c022dfb7b1.htm" />
+        <HelpTOCNode Title="GetAsync メソッド " Url="html/9d3978f1-9fb9-b6eb-4f30-c3c8dbf00ca6.htm" />
+        <HelpTOCNode Title="PostAsync メソッド " Url="html/0dd226f6-a66d-449e-c97f-3b75d6d256e9.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="89a3e378-78fe-4811-b994-3ad062bfd3e8" Title="ICommands(T) インターフェイス" Url="html/25b5487b-8399-16a2-8b97-941414ff554c.htm">
+      <HelpTOCNode Id="84160f0a-212c-4fc2-8d1d-b1504d443763" Title="ICommands(T) メソッド" Url="html/743692d1-edea-81e7-5491-cdcd0bb89e01.htm">
+        <HelpTOCNode Title="DeleteAsync メソッド " Url="html/6c6d737b-f891-aab0-18d3-0e916e5f4c40.htm" />
+        <HelpTOCNode Title="SaveAsync メソッド " Url="html/7cf45719-519a-1749-5f33-6d4560d60a0b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="55fdbffc-fec2-41cf-8f26-78d1d603b4fa" Title="ICovid19Service インターフェイス" Url="html/77770495-35e7-da2d-5ceb-49e8e6f35b5c.htm">
+      <HelpTOCNode Id="ba972a97-7eb8-4f56-8164-7c01587747ac" Title="ICovid19Service メソッド" Url="html/746bc150-6421-e5d3-1157-7b4f23f1710c.htm">
+        <HelpTOCNode Title="GetAsync(T) メソッド " Url="html/748a828e-da4a-a64b-74bf-26f642bc1427.htm" />
+        <HelpTOCNode Title="MapperToRepositoryAsync メソッド " Url="html/86849a27-7780-8ba2-7cd7-19ae07716913.htm" />
+        <HelpTOCNode Title="PostAsync メソッド " Url="html/80c688d6-9c07-e270-9d3b-1a73beb17225.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a5709fca-0874-40d5-b0a0-25764ab1ec60" Title="IInfectionService インターフェイス" Url="html/1957f873-2af1-c812-04f3-8ec55bfc3e65.htm">
+      <HelpTOCNode Id="78d49528-c711-4631-aacb-34970b7a9155" Title="IInfectionService メソッド" Url="html/d82012b2-0ddb-068a-ec61-f7f33d3224c9.htm">
+        <HelpTOCNode Title="CreateAsync メソッド " Url="html/365dac55-cfdc-fc69-ab77-d47b2589118a.htm" />
+        <HelpTOCNode Title="GetAsync メソッド " Url="html/c90bb9b3-e3bb-df78-554c-02e2e7f85b4e.htm" />
+        <HelpTOCNode Title="PostAsync メソッド " Url="html/28c3e120-5498-2a0b-62a9-e568d3965070.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="efaf7ecf-bd61-430b-84e0-9ee83b2aa790" Title="IInspectionService インターフェイス" Url="html/8ac4ac4b-c9aa-66e5-8d34-6e1e17ef1900.htm">
+      <HelpTOCNode Id="cf0c66d8-4051-43e6-afe1-a4953441c858" Title="IInspectionService メソッド" Url="html/430c7667-d431-9393-755d-03202ef8eada.htm">
+        <HelpTOCNode Title="CreateAsync メソッド " Url="html/11384456-ac93-ee06-e765-0e11bed902ac.htm" />
+        <HelpTOCNode Title="GetAsync メソッド " Url="html/a71cf108-3b01-4ca7-1565-3556f3e66ff5.htm" />
+        <HelpTOCNode Title="PostAsync メソッド " Url="html/28554b96-cfa2-b03e-8255-ba64000b59e8.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="41987585-b826-4406-9d44-d7793839135a" Title="IQueries(T) インターフェイス" Url="html/26aea6a0-e8fc-8d0f-248d-5a9403227420.htm">
+      <HelpTOCNode Id="42553a91-0dd6-48d8-8ad5-8a6ed8463342" Title="IQueries(T) メソッド" Url="html/64f16d3b-2dc5-e2ea-b5dc-1473f2db02ae.htm">
+        <HelpTOCNode Title="ReadAllAsync メソッド " Url="html/aa09f4d9-75d3-9d11-fe9f-16754a2e0f09.htm" />
+        <HelpTOCNode Title="ReadAsync メソッド " Url="html/31e909ea-f620-588f-6ee8-7c6869c34258.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="ISettingService インターフェイス" Url="html/28c050ef-7291-9897-a020-767fb23942ff.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="703b694a-56e5-49ed-b176-f3b3affabd4d" Title="CovidReader.Service.Api" Url="html/f81a41aa-db9c-bc1b-9720-f0a38a9036b4.htm">
+    <HelpTOCNode Title="IAccountFactory インターフェイス" Url="html/c074a849-7d50-cf4f-a75f-52d111478d3f.htm" />
   </HelpTOCNode>
 </HelpTOC>

@@ -4,68 +4,68 @@
 
 # ソリューション構造
 ```
-CovidReader<br>
-| CovidReader.sln<br>  
-|<br>
-├─app<br>  
-|  | CovidReader          : コンソールアプリ<br>    
-|  | CovidReader.Web      : Webアプリ（バックエンドASPNETCore / フロントエンドReact）<br>  
-|  | CovidReader.Windows  : WindowsOS ネイティブアプリ（WPF）<br>  
-|<br>
-├─src<br>  
-|  ├─api<br> 
-|  |  | CovidReader.Api     : コマンド型APIライブラリ<br>
-|  |  | CovidReader.WebApi  : WebAPIライブラリ<br>
-|  |<br>
-|  ├─controllers<br>
-|  |  | CovidReader.Controllers           : 各種アプリケーションコントロール　インターフェイス<br>
-|  |  | CovidReader.Controllers.UseCases  : アプリケーションコントロール　実装ユースケース<br>
-|  |  | <br>
-|  |  | CovidReader.Service               : 各種データアクセスサービス　インターフェイス<br>
-|  |  | CovidReader.Service.Api           : API関連データアクセスサービス　実装クラス<br>
-|  |  | CovidReader.Service.Covid19       : Covid19関連データアクセスサービス　実装クラス<br>
-|  |  | <br>
-|  |  | CovidReader.Plugins               : 各種プラグイン　インターフェイス<br>
-|  |  | CovidReader.Plugins.Log           : ログプラグイン　実装クラス<br>
-|  |<br>
-|  ├─models<br>
-|  |  | CovidReader.Models : データモデル<br>
-|  |  |   ├─Api<br>
-|  |  |   ├─Covid19<br>
-|  |  |   |   ├─CS    : 内閣官房提供APIのデータ構造<br>
-|  |  |   |   ├─MHLW  : 厚生労働省提供APIのデータ構造<br>
-|  |  |   |   ├─RESAS : 内閣府地方創生推進室提供APIのデータ構造<br>
-|  |  |   |<br>
-|  |  |   ├─Settings<br>
-|  |  |<br>
-|  |  | CovidReader.Repository          : リポジトリのインターフェイス<br>
-|  |  | CovidReader.Repository.Api      : API関連リポジトリの実装クラス<br>
-|  |  |   ├─Csv<br>
-|  |  |   ├─InMemory<br>
-|  |  |   ├─Json<br>
-|  |  |   ├─Rest<br>
-|  |  |   ├─Sql<br>
-|  |  |<br>
-|  |  | CovidReader.Repository.Covid19  : Covid19関連リポジトリの実装クラス<br>
-|  |  |   ├─CS<br>
-|  |  |   ├─MHLW<br>
-|  |  |   ├─RESAS<br>
-|  |  |<br>
-|  |  | CovidReader.Repository.Setting  : 初期設定関連リポジトリの実装クラス<br>
-|  |      ├─Csv<br>
-|  |      ├─Ini<br>
-|  |      ├─Json<br>
-|  |      ├─Xml<br>
-|  |<br>
-|  └─views<br>  
-|     | CovidReader.Infrastructure      : View基盤ライブラリ<br>
-|     | CovidReader.Infrastructure.Wpf  : WPF関連のView基盤ライブラリ<br>
-|<br>
-├─helps<br>
-|  | CovidReader.Document : ヘルプドキュメント生成<br>
-|<br>
-└─builds<br>
-   | CovidReader.Setup : インストーラ生成<br>
+CovidReader
+| CovidReader.sln  
+|
+├─app  
+|  | CovidReader          : コンソールアプリ
+|  | CovidReader.Web      : Webアプリ（バックエンドASPNETCore / フロントエンドReact）  
+|  | CovidReader.Windows  : WindowsOS ネイティブアプリ（WPF）
+|
+├─src  
+|  ├─api 
+|  |  | CovidReader.Api     : コマンド型APIライブラリ
+|  |  | CovidReader.WebApi  : WebAPIライブラリ
+|  |
+|  ├─controllers
+|  |  | CovidReader.Controllers           : 各種アプリケーションコントロール　インターフェイス
+|  |  | CovidReader.Controllers.UseCases  : アプリケーションコントロール　実装ユースケース
+|  |  | 
+|  |  | CovidReader.Service               : 各種データアクセスサービス　インターフェイス
+|  |  | CovidReader.Service.Api           : API関連データアクセスサービス　実装クラス
+|  |  | CovidReader.Service.Covid19       : Covid19関連データアクセスサービス　実装クラス
+|  |  | 
+|  |  | CovidReader.Plugins               : 各種プラグイン　インターフェイス
+|  |  | CovidReader.Plugins.Log           : ログプラグイン　実装クラス
+|  |
+|  ├─models
+|  |  | CovidReader.Models : データモデル
+|  |  |   ├─Api
+|  |  |   ├─Covid19
+|  |  |   |   ├─CS    : 内閣官房提供APIのデータ構造
+|  |  |   |   ├─MHLW  : 厚生労働省提供APIのデータ構造
+|  |  |   |   ├─RESAS : 内閣府地方創生推進室提供APIのデータ構造
+|  |  |   |
+|  |  |   ├─Settings
+|  |  |
+|  |  | CovidReader.Repository          : リポジトリのインターフェイス
+|  |  | CovidReader.Repository.Api      : API関連リポジトリの実装クラス
+|  |  |   ├─Csv
+|  |  |   ├─InMemory
+|  |  |   ├─Json
+|  |  |   ├─Rest
+|  |  |   ├─Sql
+|  |  |
+|  |  | CovidReader.Repository.Covid19  : Covid19関連リポジトリの実装クラス
+|  |  |   ├─CS
+|  |  |   ├─MHLW
+|  |  |   ├─RESAS
+|  |  |
+|  |  | CovidReader.Repository.Setting  : 初期設定関連リポジトリの実装クラス
+|  |      ├─Csv
+|  |      ├─Ini
+|  |      ├─Json
+|  |      ├─Xml
+|  |
+|  └─views  
+|     | CovidReader.Infrastructure      : View基盤ライブラリ
+|     | CovidReader.Infrastructure.Wpf  : WPF関連のView基盤ライブラリ
+|
+├─helps
+|  | CovidReader.Document : ヘルプドキュメント生成
+|
+└─builds
+   | CovidReader.Setup : インストーラ生成
 ```
 
 # モデル構造
