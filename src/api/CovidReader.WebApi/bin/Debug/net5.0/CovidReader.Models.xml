@@ -4,9 +4,56 @@
         <name>CovidReader.Models</name>
     </assembly>
     <members>
+        <member name="T:CovidReader.Models.Api.ChartConfig">
+            <summary>
+            チャート各カラムのコンフィグ（オプション）データ
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.ChartType">
+            <summary>
+            チャートタイプ（ライン/バー等）
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.BackgroundColor">
+            <summary>
+            背景色
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.BorderColor">
+            <summary>
+            ボーダー色
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.BorderWidth">
+            <summary>
+            ボーダー幅
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.ChartConfig.Category">
+            <summary>
+            カテゴリ（区分用）
+            </summary>
+        </member>
+        <member name="M:CovidReader.Models.Api.ChartConfig.ToString">
+            <summary>
+            文字列取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Models.Api.ChartConfig.GetHeader">
+            <summary>
+            ヘッダー文字列取得
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:CovidReader.Models.Api.DailyDbObject">
             <summary>
             日集計データ共通項目
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.DailyDbObject.Id">
+            <summary>
+            ID
             </summary>
         </member>
         <member name="P:CovidReader.Models.Api.DailyDbObject.Index">
@@ -32,6 +79,11 @@
         <member name="P:CovidReader.Models.Api.DbObject.Id">
             <summary>
             ID
+            </summary>
+        </member>
+        <member name="P:CovidReader.Models.Api.DbObject.Name">
+            <summary>
+            データ名
             </summary>
         </member>
         <member name="T:CovidReader.Models.Api.Account">
@@ -172,53 +224,6 @@
             <summary>
             一覧データ
             </summary>
-        </member>
-        <member name="T:CovidReader.Models.Api.ChartConfig">
-            <summary>
-            チャート各カラムのコンフィグ（オプション）データ
-            </summary>
-        </member>
-        <member name="P:CovidReader.Models.Api.ChartConfig.Name">
-            <summary>
-            名称（表示用）
-            </summary>
-        </member>
-        <member name="P:CovidReader.Models.Api.ChartConfig.ChartType">
-            <summary>
-            チャートタイプ（ライン/バー等）
-            </summary>
-        </member>
-        <member name="P:CovidReader.Models.Api.ChartConfig.BackgroundColor">
-            <summary>
-            背景色
-            </summary>
-        </member>
-        <member name="P:CovidReader.Models.Api.ChartConfig.BorderColor">
-            <summary>
-            ボーダー色
-            </summary>
-        </member>
-        <member name="P:CovidReader.Models.Api.ChartConfig.BorderWidth">
-            <summary>
-            ボーダー幅
-            </summary>
-        </member>
-        <member name="P:CovidReader.Models.Api.ChartConfig.Category">
-            <summary>
-            カテゴリ（区分用）
-            </summary>
-        </member>
-        <member name="M:CovidReader.Models.Api.ChartConfig.ToString">
-            <summary>
-            文字列取得
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:CovidReader.Models.Api.ChartConfig.GetHeader">
-            <summary>
-            ヘッダー文字列取得
-            </summary>
-            <returns></returns>
         </member>
         <member name="T:CovidReader.Models.Api.ChartItem">
             <summary>

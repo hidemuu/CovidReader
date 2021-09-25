@@ -1,5 +1,5 @@
 ﻿using CovidReader.Controllers;
-using CovidReader.Controllers.UseCases;
+using CovidReader.UseCases;
 using CovidReader.Infrastructure.Wpf;
 using CovidReader.Infrastructure.Wpf.CustomerRegionAdapters;
 using CovidReader.Infrastructure.Wpf.Services;

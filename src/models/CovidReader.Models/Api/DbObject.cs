@@ -22,5 +22,13 @@ namespace CovidReader.Models.Api
         [Key]
         [Required]
         public Guid Id { get; set; } = Guid.NewGuid();
+
+        /// <summary>
+        /// データ名
+        /// </summary>
+        [Name("name")]
+        [JsonProperty("name")]
+        [DisplayName("name")]
+        public string Name { get; set; } = "";
     }
 }

@@ -941,25 +941,6 @@
           "bin/placeholder/CovidReader.Controllers.dll": {}
         }
       },
-      "CovidReader.Controllers.UseCases/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Autofac": "6.2.0",
-          "CovidReader.Controllers": "1.0.0",
-          "CovidReader.Repository.Api": "1.0.0",
-          "CovidReader.Repository.Covid19": "1.0.0",
-          "CovidReader.Repository.Settings": "1.0.0",
-          "CovidReader.Service.Api": "1.0.0",
-          "CovidReader.Service.Covid19": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/CovidReader.Controllers.UseCases.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CovidReader.Controllers.UseCases.dll": {}
-        }
-      },
       "CovidReader.Infrastructure.Wpf/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1107,6 +1088,25 @@
         },
         "runtime": {
           "bin/placeholder/CovidReader.Service.Covid19.dll": {}
+        }
+      },
+      "CovidReader.UseCases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Autofac": "6.2.0",
+          "CovidReader.Controllers": "1.0.0",
+          "CovidReader.Repository.Api": "1.0.0",
+          "CovidReader.Repository.Covid19": "1.0.0",
+          "CovidReader.Repository.Settings": "1.0.0",
+          "CovidReader.Service.Api": "1.0.0",
+          "CovidReader.Service.Covid19": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.UseCases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.UseCases.dll": {}
         }
       },
       "CovidReader.Utilities/1.0.0": {
@@ -3052,11 +3052,6 @@
       "path": "../../src/controllers/CovidReader.Controllers/CovidReader.Controllers.csproj",
       "msbuildProject": "../../src/controllers/CovidReader.Controllers/CovidReader.Controllers.csproj"
     },
-    "CovidReader.Controllers.UseCases/1.0.0": {
-      "type": "project",
-      "path": "../../src/controllers/CovidReader.Controllers.UseCases/CovidReader.Controllers.UseCases.csproj",
-      "msbuildProject": "../../src/controllers/CovidReader.Controllers.UseCases/CovidReader.Controllers.UseCases.csproj"
-    },
     "CovidReader.Infrastructure.Wpf/1.0.0": {
       "type": "project",
       "path": "../../src/views/CovidReader.Infrastructure.Wpf/CovidReader.Infrastructure.Wpf.csproj",
@@ -3107,6 +3102,11 @@
       "path": "../../src/controllers/CovidReader.Service.Covid19/CovidReader.Service.Covid19.csproj",
       "msbuildProject": "../../src/controllers/CovidReader.Service.Covid19/CovidReader.Service.Covid19.csproj"
     },
+    "CovidReader.UseCases/1.0.0": {
+      "type": "project",
+      "path": "../../src/controllers/CovidReader.UseCases/CovidReader.UseCases.csproj",
+      "msbuildProject": "../../src/controllers/CovidReader.UseCases/CovidReader.UseCases.csproj"
+    },
     "CovidReader.Utilities/1.0.0": {
       "type": "project",
       "path": "../../src/controllers/CovidReader.Utilities/CovidReader.Utilities.csproj",
@@ -3115,8 +3115,8 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "CovidReader.Controllers.UseCases >= 1.0.0",
       "CovidReader.Infrastructure.Wpf >= 1.0.0",
+      "CovidReader.UseCases >= 1.0.0",
       "Prism.Unity >= 8.1.97"
     ]
   },
@@ -3157,8 +3157,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.Controllers.UseCases.csproj": {
-              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.Controllers.UseCases.csproj"
+            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.UseCases\\CovidReader.UseCases.csproj": {
+              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.UseCases\\CovidReader.UseCases.csproj"
             },
             "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\views\\CovidReader.Infrastructure.Wpf\\CovidReader.Infrastructure.Wpf.csproj": {
               "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\views\\CovidReader.Infrastructure.Wpf\\CovidReader.Infrastructure.Wpf.csproj"

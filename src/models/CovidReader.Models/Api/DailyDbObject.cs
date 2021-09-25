@@ -11,8 +11,18 @@ namespace CovidReader.Models.Api
     /// <summary>
     /// 日集計データ共通項目
     /// </summary>
-    public class DailyDbObject : DbObject
+    public class DailyDbObject
     {
+        /// <summary>
+        /// ID
+        /// </summary>
+        [Name("id")]
+        [JsonProperty("id")]
+        [DisplayName("id")]
+        [Key]
+        [Required]
+        public Guid Id { get; set; } = Guid.NewGuid();
+
         /// <summary>
         /// インデックス番号
         /// </summary>

@@ -1,53 +1,43 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import NoticeScreen from '../components/functions/NoticeScreen';
-import SignIn from './SignIn';
 import img01 from '../img/img01.jpg';
 import img02 from '../img/img02.jpg';
 import img03 from '../img/img03.jpg';
-import img04 from '../img/img04.jpg';
-import img05 from '../img/img05.jpg';
 
+//ホーム画面
 export default class Home extends Component {
   static displayName = Home.name;
 
   constructor(props) {
     super(props);
-    this.state = { currentCount: 0 };
-    this.incrementCounter = this.incrementCounter.bind(this);
   }
 
-    handleButtonClick() {
-        fetch('api/home')
-            .then((response) => {
-                if (response.status === 200) {
-                    return response.text();
-                } else {
-                    throw new Error();
-                }
-            })
-            .then((data) => {
-                alert(data);
-            })
-            .catch((error) => {
-                alert("error");
-                console.log(error);
-            })
-    }
-
-    incrementCounter() {
-      this.setState({
-        currentCount: this.state.currentCount + 1
-      });
-    }
+  //API更新ボタンクリックイベント
+  handleUpdateButtonClick() {
+    fetch('api/home')
+      .then((response) => {
+        if (response.status === 200) {
+            return response.text();
+        } else {
+            throw new Error();
+        }
+      })
+      .then((data) => {
+        alert(data);
+      })
+      .catch((error) => {
+        alert("error");
+        console.log(error);
+      })
+  }
 
   render () {
 
+    //スタイルシート生成
     const useStyles = makeStyles((theme) =>
       createStyles({
         root: {
@@ -64,7 +54,8 @@ export default class Home extends Component {
       }),
     );
 
-    const tileData = [
+    //コンテンツリスト
+    const contentsTileData = [
       {
         img: img01,
         title: 'ダッシュボード',
@@ -80,20 +71,8 @@ export default class Home extends Component {
         title: '感染データテーブル',
         author: '',
       },
-      // {
-      //   img: img04,
-      //   title: '登録',
-      //   author: '',
-      // },
-      // {
-      //   img: img05,
-      //   title: 'モチーフ',
-      //   author: '',
-      // },
     ];
 
-    // const [commDlg, setCommDlg] = React.useState(false);
-    // const execute = () => {}
     return (
       <div>
         <h1>新型コロナウイルス データ解析</h1>
@@ -103,7 +82,7 @@ export default class Home extends Component {
               {/* <ListSubheader component="div">APIデータ</ListSubheader> */}
             </GridListTile>
             <GridListTile cols={2}>
-              <p><button className="btn btn-primary" onClick={this.handleButtonClick}>API Update</button> <Link to="/signin" className="btn btn-primary">SignIn</Link> <Link to="/signup" className="btn btn-primary">SignUp</Link></p>
+              <p><button className="btn btn-primary" onClick={this.handleUpdateButtonClick}>API Update</button> <Link to="/signin" className="btn btn-primary">SignIn</Link> <Link to="/signup" className="btn btn-primary">SignUp</Link></p>
               <h3>ベースデータ</h3>
               <ul>
                 <li>政府機関 : <a href='https://corona.go.jp/dashboard/'>内閣官房</a> / <a href='https://portal.opendata.go.jp/'>厚生労働省</a></li>
@@ -118,9 +97,6 @@ export default class Home extends Component {
                 <li><strong>全国医療機関の医療提供体制の状況</strong> : <a href='https://opendata.corona.go.jp/api/covid19DailySurvey'>covid19DailySurvey.json</a></li>
               </ul>
             </GridListTile>
-            {/* <GridListTile cols={1}>
-              <SignIn></SignIn>
-            </GridListTile> */}
           </GridList>
         </div>
         <h3>コンテンツリスト</h3>
@@ -129,7 +105,7 @@ export default class Home extends Component {
             <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
               {/* <ListSubheader component="div">タイルリスト</ListSubheader> */}
             </GridListTile>
-            {tileData.map((tile) => (
+            {contentsTileData.map((tile) => (
               <GridListTile key={tile.img}>
                 <img src={tile.img} alt={tile.title} />
                 <GridListTileBar
@@ -141,26 +117,7 @@ export default class Home extends Component {
           </GridList>
         </div>
         
-        {/* <div className={useStyles.root}>
-          <GridList cellHeight={100} className={useStyles.gridList}>
-            <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-              <ListSubheader component="div"> <code>ClientApp</code> テストコマンド</ListSubheader>
-            </GridListTile>
-            <GridListTile cols={1}>
-              <p aria-live="polite">Current count: <strong>{this.state.currentCount}</strong></p>
-              <p><button className="btn btn-primary" onClick={this.incrementCounter}>Increment</button></p>
-            </GridListTile>
-            <GridListTile cols={1}>
-              <p><Link to="/signin" className="btn btn-primary">SignIn</Link></p>          
-              <p><Link to="/signup" className="btn btn-primary">SignUp</Link></p>
-            </GridListTile>
-            <GridListTile cols={1}>
-              <p><NoticeScreen></NoticeScreen></p>
-            </GridListTile>
-          </GridList>
-        </div> */}
-
-           
+        
       </div>
     );
   }

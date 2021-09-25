@@ -63,7 +63,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Web", "app\Covi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Service.Api", "src\controllers\CovidReader.Service.Api\CovidReader.Service.Api.csproj", "{5E721E5A-C5B6-4FEF-8645-D7A39E7E0753}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Controllers.UseCases", "src\controllers\CovidReader.Controllers.UseCases\CovidReader.Controllers.UseCases.csproj", "{E3E2B19A-9B6C-4AF3-B096-E1BFD43261C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.UseCases", "src\controllers\CovidReader.UseCases\CovidReader.UseCases.csproj", "{E3E2B19A-9B6C-4AF3-B096-E1BFD43261C8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Plugins.Log", "src\controllers\CovidReader.Plugins.Log\CovidReader.Plugins.Log.csproj", "{A367C43A-2E35-402C-AC1D-BCA07A25C7FF}"
 EndProject

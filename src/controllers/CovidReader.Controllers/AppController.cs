@@ -57,8 +57,6 @@ namespace CovidReader.Controllers
             await Covid19.MapperToRepositoryAsync();
         }
 
-        
-
         /// <summary>
         /// Covid19 APIデータをアプリケーションAPIデータベーステーブルに反映
         /// </summary>

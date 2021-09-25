@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\controllers\CovidReader.Controllers.UseCases\CovidReader.Controllers.UseCases.csproj" />
+    <ProjectReference Include="..\..\src\controllers\CovidReader.UseCases\CovidReader.UseCases.csproj" />
     <ProjectReference Include="..\..\src\views\CovidReader.Infrastructure.Wpf\CovidReader.Infrastructure.Wpf.csproj" />
   </ItemGroup>
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Api.Sql
 {
-    public class SqlApiRepositoryBase<T> where T : DailyDbObject
+    public abstract class SqlApiRepositoryBase<T> where T: DbObject
     {
         private readonly ApiDbContext _db;
         private readonly DbSet<T> _ts;
@@ -27,18 +27,18 @@ namespace CovidReader.Repository.Api.Sql
                 .ToListAsync();
         }
 
-        public async Task<T> GetAsync(string date)
+        public async Task<T> GetAsync(string name)
         {
             return await _ts
                 .AsNoTracking()
-                .FirstOrDefaultAsync(m => m.Date == date);
+                .FirstOrDefaultAsync(m => m.Name == name);
         }
 
 
         public async Task PostAsync(T item)
         {
-            //var current = await _ts.FirstOrDefaultAsync(_m => _m.Id == item.Id);
-            var current = await _ts.Where(x => x.Date == item.Date).FirstOrDefaultAsync(_m => _m.Calc == item.Calc);
+            var current = await _ts.FirstOrDefaultAsync(_m => _m.Id == item.Id);
+            //var current = await _ts.Where(x => x.Name == item.Name).FirstOrDefaultAsync(_m => _m.Calc == item.Calc);
             if (null == current)
             {
                 _ts.Add(item);
@@ -65,10 +65,10 @@ namespace CovidReader.Repository.Api.Sql
 
         }
 
-        public async Task DeleteAsync(string date)
+        public async Task DeleteAsync(string name)
         {
-            var query = _ts.Where(x => x.Date == date);
-            foreach(var q in query)
+            var query = _ts.Where(x => x.Name == name);
+            foreach (var q in query)
             {
                 var item = await _ts.FirstOrDefaultAsync(_m => _m.Id == q.Id);
                 if (null != item)
@@ -77,8 +77,7 @@ namespace CovidReader.Repository.Api.Sql
                     await _db.SaveChangesAsync();
                 }
             }
-            
-        }
 
+        }
     }
 }

@@ -37,27 +37,15 @@ export default class NavMenu extends Component {
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/dashboard">Dashboard</NavLink>
                 </NavItem>
-                {/* <NavItem>
+                <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/charts">Charts</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/tables">Tables</NavLink>
-                </NavItem> */}
+                </NavItem>
                 {/* <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/viruscharts">VirusCharts</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/virustables">VirusTables</NavLink>
-                </NavItem> */}
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/infectioncharts">InfectionCharts</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/infectiontables">InfectionTables</NavLink>
-                </NavItem>
-                <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/register">Register</NavLink>
-                </NavItem>
+                </NavItem> */}
                 {/* <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/archives/news?date=today&filter=none">Archives</NavLink>
                 </NavItem>

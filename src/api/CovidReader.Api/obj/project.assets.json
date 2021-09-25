@@ -664,25 +664,6 @@
           "bin/placeholder/CovidReader.Controllers.dll": {}
         }
       },
-      "CovidReader.Controllers.UseCases/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Autofac": "6.2.0",
-          "CovidReader.Controllers": "1.0.0",
-          "CovidReader.Repository.Api": "1.0.0",
-          "CovidReader.Repository.Covid19": "1.0.0",
-          "CovidReader.Repository.Settings": "1.0.0",
-          "CovidReader.Service.Api": "1.0.0",
-          "CovidReader.Service.Covid19": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/CovidReader.Controllers.UseCases.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CovidReader.Controllers.UseCases.dll": {}
-        }
-      },
       "CovidReader.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -805,6 +786,25 @@
         },
         "runtime": {
           "bin/placeholder/CovidReader.Service.Covid19.dll": {}
+        }
+      },
+      "CovidReader.UseCases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Autofac": "6.2.0",
+          "CovidReader.Controllers": "1.0.0",
+          "CovidReader.Repository.Api": "1.0.0",
+          "CovidReader.Repository.Covid19": "1.0.0",
+          "CovidReader.Repository.Settings": "1.0.0",
+          "CovidReader.Service.Api": "1.0.0",
+          "CovidReader.Service.Covid19": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.UseCases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.UseCases.dll": {}
         }
       },
       "CovidReader.Utilities/1.0.0": {
@@ -2072,11 +2072,6 @@
       "path": "../../controllers/CovidReader.Controllers/CovidReader.Controllers.csproj",
       "msbuildProject": "../../controllers/CovidReader.Controllers/CovidReader.Controllers.csproj"
     },
-    "CovidReader.Controllers.UseCases/1.0.0": {
-      "type": "project",
-      "path": "../../controllers/CovidReader.Controllers.UseCases/CovidReader.Controllers.UseCases.csproj",
-      "msbuildProject": "../../controllers/CovidReader.Controllers.UseCases/CovidReader.Controllers.UseCases.csproj"
-    },
     "CovidReader.Models/1.0.0": {
       "type": "project",
       "path": "../../models/CovidReader.Models/CovidReader.Models.csproj",
@@ -2122,6 +2117,11 @@
       "path": "../../controllers/CovidReader.Service.Covid19/CovidReader.Service.Covid19.csproj",
       "msbuildProject": "../../controllers/CovidReader.Service.Covid19/CovidReader.Service.Covid19.csproj"
     },
+    "CovidReader.UseCases/1.0.0": {
+      "type": "project",
+      "path": "../../controllers/CovidReader.UseCases/CovidReader.UseCases.csproj",
+      "msbuildProject": "../../controllers/CovidReader.UseCases/CovidReader.UseCases.csproj"
+    },
     "CovidReader.Utilities/1.0.0": {
       "type": "project",
       "path": "../../controllers/CovidReader.Utilities/CovidReader.Utilities.csproj",
@@ -2130,7 +2130,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "CovidReader.Controllers.UseCases >= 1.0.0",
+      "CovidReader.UseCases >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -2171,8 +2171,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.Controllers.UseCases.csproj": {
-              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.Controllers.UseCases.csproj"
+            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.UseCases\\CovidReader.UseCases.csproj": {
+              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.UseCases\\CovidReader.UseCases.csproj"
             }
           }
         }

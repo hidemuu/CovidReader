@@ -1,5 +1,5 @@
 ﻿using CovidReader.Controllers;
-using CovidReader.Controllers.UseCases;
+using CovidReader.UseCases;
 using CovidReader.Models;
 using CovidReader.Repository;
 using CovidReader.Repository.Api;

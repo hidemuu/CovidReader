@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Api.Json
 {
-    public abstract class JsonApiRepositoryBase<T> where T : DailyDbObject
+    public abstract class JsonApiRepositoryBase<T> where T: DbObject
     {
         private readonly JsonFileHelper _json;
 
@@ -21,10 +21,10 @@ namespace CovidReader.Repository.Api.Json
             return await Task.Run(() => _json.Read<IEnumerable<T>>());
         }
 
-        public async Task<T> GetAsync(string date)
+        public async Task<T> GetAsync(string name)
         {
             var items = await GetAsync();
-            return items.FirstOrDefault(x => x.Date == date);
+            return items.FirstOrDefault(x => x.Name == name);
         }
 
 
@@ -36,7 +36,7 @@ namespace CovidReader.Repository.Api.Json
         public async Task PostAsync(IEnumerable<T> items)
         {
             await Task.Run(() => _json.Write<IEnumerable<T>>(items));
-            
+
         }
 
         public Task DeleteAsync(string date)

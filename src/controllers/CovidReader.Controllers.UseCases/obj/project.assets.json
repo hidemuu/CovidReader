@@ -2125,9 +2125,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.Controllers.UseCases.csproj",
-      "projectName": "CovidReader.Controllers.UseCases",
-      "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.Controllers.UseCases.csproj",
+      "projectUniqueName": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.UseCases.csproj",
+      "projectName": "CovidReader.UseCases",
+      "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.UseCases.csproj",
       "packagesPath": "C:\\Users\\nando\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\obj\\",
       "projectStyle": "PackageReference",

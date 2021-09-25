@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
-import { Container } from 'reactstrap';
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import NavMenu from '../components/layout/NavMenu';

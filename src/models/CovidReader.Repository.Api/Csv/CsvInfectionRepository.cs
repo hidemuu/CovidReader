@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CovidReader.Repository.Api.Csv
 {
-    public class CsvInfectionRepository : CsvApiRepositoryBase<Infection>, IInfectionRepository
+    public class CsvInfectionRepository : CsvApiDailyRepositoryBase<Infection>, IInfectionRepository
     {
         public CsvInfectionRepository(string filename, string encode = "utf-8") : base(filename, encode) { }
     }

@@ -1,4 +1,4 @@
-﻿using CovidReader.Controllers.UseCases;
+﻿using CovidReader.UseCases;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

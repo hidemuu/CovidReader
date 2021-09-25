@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4T1lCXJjOP3YmDLMCSAfMieLVzhZVfqzTUzITHliprl/iB5j+ehcQp23BU2pMkK4j1BaM1em/+HFA6WFOeImPA==",
+  "dgSpecHash": "Ijz8fUEIieJeXA764ExaKNJrmJST88AxX/PQvTVPoCd5KEhEnKIwxXab7hQttlTBDX+JABhX/oGGAjQCEFqN9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.Controllers.UseCases.csproj",
+  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.Controllers.UseCases\\CovidReader.UseCases.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nando\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",

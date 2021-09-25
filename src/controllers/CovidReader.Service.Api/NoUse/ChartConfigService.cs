@@ -60,8 +60,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 0,
-                    Date = date.ToString(),
                     Name = "Death",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -72,8 +70,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 1,
-                    Date = date.AddSeconds(1).ToString(),
                     Name = "Hospitalization",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -84,8 +80,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 2,
-                    Date = date.AddSeconds(2).ToString(),
                     Name = "Positive",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -96,8 +90,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 3,
-                    Date = date.AddSeconds(3).ToString(),
                     Name = "Recovery",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -108,8 +100,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 4,
-                    Date = date.AddSeconds(4).ToString(),
                     Name = "Severe",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -120,8 +110,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 5,
-                    Date = date.AddSeconds(5).ToString(),
                     Name = "Test",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -132,8 +120,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 6,
-                    Date = date.AddSeconds(6).ToString(),
                     Name = "NationalTest",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -144,8 +130,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 7,
-                    Date = date.AddSeconds(7).ToString(),
                     Name = "QuarantineTest",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -156,8 +140,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 8,
-                    Date = date.AddSeconds(8).ToString(),
                     Name = "CareCenterTest",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -168,8 +150,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 9,
-                    Date = date.AddSeconds(9).ToString(),
                     Name = "CivilCenterTest",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -180,8 +160,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 10,
-                    Date = date.AddSeconds(10).ToString(),
                     Name = "CollegeTestNumber",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",
@@ -192,8 +170,6 @@ namespace CovidReader.Service.Api
 
                 result.Add(new ChartConfig
                 {
-                    Index = 11,
-                    Date = date.AddSeconds(11).ToString(),
                     Name = "MedicalTestNumber",
                     ChartType = "line",
                     BackgroundColor = "rgba(0, 0, 0, 0)",

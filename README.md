@@ -9,17 +9,21 @@ CovidReader
 |
 ├─app  
 |  | CovidReader          : コンソールアプリ
+|  |
 |  | CovidReader.Web      : Webアプリ（バックエンドASPNETCore / フロントエンドReact）  
+|  |   ├─ClientApp        : フロントエンド処理
+|  |   └─Controllers      : バックエンド処理
+|  |
 |  | CovidReader.Windows  : WindowsOS ネイティブアプリ（WPF）
 |
 ├─src  
 |  ├─api 
-|  |  | CovidReader.Api     : コマンド型APIライブラリ
+|  |  | CovidReader.Api     : コマンドAPIライブラリ
 |  |  | CovidReader.WebApi  : WebAPIライブラリ
 |  |
 |  ├─controllers
 |  |  | CovidReader.Controllers           : 各種アプリケーションコントロール　インターフェイス
-|  |  | CovidReader.Controllers.UseCases  : アプリケーションコントロール　実装ユースケース
+|  |  | CovidReader.UseCases              : アプリケーションコントロール　実装ユースケース
 |  |  | 
 |  |  | CovidReader.Service               : 各種データアクセスサービス　インターフェイス
 |  |  | CovidReader.Service.Api           : API関連データアクセスサービス　実装クラス
@@ -27,6 +31,8 @@ CovidReader
 |  |  | 
 |  |  | CovidReader.Plugins               : 各種プラグイン　インターフェイス
 |  |  | CovidReader.Plugins.Log           : ログプラグイン　実装クラス
+|  |  |
+|  |  | CovidReader.Utilities             : 共通汎用ロジック
 |  |
 |  ├─models
 |  |  | CovidReader.Models : データモデル
@@ -34,9 +40,9 @@ CovidReader
 |  |  |   ├─Covid19
 |  |  |   |   ├─CS    : 内閣官房提供APIのデータ構造
 |  |  |   |   ├─MHLW  : 厚生労働省提供APIのデータ構造
-|  |  |   |   ├─RESAS : 内閣府地方創生推進室提供APIのデータ構造
+|  |  |   |   └─RESAS : 内閣府地方創生推進室提供APIのデータ構造
 |  |  |   |
-|  |  |   ├─Settings
+|  |  |   └─Settings
 |  |  |
 |  |  | CovidReader.Repository          : リポジトリのインターフェイス
 |  |  | CovidReader.Repository.Api      : API関連リポジトリの実装クラス
@@ -44,18 +50,18 @@ CovidReader
 |  |  |   ├─InMemory
 |  |  |   ├─Json
 |  |  |   ├─Rest
-|  |  |   ├─Sql
+|  |  |   └─Sql
 |  |  |
 |  |  | CovidReader.Repository.Covid19  : Covid19関連リポジトリの実装クラス
 |  |  |   ├─CS
 |  |  |   ├─MHLW
-|  |  |   ├─RESAS
+|  |  |   └─RESAS
 |  |  |
 |  |  | CovidReader.Repository.Setting  : 初期設定関連リポジトリの実装クラス
 |  |      ├─Csv
 |  |      ├─Ini
 |  |      ├─Json
-|  |      ├─Xml
+|  |      └─Xml
 |  |
 |  └─views  
 |     | CovidReader.Infrastructure      : View基盤ライブラリ
@@ -66,6 +72,53 @@ CovidReader
 |
 └─builds
    | CovidReader.Setup : インストーラ生成
+```
+
+# Web フロントエンドデータ構造
+```
+ClientApp
+| package.json      : パッケージファイル
+| webpack.config.js : WebPack設定 
+|
+├─public
+|  | index.html     : 起動html
+|  | favicon.ico    : アイコンファイル
+|  | manifest.json  :
+|  |
+|  ├─css
+|  └─images
+|   
+└─src
+   | App.js                   : アプリケーション基幹クラス
+   | index.js                 : 起動スクリプト
+   | registerServiceWorker.js : 
+   |
+   ├─components
+   |  | CommonDialog.js
+   |  |
+   |  ├─layout
+   |  |   | Footer.js   : フッター
+   |  |   | Header.js   : ヘッダー
+   |  |   | NavMenu.js  : ナビゲーションメニュー
+   |  |   
+   |  ├─functions
+   |  |   | fetchItems.js       :
+   |  |   | getChartConfigs.js  :
+   |  |   | getItems.js         :
+   |  |   | getTableConfigs.js  :
+   |  |
+   |  ├─models
+   |  └─templetes
+   |
+   └─pages
+      | Layut.js            : アプリケーションレイアウト
+      | Home.js             : ホーム画面
+      | Dashboard.js        : ダッシュボード画面
+      | InfectionCharts.js  : 感染データチャート画面
+      | InfectionTables.js  : 感染データテーブル画面
+      | SignIn.js           : サインイン画面
+      | SignUp.js           : サインアップ画面
+
 ```
 
 # モデル構造

@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Repository.Api.Csv
 {
-    public class CsvApiRepositoryBase<T> where T : DailyDbObject
+    /// <summary>
+    /// 
+    /// </summary>
+    public abstract class CsvApiRepositoryBase<T> where T : DbObject
     {
         private readonly CsvFileHelper _csv;
 
@@ -21,10 +24,10 @@ namespace CovidReader.Repository.Api.Csv
             return await Task.Run(() => _csv.Read<T>());
         }
 
-        public async Task<T> GetAsync(string date)
+        public async Task<T> GetAsync(string name)
         {
             var items = await Task.Run(() => _csv.Read<T>());
-            return items.FirstOrDefault(x => x.Date == date);
+            return items.FirstOrDefault(x => x.Name == name);
         }
 
 
