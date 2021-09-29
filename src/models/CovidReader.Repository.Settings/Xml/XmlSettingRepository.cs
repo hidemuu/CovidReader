@@ -14,7 +14,7 @@ namespace CovidReader.Repository.Settings.Xml
         }
 
         public IConfigRepository Configs =>
-            new XmlConfigRepository(_path + @"settings.xml");
+            new XmlConfigRepository(_path + @"configs.xml");
 
     }
 }

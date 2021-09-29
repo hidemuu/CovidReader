@@ -2,8 +2,10 @@ import React from "react";
 import MaterialTable from 'material-table';
 import CircularProgress from "@material-ui/core/CircularProgress";
 
+//定数
+const basepath = 'api/inspection/calc/';
 
-
+//検査データテーブル表示クラス
 export default class InspectionTables extends React.Component {
 
   constructor(props) {
@@ -14,14 +16,14 @@ export default class InspectionTables extends React.Component {
     };
   }
 
+  //マウント時イベントハンドラ
   componentDidMount() {
-    this.populateChartItemAsync(this.props.calc);  
+    this.populateItemAsync(this.props.calc);  
   }
 
-  async populateChartItemAsync(param){
+  //テーブルデータ取得
+  async populateItemAsync(param){
     
-    const basepath = 'api/inspection/calc/';
-
     await fetch(basepath + param)
     .then((response) => {
       if (response.status === 200) {
@@ -44,8 +46,10 @@ export default class InspectionTables extends React.Component {
 
   }
 
+  //レンダリング
   render() {
 
+    //データ取得完了後処理
     if(!this.state.loading){
       console.log('draw start');
       const data = this.state.data;
@@ -104,6 +108,7 @@ export default class InspectionTables extends React.Component {
         </div>
       );
 
+    //データ取得中処理
     }else{
       
       return(

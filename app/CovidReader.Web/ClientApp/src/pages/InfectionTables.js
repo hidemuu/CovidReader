@@ -2,8 +2,13 @@ import React from "react";
 import MaterialTable from 'material-table';
 import CircularProgress from "@material-ui/core/CircularProgress";
 
+//定数
+const basepath = 'api/infection/calc/';
+
+//感染データテーブル生成クラス
 export default class InfectionTables extends React.Component {
 
+  //コンストラクタ
   constructor(props) {
     super(props);
     this.state={
@@ -12,14 +17,14 @@ export default class InfectionTables extends React.Component {
     };
   }
 
+  //マウント時イベントハンドラ
   componentDidMount() {
-    this.populateChartItemAsync(this.props.calc);  
+    this.populateItemAsync(this.props.calc);  
   }
 
-  async populateChartItemAsync(param){
+  //テーブルデータ取得
+  async populateItemAsync(param){
     
-    const basepath = 'api/infection/calc/';
-
     await fetch(basepath + param)
     .then((response) => {
       if (response.status === 200) {
@@ -42,8 +47,10 @@ export default class InfectionTables extends React.Component {
 
   }
 
+  //レンダリング
   render() {
 
+    //データ取得完了後処理
     if(!this.state.loading){
       console.log('draw start');
       const data = this.state.data;
@@ -105,6 +112,7 @@ export default class InfectionTables extends React.Component {
         </div>
       );
 
+    //データ取得中処理
     }else{
       
       return(

@@ -5,42 +5,40 @@ import { Line, Bar } from 'react-chartjs-2';
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 //定数
-const basepath = 'api/infection/calc/';
+const basepath = 'api/infection/';
 const chartTitle = '全国感染状況';
-const deathLabel = '死亡者';
-const cureLabel = '入院者';
-const patientlabel = '陽性者';
-const recoveryLabel = '治癒者';
-const severeLabel = '重傷者';
-const testLabel = '検査者';
+const labels = ['死亡者', '入院者', '陽性者', '治癒者', '重傷者', '検査者']; //EDIT 2021.09.29 ラベルデータをユニーク変数名から配列に変更（汎用化）
+const borderColors = ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)']; //ADD 2021.09.29 ボーダー色を宣言
+const backgroundColors = ['rgba(255,0,0,1)','rgba(0,255,0,1)','rgba(0,0,255,1)','rgba(255,255,0,1)','rgba(0,255,255,1)','rgba(255,0,255,1)']; //ADD 2021.09.29 背景色を宣言
 
 //感染データチャート生成クラス
 export default class InfectionCharts extends React.Component {
 
+  //コンストラクタ
   constructor(props) {
     super(props);
     this.state={
       data: [],
       loading:true,
-      category: '',
     };
   }
 
+  //マウント時イベントハンドラ
   componentDidMount() {
-    this.populateChartItemAsync(this.props.calc);  
+    this.populateChartItemAsync();  
   }
 
-  async populateChartItemAsync(param){
+  //チャートデータ取得
+  async populateChartItemAsync(){
 
-    console.log(basepath + param);
-    await fetch(basepath + param)
+    console.log(basepath);
+    await fetch(basepath)
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
       this.setState({
         data: json,
         loading: false,
-        category: param,
       });
       
     })
@@ -48,6 +46,7 @@ export default class InfectionCharts extends React.Component {
       console.error('--- fetch error ' + basepath + this.props.calc + '---');
       console.error(error);
     });
+
   }
 
   //レンダリング
@@ -80,68 +79,77 @@ export default class InfectionCharts extends React.Component {
       console.log('draw start');
       //データ格納
       const data = this.state.data;
+      const category = this.props.calc;
+      const query = data.filter(item => { return item.calc ==  category});
       //データラベル生成
-      let chartLabels = data.map(item => { return item.date; });
-      console.log('--- drawData : chartLabels -----');
+      const chartLabels = query.map(item => { return item.date; });
       console.log(chartLabels);
       //各系列の描画パラメータ設定
-      let chartData = [];  
-      chartData.push({
+      const chartItems = [
+        query.map(item => { return item.deathNumber; }), 
+        query.map(item => { return item.cureNumber; }), 
+        query.map(item => { return item.patientNumber; }),
+        query.map(item => { return item.recoveryNumber; }),
+        query.map(item => { return item.severeNumber; }),
+        query.map(item => { return item.testNumber; }), 
+      ]
+      const chartData = [
+        {
         type: 'bar',
         yAxisID: 'y-axis',
-        label: deathLabel,
-        data: data.map(item => { return item.deathNumber; }),
-        borderColor: 'rgba(0, 0, 0, 0)',
-        backgroundColor: 'rgba(255,0,0,1)',
+        label: labels[0],
+        data: chartItems[0],
+        borderColor: borderColors[0],
+        backgroundColor: backgroundColors[0],
         borderWidth: 1
-      });
-      chartData.push({
-        type: 'bar',
-        yAxisID: 'y-axis',
-        label: cureLabel,
-        data: data.map(item => { return item.cureNumber; }),
-        borderColor: 'rgba(0, 0, 0, 0)',
-        backgroundColor: 'rgba(0,255,0,1)',
-        borderWidth: 1
-      });
-      chartData.push({
-        type: 'bar',
-        yAxisID: 'y-axis',
-        label: patientlabel,
-        data: data.map(item => { return item.patientNumber; }),
-        borderColor: 'rgba(0, 0, 0, 0)',
-        backgroundColor: 'rgba(0,0,255,1)',
-        borderWidth: 1
-      });
-      chartData.push({
-        type: 'bar',
-        yAxisID: 'y-axis',
-        label: recoveryLabel,
-        data: data.map(item => { return item.recoveryNumber; }),
-        borderColor: 'rgba(0, 0, 0, 0)',
-        backgroundColor: 'rgba(255,255,0,1)',
-        borderWidth: 1
-      });
-      chartData.push({
-        type: 'bar',
-        yAxisID: 'y-axis',
-        label: severeLabel,
-        data: data.map(item => { return item.severeNumber; }),
-        borderColor: 'rgba(0, 0, 0, 0)',
-        backgroundColor: 'rgba(0,255,255,1)',
-        borderWidth: 1
-      });
-      chartData.push({
-        type: 'bar',
-        yAxisID: 'y-axis',
-        label: testLabel,
-        data: data.map(item => { return item.testNumber; }),
-        borderColor: 'rgba(0, 0, 0, 0)',
-        backgroundColor: 'rgba(255,0,255,1)',
-        borderWidth: 1
-      });
-      
-      console.log('--- drawData : chartData -----');
+        },
+        {
+          type: 'bar',
+          yAxisID: 'y-axis',
+          label: labels[1],
+          data: chartItems[1],
+          borderColor: borderColors[1],
+          backgroundColor: backgroundColors[1],
+          borderWidth: 1
+        },
+        {
+          type: 'bar',
+          yAxisID: 'y-axis',
+          label: labels[2],
+          data: chartItems[2],
+          borderColor: borderColors[2],
+          backgroundColor: backgroundColors[2],
+          borderWidth: 1
+        },
+        {
+          type: 'bar',
+          yAxisID: 'y-axis',
+          label: labels[3],
+          data: chartItems[3],
+          borderColor: borderColors[3],
+          backgroundColor: backgroundColors[3],
+          borderWidth: 1
+        },
+        {
+          type: 'bar',
+          yAxisID: 'y-axis',
+          label: labels[4],
+          data: chartItems[4],
+          borderColor: borderColors[4],
+          backgroundColor: backgroundColors[4],
+          borderWidth: 1
+        },
+        {
+          type: 'bar',
+          yAxisID: 'y-axis',
+          label: labels[5],
+          data: chartItems[5],
+          borderColor: borderColors[5],
+          backgroundColor: backgroundColors[5],
+          borderWidth: 1
+        }
+      ];
+
       console.log(chartData);
 
       //チャートオプション設定
@@ -167,10 +175,11 @@ export default class InfectionCharts extends React.Component {
         }
       };
 
+      //デザイン生成
       return (
         <div>
-          <Typography variant="h3" align="center" className={useStyles.typography}>
-            <div>{chartTitle} / {this.state.category} : 一覧</div>
+          <Typography variant="h5" align="center" className={useStyles.typography}>
+            <div>{chartTitle} / {category} : 一覧</div>
           </Typography>
           <Line  
               data={{
@@ -178,15 +187,15 @@ export default class InfectionCharts extends React.Component {
                 datasets: chartData,
               }} 
               options={options}/>
-          <Typography variant="h3" align="center" className={useStyles.typography}>
-            <div>{chartTitle} / {this.state.category} : 個別</div>
+          <Typography variant="h5" align="center" className={useStyles.typography}>
+            <div>{chartTitle} / {category} : 個別</div>
           </Typography>
           <Grid container style={{ paddingTop: 30 }} justify="flex-end" direction="row">
             <Grid item className={useStyles.grid} xs={6}>
               <Bar  
               data={{
                 labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == deathLabel}),
+                datasets: chartData.filter(d => {return d.label == labels[0]}),
               }} 
               options={options}/>
             </Grid>
@@ -194,7 +203,7 @@ export default class InfectionCharts extends React.Component {
               <Bar  
               data={{
                 labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == cureLabel}),
+                datasets: chartData.filter(d => {return d.label == labels[1]}),
               }} 
               options={options}/>
             </Grid>
@@ -202,7 +211,7 @@ export default class InfectionCharts extends React.Component {
               <Bar  
               data={{
                 labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == patientlabel}),
+                datasets: chartData.filter(d => {return d.label == labels[2]}),
               }} 
               options={options}/>
             </Grid>
@@ -210,7 +219,7 @@ export default class InfectionCharts extends React.Component {
               <Bar  
               data={{
                 labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == recoveryLabel}),
+                datasets: chartData.filter(d => {return d.label == labels[3]}),
               }} 
               options={options}/>
             </Grid>
@@ -218,7 +227,7 @@ export default class InfectionCharts extends React.Component {
               <Bar  
               data={{
                 labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == severeLabel}),
+                datasets: chartData.filter(d => {return d.label == labels[4]}),
               }} 
               options={options}/>
             </Grid>
@@ -226,7 +235,7 @@ export default class InfectionCharts extends React.Component {
               <Bar  
               data={{
                 labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == testLabel}),
+                datasets: chartData.filter(d => {return d.label == labels[5]}),
               }} 
               options={options}/>
             </Grid>

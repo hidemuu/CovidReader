@@ -27,7 +27,7 @@ export default class InspectionCharts extends React.Component {
     };
   }
 
-  //マウント時イベント
+  //マウント時イベントハンドラ
   componentDidMount() {
     this.populateChartItemAsync(this.props.calc);  
   }
@@ -83,7 +83,7 @@ export default class InspectionCharts extends React.Component {
     //データ取得完了後処理
     if(!this.state.loading){
       console.log('draw start');
-      //データ
+      //データ格納
       const data = this.state.data;
       
       //データラベル生成

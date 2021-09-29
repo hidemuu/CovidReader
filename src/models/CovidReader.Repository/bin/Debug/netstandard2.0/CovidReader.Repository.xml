@@ -415,6 +415,19 @@
             UIコメント
             </summary>
         </member>
+        <member name="M:CovidReader.Repository.Settings.ICommentRepository.GetAsync">
+            <summary>
+            一括で取得しデシリアライズ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Repository.Settings.ICommentRepository.GetAsync(System.String)">
+            <summary>
+            名称が一致するものを取得しデシリアライズ
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
         <member name="T:CovidReader.Repository.Settings.IConfigRepository">
             <summary>
             コンフィグレーション設定

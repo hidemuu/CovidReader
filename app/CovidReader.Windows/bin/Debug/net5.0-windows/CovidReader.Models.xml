@@ -652,6 +652,11 @@
             詳細説明（任意記載）
             </summary>
         </member>
+        <member name="T:CovidReader.Models.Settings.Comments">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:CovidReader.Models.Settings.Config">
             <summary>
             コンフィグレーションデータ
