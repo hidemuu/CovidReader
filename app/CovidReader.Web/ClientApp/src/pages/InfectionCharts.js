@@ -6,7 +6,6 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 //定数
 const basepath = 'api/infection/';
-const chartTitle = '全国感染状況';
 const labels = ['死亡者', '入院者', '陽性者', '治癒者', '重傷者', '検査者']; //EDIT 2021.09.29 ラベルデータをユニーク変数名から配列に変更（汎用化）
 const borderColors = ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)']; //ADD 2021.09.29 ボーダー色を宣言
 const backgroundColors = ['rgba(255,0,0,1)','rgba(0,255,0,1)','rgba(0,0,255,1)','rgba(255,255,0,1)','rgba(0,255,255,1)','rgba(255,0,255,1)']; //ADD 2021.09.29 背景色を宣言
@@ -25,11 +24,11 @@ export default class InfectionCharts extends React.Component {
 
   //マウント時イベントハンドラ
   componentDidMount() {
-    this.populateChartItemAsync();  
+    this.populateItemAsync();  
   }
 
   //チャートデータ取得
-  async populateChartItemAsync(){
+  async populateItemAsync(){
 
     console.log(basepath);
     await fetch(basepath)
@@ -76,13 +75,28 @@ export default class InfectionCharts extends React.Component {
 
     //データ取得完了後処理
     if(!this.state.loading){
-      console.log('draw start');
+      
       //データ格納
       const data = this.state.data;
       const category = this.props.calc;
       const disp = this.props.disp;
+      //日付フィルタ ADD 2021.10.02
+      const endDate = new Date(this.props.endDate);
+      const dateFilter = this.props.dateFilter;
+      let startDate = new Date(this.props.endDate);
+      if(dateFilter == 'week'){
+        startDate.setDate( startDate.getDate() - 7);
+      }else if(dateFilter == 'month'){
+        startDate.setDate( startDate.getDate() - 30);
+      }else if(dateFilter == 'year'){
+        startDate.setDate( startDate.getDate() - 365);
+      }else{
+        startDate.setDate( startDate.getDate() - 365);
+      }
 
-      const query = data.filter(item => { return item.calc ==  category});
+      console.log('draw start' + startDate + ' - ' + endDate);
+
+      const query = data.filter(item => { return item.calc ==  category}).filter(item => {return new Date(item.date) >= startDate && new Date(item.date) <= endDate});
       //データラベル生成
       const chartLabels = query.map(item => { return item.date; });
       console.log(chartLabels);

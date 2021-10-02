@@ -49,10 +49,10 @@ export default class NavMenu extends Component {
                 </NavItem> */}
                 {/* <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/archives/news?date=today&filter=none">Archives</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/srttings">Settings</NavLink>
                 </NavItem> */}
+                <NavItem>
+                  <NavLink tag={Link} className="text-dark" to="/settings">Settings</NavLink>
+                </NavItem>
                 
                 
               </ul>

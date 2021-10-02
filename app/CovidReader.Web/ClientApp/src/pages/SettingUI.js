@@ -3,10 +3,10 @@ import SettingTemplate from "../components/templates/SettingTemplate";
 
 export default class Settings extends React.Component {
   render() {
-    console.log("settings");
+    console.log("settingUI");
     return (  
-      <SettingTemplate title="セッテングページ">
-          <h1>Settings</h1>
+      <SettingTemplate title="UIページ">
+          <h1>SettingUI</h1>
       </SettingTemplate>
     );
   }

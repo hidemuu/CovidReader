@@ -25,6 +25,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 
 const drawerWidth = 240;
 
+//テーマ生成
 const theme = createTheme({
   typography: {
     fontFamily: [
@@ -48,6 +49,7 @@ const theme = createTheme({
   },
 });
 
+//スタイル設定
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
@@ -133,6 +135,7 @@ const useStyles = makeStyles((theme) =>
   })
 );
 
+//コピーライトデザイン
 const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -146,8 +149,8 @@ const Copyright = () => {
   );
 };
 
-
-const DashboardTemplate = ({
+//テンプレートデザイン
+const SettingTemplate = ({
   children,
   title,
 }) => {
@@ -206,7 +209,7 @@ const DashboardTemplate = ({
           </div>
           <Divider />
           <List>
-            <Link to="/dashboard" className={classes.link}>
+            <Link to="/settings" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                   <HomeIcon />
@@ -214,7 +217,7 @@ const DashboardTemplate = ({
                 <ListItemText primary="トップページ" />
               </ListItem>
             </Link>
-            <Link to="/dashboardsummary" className={classes.link}>
+            <Link to="/settingui" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                   <ShoppingCartIcon />
@@ -247,4 +250,4 @@ const DashboardTemplate = ({
   );
 };
 
-export default DashboardTemplate;
+export default SettingTemplate;

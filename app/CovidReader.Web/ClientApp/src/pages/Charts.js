@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import DatePicker from "react-datepicker";
@@ -8,16 +8,17 @@ import 'react-tabs/style/react-tabs.css';
 import InfectionCharts from './InfectionCharts';
 import InspectionCharts from './InspectionCharts';
 
-var startDate;
-var dateFilter;
-var tabNumber;
-
 //感染データ、検査データチャート一覧表示
 export default class Charts extends React.Component {
 
-    //コンストラクタ
+    //コンストラクタ EDIT 2021.10.02 state追加
     constructor(props) {
         super(props);
+        this.state={
+            endDate: new Date(),
+            dateFilter: 'all',
+            tabNumber: 2,
+          };
     }
 
     //マウント時イベントハンドラ
@@ -28,42 +29,25 @@ export default class Charts extends React.Component {
     //タブセレクトイベント
     handleTabSelect(index, last) {
         console.log('Selected tab: ' + index + ', Last tab: ' + last);
-        tabNumber = index;
+        this.setState({tabNumber: index});
         if (index == 0){
-            dateFilter = 'week';
+            this.setState({dateFilter: 'week'});
         }
         else if (index == 1){
-            dateFilter = 'month';
+            this.setState({dateFilter: 'month'});
         }
         else if (index == 2){
-            dateFilter = 'year';
+            this.setState({dateFilter: 'year'});
         }
     }
 
-    //週表示ボタンクリックイベント
-    handleWeeklyButtonClick() {
-        dateFilter = 'week';
-    }
-    //月表示ボタンクリックイベント
-    handleMonthlyButtonClick() {
-        dateFilter = 'month';
-    }
-    //年表示ボタンクリックイベント
-    handleYearlyButtonClick() {
-        dateFilter = 'year';
-    }
     //カレンダークリックイベント
     handleDatepickerChanged(date) {
-        startDate = date;
+        this.setState({endDate: date});
     }
 
     //レンダリング
     render() {
-
-        startDate = new Date();
-        dateFilter = 'all';
-        tabNumber = 1;
-
         //スタイル設定
         const useStyles = makeStyles((theme) => ({
             typography: {
@@ -88,7 +72,7 @@ export default class Charts extends React.Component {
 
         return (
             <div>
-                <Tabs onSelect={this.handleTabSelect} selectedIndex={this.tabNumber}>
+                <Tabs onSelect={(index, last) => this.handleTabSelect(index, last)} selectedIndex={this.state.tabNumber}>
                     <TabList>
                         <Tab>週</Tab>
                         <Tab>月</Tab>
@@ -104,7 +88,7 @@ export default class Charts extends React.Component {
                         <h2>年報</h2>
                     </TabPanel>
                 </Tabs>
-                <DatePicker selected={startDate} onChange={(date) => this.handleDatepickerChanged(date)} />
+                <DatePicker selected={this.state.endDate} onChange={(date) => this.handleDatepickerChanged(date)} />
                 {/* <button className="btn btn-primary" onClick={this.handleWeeklyButtonClick}>週</button>
                 <button className="btn btn-primary" onClick={this.handleMonthlyButtonClick}>月</button>
                 <button className="btn btn-primary" onClick={this.handleYearlyButtonClick}>年</button> */}
@@ -113,10 +97,10 @@ export default class Charts extends React.Component {
                 </Typography>
                 <Grid container style={{ paddingTop: 30, paddingBottom: 50 }} justify="flex-end" direction="row">
                     <Grid item className={useStyles.grid} xs={6}>
-                        <InfectionCharts calc='daily' disp='all'/>
+                        <InfectionCharts calc='daily' disp='all' endDate={this.state.endDate} dateFilter={this.state.dateFilter}/>
                     </Grid>
                     <Grid item className={useStyles.grid} xs={6}>
-                        <InfectionCharts calc='daily' disp='units'/>
+                        <InfectionCharts calc='daily' disp='units' endDate={this.state.endDate} dateFilter={this.state.dateFilter}/>
                     </Grid>
                 </Grid>
                 <Typography variant="h5" align="center" className={useStyles.typography}>
@@ -124,10 +108,10 @@ export default class Charts extends React.Component {
                 </Typography>
                 <Grid container style={{ paddingTop: 30, paddingBottom: 50 }} justify="flex-end" direction="row">
                     <Grid item className={useStyles.grid} xs={6}>
-                        <InfectionCharts calc='total' disp='all'/>
+                        <InfectionCharts calc='total' disp='all' endDate={this.state.endDate} dateFilter={this.state.dateFilter}/>
                     </Grid>
                     <Grid item className={useStyles.grid} xs={6}>
-                        <InfectionCharts calc='total' disp='units'/>
+                        <InfectionCharts calc='total' disp='units' endDate={this.state.endDate} dateFilter={this.state.dateFilter}/>
                     </Grid>
                 </Grid>
                 

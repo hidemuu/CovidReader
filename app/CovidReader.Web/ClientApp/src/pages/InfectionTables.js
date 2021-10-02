@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 //定数
-const basepath = 'api/infection/calc/';
+const basepath = 'api/infection/';
 
 //感染データテーブル生成クラス
 export default class InfectionTables extends React.Component {
@@ -19,13 +19,13 @@ export default class InfectionTables extends React.Component {
 
   //マウント時イベントハンドラ
   componentDidMount() {
-    this.populateItemAsync(this.props.calc);  
+    this.populateItemAsync();  
   }
 
   //テーブルデータ取得
-  async populateItemAsync(param){
+  async populateItemAsync(){
     
-    await fetch(basepath + param)
+    await fetch(basepath)
     .then((response) => {
       if (response.status === 200) {
         return response.json();
@@ -41,7 +41,7 @@ export default class InfectionTables extends React.Component {
       });
     })
     .catch((error) =>{
-      console.error('--- fetch error ' + basepath + this.props.calc + '---');
+      console.error('--- fetch error ' + basepath + '---');
       console.error(error);
     });
 
@@ -54,7 +54,9 @@ export default class InfectionTables extends React.Component {
     if(!this.state.loading){
       console.log('draw start');
       const data = this.state.data;
-      console.log(data);
+      const category = this.props.calc;
+      const query = data.filter(item => { return item.calc ==  category})
+      console.log(query);
       
 
       return(
@@ -97,10 +99,13 @@ export default class InfectionTables extends React.Component {
                 cellStyle: { textAlign: 'right' },
               },
             ]}
-            data={data}
+            data={query}
             options={{
               //showTitle: false,
               paging: false,
+              // search: false,
+              // draggable: false,
+              filtering: true,
               maxBodyHeight: 700,
               headerStyle: { 
                 position: 'sticky', 
