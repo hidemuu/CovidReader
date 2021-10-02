@@ -1,6 +1,7 @@
 ﻿C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.i.cs
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\App.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\ChartView.xaml;;
+FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\DashboardView.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Dialogs\AlertDialog.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Dialogs\DialogWindow.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Dialogs\SuccessDialog.xaml;;
@@ -10,5 +11,6 @@ FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Login
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Login\LoginMainContent.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Login\LoginWindow.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\MainWindow.xaml;;
+FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\SettingView.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\TableView.xaml;;
 

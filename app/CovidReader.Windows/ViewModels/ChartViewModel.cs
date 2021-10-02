@@ -22,12 +22,10 @@ namespace CovidReader.Windows.ViewModels
 
         public void OnNavigatedFrom(NavigationContext navigationContext)
         {
-            //MessageBox.Show("退出了LoginMainContent");
         }
 
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
-            //MessageBox.Show("从CreateAccount导航到LoginMainContent");
             _journal = navigationContext.NavigationService.Journal;
 
 

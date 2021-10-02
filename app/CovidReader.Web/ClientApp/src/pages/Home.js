@@ -101,7 +101,7 @@ export default class Home extends Component {
         </div>
         <h3>コンテンツリスト</h3>
         <div className={useStyles.root}>
-          <GridList cellHeight={200} className={useStyles.gridList}>
+          <GridList cellHeight={400} className={useStyles.gridList}>
             <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
               {/* <ListSubheader component="div">タイルリスト</ListSubheader> */}
             </GridListTile>

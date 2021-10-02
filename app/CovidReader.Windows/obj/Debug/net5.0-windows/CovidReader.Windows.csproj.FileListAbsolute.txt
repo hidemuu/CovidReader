@@ -542,3 +542,7 @@ C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\ne
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.UseCases.dll
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.UseCases.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.UseCases.xml
+C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\obj\Debug\net5.0-windows\Views\DashboardView.g.cs
+C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\obj\Debug\net5.0-windows\Views\SettingView.g.cs
+C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\obj\Debug\net5.0-windows\Views\DashboardView.baml
+C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\obj\Debug\net5.0-windows\Views\SettingView.baml

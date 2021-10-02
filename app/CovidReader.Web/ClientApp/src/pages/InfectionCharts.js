@@ -43,7 +43,7 @@ export default class InfectionCharts extends React.Component {
       
     })
     .catch((error) =>{
-      console.error('--- fetch error ' + basepath + this.props.calc + '---');
+      console.error('--- fetch error ' + basepath +  '---');
       console.error(error);
     });
 
@@ -80,6 +80,8 @@ export default class InfectionCharts extends React.Component {
       //データ格納
       const data = this.state.data;
       const category = this.props.calc;
+      const disp = this.props.disp;
+
       const query = data.filter(item => { return item.calc ==  category});
       //データラベル生成
       const chartLabels = query.map(item => { return item.date; });
@@ -93,63 +95,21 @@ export default class InfectionCharts extends React.Component {
         query.map(item => { return item.severeNumber; }),
         query.map(item => { return item.testNumber; }), 
       ]
-      const chartData = [
-        {
-        type: 'bar',
-        yAxisID: 'y-axis',
-        label: labels[0],
-        data: chartItems[0],
-        borderColor: borderColors[0],
-        backgroundColor: backgroundColors[0],
-        borderWidth: 1
-        },
-        {
-          type: 'bar',
-          yAxisID: 'y-axis',
-          label: labels[1],
-          data: chartItems[1],
-          borderColor: borderColors[1],
-          backgroundColor: backgroundColors[1],
-          borderWidth: 1
-        },
-        {
-          type: 'bar',
-          yAxisID: 'y-axis',
-          label: labels[2],
-          data: chartItems[2],
-          borderColor: borderColors[2],
-          backgroundColor: backgroundColors[2],
-          borderWidth: 1
-        },
-        {
-          type: 'bar',
-          yAxisID: 'y-axis',
-          label: labels[3],
-          data: chartItems[3],
-          borderColor: borderColors[3],
-          backgroundColor: backgroundColors[3],
-          borderWidth: 1
-        },
-        {
-          type: 'bar',
-          yAxisID: 'y-axis',
-          label: labels[4],
-          data: chartItems[4],
-          borderColor: borderColors[4],
-          backgroundColor: backgroundColors[4],
-          borderWidth: 1
-        },
-        {
-          type: 'bar',
-          yAxisID: 'y-axis',
-          label: labels[5],
-          data: chartItems[5],
-          borderColor: borderColors[5],
-          backgroundColor: backgroundColors[5],
-          borderWidth: 1
-        }
-      ];
 
+      let chartData = [];
+      for (let i = 0; i < labels.length; i++){
+        chartData.push({
+          type: 'bar',
+          yAxisID: 'y-axis',
+          label: labels[i],
+          data: chartItems[i],
+          borderColor: borderColors[i],
+          backgroundColor: backgroundColors[i],
+          borderWidth: 1
+        });
+      }
+
+      
       console.log(chartData);
 
       //チャートオプション設定
@@ -175,75 +135,45 @@ export default class InfectionCharts extends React.Component {
         }
       };
 
-      //デザイン生成
-      return (
-        <div>
-          <Typography variant="h5" align="center" className={useStyles.typography}>
-            <div>{chartTitle} / {category} : 一覧</div>
-          </Typography>
-          <Line  
-              data={{
-                labels: chartLabels,
-                datasets: chartData,
-              }} 
-              options={options}/>
-          <Typography variant="h5" align="center" className={useStyles.typography}>
-            <div>{chartTitle} / {category} : 個別</div>
-          </Typography>
-          <Grid container style={{ paddingTop: 30 }} justify="flex-end" direction="row">
-            <Grid item className={useStyles.grid} xs={6}>
-              <Bar  
-              data={{
-                labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == labels[0]}),
-              }} 
-              options={options}/>
+      //デザイン
+      if(disp == 'all'){
+        return (
+          <div>
+            <Typography variant="h5" align="center" className={useStyles.typography}>
+              <div>一覧</div>
+            </Typography>
+            <Line  
+                data={{
+                  labels: chartLabels,
+                  datasets: chartData,
+                }} 
+                options={options}/>
+          </div>
+        );
+      }
+      else{
+        return (
+          <div>
+            <Typography variant="h5" align="center" className={useStyles.typography}>
+              <div>個別</div>
+            </Typography>
+            <Grid container style={{ paddingTop: 30 }} justify="flex-end" direction="row">
+              {labels.map((label, index) => (
+                <Grid item className={useStyles.grid} xs={6}>
+                <Bar  
+                data={{
+                  labels: chartLabels,
+                  datasets: chartData.filter(d => {return d.label == label}),
+                }} 
+                options={options}/>
+              </Grid>
+              ))}
             </Grid>
-            <Grid item className={useStyles.grid} xs={6}>
-              <Bar  
-              data={{
-                labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == labels[1]}),
-              }} 
-              options={options}/>
-            </Grid>
-            <Grid item className={useStyles.grid} xs={6}>
-              <Bar  
-              data={{
-                labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == labels[2]}),
-              }} 
-              options={options}/>
-            </Grid>
-            <Grid item className={useStyles.grid} xs={6}>
-              <Bar  
-              data={{
-                labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == labels[3]}),
-              }} 
-              options={options}/>
-            </Grid>
-            <Grid item className={useStyles.grid} xs={6}>
-              <Bar  
-              data={{
-                labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == labels[4]}),
-              }} 
-              options={options}/>
-            </Grid>
-            <Grid item className={useStyles.grid} xs={6}>
-              <Bar  
-              data={{
-                labels: chartLabels,
-                datasets: chartData.filter(d => {return d.label == labels[5]}),
-              }} 
-              options={options}/>
-            </Grid>
-          </Grid>
+          </div>
           
-        </div>
-        
-      );
+        );
+      }
+      
     }else{
 
       return (

@@ -37,56 +37,6 @@
           }
         }
       },
-      "Google.Apis/1.53.0": {
-        "dependencies": {
-          "Google.Apis.Core": "1.53.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.dll": {
-            "assemblyVersion": "1.53.0.0",
-            "fileVersion": "1.53.0.0"
-          }
-        }
-      },
-      "Google.Apis.Auth/1.53.0": {
-        "dependencies": {
-          "Google.Apis": "1.53.0",
-          "Google.Apis.Core": "1.53.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {
-            "assemblyVersion": "1.53.0.0",
-            "fileVersion": "1.53.0.0"
-          },
-          "lib/netstandard2.0/Google.Apis.Auth.dll": {
-            "assemblyVersion": "1.53.0.0",
-            "fileVersion": "1.53.0.0"
-          }
-        }
-      },
-      "Google.Apis.Calendar.v3/1.53.0.2382": {
-        "dependencies": {
-          "Google.Apis": "1.53.0",
-          "Google.Apis.Auth": "1.53.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.Calendar.v3.dll": {
-            "assemblyVersion": "1.53.0.2382",
-            "fileVersion": "1.53.0.2382"
-          }
-        }
-      },
-      "Google.Apis.Core/1.53.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.Core.dll": {
-            "assemblyVersion": "1.53.0.0",
-            "fileVersion": "1.53.0.0"
-          }
-        }
-      },
       "LiveCharts.Wpf.NetCore3/0.9.7": {
         "dependencies": {
           "System.Data.DataSetExtensions": "4.5.0"
@@ -833,34 +783,6 @@
       "sha512": "sha512-lo5yypClBORR2XiWPRxQApaA4C2R4GVCIPVRt9HfaLxLmVQtg/KZiOYsd4luLgyOxkUatF9R0QdFQYk7Y2l0cw==",
       "path": "csvhelper/27.1.1",
       "hashPath": "csvhelper.27.1.1.nupkg.sha512"
-    },
-    "Google.Apis/1.53.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nLVl91WLUHuU/WVQfGXXf2UcNguTRvVorZujT06q6fjYKk/Q6UJDgEcO5Ti00vdb40sT1GQwnqUpPeSKjLSn2Q==",
-      "path": "google.apis/1.53.0",
-      "hashPath": "google.apis.1.53.0.nupkg.sha512"
-    },
-    "Google.Apis.Auth/1.53.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-f8MhaaP9aRoVpybRNfMKzBFrNh/Hw3z1TUBFsWWXYZOgcXFFUuFCFmAxyIjixdYxDG+DCwkoVnf5lSIXEy3QdA==",
-      "path": "google.apis.auth/1.53.0",
-      "hashPath": "google.apis.auth.1.53.0.nupkg.sha512"
-    },
-    "Google.Apis.Calendar.v3/1.53.0.2382": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Tp1FB2N1Sd4Mt1/Dg/QKLmSBFQ8L65H7nwL8HsKF9o+sRJgsk6PF1BAdTOZ4jNSP5zycb0eCAp2khai2qlO9kQ==",
-      "path": "google.apis.calendar.v3/1.53.0.2382",
-      "hashPath": "google.apis.calendar.v3.1.53.0.2382.nupkg.sha512"
-    },
-    "Google.Apis.Core/1.53.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-6pTO2f75pwYag0DenUz4A3fPBi2t8qHhlPAVXP6hsSWU5lP7pPqsxV8Oc2sgcBwVquMIL6DVw23Woc2vC73E9A==",
-      "path": "google.apis.core/1.53.0",
-      "hashPath": "google.apis.core.1.53.0.nupkg.sha512"
     },
     "LiveCharts.Wpf.NetCore3/0.9.7": {
       "type": "package",

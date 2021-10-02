@@ -24,16 +24,19 @@
             <behaviors:InvokeCommandAction Command="{Binding LoadingCommand}"/>
         </behaviors:EventTrigger>
     </behaviors:Interaction.Triggers>
+    
     <metro:MetroWindow.Flyouts>
         <metro:FlyoutsControl x:Name="flyoutsControlRegion" />
     </metro:MetroWindow.Flyouts>
+    
     <!-- RightWindow Commands -->
     <metro:MetroWindow.RightWindowCommands>
         <metro:WindowCommands x:Name="rightWindowCommandsRegion" />
     </metro:MetroWindow.RightWindowCommands>
+    
     <metro:MetroContentControl>
         <Grid>
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
@@ -49,10 +52,10 @@
                     <Button  Content="Load" FontSize="20" Margin="5" Command="{Binding LoadModuleCommand}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="1">
+                    <ContentControl x:Name="homeRegion" Grid.Row="0" prism:RegionManager.RegionName="{x:Static constants:RegionNames.HomeRegion}"/>
+                    <ContentControl x:Name="tableRegion" Grid.Row="0" prism:RegionManager.RegionName="{x:Static constants:RegionNames.TableRegion}"/>
+                    <ContentControl x:Name="chartRegion" Grid.Row="0" prism:RegionManager.RegionName="{x:Static constants:RegionNames.ChartRegion}"/>
                     <UniformGrid Margin="5">
-                        <ContentControl x:Name="homeRegion" Grid.Row="1" prism:RegionManager.RegionName="{x:Static constants:RegionNames.HomeRegion}"/>
-                        <ContentControl x:Name="tableRegion" Grid.Row="2" prism:RegionManager.RegionName="{x:Static constants:RegionNames.TableRegion}"/>
-                        <ContentControl x:Name="chartRegion" Grid.Row="3" prism:RegionManager.RegionName="{x:Static constants:RegionNames.ChartRegion}"/>
                     </UniformGrid>
                 </StackPanel>
                 

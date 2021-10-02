@@ -116,6 +116,8 @@
   $ npm install react-hook-form
   $ npm install elemental --save
   $ npm install node-sass
+  $ npm install react-datepicker --save
+  $ npm install --save react-tabs
 
   $ npm i -g topojson
   $ npm install -g koko

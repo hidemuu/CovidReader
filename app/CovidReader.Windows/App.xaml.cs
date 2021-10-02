@@ -57,7 +57,7 @@ namespace CovidReader.Windows
 
         protected override Window CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            return Container.Resolve<MainWindow>(); //初期表示ビュー
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -98,8 +98,12 @@ namespace CovidReader.Windows
 
         protected override void ConfigureViewModelLocator()
         {
-             base.ConfigureViewModelLocator(); 
-             ViewModelLocationProvider.Register<MainWindow, MainWindowViewModel>();
+            base.ConfigureViewModelLocator(); 
+
+            ViewModelLocationProvider.Register<MainWindow, MainWindowViewModel>();
+            ViewModelLocationProvider.Register<HomeView, HomeViewModel>();
+            ViewModelLocationProvider.Register<ChartView, ChartViewModel>();
+            ViewModelLocationProvider.Register<TableView, TableViewModel>();
         }
 
         //protected override IModuleCatalog CreateModuleCatalog()
