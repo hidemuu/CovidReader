@@ -49,7 +49,7 @@ export default class Charts extends React.Component {
     //レンダリング
     render() {
         //スタイル設定
-        const useStyles = makeStyles((theme) => ({
+        const classes = makeStyles((theme) => ({
             typography: {
             marginTop: theme.spacing(0),
             marginBottom: theme.spacing(0),
@@ -92,25 +92,25 @@ export default class Charts extends React.Component {
                 {/* <button className="btn btn-primary" onClick={this.handleWeeklyButtonClick}>週</button>
                 <button className="btn btn-primary" onClick={this.handleMonthlyButtonClick}>月</button>
                 <button className="btn btn-primary" onClick={this.handleYearlyButtonClick}>年</button> */}
-                <Typography variant="h5" align="center" className={useStyles.typography}>
+                <Typography variant="h5" align="center" className={classes.typography}>
                     <div>全国感染状況 : 日報</div>
                 </Typography>
-                <Grid container style={{ paddingTop: 30, paddingBottom: 50 }} justify="flex-end" direction="row">
-                    <Grid item className={useStyles.grid} xs={6}>
+                <Grid container style={{ paddingTop: 30, paddingBottom: 50 }} justifyContent="flex-end" direction="row">
+                    <Grid item className={classes.grid} xs={6}>
                         <InfectionCharts calc='daily' disp='all' endDate={this.state.endDate} dateFilter={this.state.dateFilter}/>
                     </Grid>
-                    <Grid item className={useStyles.grid} xs={6}>
+                    <Grid item className={classes.grid} xs={6}>
                         <InfectionCharts calc='daily' disp='units' endDate={this.state.endDate} dateFilter={this.state.dateFilter}/>
                     </Grid>
                 </Grid>
-                <Typography variant="h5" align="center" className={useStyles.typography}>
+                <Typography variant="h5" align="center" className={classes.typography}>
                     <div>全国感染状況 : 累計</div>
                 </Typography>
-                <Grid container style={{ paddingTop: 30, paddingBottom: 50 }} justify="flex-end" direction="row">
-                    <Grid item className={useStyles.grid} xs={6}>
+                <Grid container style={{ paddingTop: 30, paddingBottom: 50 }} justifyContent="flex-end" direction="row">
+                    <Grid item className={classes.grid} xs={6}>
                         <InfectionCharts calc='total' disp='all' endDate={this.state.endDate} dateFilter={this.state.dateFilter}/>
                     </Grid>
-                    <Grid item className={useStyles.grid} xs={6}>
+                    <Grid item className={classes.grid} xs={6}>
                         <InfectionCharts calc='total' disp='units' endDate={this.state.endDate} dateFilter={this.state.dateFilter}/>
                     </Grid>
                 </Grid>

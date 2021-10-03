@@ -6,9 +6,13 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 //定数
 const basepath = 'api/infection/';
+const chartTypes = ['bar', 'bar', 'bar', 'bar', 'bar', 'bar'];
+const yAxisIDs = ['y-axis', 'y-axis', 'y-axis', 'y-axis', 'y-axis', 'y-axis'];
 const labels = ['死亡者', '入院者', '陽性者', '治癒者', '重傷者', '検査者']; //EDIT 2021.09.29 ラベルデータをユニーク変数名から配列に変更（汎用化）
 const borderColors = ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)']; //ADD 2021.09.29 ボーダー色を宣言
-const backgroundColors = ['rgba(255,0,0,1)','rgba(0,255,0,1)','rgba(0,0,255,1)','rgba(255,255,0,1)','rgba(0,255,255,1)','rgba(255,0,255,1)']; //ADD 2021.09.29 背景色を宣言
+const backgroundColors = ['rgba(255,0,0,1)', 'rgba(0,255,0,1)', 'rgba(0,0,255,1)', 'rgba(255,255,0,1)', 'rgba(0,255,255,1)', 'rgba(255,0,255,1)']; //ADD 2021.09.29 背景色を宣言
+const borderWidthes = [1, 1, 1, 1, 1, 1];
+const isEnables = [true, false, true, false, false, false];
 
 //感染データチャート生成クラス
 export default class InfectionCharts extends React.Component {
@@ -111,16 +115,23 @@ export default class InfectionCharts extends React.Component {
       ]
 
       let chartData = [];
+      let queryLabels = [];
+      let c = 0;
       for (let i = 0; i < labels.length; i++){
-        chartData.push({
-          type: 'bar',
-          yAxisID: 'y-axis',
-          label: labels[i],
-          data: chartItems[i],
-          borderColor: borderColors[i],
-          backgroundColor: backgroundColors[i],
-          borderWidth: 1
-        });
+        if(isEnables[i] === true){
+          chartData.push({
+            type: chartTypes[c],
+            // yAxisID: yAxisIDs[c],
+            label: labels[c],
+            data: chartItems[c],
+            borderColor: borderColors[c],
+            backgroundColor: backgroundColors[c],
+            borderWidth: borderWidthes[c],
+          });
+          queryLabels.push(labels[c]);
+          c++;
+        }
+        
       }
 
       
@@ -171,9 +182,9 @@ export default class InfectionCharts extends React.Component {
             <Typography variant="h5" align="center" className={useStyles.typography}>
               <div>個別</div>
             </Typography>
-            <Grid container style={{ paddingTop: 30 }} justify="flex-end" direction="row">
-              {labels.map((label, index) => (
-                <Grid item className={useStyles.grid} xs={6}>
+            <Grid container style={{ paddingTop: 30 }} justifyContent="flex-end" direction="row">
+              {queryLabels.map((label, index) => (
+                <Grid item className={useStyles.grid} xs={12}>
                 <Bar  
                 data={{
                   labels: chartLabels,

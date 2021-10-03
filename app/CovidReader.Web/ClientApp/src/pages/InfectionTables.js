@@ -4,6 +4,10 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 //定数
 const basepath = 'api/infection/';
+const title = '感染状況';
+const labels = ['日付', '死亡者数', '入院者数', '陽性者数', '回復者数', '重傷者数', '検査数'];
+const fields = ['date', 'deathNumber', 'cureNumber', 'patientNumber', 'recoveryNumber', 'severeNumber', 'testNumber'];
+const isEnables = [true, true, false, true, false, false, false];
 
 //感染データテーブル生成クラス
 export default class InfectionTables extends React.Component {
@@ -55,58 +59,48 @@ export default class InfectionTables extends React.Component {
       console.log('draw start');
       const data = this.state.data;
       const category = this.props.calc;
-      const query = data.filter(item => { return item.calc ==  category})
+      //日付フィルタ ADD 2021.10.02
+      const endDate = new Date(this.props.endDate);
+      const dateFilter = this.props.dateFilter;
+      let startDate = new Date(this.props.endDate);
+      if(dateFilter == 'week'){
+        startDate.setDate( startDate.getDate() - 7);
+      }else if(dateFilter == 'month'){
+        startDate.setDate( startDate.getDate() - 30);
+      }else if(dateFilter == 'year'){
+        startDate.setDate( startDate.getDate() - 365);
+      }else{
+        startDate.setDate( startDate.getDate() - 365);
+      }
+
+      const query = data.filter(item => { return item.calc ==  category}).filter(item => {return new Date(item.date) >= startDate && new Date(item.date) <= endDate});
       console.log(query);
-      
+      let tableColumns = [];
+      let c = 0;
+      for (let i = 0; i < labels.length; i++){
+        if (isEnables[i] === true){
+          tableColumns.push({
+            title: labels[c],
+            field: fields[c],
+            cellStyle: { textAlign: 'right' },
+          });
+          c++;
+        }
+      }
 
       return(
         <div>
           <MaterialTable
-            title={'感染状況'}
-            columns={[
-              {
-                title: '日付',
-                field: 'date',
-              },
-              { 
-                title: '死亡者数',
-                field: 'deathNumber',
-                cellStyle: { textAlign: 'right' },
-              },
-              {
-                title: '入院者数',
-                field: 'cureNumber',
-                cellStyle: { textAlign: 'right' },
-              },
-              {
-                title: '陽性者数',
-                field: 'patientNumber',
-                cellStyle: { textAlign: 'right' },
-              },
-              {
-                title: '回復者数',
-                field: 'recoveryNumber',
-                cellStyle: { textAlign: 'right' },
-              },
-              {
-                title: '重傷者数',
-                field: 'severeNumber',
-                cellStyle: { textAlign: 'right' },
-              },
-              {
-                title: '検査数',
-                field: 'testNumber',
-                cellStyle: { textAlign: 'right' },
-              },
-            ]}
+            title={title}
+            columns={tableColumns}
             data={query}
             options={{
               //showTitle: false,
               paging: false,
               // search: false,
               // draggable: false,
-              filtering: true,
-              maxBodyHeight: 700,
+              // filtering: true,
+              maxBodyHeight: 500,
               headerStyle: { 
                 position: 'sticky', 
                 top: 0,
@@ -121,11 +115,11 @@ export default class InfectionTables extends React.Component {
     }else{
       
       return(
-        <div className="App-header">
-          <p>Loading...</p>
-          <CircularProgress color="inherit" />
-          
-        </div>
+        <CircularProgress color="inherit" />
+        // <div className="App-header">
+        //   <p>Loading...</p>
+        //   <CircularProgress color="inherit" />
+        // </div>
       );
     }
 

@@ -1,4 +1,5 @@
 ﻿using CovidReader.Models.Api;
+using CovidReader.Windows.ViewModels.Buttons;
 using Prism.Events;
 using Prism.Mvvm;
 using Prism.Regions;
@@ -15,6 +16,9 @@ namespace CovidReader.Windows.ViewModels
 {
     public class TableViewModel : BindableBase, INavigationAware, IRegionMemberLifetime
     {
+        public NavigationIconButtonViewModel NavigationIconButtonViewModel =>
+            new NavigationIconButtonViewModel { Title = "Table", IconKey = "Table" };
+
         private CompositeDisposable _disposables = new CompositeDisposable();
         private IRegionNavigationJournal _journal;
         //private readonly IRegionManager _regionManager;

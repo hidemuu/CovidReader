@@ -118,6 +118,8 @@
   $ npm install node-sass
   $ npm install react-datepicker --save
   $ npm install --save react-tabs
+  $ npm i react-intl
+  $ npm i material-ui-pickers
 
   $ npm i -g topojson
   $ npm install -g koko

@@ -16,10 +16,10 @@ export class Layout extends Component {
       return (
           <div>
               <NavMenu location={location} />
-              <div class="container" style={containerStyle}>
+              <div className="container" style={containerStyle}>
                   {/* <Header /> */}
-                  <div class="row">
-                      <div class="col-lg-12">
+                  <div className="row">
+                      <div className="col-lg-12">
                           {this.props.children}
                       </div>
                   </div>

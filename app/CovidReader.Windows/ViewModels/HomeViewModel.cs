@@ -1,4 +1,5 @@
-﻿using Prism.Mvvm;
+﻿using CovidReader.Windows.ViewModels.Buttons;
+using Prism.Mvvm;
 using Prism.Regions;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,9 @@ namespace CovidReader.Windows.ViewModels
 {
     public class HomeViewModel : BindableBase, INavigationAware, IRegionMemberLifetime
     {
+        public NavigationIconButtonViewModel NavigationIconButtonViewModel =>
+            new NavigationIconButtonViewModel { Title = "Home", IconKey = "Home" };
+
         private IRegionNavigationJournal _journal;
         //private readonly IRegionManager _regionManager;
 
