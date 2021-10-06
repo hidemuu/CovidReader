@@ -24,14 +24,10 @@ namespace CovidReader.Windows.Views
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        //private MainWindowViewModel ViewModel { get; }
 
         public MainWindow()
         {
             InitializeComponent();
-
-            //ViewModel = new MainWindowViewModel();
-            //DataContext = ViewModel;
 
             var regionManager = ContainerLocator.Current.Resolve<IRegionManager>();
             if (regionManager != null)

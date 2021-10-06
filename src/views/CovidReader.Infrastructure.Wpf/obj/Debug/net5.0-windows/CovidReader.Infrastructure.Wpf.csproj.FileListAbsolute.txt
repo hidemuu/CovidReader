@@ -124,10 +124,7 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure
 C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure.Wpf\obj\Debug\net5.0-windows\Styles\MacLikeScrollBarStyle.baml
 C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure.Wpf\obj\Debug\net5.0-windows\Styles\MaterialTextBlockStyle.baml
 C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure.Wpf\obj\Debug\net5.0-windows\Styles\NavigationRailResource.baml
-C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure.Wpf\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure.Wpf\obj\Debug\net5.0-windows\CovidReader.Infrastructure.Wpf_MarkupCompile.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure.Wpf\obj\Debug\net5.0-windows\CovidReader.Infrastructure.Wpf_MarkupCompile.lref
-C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure.Wpf\obj\Debug\net5.0-windows\Assets\Styles\Converters.baml
 C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure.Wpf\obj\Debug\net5.0-windows\CovidReader.Infrastructure.Wpf.g.resources
 C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure.Wpf\obj\Debug\net5.0-windows\CovidReader.Infrastructure.Wpf.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\nando\Documents\GitHub\CovidReader\src\views\CovidReader.Infrastructure.Wpf\obj\Debug\net5.0-windows\CovidReader.Infrastructure.Wpf.AssemblyInfoInputs.cache

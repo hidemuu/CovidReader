@@ -9,13 +9,30 @@ namespace CovidReader.Windows.ViewModels.Buttons
 {
     public class NavigationIconButtonViewModel : BindableBase
     {
-        
-        public string Title { get; set; }
-        
-        public string IconKey { get; set; }
-        
-        
-        public bool IsSelected { get; set; }
-        
+        private string _title;
+
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
+        }
+
+
+        private string _iconKey;
+
+        public string IconKey
+        {
+            get => _iconKey;
+            set => SetProperty(ref _iconKey, value);
+        }
+
+        private bool _isSelected;
+
+        public bool IsSelected
+        {
+            get => _isSelected;
+            set => SetProperty(ref _isSelected, value);
+        }
+
     }
 }

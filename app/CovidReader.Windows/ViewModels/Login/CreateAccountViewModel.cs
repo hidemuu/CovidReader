@@ -59,7 +59,7 @@ namespace CovidReader.Windows.ViewModels.Login
             }
             this.IsUseRequest = true;
             var Title = string.Empty;
-            _dialogService.ShowDialog("SuccessDialog", new DialogParameters($"message={"注册成功"}"), null);
+            _dialogService.ShowDialog("SuccessDialog", new DialogParameters($"message={"登録成功"}"), null);
             _journal.GoBack();
         }
 
@@ -73,7 +73,7 @@ namespace CovidReader.Windows.ViewModels.Login
         {
             if (string.IsNullOrEmpty(this.RegisteredLoginId))
             {
-                MessageBox.Show("LoginId 不能为空！");
+                MessageBox.Show("LoginIdが空白です！");
                 return false;
             }
             var passwords = parameter as Dictionary<string, PasswordBox>;
@@ -81,17 +81,17 @@ namespace CovidReader.Windows.ViewModels.Login
             var confimPassword = (passwords["ConfirmPassword"] as PasswordBox).Password;
             if (string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Password 不能为空！");
+                MessageBox.Show("Passwordが空白です！");
                 return false;
             }
             if (string.IsNullOrEmpty(confimPassword))
             {
-                MessageBox.Show("ConfirmPassword 不能为空！");
+                MessageBox.Show("ConfirmPassword パスワードを確認して下さい！");
                 return false;
             }
             if (password.Trim() != confimPassword.Trim())
             {
-                MessageBox.Show("两次密码不一致");
+                MessageBox.Show("アカウントが一致しません");
                 return false;
             }
             Global.AllUsers.Add(new User()
@@ -117,12 +117,11 @@ namespace CovidReader.Windows.ViewModels.Login
 
         public void OnNavigatedFrom(NavigationContext navigationContext)
         {
-            //MessageBox.Show("退出了CreateAccount");
+            
         }
 
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
-            //MessageBox.Show("从LoginMainContent导航到CreateAccount");
             _journal = navigationContext.NavigationService.Journal;
         }
 
@@ -130,19 +129,14 @@ namespace CovidReader.Windows.ViewModels.Login
         {
             if (!string.IsNullOrEmpty(RegisteredLoginId) && this.IsUseRequest)
             {
-                _dialogService.ShowDialog("AlertDialog", new DialogParameters($"message={"是否需要用当前注册的用户登录?"}"), r =>
+                _dialogService.ShowDialog("AlertDialog", new DialogParameters($"message={"登録してもいいですか？"}"), r =>
                 {
                     if (r.Result == ButtonResult.Yes)
                         navigationContext.Parameters.Add("loginId", RegisteredLoginId);
                 });
             }
             continuationCallback(true);
-            //var result = false;
-            //if (MessageBox.Show("是否需要导航到LoginMainContent页面?", "Naviagte?",MessageBoxButton.YesNo) ==MessageBoxResult.Yes)
-            //{
-            //    result = true;
-            //}
-            //continuationCallback(result);
+            
         }
 
     }

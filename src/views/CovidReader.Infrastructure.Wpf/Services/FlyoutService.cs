@@ -23,7 +23,7 @@ namespace CovidReader.Infrastructure.Wpf.Services
             _applicationCommands = applicationCommands;
 
             this.ShowFlyoutCommand = new DelegateCommand<string>(ShowFlyout);
-            //注册子命令给全局复合命令
+            
             _applicationCommands.ShowCommand.RegisterCommand(this.ShowFlyoutCommand);
 
         }

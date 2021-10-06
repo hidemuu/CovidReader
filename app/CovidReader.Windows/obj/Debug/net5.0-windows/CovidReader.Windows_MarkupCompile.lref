@@ -6,6 +6,11 @@ FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Dialo
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Dialogs\DialogWindow.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Dialogs\SuccessDialog.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Dialogs\WarningDialog.xaml;;
+FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\ForFuture\ExploreView.xaml;;
+FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\ForFuture\PropertyView.xaml;;
+FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\ForFuture\RequestView.xaml;;
+FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\ForFuture\ResultView.xaml;;
+FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\ForFuture\WebView.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\HomeView.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Login\CreateAccount.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\Views\Login\LoginMainContent.xaml;;

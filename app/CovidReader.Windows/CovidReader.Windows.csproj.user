@@ -22,6 +22,9 @@
     <Compile Update="Views\Dialogs\WarningDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ForFuture\ExploreView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Login\CreateAccount.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,10 +40,22 @@
     <Compile Update="Views\Login\LoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ForFuture\PropertyView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ForFuture\RequestView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ForFuture\ResultView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\SettingView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\TableView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ForFuture\WebView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -58,6 +73,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Dialogs\WarningDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ForFuture\ExploreView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Login\CreateAccount.xaml">
@@ -78,10 +96,22 @@
     <Page Update="Views\HomeView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\ForFuture\PropertyView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ForFuture\RequestView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ForFuture\ResultView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\SettingView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TableView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ForFuture\WebView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

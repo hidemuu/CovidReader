@@ -8,11 +8,17 @@ namespace CovidReader.Infrastructure.Wpf.Constants
 {
     public static class RegionNames
     {
+        public static string MainRegion = "MainRegion";
+
         public static string HomeRegion = "HomeRegion";
 
         public static string TableRegion = "TableRegion";
 
         public static string ChartRegion = "ChartRegion";
+
+        public static string DashboardRegion = "DashboardRegion";
+
+        public static string SettingRegion = "SettingRegion";
 
         public static string LoginRegion = "LoginRegion";
 

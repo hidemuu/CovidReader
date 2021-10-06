@@ -121,6 +121,9 @@ ClientApp
 
 ```
 
+# Native フロントエンドデータ構造
+
+
 # モデル構造
 * Infection
 
@@ -145,6 +148,10 @@ ClientApp
 
 # APIスキーマ
 
+
+# アーキテクチャ
+  レイヤ化アーキテクチャによるDDD駆動モデルを適用
+   (https://qiita.com/takasp/items/f05ef45a6fadd916ffa8 https://qiita.com/mikesorae/items/ff8192fb9cf106262dbf)
 
 # 参照データ
 * 内閣官房 (https://corona.go.jp/dashboard/)

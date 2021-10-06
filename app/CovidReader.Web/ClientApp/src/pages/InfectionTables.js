@@ -56,6 +56,9 @@ export default class InfectionTables extends React.Component {
 
     //データ取得完了後処理
     if(!this.state.loading){
+
+      const startTime = performance.now(); // 開始時間
+
       console.log('draw start');
       const data = this.state.data;
       const category = this.props.calc;
@@ -87,6 +90,10 @@ export default class InfectionTables extends React.Component {
           c++;
         }
       }
+
+      const endTime = performance.now(); // 終了時間
+
+      console.log(endTime - startTime); // 何ミリ秒かかったかを表示する
 
       return(
         <div>

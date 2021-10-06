@@ -26,7 +26,15 @@
     TextOptions.TextRenderingMode="Auto"
     ResizeMode="CanResizeWithGrip"
     WindowStartupLocation="CenterScreen">
-    
+
+    <metro:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/CovidReader.Infrastructure.Wpf;component/Styles/NavigationRailResource.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </metro:MetroWindow.Resources>
+
     <behaviors:Interaction.Triggers>
         <behaviors:EventTrigger EventName="Loaded">
             <behaviors:InvokeCommandAction Command="{Binding LoadingCommand}"/>
@@ -47,9 +55,7 @@
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <StackPanel Orientation="Horizontal">
                     <Image Source="pack://application:,,,/CovidReader.Infrastructure.Wpf;Component/Assets/Photos/home.png" Height="40"/>
@@ -59,13 +65,44 @@
                     <Button Content="Table" FontSize="20" Margin="5" Command="{Binding ActiveTableCommand}"/>
                     <Button  Content="Load" FontSize="20" Margin="5" Command="{Binding LoadModuleCommand}"/>
                 </StackPanel>
-                <StackPanel Grid.Row="1">
-                    <ContentControl x:Name="homeRegion" Grid.Row="0" prism:RegionManager.RegionName="{x:Static constants:RegionNames.HomeRegion}"/>
-                    <ContentControl x:Name="tableRegion" Grid.Row="0" prism:RegionManager.RegionName="{x:Static constants:RegionNames.TableRegion}"/>
-                    <ContentControl x:Name="chartRegion" Grid.Row="0" prism:RegionManager.RegionName="{x:Static constants:RegionNames.ChartRegion}"/>
-                    <UniformGrid Margin="5">
-                    </UniformGrid>
-                </StackPanel>
+                <Grid Grid.Row="1">
+                    <TabControl
+                        Padding="16"
+                        ItemsSource="{Binding Contents}"
+                        Style="{StaticResource NavigationRailControlStyleKey}"> 
+                        <TabControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+
+                                    <materialDesign:PackIcon
+                                        Width="24"
+                                        Height="24"
+                                        HorizontalAlignment="Center"
+                                        Kind="{Binding NavigationIconButtonViewModel.IconKey}" />
+                                    <TextBlock
+                                        Grid.Row="1"
+                                        Margin="0,4,0,0"
+                                        HorizontalAlignment="Center"
+                                        Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                                        Text="{Binding NavigationIconButtonViewModel.Title}" />
+                                </Grid>
+                            </DataTemplate>
+                        </TabControl.ItemTemplate>
+                    </TabControl>
+
+                    <materialDesign:Snackbar x:Name="Snackbar"/>
+
+                    <StackPanel>
+                        <ContentControl x:Name="mainRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.MainRegion}"/>
+                        <!--<UniformGrid Margin="5">
+                        </UniformGrid>-->
+                    </StackPanel>
+                </Grid>
+                
                 
             </Grid>
         </Grid>

@@ -21,6 +21,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Xaml_Behaviors_Wpf Condition=" '$(PkgMicrosoft_Xaml_Behaviors_Wpf)' == '' ">C:\Users\nando\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.31</PkgMicrosoft_Xaml_Behaviors_Wpf>
     <PkgNLog_Config Condition=" '$(PkgNLog_Config)' == '' ">C:\Users\nando\.nuget\packages\nlog.config\4.7.11</PkgNLog_Config>
+    <PkgMicrosoft_Web_WebView2 Condition=" '$(PkgMicrosoft_Web_WebView2)' == '' ">C:\Users\nando\.nuget\packages\microsoft.web.webview2\1.0.992.28</PkgMicrosoft_Web_WebView2>
     <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\nando\.nuget\packages\materialdesignthemes\4.1.0</PkgMaterialDesignThemes>
     <PkgMahApps_Metro Condition=" '$(PkgMahApps_Metro)' == '' ">C:\Users\nando\.nuget\packages\mahapps.metro\2.4.7</PkgMahApps_Metro>
   </PropertyGroup>

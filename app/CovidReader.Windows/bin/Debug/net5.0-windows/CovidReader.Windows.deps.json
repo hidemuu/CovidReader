@@ -10,6 +10,7 @@
         "dependencies": {
           "CovidReader.Infrastructure.Wpf": "1.0.0",
           "CovidReader.UseCases": "1.0.0",
+          "Microsoft.Web.WebView2": "1.0.992.28",
           "Prism.Unity": "8.1.97"
         },
         "runtime": {
@@ -348,6 +349,39 @@
       },
       "Microsoft.NETCore.Platforms/5.0.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.Web.WebView2/1.0.992.28": {
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "1.0.992.28",
+            "fileVersion": "1.0.992.28"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
+            "assemblyVersion": "1.0.992.28",
+            "fileVersion": "1.0.992.28"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.992.28",
+            "fileVersion": "1.0.992.28"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.992.28"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.992.28"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.992.28"
+          }
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.31": {
         "runtime": {
           "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
@@ -1069,6 +1103,13 @@
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.992.28": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3pYGRFg2qqB9mxQpyomnwWimCbT01pHYCC2+OFPWce9heF0kbvb0WJoK7vVeBZCTc0Sv5N6TA4FrGglM2lwQ1g==",
+      "path": "microsoft.web.webview2/1.0.992.28",
+      "hashPath": "microsoft.web.webview2.1.0.992.28.nupkg.sha512"
     },
     "Microsoft.Xaml.Behaviors.Wpf/1.1.31": {
       "type": "package",

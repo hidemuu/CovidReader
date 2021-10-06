@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Windows.ViewModels
 {
-    public class TableViewModel : BindableBase, INavigationAware, IRegionMemberLifetime
+    public class TableViewModel : BindableBase, INavigationAware, IRegionMemberLifetime, IContentViewModel
     {
         public NavigationIconButtonViewModel NavigationIconButtonViewModel =>
             new NavigationIconButtonViewModel { Title = "Table", IconKey = "Table" };
@@ -25,21 +25,12 @@ namespace CovidReader.Windows.ViewModels
 
         public bool KeepAlive => true;
 
-        //public ObservableCollection<Infection> Models { get; }
         public ReactiveCollection<Infection> Models { get; }
-
+        
         public TableViewModel()
         {
-            //Models = new ObservableCollection<Infection>();
             Models = new ReactiveCollection<Infection>();
-            var task = App.NativeController.Api.Infection.GetAsync();
-            Task.WaitAll(task);
-            //Models = task.Result.ToReadOnlyReactiveCollection(m => new Infection(m));
-            foreach (var item in task.Result)
-            {
-                
-                Models.Add(item);
-            }
+            
         }
 
         public bool IsNavigationTarget(NavigationContext navigationContext)
@@ -55,7 +46,14 @@ namespace CovidReader.Windows.ViewModels
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
             _journal = navigationContext.NavigationService.Journal;
-
+            
+            var task = App.NativeController.Api.Infection.GetAsync();
+            Task.WaitAll(task);
+            foreach (var item in task.Result)
+            {
+                //Models.Add(item);
+                Models.AddOnScheduler(item);
+            }
 
         }
     }
