@@ -49,7 +49,7 @@ namespace CovidReader.Windows.ViewModels
         /// コンストラクタ
         /// </summary>
         /// <param name="eventAggregator">PubSubパターンでイベントの通知と購読を管理することで、ViewModel間の通信を実現</param>
-        public HomeViewModel(IEventAggregator eventAggregator)
+        public HomeViewModel()
         {
             ExecuteDelegateCommand = new DelegateCommand(Execute, CanExecute);
 

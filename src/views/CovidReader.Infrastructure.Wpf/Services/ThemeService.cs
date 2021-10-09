@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace CovidReader.Infrastructure.Wpf.Services
 {
-    static class ThemeService
+    public static class ThemeService
     {
         public static Swatch CurrentTheme { get; private set; }
 

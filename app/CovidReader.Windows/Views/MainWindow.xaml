@@ -57,50 +57,53 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <StackPanel Orientation="Horizontal">
+                 <!--<StackPanel Orientation="Horizontal">
                     <Image Source="pack://application:,,,/CovidReader.Infrastructure.Wpf;Component/Assets/Photos/home.png" Height="40"/>
-                    <!--<Label Content="Home" FontSize="35" FontWeight="Bold"/>-->
+                    <Label Content="Home" FontSize="35" FontWeight="Bold"/>
                     <Button Content="Home" FontSize="20" Margin="5" Command="{Binding ActiveHomeCommand}"/>
                     <Button Content="Chart" FontSize="20" Margin="5" Command="{Binding ActiveChartCommand}"/>
                     <Button Content="Table" FontSize="20" Margin="5" Command="{Binding ActiveTableCommand}"/>
                     <Button  Content="Load" FontSize="20" Margin="5" Command="{Binding LoadModuleCommand}"/>
-                </StackPanel>
+                </StackPanel>-->
                 <Grid Grid.Row="1">
-                    <TabControl
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TabControl Grid.Column="0"
                         Padding="16"
                         ItemsSource="{Binding Contents}"
-                        Style="{StaticResource NavigationRailControlStyleKey}"> 
-                        <TabControl.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition />
-                                        <RowDefinition />
-                                    </Grid.RowDefinitions>
-
-                                    <materialDesign:PackIcon
-                                        Width="24"
-                                        Height="24"
-                                        HorizontalAlignment="Center"
-                                        Kind="{Binding NavigationIconButtonViewModel.IconKey}" />
-                                    <TextBlock
-                                        Grid.Row="1"
-                                        Margin="0,4,0,0"
-                                        HorizontalAlignment="Center"
-                                        Style="{StaticResource MaterialDesignCaptionTextBlock}"
-                                        Text="{Binding NavigationIconButtonViewModel.Title}" />
-                                </Grid>
-                            </DataTemplate>
-                        </TabControl.ItemTemplate>
-                    </TabControl>
-
+                        Style="{StaticResource NavigationRailControlStyleKey}"
+                        SelectedIndex="{Binding TabPage.Value}">
+                            <TabControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <materialDesign:PackIcon
+                                            Grid.Row="0"
+                                            Width="24"
+                                            Height="24"
+                                            HorizontalAlignment="Center"
+                                            Kind="{Binding NavigationIconButtonViewModel.IconKey}" />
+                                        <TextBlock
+                                            Grid.Row="1"
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Center"
+                                            Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                                            Text="{Binding NavigationIconButtonViewModel.Title}" />
+                                    </Grid>
+                                </DataTemplate>
+                            </TabControl.ItemTemplate>
+                        </TabControl>
+                        <StackPanel Grid.Column="1">
+                            <ContentControl x:Name="mainRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.MainRegion}"/>
+                        </StackPanel>
+                    </Grid>
                     <materialDesign:Snackbar x:Name="Snackbar"/>
-
-                    <StackPanel>
-                        <ContentControl x:Name="mainRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.MainRegion}"/>
-                        <!--<UniformGrid Margin="5">
-                        </UniformGrid>-->
-                    </StackPanel>
                 </Grid>
                 
                 

@@ -87,6 +87,8 @@ namespace CovidReader.Windows
             containerRegistry.RegisterForNavigation<HomeView>();
             containerRegistry.RegisterForNavigation<ChartView>();
             containerRegistry.RegisterForNavigation<TableView>();
+            containerRegistry.RegisterForNavigation<DashboardView>();
+            containerRegistry.RegisterForNavigation<SettingView>();
 
             //Dialogの登録
             containerRegistry.RegisterDialog<AlertDialog, AlertDialogViewModel>();

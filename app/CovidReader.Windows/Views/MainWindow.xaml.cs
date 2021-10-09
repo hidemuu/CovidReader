@@ -29,33 +29,21 @@ namespace CovidReader.Windows.Views
         {
             InitializeComponent();
 
-            var regionManager = ContainerLocator.Current.Resolve<IRegionManager>();
-            if (regionManager != null)
-            {
-                SetRegionManager(regionManager, this.flyoutsControlRegion, "FlyoutRegion");
-                SetRegionManager(regionManager, this.rightWindowCommandsRegion, "ShowSearchPatientRegion");
-            }
+            //var regionManager = ContainerLocator.Current.Resolve<IRegionManager>();
+            //if (regionManager != null)
+            //{
+            //    SetRegionManager(regionManager, this.flyoutsControlRegion, "FlyoutRegion");
+            //    SetRegionManager(regionManager, this.rightWindowCommandsRegion, "ShowSearchPatientRegion");
+            //}
 
-            //this.Loaded += MainWindow_Loaded;
 
         }
 
-        private void SetRegionManager(IRegionManager regionManager, DependencyObject regionTarget, string regionName)
-        {
-            RegionManager.SetRegionName(regionTarget, regionName);
-            RegionManager.SetRegionManager(regionTarget, regionManager);
-        }
+        //private void SetRegionManager(IRegionManager regionManager, DependencyObject regionTarget, string regionName)
+        //{
+        //    RegionManager.SetRegionName(regionTarget, regionName);
+        //    RegionManager.SetRegionManager(regionTarget, regionManager);
+        //}
 
-
-        private void ShowWindow()
-        {
-            // ウィンドウ表示&最前面に持ってくる
-            if (this.WindowState == System.Windows.WindowState.Minimized)
-                this.WindowState = System.Windows.WindowState.Normal;
-
-            this.Show();
-            this.Activate();
-            this.ShowInTaskbar = true;
-        }
     }
 }
