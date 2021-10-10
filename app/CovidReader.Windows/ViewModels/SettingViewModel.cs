@@ -13,10 +13,8 @@ using System.IO;
 
 namespace CovidReader.Windows.ViewModels
 {
-    public class SettingViewModel : BindableBase, IContentViewModel
+    public class SettingViewModel : BindableBase
     {
-        public NavigationIconButtonViewModel NavigationIconButtonViewModel =>
-            new NavigationIconButtonViewModel { Title = "CONFIG", IconKey = "Cog" };
 
         public Swatch[] Swatches { get; } = new SwatchesProvider().Swatches.ToArray();
 

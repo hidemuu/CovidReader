@@ -17,7 +17,7 @@ namespace CovidReader.Web
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //var connectionString = new SqliteConnectionStringBuilder { DataSource = Constants.RootPath + @"\assets\covid\" + @"covid.db" }.ToString();
-            optionsBuilder.UseSqlite("Data Source=" + Urls.SqlLocalConnectionString);
+            optionsBuilder.UseSqlite(Urls.SqlLocalConnectionStringForSqlite);
             
         }
 

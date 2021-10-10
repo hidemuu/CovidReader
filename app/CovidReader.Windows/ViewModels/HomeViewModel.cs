@@ -11,10 +11,9 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Windows.ViewModels
 {
-    public class HomeViewModel : BindableBase, INavigationAware, IRegionMemberLifetime, IContentViewModel
+    public class HomeViewModel : BindableBase, INavigationAware, IRegionMemberLifetime
     {
-        public NavigationIconButtonViewModel NavigationIconButtonViewModel =>
-            new NavigationIconButtonViewModel { Title = "Home", IconKey = "Home" };
+
 
         private IRegionNavigationJournal _journal;
         //private readonly IRegionManager _regionManager;

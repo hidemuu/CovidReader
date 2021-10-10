@@ -466,7 +466,17 @@
             ルートパス（絶対パス）
             </summary>
         </member>
-        <member name="F:CovidReader.Repository.Urls.SqlLocalConnectionString">
+        <member name="F:CovidReader.Repository.Urls.SqlLocalConnectionStringForSqlite">
+            <summary>
+            アプリケーションAPI用ローカルデータベースコネクション文字列
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Urls.SqlLocalConnectionStringForPostgreSql">
+            <summary>
+            アプリケーションAPI用ローカルデータベースコネクション文字列
+            </summary>
+        </member>
+        <member name="F:CovidReader.Repository.Urls.SqlLocalConnectionStringForSqlServer">
             <summary>
             アプリケーションAPI用ローカルデータベースコネクション文字列
             </summary>

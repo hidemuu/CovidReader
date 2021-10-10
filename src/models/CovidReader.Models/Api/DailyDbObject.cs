@@ -30,7 +30,7 @@ namespace CovidReader.Models.Api
         [JsonProperty("index")]
         [DisplayName("項目")]
         [Required]
-        public int Index { get; set; }
+        public int Index { get; set; } = 0;
 
         /// <summary>
         /// 日付
@@ -39,7 +39,7 @@ namespace CovidReader.Models.Api
         [JsonProperty("date")]
         [DisplayName("日付")]
         [Required]
-        public string Date { get; set; }
+        public string Date { get; set; } = "";
         /// <summary>
         /// 集計方法（単日 / 累計）
         /// </summary>

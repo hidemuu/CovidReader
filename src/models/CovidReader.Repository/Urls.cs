@@ -16,7 +16,15 @@ namespace CovidReader.Repository
         /// <summary>
         /// アプリケーションAPI用ローカルデータベースコネクション文字列
         /// </summary>
-        public static readonly string SqlLocalConnectionString = RootPath + @"assets\api\db.sqlite";
+        public static readonly string SqlLocalConnectionStringForSqlite = @"Data Source=" + RootPath + @"assets\api\db.sqlite";
+        /// <summary>
+        /// アプリケーションAPI用ローカルデータベースコネクション文字列
+        /// </summary>
+        public static readonly string SqlLocalConnectionStringForPostgreSql = @"Host=localhost;Port=5432;User Id=postgres;Password=5285;Database=MobileLinks_db";
+        /// <summary>
+        /// アプリケーションAPI用ローカルデータベースコネクション文字列
+        /// </summary>
+        public static readonly string SqlLocalConnectionStringForSqlServer = @"data source=(LocalDb)\MSSQLLocalDB; initial catalog=MobileLinks.Repository.Sql.MobileLinksDbContext; integrated security=True; MultipleActiveResultSets=True; App=EntityFramework";
         /// <summary>
         /// Covid19 API用ローカルデータベースコネクション文字列
         /// </summary>

@@ -23,16 +23,36 @@ namespace CovidReader.UseCases
         /// <returns></returns>
         public static IApiRepository UseSqlite()
         {
-            var connection = Urls.SqlLocalConnectionString;
+            var connection = Urls.SqlLocalConnectionStringForSqlite;
             //var backupconnection = "";
             //if (!File.Exists(connection))
             //{
             //    File.Copy(backupconnection, connection);
             //}
-            var dbOptions = new DbContextOptionsBuilder<ApiDbContext>().UseSqlite(
-                "Data Source=" + connection);
-            var r = new SqlApiRepository(dbOptions);
-            return r;
+            var dbOptions = new DbContextOptionsBuilder<ApiDbContext>().UseSqlite(connection);
+            return new SqlApiRepository(dbOptions);
+        }
+
+        /// <summary>
+        /// PostgreSQL連携のリポジトリを生成
+        /// </summary>
+        /// <returns></returns>
+        public static IApiRepository UsePostgureSql()
+        {
+            var connection = Urls.SqlLocalConnectionStringForPostgreSql;
+            var dbOptions = new DbContextOptionsBuilder<ApiDbContext>().UseNpgsql(connection);
+            return new SqlApiRepository(dbOptions);
+        }
+
+        /// <summary>
+        /// SQLServer連携のリポジトリを生成
+        /// </summary>
+        /// <returns></returns>
+        public static IApiRepository UseSqlServer()
+        {
+            var connection = Urls.SqlLocalConnectionStringForSqlServer;
+            var dbOptions = new DbContextOptionsBuilder<ApiDbContext>().UseSqlServer(connection);
+            return new SqlApiRepository(dbOptions);
         }
 
         /// <summary>

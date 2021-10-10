@@ -9,11 +9,12 @@ namespace CovidReader.Infrastructure.Wpf.Services
     {
         private static readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
 
-        //public SnackbarMessageQueue MessageQueue { get; } = new SnackbarMessageQueue();
+        public static SnackbarService Current { get; } = new SnackbarService();
+        public SnackbarMessageQueue MessageQueue { get; } = new SnackbarMessageQueue();
 
         public void ShowMessage(string messaage)
         {
-            //MessageQueue.Enqueue(messaage);
+            MessageQueue.Enqueue(messaage);
             _logger.Info("[Message] " + messaage);
         }
     }

@@ -122,23 +122,11 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[3.1.17, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.17, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[3.1.11, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",
@@ -505,15 +493,27 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Autofac": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[6.2.0, )"
+              "version": "[3.1.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.17, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.11, )"
             }
           },
           "imports": [
@@ -717,10 +717,6 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.17, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -789,10 +785,6 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.17, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

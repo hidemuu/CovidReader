@@ -12,7 +12,7 @@ namespace CovidReader.Controllers
     /// <summary>
     /// アプリケーション用コントローラー基本クラス
     /// </summary>
-    public class AppController
+    public class AppController : IAppController
     {
         /// <summary>
         /// アプリケーションAPI アクセスサービス

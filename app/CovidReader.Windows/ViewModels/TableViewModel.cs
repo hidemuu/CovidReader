@@ -1,4 +1,5 @@
-﻿using CovidReader.Models.Api;
+﻿using CovidReader.Controllers;
+using CovidReader.Models.Api;
 using CovidReader.Windows.ViewModels.Buttons;
 using Prism.Events;
 using Prism.Mvvm;
@@ -14,23 +15,33 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Windows.ViewModels
 {
-    public class TableViewModel : BindableBase, INavigationAware, IRegionMemberLifetime, IContentViewModel
+    public class TableViewModel : BindableBase, INavigationAware, IRegionMemberLifetime
     {
-        public NavigationIconButtonViewModel NavigationIconButtonViewModel =>
-            new NavigationIconButtonViewModel { Title = "Table", IconKey = "Table" };
 
-        private CompositeDisposable _disposables = new CompositeDisposable();
-        private IRegionNavigationJournal _journal;
-        //private readonly IRegionManager _regionManager;
+        private NativeAppController nativeAppController;
+        private CompositeDisposable disposables = new CompositeDisposable();
+        private IRegionNavigationJournal journal;
+        private readonly IRegionManager regionManager;
 
+        public ReactiveCommand RefreshCommand { get; } = new ReactiveCommand();
         public bool KeepAlive => true;
 
-        public ReactiveCollection<Infection> Models { get; }
-        
-        public TableViewModel()
+        public ReadOnlyReactiveCollection<TableModel> Contents { get; }
+        private ObservableCollection<Infection> infections { get; set; }
+        public ReactiveProperty<TableModel> SelectedItem { get; set; }
+
+        public TableViewModel(IRegionManager regionManager, NativeAppController nativeAppController)
         {
-            Models = new ReactiveCollection<Infection>();
-            
+            this.regionManager = regionManager;
+            this.nativeAppController = nativeAppController;
+
+            var task = this.nativeAppController.Api.Infection.GetAsync();
+            Task.WaitAll(task);
+            this.infections = new ObservableCollection<Infection>(task.Result);
+            this.Contents = this.infections.ToReadOnlyReactiveCollection(c => new TableModel(c));
+
+            //RefreshCommand.Subscribe(_ => Refresh());
+
         }
 
         public bool IsNavigationTarget(NavigationContext navigationContext)
@@ -45,16 +56,25 @@ namespace CovidReader.Windows.ViewModels
 
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
-            _journal = navigationContext.NavigationService.Journal;
+            this.journal = navigationContext.NavigationService.Journal;
             
-            var task = App.NativeController.Api.Infection.GetAsync();
-            Task.WaitAll(task);
-            foreach (var item in task.Result)
-            {
-                //Models.Add(item);
-                Models.AddOnScheduler(item);
-            }
+
+        }
+
+
+    }
+
+    public class TableModel
+    {
+        public ReactivePropertySlim<string> Date { get; } = new ReactivePropertySlim<string>();
+        public ReactivePropertySlim<int> Number { get; } = new ReactivePropertySlim<int>();
+
+        public TableModel(Infection model)
+        {
+            Date.Value = model.Date;
+            Number.Value = model.PatientNumber;
 
         }
     }
+
 }

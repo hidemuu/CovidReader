@@ -82,6 +82,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:CovidReader.Controllers.IAppController">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:CovidReader.Controllers.NativeAppController">
             <summary>
             ネイティブアプリケーション用コントローラー

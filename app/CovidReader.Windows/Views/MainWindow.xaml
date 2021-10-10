@@ -56,6 +56,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                  <!--<StackPanel Orientation="Horizontal">
                     <Image Source="pack://application:,,,/CovidReader.Infrastructure.Wpf;Component/Assets/Photos/home.png" Height="40"/>
@@ -96,17 +98,39 @@
                                             Style="{StaticResource MaterialDesignCaptionTextBlock}"
                                             Text="{Binding NavigationIconButtonViewModel.Title}" />
                                     </Grid>
+                                    
                                 </DataTemplate>
+                                
                             </TabControl.ItemTemplate>
+                            <behaviors:Interaction.Triggers>
+                                <behaviors:EventTrigger EventName="SelectionChanged">
+                                    <prism:InvokeCommandAction Command="{Binding TabChangeCommand}"></prism:InvokeCommandAction>
+                                </behaviors:EventTrigger>
+                            </behaviors:Interaction.Triggers>
                         </TabControl>
                         <StackPanel Grid.Column="1">
                             <ContentControl x:Name="mainRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.MainRegion}"/>
                         </StackPanel>
                     </Grid>
-                    <materialDesign:Snackbar x:Name="Snackbar"/>
+                    <materialDesign:Snackbar x:Name="Snackbar" MessageQueue="{Binding SnackMessageQueue}"/>
                 </Grid>
-                
-                
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                    Grid.Column="0"
+                    Margin="0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                    Text="{Binding Guidance.Value}">
+                    </TextBlock>
+                </Grid>
+
             </Grid>
         </Grid>
     </metro:MetroContentControl>

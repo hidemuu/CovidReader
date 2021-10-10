@@ -9,11 +9,9 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Windows.ViewModels
 {
-    public class ChartViewModel : BindableBase, INavigationAware, IRegionMemberLifetime, IContentViewModel
+    public class ChartViewModel : BindableBase, INavigationAware, IRegionMemberLifetime
     {
-        public NavigationIconButtonViewModel NavigationIconButtonViewModel =>
-            new NavigationIconButtonViewModel { Title = "Chart", IconKey = "Home" };
-
+        
         private IRegionNavigationJournal _journal;
         //private readonly IRegionManager _regionManager;
 

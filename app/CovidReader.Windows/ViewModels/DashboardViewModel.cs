@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace CovidReader.Windows.ViewModels
 {
-    public class DashboardViewModel : BindableBase, IContentViewModel
+    public class DashboardViewModel : BindableBase
     {
-        public NavigationIconButtonViewModel NavigationIconButtonViewModel =>
-            new NavigationIconButtonViewModel { Title = "DASHBOARD", IconKey = "Cog" };
+        
     }
 }

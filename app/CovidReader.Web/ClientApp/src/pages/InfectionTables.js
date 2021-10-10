@@ -76,7 +76,13 @@ export default class InfectionTables extends React.Component {
         startDate.setDate( startDate.getDate() - 365);
       }
 
-      const query = data.filter(item => { return item.calc ==  category}).filter(item => {return new Date(item.date) >= startDate && new Date(item.date) <= endDate});
+      const df = data.filter(item => { return item.calc ==  category}).filter(item => {return new Date(item.date) >= startDate && new Date(item.date) <= endDate});
+      const query = df.map(item => {return {
+        date: item.date,
+        deathNumber: item.deathNumber,
+        patientNumber: item.patientNumber,
+      }
+      });
       console.log(query);
       let tableColumns = [];
       let c = 0;

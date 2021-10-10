@@ -42,7 +42,7 @@ namespace CovidReader.Web
             });
 
             var db = new ApiDbContext(new DbContextOptionsBuilder<ApiDbContext>()
-                .UseSqlite("Data Source=" + Urls.SqlLocalConnectionString).Options);
+                .UseSqlite(Urls.SqlLocalConnectionStringForSqlite).Options);
             services.AddScoped<IInfectionRepository, SqlInfectionRepository>(_ => new SqlInfectionRepository(db));
             services.AddScoped<IInspectionRepository, SqlInspectionRepository>(_ => new SqlInspectionRepository(db));
             services.AddScoped<IChartItemRepository, SqlChartItemRepository>(_ => new SqlChartItemRepository(db));

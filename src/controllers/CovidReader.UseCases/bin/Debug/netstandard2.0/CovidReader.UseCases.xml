@@ -15,6 +15,18 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:CovidReader.UseCases.ApiRepositoryUseCase.UsePostgureSql">
+            <summary>
+            PostgreSQL連携のリポジトリを生成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.ApiRepositoryUseCase.UseSqlServer">
+            <summary>
+            SQLServer連携のリポジトリを生成
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:CovidReader.UseCases.ApiRepositoryUseCase.UseREST(System.String,System.String)">
             <summary>
             RestAPI連携のリポジトリを生成（将来拡張用）

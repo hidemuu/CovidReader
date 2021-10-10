@@ -42,11 +42,10 @@ namespace CovidReader.Windows
     {
         //private Mutex _mutex = new Mutex(false, "CovidReaderApp");
 
-        public static NativeAppController NativeController { get; set; }
 
         public App()
         {
-            NativeController = new NativeAppController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));
+            
         }
 
         #region イベントハンドラ
@@ -74,12 +73,15 @@ namespace CovidReader.Windows
             container.RegisterType<IChartService, ChartService>();
             container.RegisterType<ITableService, TableService>();
             container.RegisterType<IUserService, UserService>();
+            
 
             //シングルトンとして登録
             containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
+            
 
             //任意のデータインスタンスを登録
             containerRegistry.RegisterInstance<IFlyoutService>(Container.Resolve<FlyoutService>());
+            containerRegistry.RegisterInstance<NativeAppController>(new NativeAppController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv")));
 
             //Viewの登録
             containerRegistry.RegisterForNavigation<LoginMainContent>();
