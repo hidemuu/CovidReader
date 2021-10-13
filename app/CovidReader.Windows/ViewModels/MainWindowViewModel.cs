@@ -45,8 +45,9 @@ namespace CovidReader.Windows.ViewModels
             Contents.Add(new MainWindowModel(0, "Home", "Home", () => _regionManager.RequestNavigate(RegionNames.MainRegion, nameof(HomeView))));
             Contents.Add(new MainWindowModel(1, "Table", "Table", () => _regionManager.RequestNavigate(RegionNames.MainRegion, nameof(TableView))));
             Contents.Add(new MainWindowModel(2, "Chart", "Cog", () => _regionManager.RequestNavigate(RegionNames.MainRegion, nameof(ChartView))));
-            Contents.Add(new MainWindowModel(3, "Dashboard", "Cog", () => _regionManager.RequestNavigate(RegionNames.MainRegion, nameof(DashboardView))));
-            Contents.Add(new MainWindowModel(4, "Setting", "Cog", () => _regionManager.RequestNavigate(RegionNames.MainRegion, nameof(SettingView))));
+            Contents.Add(new MainWindowModel(3, "Tree", "Cog", () => _regionManager.RequestNavigate(RegionNames.MainRegion, nameof(TreeListView))));
+            Contents.Add(new MainWindowModel(4, "Dashboard", "Cog", () => _regionManager.RequestNavigate(RegionNames.MainRegion, nameof(DashboardView))));
+            Contents.Add(new MainWindowModel(5, "Setting", "Cog", () => _regionManager.RequestNavigate(RegionNames.MainRegion, nameof(SettingView))));
 
             LoadingCommand.Subscribe(_ => Contents.FirstOrDefault(x => x.NavigationIconButtonViewModel.Title == "Home").TabCommand());
             TabChangeCommand.Subscribe(_ => ChangeTab());

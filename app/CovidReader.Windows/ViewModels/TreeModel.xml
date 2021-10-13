@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Model>
+  <Item>
+    <Path>path1</Path>
+  </Item> 
+  <Models>
+    <Model>
+      <Item>
+        <Path>path2</Path>
+      </Item>
+      <Models>
+        <Model>
+          <Item>
+            <Path>path3</Path>
+          </Item>
+          <Models>
+          </Models>
+        </Model>
+      </Models>
+    </Model>
+  </Models>
+</Model>

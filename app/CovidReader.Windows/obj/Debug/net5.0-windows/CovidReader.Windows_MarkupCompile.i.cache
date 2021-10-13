@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\App.xaml
-18-1150656743
-1-1602627052
-421183039905
+191179815949
+2-786028597
+44-145975132
 2661717782945
-Views\ChartView.xaml;Views\DashboardView.xaml;Views\Dialogs\AlertDialog.xaml;Views\Dialogs\DialogWindow.xaml;Views\Dialogs\SuccessDialog.xaml;Views\Dialogs\WarningDialog.xaml;Views\ForFuture\ExploreView.xaml;Views\ForFuture\PropertyView.xaml;Views\ForFuture\RequestView.xaml;Views\ForFuture\ResultView.xaml;Views\ForFuture\WebView.xaml;Views\HomeView.xaml;Views\Login\CreateAccount.xaml;Views\Login\LoginMainContent.xaml;Views\Login\LoginWindow.xaml;Views\MainWindow.xaml;Views\SettingView.xaml;Views\TableView.xaml;
+Views\ChartView.xaml;Views\DashboardView.xaml;Views\Dialogs\AlertDialog.xaml;Views\Dialogs\DialogWindow.xaml;Views\Dialogs\SuccessDialog.xaml;Views\Dialogs\WarningDialog.xaml;Views\ForFuture\ExploreView.xaml;Views\ForFuture\PropertyView.xaml;Views\ForFuture\RequestView.xaml;Views\ForFuture\ResultView.xaml;Views\ForFuture\WebView.xaml;Views\HomeView.xaml;Views\Login\CreateAccount.xaml;Views\Login\LoginMainContent.xaml;Views\Login\LoginWindow.xaml;Views\MainWindow.xaml;Views\SettingView.xaml;Views\TableView.xaml;Views\TreeListView.xaml;
 
-True
+False
 

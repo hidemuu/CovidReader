@@ -89,6 +89,7 @@ namespace CovidReader.Windows
             containerRegistry.RegisterForNavigation<HomeView>();
             containerRegistry.RegisterForNavigation<ChartView>();
             containerRegistry.RegisterForNavigation<TableView>();
+            containerRegistry.RegisterForNavigation<TreeListView>();
             containerRegistry.RegisterForNavigation<DashboardView>();
             containerRegistry.RegisterForNavigation<SettingView>();
 
@@ -115,6 +116,7 @@ namespace CovidReader.Windows
             ViewModelLocationProvider.Register<HomeView, HomeViewModel>();
             ViewModelLocationProvider.Register<ChartView, ChartViewModel>();
             ViewModelLocationProvider.Register<TableView, TableViewModel>();
+            ViewModelLocationProvider.Register<TreeListView, TreeListViewModel>();
             ViewModelLocationProvider.Register<DashboardView, DashboardViewModel>();
             ViewModelLocationProvider.Register<SettingView, SettingViewModel>();
         }

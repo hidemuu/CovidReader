@@ -58,6 +58,9 @@
     <Compile Update="Views\ForFuture\WebView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\TreeListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\DashboardView.xaml">
@@ -112,6 +115,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ForFuture\WebView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TreeListView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
