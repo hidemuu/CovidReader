@@ -9,7 +9,7 @@
       "CovidReader/1.0.0": {
         "dependencies": {
           "CovidReader.Api": "1.0.0",
-          "CovidReader.Infrastructure": "1.0.0",
+          "CovidReader.ViewControls": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "3.1.17",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.17",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.17"
@@ -1149,26 +1149,10 @@
       },
       "CovidReader.Api/1.0.0": {
         "dependencies": {
-          "CovidReader.UseCases": "1.0.0"
+          "CovidReader.UseCases.Implement": "1.0.0"
         },
         "runtime": {
           "CovidReader.Api.dll": {}
-        }
-      },
-      "CovidReader.Controllers/1.0.0": {
-        "dependencies": {
-          "CovidReader.Plugins": "1.0.0",
-          "CovidReader.Service": "1.0.0",
-          "Selenium.WebDriver": "3.141.0",
-          "Selenium.WebDriver.ChromeDriver": "92.0.4515.10700"
-        },
-        "runtime": {
-          "CovidReader.Controllers.dll": {}
-        }
-      },
-      "CovidReader.Infrastructure/1.0.0": {
-        "runtime": {
-          "CovidReader.Infrastructure.dll": {}
         }
       },
       "CovidReader.Models/1.0.0": {
@@ -1250,24 +1234,40 @@
       },
       "CovidReader.UseCases/1.0.0": {
         "dependencies": {
-          "CovidReader.Controllers": "1.0.0",
+          "CovidReader.Plugins": "1.0.0",
+          "CovidReader.Service": "1.0.0",
+          "Selenium.WebDriver": "3.141.0",
+          "Selenium.WebDriver.ChromeDriver": "92.0.4515.10700"
+        },
+        "runtime": {
+          "CovidReader.UseCases.dll": {}
+        }
+      },
+      "CovidReader.UseCases.Implement/1.0.0": {
+        "dependencies": {
           "CovidReader.Repository.Api": "1.0.0",
           "CovidReader.Repository.Covid19": "1.0.0",
           "CovidReader.Repository.Settings": "1.0.0",
           "CovidReader.Service.Api": "1.0.0",
           "CovidReader.Service.Covid19": "1.0.0",
+          "CovidReader.UseCases": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.17",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.17",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.11"
         },
         "runtime": {
-          "CovidReader.UseCases.dll": {}
+          "CovidReader.UseCases.Implement.dll": {}
         }
       },
       "CovidReader.Utilities/1.0.0": {
         "runtime": {
           "CovidReader.Utilities.dll": {}
+        }
+      },
+      "CovidReader.ViewControls/1.0.0": {
+        "runtime": {
+          "CovidReader.ViewControls.dll": {}
         }
       }
     }
@@ -2074,16 +2074,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CovidReader.Controllers/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CovidReader.Infrastructure/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "CovidReader.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -2134,7 +2124,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "CovidReader.UseCases.Implement/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "CovidReader.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CovidReader.ViewControls/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

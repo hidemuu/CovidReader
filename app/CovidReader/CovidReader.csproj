@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\api\CovidReader.Api\CovidReader.Api.csproj" />
-    <ProjectReference Include="..\..\src\views\CovidReader.Infrastructure\CovidReader.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\api\CovidReader.Api\CovidReader.Api.csproj" />
+    <ProjectReference Include="..\..\src\infrastructures\CovidReader.ViewControls\CovidReader.ViewControls.csproj" />
   </ItemGroup>
 
 </Project>

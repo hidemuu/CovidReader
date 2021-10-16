@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CovidReader.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:CovidReader.Utilities.DataConverter">
+            <summary>
+            データ変換ロジック
+            </summary>
+        </member>
+        <member name="M:CovidReader.Utilities.DataConverter.StringToInt(System.String,System.Int32)">
+            <summary>
+            文字列データを数値データに変換　変換不可なら0か指定した数値を返す
+            </summary>
+            <param name="value">変換対象文字列データ</param>
+            <param name="def">変換不可時の返値</param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Utilities.DataConverter.UnitToSum(System.Int32[])">
+            <summary>
+            単日データリストを累積データリストに変換
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Utilities.DataConverter.SumToUnit(System.Int32[])">
+            <summary>
+            累積データリストを単日データリストに変換
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Utilities.DataConverter.IsUnit(System.Int32[])">
+            <summary>
+            データリストが単日データならtrueを返す
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

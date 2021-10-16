@@ -5,39 +5,37 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader", "app\CovidReader\CovidReader.csproj", "{2EE7D6E5-FF4A-4839-BC96-1B1EADD6D93E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Models", "src\models\CovidReader.Models\CovidReader.Models.csproj", "{BDD857BF-9CCD-497E-9F8B-07688943720E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Models", "src\domains\CovidReader.Models\CovidReader.Models.csproj", "{BDD857BF-9CCD-497E-9F8B-07688943720E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository", "src\models\CovidReader.Repository\CovidReader.Repository.csproj", "{2E6EA081-B81A-4D55-8B34-7DAF58647185}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository", "src\domains\CovidReader.Repository\CovidReader.Repository.csproj", "{2E6EA081-B81A-4D55-8B34-7DAF58647185}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Service", "src\controllers\CovidReader.Service\CovidReader.Service.csproj", "{E7F83274-3D44-4B06-A0CA-493AAB285D2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Service", "src\applications\CovidReader.Service\CovidReader.Service.csproj", "{E7F83274-3D44-4B06-A0CA-493AAB285D2E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Windows", "app\CovidReader.Windows\CovidReader.Windows.csproj", "{0A39F21A-CA26-4992-82BA-0628966CE847}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.WebApi", "src\api\CovidReader.WebApi\CovidReader.WebApi.csproj", "{515D9086-7BED-423E-859C-C48537B35313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.WebApi", "api\CovidReader.WebApi\CovidReader.WebApi.csproj", "{515D9086-7BED-423E-859C-C48537B35313}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository.Covid19", "src\models\CovidReader.Repository.Covid19\CovidReader.Repository.Covid19.csproj", "{1AB1F34B-F60E-456A-B2FC-158A0F12E05E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository.Covid19", "src\domains\CovidReader.Repository.Covid19\CovidReader.Repository.Covid19.csproj", "{1AB1F34B-F60E-456A-B2FC-158A0F12E05E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository.Api", "src\models\CovidReader.Repository.Api\CovidReader.Repository.Api.csproj", "{4E2E456D-B843-41C6-A5DF-8E931876DC1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository.Api", "src\domains\CovidReader.Repository.Api\CovidReader.Repository.Api.csproj", "{4E2E456D-B843-41C6-A5DF-8E931876DC1C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DB2FD42B-EA82-45CD-9EEF-49E7078A1191}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domains", "domains", "{4DACA4B7-3523-45AF-9FD6-97A73C06D868}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{4DACA4B7-3523-45AF-9FD6-97A73C06D868}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "applications", "applications", "{7A04886A-B0CC-426E-AFBA-4B0AF459F5C9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "application", "application", "{7A04886A-B0CC-426E-AFBA-4B0AF459F5C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Service.Test", "src\applications\CovidReader.Service.Test\CovidReader.Service.Test.csproj", "{68F3549F-9451-44DF-B2EC-8D963AD1AE09}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Test", "tests\CovidReader.Test\CovidReader.Test.csproj", "{68F3549F-9451-44DF-B2EC-8D963AD1AE09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.UseCases", "src\applications\CovidReader.UseCases\CovidReader.UseCases.csproj", "{4BB8D4C8-4E03-4CA1-95BD-F97984C2937E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Controllers", "src\controllers\CovidReader.Controllers\CovidReader.Controllers.csproj", "{4BB8D4C8-4E03-4CA1-95BD-F97984C2937E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository.Settings", "src\models\CovidReader.Repository.Settings\CovidReader.Repository.Settings.csproj", "{9F0E211B-DD81-42B4-89C3-865B4F7D22A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Repository.Settings", "src\domains\CovidReader.Repository.Settings\CovidReader.Repository.Settings.csproj", "{9F0E211B-DD81-42B4-89C3-865B4F7D22A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{52739B30-A5F8-4094-BFCF-B3B4B4198FCE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{FD539BBA-68BF-4744-BD47-D6834C24BA89}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Api", "src\api\CovidReader.Api\CovidReader.Api.csproj", "{016A84A9-C597-4482-86AA-9C3C2D4E7361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Api", "api\CovidReader.Api\CovidReader.Api.csproj", "{016A84A9-C597-4482-86AA-9C3C2D4E7361}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Infrastructure.Wpf", "src\views\CovidReader.Infrastructure.Wpf\CovidReader.Infrastructure.Wpf.csproj", "{AB9648FB-EB93-49B6-922C-AE08AB8ADF61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.ViewControls.Wpf", "src\infrastructures\CovidReader.ViewControls.Wpf\CovidReader.ViewControls.Wpf.csproj", "{AB9648FB-EB93-49B6-922C-AE08AB8ADF61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution_items", "solution_items", "{1A9DEF3A-E9FC-4ADC-BE27-28242CAD7449}"
 	ProjectSection(SolutionItems) = preProject
@@ -45,41 +43,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution_items", "solution_
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "builds", "builds", "{1B524C26-CBB0-4645-B8C3-CD7658FDF3D7}"
-EndProject
-Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "CovidReader.Document", "helps\CovidReader.Document\CovidReader.Document.shfbproj", "{FB41A66A-2ED0-47F0-8403-5C4A943C0C93}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Infrastructure", "src\views\CovidReader.Infrastructure\CovidReader.Infrastructure.csproj", "{CAE9DC5A-0034-456A-A1C2-4F272F9555F7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "helps", "helps", "{D50393EF-96F9-4DFB-A18F-14B9D20DEA89}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CovidReader.Setup", "builds\CovidReader.Setup\CovidReader.Setup.vdproj", "{D96EBCDE-7752-4F24-83B5-10A0E5E19A53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.ViewControls", "src\infrastructures\CovidReader.ViewControls\CovidReader.ViewControls.csproj", "{CAE9DC5A-0034-456A-A1C2-4F272F9555F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ACFDCCD3-62BC-4BBE-B933-E8634F540D4B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Web", "app\CovidReader.Web\CovidReader.Web.csproj", "{F483C169-4213-4F49-A658-315BF552454D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Service.Api", "src\controllers\CovidReader.Service.Api\CovidReader.Service.Api.csproj", "{5E721E5A-C5B6-4FEF-8645-D7A39E7E0753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Service.Api", "src\applications\CovidReader.Service.Api\CovidReader.Service.Api.csproj", "{5E721E5A-C5B6-4FEF-8645-D7A39E7E0753}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.UseCases", "src\controllers\CovidReader.UseCases\CovidReader.UseCases.csproj", "{E3E2B19A-9B6C-4AF3-B096-E1BFD43261C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.UseCases.Implement", "src\applications\CovidReader.UseCases.Implement\CovidReader.UseCases.Implement.csproj", "{E3E2B19A-9B6C-4AF3-B096-E1BFD43261C8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Plugins.Log", "src\controllers\CovidReader.Plugins.Log\CovidReader.Plugins.Log.csproj", "{A367C43A-2E35-402C-AC1D-BCA07A25C7FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Plugins.Log", "src\applications\CovidReader.Plugins.Log\CovidReader.Plugins.Log.csproj", "{A367C43A-2E35-402C-AC1D-BCA07A25C7FF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Plugins", "src\controllers\CovidReader.Plugins\CovidReader.Plugins.csproj", "{0A683DA5-394A-4CA9-86C3-E09B180ADE70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Plugins", "src\applications\CovidReader.Plugins\CovidReader.Plugins.csproj", "{0A683DA5-394A-4CA9-86C3-E09B180ADE70}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Service.Covid19", "src\controllers\CovidReader.Service.Covid19\CovidReader.Service.Covid19.csproj", "{A8BF286F-5193-4690-AC8C-D73073C768A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Service.Covid19", "src\applications\CovidReader.Service.Covid19\CovidReader.Service.Covid19.csproj", "{A8BF286F-5193-4690-AC8C-D73073C768A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Utilities", "src\controllers\CovidReader.Utilities\CovidReader.Utilities.csproj", "{F4AE5484-763D-4384-9B29-A924702F0A64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Utilities", "src\infrastructures\CovidReader.Utilities\CovidReader.Utilities.csproj", "{F4AE5484-763D-4384-9B29-A924702F0A64}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{648BFF33-E6E6-46EF-B4F7-ED9ABAA70EA7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructures", "infrastructures", "{648BFF33-E6E6-46EF-B4F7-ED9ABAA70EA7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{0B6BA8F8-5EFB-425F-B0E9-994C2BD2A4E6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentations", "presentations", "{0B6BA8F8-5EFB-425F-B0E9-994C2BD2A4E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidReader.ViewModels", "src\views\CovidReader.ViewModels\CovidReader.ViewModels.csproj", "{0D47BE40-82AE-4DEE-9789-2D35DEC3F1D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Windows.Views", "src\presentations\CovidReader.Windows.Views\CovidReader.Windows.Views.csproj", "{E5C798A5-0F3F-4080-B8D8-D2B7C344E6F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidReader.Containers", "src\views\CovidReader.Containers\CovidReader.Containers.csproj", "{8F385DC1-6FA5-4B26-9A67-4FBA4DE44369}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.ViewStyles.Wpf", "src\infrastructures\CovidReader.ViewStyles.Wpf\CovidReader.ViewStyles.Wpf.csproj", "{602DB481-C107-49EA-8C2F-CBA80872DF60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidReader.Views", "src\views\CovidReader.Views\CovidReader.Views.csproj", "{E5C798A5-0F3F-4080-B8D8-D2B7C344E6F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Windows.ViewModels", "src\presentations\CovidReader.Windows.ViewModels\CovidReader.Windows.ViewModels.csproj", "{73852DC0-9FDC-4848-BFC8-70349541CB63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidReader.Windows.ViewUtility", "src\presentations\CovidReader.Windows.ViewUtility\CovidReader.Windows.ViewUtility.csproj", "{5144AC52-F4A4-47D9-BCF7-0E825FD7870A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,16 +131,10 @@ Global
 		{AB9648FB-EB93-49B6-922C-AE08AB8ADF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB9648FB-EB93-49B6-922C-AE08AB8ADF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB9648FB-EB93-49B6-922C-AE08AB8ADF61}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB41A66A-2ED0-47F0-8403-5C4A943C0C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB41A66A-2ED0-47F0-8403-5C4A943C0C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB41A66A-2ED0-47F0-8403-5C4A943C0C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB41A66A-2ED0-47F0-8403-5C4A943C0C93}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CAE9DC5A-0034-456A-A1C2-4F272F9555F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CAE9DC5A-0034-456A-A1C2-4F272F9555F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAE9DC5A-0034-456A-A1C2-4F272F9555F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAE9DC5A-0034-456A-A1C2-4F272F9555F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D96EBCDE-7752-4F24-83B5-10A0E5E19A53}.Debug|Any CPU.ActiveCfg = Debug
-		{D96EBCDE-7752-4F24-83B5-10A0E5E19A53}.Release|Any CPU.ActiveCfg = Release
 		{F483C169-4213-4F49-A658-315BF552454D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F483C169-4213-4F49-A658-315BF552454D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F483C169-4213-4F49-A658-315BF552454D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -177,18 +163,22 @@ Global
 		{F4AE5484-763D-4384-9B29-A924702F0A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4AE5484-763D-4384-9B29-A924702F0A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4AE5484-763D-4384-9B29-A924702F0A64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D47BE40-82AE-4DEE-9789-2D35DEC3F1D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D47BE40-82AE-4DEE-9789-2D35DEC3F1D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D47BE40-82AE-4DEE-9789-2D35DEC3F1D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D47BE40-82AE-4DEE-9789-2D35DEC3F1D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F385DC1-6FA5-4B26-9A67-4FBA4DE44369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F385DC1-6FA5-4B26-9A67-4FBA4DE44369}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F385DC1-6FA5-4B26-9A67-4FBA4DE44369}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F385DC1-6FA5-4B26-9A67-4FBA4DE44369}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E5C798A5-0F3F-4080-B8D8-D2B7C344E6F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E5C798A5-0F3F-4080-B8D8-D2B7C344E6F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5C798A5-0F3F-4080-B8D8-D2B7C344E6F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5C798A5-0F3F-4080-B8D8-D2B7C344E6F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{602DB481-C107-49EA-8C2F-CBA80872DF60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{602DB481-C107-49EA-8C2F-CBA80872DF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{602DB481-C107-49EA-8C2F-CBA80872DF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{602DB481-C107-49EA-8C2F-CBA80872DF60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73852DC0-9FDC-4848-BFC8-70349541CB63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73852DC0-9FDC-4848-BFC8-70349541CB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73852DC0-9FDC-4848-BFC8-70349541CB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73852DC0-9FDC-4848-BFC8-70349541CB63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5144AC52-F4A4-47D9-BCF7-0E825FD7870A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5144AC52-F4A4-47D9-BCF7-0E825FD7870A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5144AC52-F4A4-47D9-BCF7-0E825FD7870A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5144AC52-F4A4-47D9-BCF7-0E825FD7870A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,15 +194,12 @@ Global
 		{4E2E456D-B843-41C6-A5DF-8E931876DC1C} = {4DACA4B7-3523-45AF-9FD6-97A73C06D868}
 		{4DACA4B7-3523-45AF-9FD6-97A73C06D868} = {ACFDCCD3-62BC-4BBE-B933-E8634F540D4B}
 		{7A04886A-B0CC-426E-AFBA-4B0AF459F5C9} = {ACFDCCD3-62BC-4BBE-B933-E8634F540D4B}
-		{68F3549F-9451-44DF-B2EC-8D963AD1AE09} = {DB2FD42B-EA82-45CD-9EEF-49E7078A1191}
+		{68F3549F-9451-44DF-B2EC-8D963AD1AE09} = {7A04886A-B0CC-426E-AFBA-4B0AF459F5C9}
 		{4BB8D4C8-4E03-4CA1-95BD-F97984C2937E} = {7A04886A-B0CC-426E-AFBA-4B0AF459F5C9}
 		{9F0E211B-DD81-42B4-89C3-865B4F7D22A5} = {4DACA4B7-3523-45AF-9FD6-97A73C06D868}
-		{52739B30-A5F8-4094-BFCF-B3B4B4198FCE} = {ACFDCCD3-62BC-4BBE-B933-E8634F540D4B}
 		{016A84A9-C597-4482-86AA-9C3C2D4E7361} = {52739B30-A5F8-4094-BFCF-B3B4B4198FCE}
 		{AB9648FB-EB93-49B6-922C-AE08AB8ADF61} = {648BFF33-E6E6-46EF-B4F7-ED9ABAA70EA7}
-		{FB41A66A-2ED0-47F0-8403-5C4A943C0C93} = {D50393EF-96F9-4DFB-A18F-14B9D20DEA89}
 		{CAE9DC5A-0034-456A-A1C2-4F272F9555F7} = {648BFF33-E6E6-46EF-B4F7-ED9ABAA70EA7}
-		{D96EBCDE-7752-4F24-83B5-10A0E5E19A53} = {1B524C26-CBB0-4645-B8C3-CD7658FDF3D7}
 		{F483C169-4213-4F49-A658-315BF552454D} = {FD539BBA-68BF-4744-BD47-D6834C24BA89}
 		{5E721E5A-C5B6-4FEF-8645-D7A39E7E0753} = {7A04886A-B0CC-426E-AFBA-4B0AF459F5C9}
 		{E3E2B19A-9B6C-4AF3-B096-E1BFD43261C8} = {7A04886A-B0CC-426E-AFBA-4B0AF459F5C9}
@@ -222,9 +209,10 @@ Global
 		{F4AE5484-763D-4384-9B29-A924702F0A64} = {648BFF33-E6E6-46EF-B4F7-ED9ABAA70EA7}
 		{648BFF33-E6E6-46EF-B4F7-ED9ABAA70EA7} = {ACFDCCD3-62BC-4BBE-B933-E8634F540D4B}
 		{0B6BA8F8-5EFB-425F-B0E9-994C2BD2A4E6} = {ACFDCCD3-62BC-4BBE-B933-E8634F540D4B}
-		{0D47BE40-82AE-4DEE-9789-2D35DEC3F1D0} = {0B6BA8F8-5EFB-425F-B0E9-994C2BD2A4E6}
-		{8F385DC1-6FA5-4B26-9A67-4FBA4DE44369} = {0B6BA8F8-5EFB-425F-B0E9-994C2BD2A4E6}
 		{E5C798A5-0F3F-4080-B8D8-D2B7C344E6F5} = {0B6BA8F8-5EFB-425F-B0E9-994C2BD2A4E6}
+		{602DB481-C107-49EA-8C2F-CBA80872DF60} = {648BFF33-E6E6-46EF-B4F7-ED9ABAA70EA7}
+		{73852DC0-9FDC-4848-BFC8-70349541CB63} = {0B6BA8F8-5EFB-425F-B0E9-994C2BD2A4E6}
+		{5144AC52-F4A4-47D9-BCF7-0E825FD7870A} = {0B6BA8F8-5EFB-425F-B0E9-994C2BD2A4E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50888AA3-00A5-4824-B3E4-46D306A26516}

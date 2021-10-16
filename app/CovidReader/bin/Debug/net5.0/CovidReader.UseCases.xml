@@ -4,119 +4,112 @@
         <name>CovidReader.UseCases</name>
     </assembly>
     <members>
-        <member name="T:CovidReader.UseCases.ApiRepositoryUseCase">
+        <member name="T:CovidReader.UseCases.AppController">
             <summary>
-            アプリケーションAPIリポジトリ生成のユースケース
+            アプリケーション用コントローラー基本クラス
             </summary>
         </member>
-        <member name="M:CovidReader.UseCases.ApiRepositoryUseCase.UseSqlite">
+        <member name="P:CovidReader.UseCases.AppController.Api">
             <summary>
-            SQLite連携のリポジトリを生成
+            アプリケーションAPI アクセスサービス
+            </summary>
+        </member>
+        <member name="P:CovidReader.UseCases.AppController.Covid19">
+            <summary>
+            Covid19 APIアクセスサービス
+            </summary>
+        </member>
+        <member name="M:CovidReader.UseCases.AppController.#ctor(CovidReader.Service.Api.IApiService,CovidReader.Service.Covid19.ICovid19Service)">
+            <summary>
+            アプリケーションAPI / Covid19 API アクセスサービスを取り込み、API全体の処理を構築
+            </summary>
+            <param name="api"></param>
+            <param name="covid19"></param>
+        </member>
+        <member name="M:CovidReader.UseCases.AppController.UpdateAsync">
+            <summary>
+            アップデート処理
+            Covid19 APIデータをインポート → アプリケーションAPIに反映
             </summary>
             <returns></returns>
         </member>
-        <member name="M:CovidReader.UseCases.ApiRepositoryUseCase.UsePostgureSql">
+        <member name="M:CovidReader.UseCases.AppController.ImportCovid19Async">
             <summary>
-            PostgreSQL連携のリポジトリを生成
+            Covid19データをインポート
             </summary>
             <returns></returns>
         </member>
-        <member name="M:CovidReader.UseCases.ApiRepositoryUseCase.UseSqlServer">
+        <member name="M:CovidReader.UseCases.AppController.CovidToApiAsync">
             <summary>
-            SQLServer連携のリポジトリを生成
+            Covid19 APIデータをアプリケーションAPIデータベーステーブルに反映
             </summary>
             <returns></returns>
         </member>
-        <member name="M:CovidReader.UseCases.ApiRepositoryUseCase.UseREST(System.String,System.String)">
+        <member name="M:CovidReader.UseCases.AppController.ToChartItemAsync">
             <summary>
-            RestAPI連携のリポジトリを生成（将来拡張用）
-            </summary>
-            <param name="url"></param>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:CovidReader.UseCases.ApiRepositoryUseCase.UseCsv(System.String)">
-            <summary>
-            Csvファイル連携のリポジトリを生成
-            </summary>
-            <param name="path"></param>
-            <returns></returns>
-        </member>
-        <member name="M:CovidReader.UseCases.ApiRepositoryUseCase.UseJson(System.String)">
-            <summary>
-            Jsonファイル連携のリポジトリを生成
-            </summary>
-            <param name="path"></param>
-            <returns></returns>
-        </member>
-        <member name="T:CovidReader.UseCases.ApiServiceUseCase">
-            <summary>
-            アプリケーションAPIアクセスサービス生成のユースケース
-            </summary>
-        </member>
-        <member name="M:CovidReader.UseCases.ApiServiceUseCase.Create(System.String,System.String)">
-            <summary>
-            サービス生成
-            mapperで外部からデータをインポートし、必要に応じてrepositoryに更新する。
-            アプリケーションのコントロールはrepositoryで行う
-            </summary>
-            <param name="repositoryType">データベースリポジトリのファイル形式名称(sql / json / csv / rest)</param>
-            <param name="mapperType">インポート用ファイルのファイル形式名称(sql / json / csv / rest)</param>
-            <returns></returns>
-        </member>
-        <member name="T:CovidReader.UseCases.Covid19RepositoryUseCase">
-            <summary>
-            Covid19 APIリポジトリ生成のユースケース
-            </summary>
-        </member>
-        <member name="M:CovidReader.UseCases.Covid19RepositoryUseCase.UseSqlite">
-            <summary>
-            SQLite連携のリポジトリを生成
+            アプリケーションAPIの感染データをChartItemテーブルに変換して格納 / ChartConfigテーブルデータを更新
             </summary>
             <returns></returns>
         </member>
-        <member name="M:CovidReader.UseCases.Covid19RepositoryUseCase.UseRest(System.String,System.String)">
+        <member name="T:CovidReader.UseCases.ConsoleAppController">
             <summary>
-            RestAPI連携のリポジトリを生成
+            コンソールアプリケーション用コントローラー
             </summary>
-            <param name="url"></param>
-            <param name="key"></param>
-            <returns></returns>
         </member>
-        <member name="M:CovidReader.UseCases.Covid19RepositoryUseCase.UseCsv(System.String)">
+        <member name="M:CovidReader.UseCases.ConsoleAppController.#ctor(CovidReader.Service.Api.IApiService,CovidReader.Service.Covid19.ICovid19Service)">
             <summary>
-            Csvファイル連携のリポジトリを生成
+            
             </summary>
-            <param name="path"></param>
-            <returns></returns>
+            <param name="api"></param>
+            <param name="covid19"></param>
         </member>
-        <member name="M:CovidReader.UseCases.Covid19RepositoryUseCase.UseJson(System.String)">
+        <member name="M:CovidReader.UseCases.ConsoleAppController.AutoRunAsync">
             <summary>
-            Jsonファイル連携のリポジトリを生成
-            </summary>
-            <param name="path"></param>
-            <returns></returns>
-        </member>
-        <member name="M:CovidReader.UseCases.Covid19RepositoryUseCase.UseInMemory">
-            <summary>
-            内部メモリ連携のリポジトリを生成
+            自動実行処理
+            XAMPPサーバーにChart表示用データとスクリプトファイルを保存し、サーバ起動＋ブラウザ起動
             </summary>
             <returns></returns>
         </member>
-        <member name="T:CovidReader.UseCases.Covid19ServiceUseCase">
+        <member name="M:CovidReader.UseCases.ConsoleAppController.ScrapingAsync">
             <summary>
-            Covid19 APIアクセスサービス生成のユースケース
+            スクレイピング処理（テスト用）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.ConsoleAppController.ViewChartAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.UseCases.IAppController">
+            <summary>
+            
             </summary>
         </member>
-        <member name="M:CovidReader.UseCases.Covid19ServiceUseCase.Create(System.String,System.String)">
+        <member name="T:CovidReader.UseCases.NativeAppController">
             <summary>
-            サービス生成
-            mapperで外部からデータをインポートし、必要に応じてrepositoryに更新する。
-            アプリケーションのコントロールはrepositoryで行う
+            ネイティブアプリケーション用コントローラー
             </summary>
-            <param name="repositoryType">データベースリポジトリのファイル形式名称(sql / json / csv / inmemory)</param>
-            <param name="mapperType">インポート用ファイルのファイル形式名称(sql / json / csv / inmemory)</param>
-            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.NativeAppController.#ctor(CovidReader.Service.Api.IApiService,CovidReader.Service.Covid19.ICovid19Service)">
+            <summary>
+            
+            </summary>
+            <param name="api"></param>
+            <param name="covid19"></param>
+        </member>
+        <member name="T:CovidReader.UseCases.WebAppController">
+            <summary>
+            Webアプリケーション用コントローラー
+            </summary>
+        </member>
+        <member name="M:CovidReader.UseCases.WebAppController.#ctor(CovidReader.Service.Api.IApiService,CovidReader.Service.Covid19.ICovid19Service)">
+            <summary>
+            
+            </summary>
+            <param name="api"></param>
+            <param name="covid19"></param>
         </member>
     </members>
 </doc>

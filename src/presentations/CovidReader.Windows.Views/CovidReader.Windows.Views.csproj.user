@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Page Update="ChartView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DashboardView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dialogs\AlertDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dialogs\DialogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dialogs\SuccessDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dialogs\WarningDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ForFuture\ExploreView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ForFuture\PropertyView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ForFuture\RequestView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ForFuture\ResultView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ForFuture\TreeListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ForFuture\WebView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login\CreateAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login\LoginMainContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SettingView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TableView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

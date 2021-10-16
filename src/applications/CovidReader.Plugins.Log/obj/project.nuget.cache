@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "cWbMFiRhGS/i4dFEXyw9RwgSKIoXjcrwfkFZOuF3F9+qVaPtI/E/O8V6ebtFARKp3Ttl1y57VKPhf6jO/tC0tA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.Plugins.Log\\CovidReader.Plugins.Log.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nando\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\nlog.config\\4.7.11\\nlog.config.4.7.11.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\nlog.schema\\4.7.11\\nlog.schema.4.7.11.nupkg.sha512"
+  ],
+  "logs": []
+}

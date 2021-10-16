@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "MkcJDWG0nCWn3TACzAGCffzf5Qn22EwA9mEk5b4KRLHz7DIErLncBBFume7FK2I/RG72hmUMtt4cShv0u8meEQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\infrastructures\\CovidReader.ViewStyles.Wpf\\CovidReader.ViewStyles.Wpf.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nando\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\livecharts.wpf.netcore3\\0.9.7\\livecharts.wpf.netcore3.0.9.7.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\mahapps.metro\\2.4.7\\mahapps.metro.2.4.7.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\materialdesigncolors\\2.0.1\\materialdesigncolors.2.0.1.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\materialdesignthemes\\4.1.0\\materialdesignthemes.4.1.0.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\materialdesignthemes.mahapps\\0.1.7\\materialdesignthemes.mahapps.0.1.7.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}

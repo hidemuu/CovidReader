@@ -1,0 +1,13 @@
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\bin\Debug\net5.0-windows\NLog.config
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\bin\Debug\net5.0-windows\CovidReader.ViewControls.Wpf.deps.json
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\bin\Debug\net5.0-windows\CovidReader.ViewControls.Wpf.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\bin\Debug\net5.0-windows\ref\CovidReader.ViewControls.Wpf.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\bin\Debug\net5.0-windows\CovidReader.ViewControls.Wpf.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewControls.Wpf.csproj.AssemblyReference.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewControls.Wpf.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewControls.Wpf.AssemblyInfoInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewControls.Wpf.AssemblyInfo.cs
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewControls.Wpf.csproj.CoreCompileInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewControls.Wpf.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\obj\Debug\net5.0-windows\ref\CovidReader.ViewControls.Wpf.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewControls.Wpf.pdb

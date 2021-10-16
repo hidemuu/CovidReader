@@ -1,4 +1,3 @@
-using CovidReader.Controllers;
 using CovidReader.UseCases;
 using CovidReader.Repository;
 using CovidReader.Repository.Api;

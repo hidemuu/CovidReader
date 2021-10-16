@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3VgNdLWmZZv9IsHgO1bjCSwjkdLBB21UcsLW1rfRG8hpBR6ExvWabqiaiKBMGJNPswf6UqsdEagV5S/4F9d4nw==",
+  "dgSpecHash": "+sirMCsG/a5M+SNXhNSt+NRIthvQnAzHSd3yJ6qK4xg2SXMksDMHcqL4cm4sA+M7sWg8sbUDHagMfAgwr0Y16g==",
   "success": true,
   "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\api\\CovidReader.Api\\CovidReader.Api.csproj",
   "expectedPackageFiles": [

@@ -1,0 +1,17 @@
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\bin\Debug\net5.0-windows\CovidReader.Views.Windows.deps.json
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\bin\Debug\net5.0-windows\CovidReader.Views.Windows.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\bin\Debug\net5.0-windows\ref\CovidReader.Views.Windows.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\bin\Debug\net5.0-windows\CovidReader.Views.Windows.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\CovidReader.Views.Windows.csproj.AssemblyReference.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\UserControl1.g.cs
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\CovidReader.Views.Windows_MarkupCompile.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\CovidReader.Views.Windows_MarkupCompile.lref
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\UserControl1.baml
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\CovidReader.Views.Windows.g.resources
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\CovidReader.Views.Windows.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\CovidReader.Views.Windows.AssemblyInfoInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\CovidReader.Views.Windows.AssemblyInfo.cs
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\CovidReader.Views.Windows.csproj.CoreCompileInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\CovidReader.Views.Windows.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\ref\CovidReader.Views.Windows.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Views\obj\Debug\net5.0-windows\CovidReader.Views.Windows.pdb

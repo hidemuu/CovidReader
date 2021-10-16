@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "xPI/NqiwtIqINoh6CeN2otxiBpxE44slYZzDpgbGuOChhz2lFyiJylA8HZOHANMcMStrD8oBTvhC2T2wOD8cBg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\infrastructures\\CovidReader.ViewControls\\CovidReader.ViewControls.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nando\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

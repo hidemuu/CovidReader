@@ -7018,63 +7018,63 @@
     },
     "CovidReader.Controllers/1.0.0": {
       "type": "project",
-      "path": "../../controllers/CovidReader.Controllers/CovidReader.Controllers.csproj",
-      "msbuildProject": "../../controllers/CovidReader.Controllers/CovidReader.Controllers.csproj"
+      "path": "../../applications/CovidReader.Controllers/CovidReader.Controllers.csproj",
+      "msbuildProject": "../../applications/CovidReader.Controllers/CovidReader.Controllers.csproj"
     },
     "CovidReader.Models/1.0.0": {
       "type": "project",
-      "path": "../../models/CovidReader.Models/CovidReader.Models.csproj",
-      "msbuildProject": "../../models/CovidReader.Models/CovidReader.Models.csproj"
+      "path": "../../domains/CovidReader.Models/CovidReader.Models.csproj",
+      "msbuildProject": "../../domains/CovidReader.Models/CovidReader.Models.csproj"
     },
     "CovidReader.Plugins/1.0.0": {
       "type": "project",
-      "path": "../../controllers/CovidReader.Plugins/CovidReader.Plugins.csproj",
-      "msbuildProject": "../../controllers/CovidReader.Plugins/CovidReader.Plugins.csproj"
+      "path": "../../applications/CovidReader.Plugins/CovidReader.Plugins.csproj",
+      "msbuildProject": "../../applications/CovidReader.Plugins/CovidReader.Plugins.csproj"
     },
     "CovidReader.Repository/1.0.0": {
       "type": "project",
-      "path": "../../models/CovidReader.Repository/CovidReader.Repository.csproj",
-      "msbuildProject": "../../models/CovidReader.Repository/CovidReader.Repository.csproj"
+      "path": "../../domains/CovidReader.Repository/CovidReader.Repository.csproj",
+      "msbuildProject": "../../domains/CovidReader.Repository/CovidReader.Repository.csproj"
     },
     "CovidReader.Repository.Api/1.0.0": {
       "type": "project",
-      "path": "../../models/CovidReader.Repository.Api/CovidReader.Repository.Api.csproj",
-      "msbuildProject": "../../models/CovidReader.Repository.Api/CovidReader.Repository.Api.csproj"
+      "path": "../../domains/CovidReader.Repository.Api/CovidReader.Repository.Api.csproj",
+      "msbuildProject": "../../domains/CovidReader.Repository.Api/CovidReader.Repository.Api.csproj"
     },
     "CovidReader.Repository.Covid19/1.0.0": {
       "type": "project",
-      "path": "../../models/CovidReader.Repository.Covid19/CovidReader.Repository.Covid19.csproj",
-      "msbuildProject": "../../models/CovidReader.Repository.Covid19/CovidReader.Repository.Covid19.csproj"
+      "path": "../../domains/CovidReader.Repository.Covid19/CovidReader.Repository.Covid19.csproj",
+      "msbuildProject": "../../domains/CovidReader.Repository.Covid19/CovidReader.Repository.Covid19.csproj"
     },
     "CovidReader.Repository.Settings/1.0.0": {
       "type": "project",
-      "path": "../../models/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj",
-      "msbuildProject": "../../models/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj"
+      "path": "../../domains/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj",
+      "msbuildProject": "../../domains/CovidReader.Repository.Settings/CovidReader.Repository.Settings.csproj"
     },
     "CovidReader.Service/1.0.0": {
       "type": "project",
-      "path": "../../controllers/CovidReader.Service/CovidReader.Service.csproj",
-      "msbuildProject": "../../controllers/CovidReader.Service/CovidReader.Service.csproj"
+      "path": "../../applications/CovidReader.Service/CovidReader.Service.csproj",
+      "msbuildProject": "../../applications/CovidReader.Service/CovidReader.Service.csproj"
     },
     "CovidReader.Service.Api/1.0.0": {
       "type": "project",
-      "path": "../../controllers/CovidReader.Service.Api/CovidReader.Service.Api.csproj",
-      "msbuildProject": "../../controllers/CovidReader.Service.Api/CovidReader.Service.Api.csproj"
+      "path": "../../applications/CovidReader.Service.Api/CovidReader.Service.Api.csproj",
+      "msbuildProject": "../../applications/CovidReader.Service.Api/CovidReader.Service.Api.csproj"
     },
     "CovidReader.Service.Covid19/1.0.0": {
       "type": "project",
-      "path": "../../controllers/CovidReader.Service.Covid19/CovidReader.Service.Covid19.csproj",
-      "msbuildProject": "../../controllers/CovidReader.Service.Covid19/CovidReader.Service.Covid19.csproj"
+      "path": "../../applications/CovidReader.Service.Covid19/CovidReader.Service.Covid19.csproj",
+      "msbuildProject": "../../applications/CovidReader.Service.Covid19/CovidReader.Service.Covid19.csproj"
     },
     "CovidReader.UseCases/1.0.0": {
       "type": "project",
-      "path": "../../controllers/CovidReader.UseCases/CovidReader.UseCases.csproj",
-      "msbuildProject": "../../controllers/CovidReader.UseCases/CovidReader.UseCases.csproj"
+      "path": "../../applications/CovidReader.UseCases/CovidReader.UseCases.csproj",
+      "msbuildProject": "../../applications/CovidReader.UseCases/CovidReader.UseCases.csproj"
     },
     "CovidReader.Utilities/1.0.0": {
       "type": "project",
-      "path": "../../controllers/CovidReader.Utilities/CovidReader.Utilities.csproj",
-      "msbuildProject": "../../controllers/CovidReader.Utilities/CovidReader.Utilities.csproj"
+      "path": "../../infrastructures/CovidReader.Utilities/CovidReader.Utilities.csproj",
+      "msbuildProject": "../../infrastructures/CovidReader.Utilities/CovidReader.Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7120,8 +7120,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.UseCases\\CovidReader.UseCases.csproj": {
-              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\controllers\\CovidReader.UseCases\\CovidReader.UseCases.csproj"
+            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases\\CovidReader.UseCases.csproj": {
+              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases\\CovidReader.UseCases.csproj"
             }
           }
         }

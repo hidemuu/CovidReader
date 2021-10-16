@@ -1,0 +1,12 @@
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\bin\Debug\net5.0\CovidReader.Windows.ViewUtility.deps.json
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\bin\Debug\net5.0\CovidReader.Windows.ViewUtility.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\bin\Debug\net5.0\ref\CovidReader.Windows.ViewUtility.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\bin\Debug\net5.0\CovidReader.Windows.ViewUtility.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\obj\Debug\net5.0\CovidReader.Windows.ViewUtility.csproj.AssemblyReference.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\obj\Debug\net5.0\CovidReader.Windows.ViewUtility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\obj\Debug\net5.0\CovidReader.Windows.ViewUtility.AssemblyInfoInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\obj\Debug\net5.0\CovidReader.Windows.ViewUtility.AssemblyInfo.cs
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\obj\Debug\net5.0\CovidReader.Windows.ViewUtility.csproj.CoreCompileInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\obj\Debug\net5.0\CovidReader.Windows.ViewUtility.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\obj\Debug\net5.0\ref\CovidReader.Windows.ViewUtility.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.ViewUtility\obj\Debug\net5.0\CovidReader.Windows.ViewUtility.pdb

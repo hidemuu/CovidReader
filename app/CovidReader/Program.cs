@@ -1,6 +1,5 @@
 ﻿using CovidReader.Api;
-using CovidReader.Controllers;
-using CovidReader.Infrastructure;
+using CovidReader.UseCases;
 using CovidReader.Repository;
 using CovidReader.Repository.Api;
 using CovidReader.Repository.Covid19.MHLW;

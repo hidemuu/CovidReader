@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TreeModel.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ForFuture\TreeModel.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\applications\CovidReader.UseCases\CovidReader.UseCases.csproj" />
+    <ProjectReference Include="..\..\domains\CovidReader.Models\CovidReader.Models.csproj" />
+    <ProjectReference Include="..\..\infrastructures\CovidReader.ViewControls.Wpf\CovidReader.ViewControls.Wpf.csproj" />
+    <ProjectReference Include="..\CovidReader.Windows.Views\CovidReader.Windows.Views.csproj" />
+  </ItemGroup>
+
+</Project>

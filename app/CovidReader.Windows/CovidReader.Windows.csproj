@@ -8,23 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ViewModels\TreeModel.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="ViewModels\TreeModel.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.992.28" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\controllers\CovidReader.UseCases\CovidReader.UseCases.csproj" />
-    <ProjectReference Include="..\..\src\views\CovidReader.Infrastructure.Wpf\CovidReader.Infrastructure.Wpf.csproj" />
+    <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Implement\CovidReader.UseCases.Implement.csproj" />
+    <ProjectReference Include="..\..\src\infrastructures\CovidReader.ViewControls.Wpf\CovidReader.ViewControls.Wpf.csproj" />
+    <ProjectReference Include="..\..\src\presentations\CovidReader.Windows.ViewModels\CovidReader.Windows.ViewModels.csproj" />
+    <ProjectReference Include="..\..\src\presentations\CovidReader.Windows.Views\CovidReader.Windows.Views.csproj" />
   </ItemGroup>
 
 </Project>

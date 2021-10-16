@@ -1,8 +1,8 @@
-﻿using CovidReader.Controllers;
-using CovidReader.UseCases;
-using CovidReader.Infrastructure.Wpf;
-using CovidReader.Infrastructure.Wpf.CustomerRegionAdapters;
-using CovidReader.Infrastructure.Wpf.Services;
+﻿using CovidReader.UseCases;
+using CovidReader.UseCases.Implement;
+using CovidReader.ViewControls.Wpf;
+using CovidReader.ViewControls.Wpf.CustomerRegionAdapters;
+using CovidReader.ViewControls.Wpf.Services;
 using CovidReader.Windows.ViewModels;
 using CovidReader.Windows.ViewModels.Dialogs;
 using CovidReader.Windows.Views;
