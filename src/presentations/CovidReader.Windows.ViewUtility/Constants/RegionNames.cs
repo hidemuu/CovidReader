@@ -8,20 +8,20 @@ namespace CovidReader.Windows.ViewUtility.Constants
 {
     public static class RegionNames
     {
-        public static string MainRegion = "MainRegion";
+        public const string MainRegion = "MainRegion";
 
-        public static string HomeRegion = "HomeRegion";
+        public const string MainHeaderRegion = "MainHeaderRegion";
 
-        public static string TableRegion = "TableRegion";
+        public const string MainFooterRegion = "MainFooterRegion";
 
-        public static string ChartRegion = "ChartRegion";
+        public const string DashboardRegion = "DashboardRegion";
 
-        public static string DashboardRegion = "DashboardRegion";
+        public const string DashboardLeftRegion = "DashboardLeftRegion";
 
-        public static string SettingRegion = "SettingRegion";
+        public const string DashboardRightRegion = "DashboardRightRegion";
 
-        public static string LoginRegion = "LoginRegion";
+        public const string LoginRegion = "LoginRegion";
 
-        public static string FlyoutRegion = "FlyoutRegion";
+        public const string FlyoutRegion = "FlyoutRegion";
     }
 }

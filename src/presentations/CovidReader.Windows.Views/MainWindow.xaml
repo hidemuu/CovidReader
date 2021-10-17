@@ -49,21 +49,14 @@
     
     <metro:MetroContentControl>
         <Grid>
-            <Grid Grid.Column="0">
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                 <!--<StackPanel Orientation="Horizontal">
-                    <Image Source="pack://application:,,,/CovidReader.ViewControls.Wpf;Component/Assets/Photos/home.png" Height="40"/>
-                    <Label Content="Home" FontSize="35" FontWeight="Bold"/>
-                    <Button Content="Home" FontSize="20" Margin="5" Command="{Binding ActiveHomeCommand}"/>
-                    <Button Content="Chart" FontSize="20" Margin="5" Command="{Binding ActiveChartCommand}"/>
-                    <Button Content="Table" FontSize="20" Margin="5" Command="{Binding ActiveTableCommand}"/>
-                    <Button  Content="Load" FontSize="20" Margin="5" Command="{Binding LoadModuleCommand}"/>
-                </StackPanel>-->
+                 
                 <Grid Grid.Row="1">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -106,7 +99,7 @@
                             </behaviors:Interaction.Triggers>
                         </TabControl>
                         <StackPanel Grid.Column="1">
-                            <ContentControl x:Name="mainRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.MainRegion}"/>
+                            <ContentControl x:Name="mainRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.MainRegion}" prism:RegionManager.RegionManager="{Binding RegionManager}" />
                         </StackPanel>
                     </Grid>
                     <materialDesign:Snackbar x:Name="Snackbar"/>
@@ -126,6 +119,7 @@
                     Style="{StaticResource MaterialDesignHeadline6TextBlock}"
                     Text="{Binding Guidance.Value}">
                     </TextBlock>
+                    <ContentControl x:Name="mainFooterRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.MainFooterRegion}" prism:RegionManager.RegionManager="{Binding RegionManager}"></ContentControl>
                 </Grid>
 
             </Grid>

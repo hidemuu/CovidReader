@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CovidReader.Service.Api</name>
+    </assembly>
+    <members>
+        <member name="T:CovidReader.Service.Api.ApiService">
+            <summary>
+            アプリケーションAPIアクセスサービス実装クラス
+            </summary>
+        </member>
+        <member name="P:CovidReader.Service.Api.ApiService.ChartConfig">
+            <summary>
+            チャート設定
+            </summary>
+        </member>
+        <member name="P:CovidReader.Service.Api.ApiService.ChartItem">
+            <summary>
+            チャート表示データ
+            </summary>
+        </member>
+        <member name="P:CovidReader.Service.Api.ApiService.Infection">
+            <summary>
+            感染データ
+            </summary>
+        </member>
+        <member name="P:CovidReader.Service.Api.ApiService.Inspection">
+            <summary>
+            検査データ
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.Api.ApiService.#ctor(CovidReader.Repository.Api.IApiRepository,CovidReader.Repository.Api.IApiMapper)">
+            <summary>
+            コンストラクタ
+            アプリケーションAPIのリポジトリとマッパーを注入
+            </summary>
+            <param name="repository"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:CovidReader.Service.Api.ApiService.CopyChartItem">
+            <summary>
+            チャート表示データをXAMPPサーバにコピー
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.Api.ApiService.RunServerProcess">
+            <summary>
+            XAMPPサーバー起動
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.Api.AccountFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Service.Api.AccountService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.Api.AccountService.#ctor(CovidReader.Service.Api.IAccountFactory)">
+            <summary>
+            
+            </summary>
+            <param name="accountFactory"></param>
+        </member>
+        <member name="T:CovidReader.Service.Api.SettingService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CovidReader.Service.Api.InfectionService">
+            <summary>
+            感染データアクセスサービス実装クラス
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.Api.InfectionService.#ctor(CovidReader.Repository.Api.IInfectionRepository)">
+            <summary>
+            コンストラクタ
+            感染データリポジトリを注入
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:CovidReader.Service.Api.InfectionService.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.Infection})">
+            <summary>
+            リポジトリを更新・追加
+            </summary>
+            <param name="items">外部データ</param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.Api.InfectionService.GetAsync">
+            <summary>
+            リポジトリから取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.Api.InfectionService.CreateAsync(System.Collections.Generic.IList{System.String},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Death},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Hospitalization},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Positive},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Recovery},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Severe},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.Test})">
+            <summary>
+            Covid19 APIから取得した各感染データで、アプリケーションAPIの感染データベースを生成（全更新）
+            </summary>
+            <param name="dates">日付</param>
+            <param name="deaths">死亡者数</param>
+            <param name="hospitalizations">入院治療者数</param>
+            <param name="positives">陽性者数</param>
+            <param name="recoveries">治癒者数</param>
+            <param name="severes">重傷者数</param>
+            <param name="tests">検査件数</param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.Api.InspectionService">
+            <summary>
+            検査データアクセスサービス実装クラス
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.Api.InspectionService.#ctor(CovidReader.Repository.Api.IInspectionRepository)">
+            <summary>
+            コンストラクタ
+            検査データリポジトリを注入
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:CovidReader.Service.Api.InspectionService.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.Inspection})">
+            <summary>
+            データをリポジトリに登録
+            </summary>
+            <param name="items">データ</param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.Api.InspectionService.GetAsync">
+            <summary>
+            リポジトリからデータ取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.Api.InspectionService.CreateAsync(System.Collections.Generic.IList{System.String},System.Collections.Generic.IEnumerable{CovidReader.Models.Covid19.MHLW.TestDetail})">
+            <summary>
+            Covid19 APIから取得した検査詳細データをリポジトリに反映
+            </summary>
+            <param name="dates">日付</param>
+            <param name="testDetails">検査詳細データ</param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.Api.ChartConfigService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.Api.ChartConfigService.#ctor(CovidReader.Repository.Api.IChartConfigRepository)">
+            <summary>
+            
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:CovidReader.Service.Api.ChartConfigService.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.ChartConfig})">
+            <summary>
+            指定外部データをリポジトリにインポート
+            </summary>
+            <param name="items">外部データ</param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.Api.ChartConfigService.GetAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.Api.ChartConfigService.CreateAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.Service.Api.ChartItemService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.Service.Api.ChartItemService.#ctor(CovidReader.Repository.Api.IChartItemRepository)">
+            <summary>
+            
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:CovidReader.Service.Api.ChartItemService.PostAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.ChartItem})">
+            <summary>
+            指定外部データをリポジトリにインポート
+            </summary>
+            <param name="items">外部データ</param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.Api.ChartItemService.GetAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.Service.Api.ChartItemService.CreateAsync(System.Collections.Generic.IEnumerable{CovidReader.Models.Api.Infection})">
+            <summary>
+            VirusテーブルデータをChartItemテーブルに変換して格納 / ChartConfigテーブルデータを更新
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

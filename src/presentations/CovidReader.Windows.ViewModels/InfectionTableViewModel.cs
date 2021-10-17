@@ -23,11 +23,12 @@ namespace CovidReader.Windows.ViewModels
         private IRegionNavigationJournal journal;
         private readonly IRegionManager regionManager;
 
-        public ReactiveCommand RefreshCommand { get; } = new ReactiveCommand();
+        public ReactiveCommand YearlyFilterCommand { get; } = new ReactiveCommand();
+        public ReactiveCommand MonthlyFilterCommand { get; } = new ReactiveCommand();
+        public ReactiveCommand WeeklyFilterCommand { get; } = new ReactiveCommand();
         public bool KeepAlive => true;
-
+        private ObservableCollection<Infection> Infections { get; set; }
         public ReadOnlyReactiveCollection<InfectionTableModel> Models { get; }
-        private ObservableCollection<Infection> infections { get; set; }
         public ReactiveProperty<InfectionTableModel> SelectedItem { get; set; }
 
         public InfectionTableViewModel(IRegionManager regionManager, IApiRepository apiRepository)
@@ -37,11 +38,19 @@ namespace CovidReader.Windows.ViewModels
 
             var task = this.apiRepository.Infections.GetAsync();
             Task.WaitAll(task);
-            this.infections = new ObservableCollection<Infection>(task.Result);
-            this.Models = this.infections.ToReadOnlyReactiveCollection(c => new InfectionTableModel(c));
+            Infections = new ObservableCollection<Infection>(task.Result);
+            this.Models = Infections.ToReadOnlyReactiveCollection(c => new InfectionTableModel(c));
 
-            //RefreshCommand.Subscribe(_ => Refresh());
+            YearlyFilterCommand.Subscribe(_ => FilterDate());
+            MonthlyFilterCommand.Subscribe(_ => FilterDate());
+            WeeklyFilterCommand.Subscribe(_ => FilterDate());
 
+        }
+
+        private void FilterDate()
+        {
+            Infections.OrderBy(x => DateTime.Parse(x.Date));
+            
         }
 
         public bool IsNavigationTarget(NavigationContext navigationContext)

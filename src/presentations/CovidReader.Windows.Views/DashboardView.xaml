@@ -7,9 +7,29 @@
              mc:Ignorable="d" 
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:constants="clr-namespace:CovidReader.Windows.ViewUtility.Constants;assembly=CovidReader.Windows.ViewUtility"
              d:DesignHeight="450" d:DesignWidth="800"
              Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock  Grid.Row="0" Text="Dashboard" Foreground="#3F487F" FontSize="20"  Margin="10,0,10,0" VerticalAlignment="Center" FontWeight="Bold"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ContentControl Grid.Column="0" x:Name="dashboardLeftRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.DashboardLeftRegion}" prism:RegionManager.RegionManager="{Binding RegionManager}"/>
+            <ContentControl Grid.Column="1" x:Name="dashboardRightRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.DashboardRightRegion}" prism:RegionManager.RegionManager="{Binding RegionManager}"/>
+        </Grid>
+        
     </Grid>
 </UserControl>

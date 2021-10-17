@@ -1,4 +1,7 @@
-﻿using Prism.Commands;
+﻿using CovidReader.Windows.Views;
+using CovidReader.Windows.Views.Login;
+using CovidReader.Windows.ViewUtility.Constants;
+using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
 using Prism.Regions;
@@ -15,23 +18,19 @@ namespace CovidReader.Windows.ViewModels
     {
 
 
-        private IRegionNavigationJournal _journal;
-        //private readonly IRegionManager _regionManager;
+        private IRegionNavigationJournal journal;
+        private readonly IRegionManager regionManager;
 
-        public ReactiveCommand ExecuteDelegateCommand { get; } = new ReactiveCommand();
+        public ReactiveCommand LoginCommand { get; } = new ReactiveCommand();
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         /// <param name="eventAggregator">PubSubパターンでイベントの通知と購読を管理することで、ViewModel間の通信を実現</param>
-        public HomeViewModel()
+        public HomeViewModel(IRegionManager regionManager)
         {
-            ExecuteDelegateCommand.Subscribe(_ => Execute());
-        }
-
-        private void Execute()
-        {
-            
+            this.regionManager = regionManager;
+            LoginCommand.Subscribe(() => ShellSwitcher.Switch<MainWindow, LoginWindow>());
         }
 
         public bool KeepAlive => true;
@@ -65,7 +64,7 @@ namespace CovidReader.Windows.ViewModels
         /// <param name="navigationContext"></param>
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
-            _journal = navigationContext.NavigationService.Journal;
+            journal = navigationContext.NavigationService.Journal;
 
             
         }

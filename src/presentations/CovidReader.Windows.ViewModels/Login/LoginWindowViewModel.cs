@@ -16,9 +16,9 @@ namespace CovidReader.Windows.ViewModels.Login
 {
     public class LoginWindowViewModel : BindableBase
     {
-        private readonly IRegionManager _regionManager;
-        private readonly IUserService _userService;
-        private readonly IDialogService _dialogService;
+        public IRegionManager RegionManager { get; }
+        private readonly IUserService userService;
+        private readonly IDialogService dialogService;
 
         private DelegateCommand _loginLoadingCommand;
         public DelegateCommand LoginLoadingCommand =>
@@ -26,10 +26,10 @@ namespace CovidReader.Windows.ViewModels.Login
 
         void ExecuteLoginLoadingCommand()
         {
-            //_regionManager.RequestNavigate(RegionNames.LoginContentRegion, "LoginMainContent");
-            IRegion region = _regionManager.Regions[RegionNames.LoginRegion];
-            region.RequestNavigate("LoginMainContent", NavigationCompelted);
-            Global.AllUsers = _userService.GetAllUsers();
+            RegionManager.RequestNavigate(RegionNames.LoginRegion, "LoginMainContent");
+            //IRegion region = regionManager.Regions[RegionNames.LoginRegion];
+            //region.RequestNavigate("LoginMainContent", NavigationCompelted);
+            Global.AllUsers = userService.GetAllUsers();
         }
 
         public async Task TestTask()
@@ -44,9 +44,9 @@ namespace CovidReader.Windows.ViewModels.Login
 
         public LoginWindowViewModel(IRegionManager regionManager, IUserService userService, IDialogService dialogService)
         {
-            _regionManager = regionManager;
-            _userService = userService;
-            _dialogService = dialogService;
+            this.RegionManager = regionManager;
+            this.userService = userService;
+            this.dialogService = dialogService;
         }
 
 
@@ -56,11 +56,11 @@ namespace CovidReader.Windows.ViewModels.Login
             if (result.Result == true)
             {
                 Thread.Sleep(1000);
-                _dialogService.Show("SuccessDialog", new DialogParameters($"message={"LoginMainContent画面表示成功"}"), null);
+                dialogService.Show("SuccessDialog", new DialogParameters($"message={"LoginMainContent画面表示成功"}"), null);
             }
             else
             {
-                _dialogService.Show("WarningDialog", new DialogParameters($"message={"LoginMainContent画面表示失敗"}"), null);
+                dialogService.Show("WarningDialog", new DialogParameters($"message={"LoginMainContent画面表示失敗"}"), null);
             }
         }
 

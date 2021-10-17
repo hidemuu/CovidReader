@@ -38,8 +38,8 @@
               "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Controllers\\CovidReader.UseCases.Controllers.csproj": {
                 "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Controllers\\CovidReader.UseCases.Controllers.csproj"
               },
-              "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\CovidReader.UseCases.Implement.csproj": {
-                "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\CovidReader.UseCases.Implement.csproj"
+              "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Repository\\CovidReader.UseCases.Repository.csproj": {
+                "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Repository\\CovidReader.UseCases.Repository.csproj"
               },
               "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\infrastructures\\CovidReader.ViewControls.Wpf\\CovidReader.ViewControls.Wpf.csproj": {
                 "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\infrastructures\\CovidReader.ViewControls.Wpf\\CovidReader.ViewControls.Wpf.csproj"
@@ -448,14 +448,14 @@
         }
       }
     },
-    "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\CovidReader.UseCases.Implement.csproj": {
+    "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Repository\\CovidReader.UseCases.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\CovidReader.UseCases.Implement.csproj",
-        "projectName": "CovidReader.UseCases.Implement",
-        "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\CovidReader.UseCases.Implement.csproj",
+        "projectUniqueName": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Repository\\CovidReader.UseCases.Repository.csproj",
+        "projectName": "CovidReader.UseCases.Repository",
+        "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Repository\\CovidReader.UseCases.Repository.csproj",
         "packagesPath": "C:\\Users\\nando\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\obj\\",
+        "outputPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

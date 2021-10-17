@@ -51,7 +51,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Web", "app\Covi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Service.Api", "src\applications\CovidReader.Service.Api\CovidReader.Service.Api.csproj", "{5E721E5A-C5B6-4FEF-8645-D7A39E7E0753}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.UseCases.Implement", "src\applications\CovidReader.UseCases.Implement\CovidReader.UseCases.Implement.csproj", "{E3E2B19A-9B6C-4AF3-B096-E1BFD43261C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.UseCases.Repository", "src\applications\CovidReader.UseCases.Repository\CovidReader.UseCases.Repository.csproj", "{E3E2B19A-9B6C-4AF3-B096-E1BFD43261C8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Plugins.Log", "src\applications\CovidReader.Plugins.Log\CovidReader.Plugins.Log.csproj", "{A367C43A-2E35-402C-AC1D-BCA07A25C7FF}"
 EndProject
@@ -73,7 +73,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Windows.ViewMod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Windows.ViewUtility", "src\presentations\CovidReader.Windows.ViewUtility\CovidReader.Windows.ViewUtility.csproj", "{5144AC52-F4A4-47D9-BCF7-0E825FD7870A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidReader.UseCases.Controllers", "src\applications\CovidReader.UseCases.Controllers\CovidReader.UseCases.Controllers.csproj", "{424A3D3D-30BB-4E66-9F6E-B7323E947A15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.UseCases.Controllers", "src\applications\CovidReader.UseCases.Controllers\CovidReader.UseCases.Controllers.csproj", "{424A3D3D-30BB-4E66-9F6E-B7323E947A15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidReader.UseCases.Service", "src\applications\CovidReader.UseCases.Service\CovidReader.UseCases.Service.csproj", "{D79980A8-40D7-4C0F-B0F1-C1D01B9C8E0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -185,6 +187,10 @@ Global
 		{424A3D3D-30BB-4E66-9F6E-B7323E947A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{424A3D3D-30BB-4E66-9F6E-B7323E947A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{424A3D3D-30BB-4E66-9F6E-B7323E947A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79980A8-40D7-4C0F-B0F1-C1D01B9C8E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79980A8-40D7-4C0F-B0F1-C1D01B9C8E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79980A8-40D7-4C0F-B0F1-C1D01B9C8E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79980A8-40D7-4C0F-B0F1-C1D01B9C8E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -220,6 +226,7 @@ Global
 		{73852DC0-9FDC-4848-BFC8-70349541CB63} = {0B6BA8F8-5EFB-425F-B0E9-994C2BD2A4E6}
 		{5144AC52-F4A4-47D9-BCF7-0E825FD7870A} = {0B6BA8F8-5EFB-425F-B0E9-994C2BD2A4E6}
 		{424A3D3D-30BB-4E66-9F6E-B7323E947A15} = {7A04886A-B0CC-426E-AFBA-4B0AF459F5C9}
+		{D79980A8-40D7-4C0F-B0F1-C1D01B9C8E0B} = {7A04886A-B0CC-426E-AFBA-4B0AF459F5C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50888AA3-00A5-4824-B3E4-46D306A26516}

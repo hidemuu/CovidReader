@@ -17,6 +17,6 @@
         </behaviors:EventTrigger>
     </behaviors:Interaction.Triggers>
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="{x:Static constants:RegionNames.LoginRegion}" Margin="5"/>
+        <ContentControl prism:RegionManager.RegionName="{x:Static constants:RegionNames.LoginRegion}" prism:RegionManager.RegionManager="{Binding RegionManager}" Margin="5"/>
     </Grid>
 </Window>

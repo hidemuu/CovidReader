@@ -13,7 +13,7 @@
     <Grid>
         <Grid.RowDefinitions>
         <!-- 行を定義 -->
-        <RowDefinition Height="700" />
+            <RowDefinition Height="700" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <!-- 列を定義 -->

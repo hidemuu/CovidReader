@@ -36,7 +36,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Controllers\CovidReader.UseCases.Controllers.csproj" />
-    <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Implement\CovidReader.UseCases.Implement.csproj" />
+    <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Repository\CovidReader.UseCases.Repository.csproj" />
+    <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Service\CovidReader.UseCases.Service.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

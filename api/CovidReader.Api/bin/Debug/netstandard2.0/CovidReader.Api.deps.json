@@ -10,7 +10,8 @@
       "CovidReader.Api/1.0.0": {
         "dependencies": {
           "CovidReader.UseCases.Controllers": "1.0.0",
-          "CovidReader.UseCases.Implement": "1.0.0",
+          "CovidReader.UseCases.Repository": "1.0.0",
+          "CovidReader.UseCases.Service": "1.0.0",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -1529,7 +1530,7 @@
           "CovidReader.UseCases.Controllers.dll": {}
         }
       },
-      "CovidReader.UseCases.Implement/1.0.0": {
+      "CovidReader.UseCases.Repository/1.0.0": {
         "dependencies": {
           "CovidReader.Repository.Api": "1.0.0",
           "CovidReader.Repository.Covid19": "1.0.0",
@@ -1543,7 +1544,15 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.11"
         },
         "runtime": {
-          "CovidReader.UseCases.Implement.dll": {}
+          "CovidReader.UseCases.Repository.dll": {}
+        }
+      },
+      "CovidReader.UseCases.Service/1.0.0": {
+        "dependencies": {
+          "CovidReader.UseCases.Repository": "1.0.0"
+        },
+        "runtime": {
+          "CovidReader.UseCases.Service.dll": {}
         }
       },
       "CovidReader.Utilities/1.0.0": {
@@ -2531,7 +2540,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CovidReader.UseCases.Implement/1.0.0": {
+    "CovidReader.UseCases.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CovidReader.UseCases.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

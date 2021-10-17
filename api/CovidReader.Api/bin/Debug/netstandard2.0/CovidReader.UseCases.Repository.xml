@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CovidReader.UseCases.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:CovidReader.UseCases.Repository.ApiRepositoryUseCase">
+            <summary>
+            アプリケーションAPIリポジトリ生成のユースケース
+            </summary>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.ApiRepositoryUseCase.UseSqlite">
+            <summary>
+            SQLite連携のリポジトリを生成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.ApiRepositoryUseCase.UsePostgureSql">
+            <summary>
+            PostgreSQL連携のリポジトリを生成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.ApiRepositoryUseCase.UseSqlServer">
+            <summary>
+            SQLServer連携のリポジトリを生成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.ApiRepositoryUseCase.UseREST(System.String,System.String)">
+            <summary>
+            RestAPI連携のリポジトリを生成（将来拡張用）
+            </summary>
+            <param name="url"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.ApiRepositoryUseCase.UseCsv(System.String)">
+            <summary>
+            Csvファイル連携のリポジトリを生成
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.ApiRepositoryUseCase.UseJson(System.String)">
+            <summary>
+            Jsonファイル連携のリポジトリを生成
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CovidReader.UseCases.Repository.Covid19RepositoryUseCase">
+            <summary>
+            Covid19 APIリポジトリ生成のユースケース
+            </summary>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.Covid19RepositoryUseCase.UseSqlite">
+            <summary>
+            SQLite連携のリポジトリを生成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.Covid19RepositoryUseCase.UseRest(System.String,System.String)">
+            <summary>
+            RestAPI連携のリポジトリを生成
+            </summary>
+            <param name="url"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.Covid19RepositoryUseCase.UseCsv(System.String)">
+            <summary>
+            Csvファイル連携のリポジトリを生成
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.Covid19RepositoryUseCase.UseJson(System.String)">
+            <summary>
+            Jsonファイル連携のリポジトリを生成
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.Repository.Covid19RepositoryUseCase.UseInMemory">
+            <summary>
+            内部メモリ連携のリポジトリを生成
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

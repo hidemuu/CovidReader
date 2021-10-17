@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CovidReader.UseCases</name>
+    </assembly>
+    <members>
+        <member name="T:CovidReader.UseCases.IAppController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CovidReader.UseCases.IAppController.UpdateAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.IAppController.ImportCovid19Async">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.IAppController.CovidToApiAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CovidReader.UseCases.IAppController.ToChartItemAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

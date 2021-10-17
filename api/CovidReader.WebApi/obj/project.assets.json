@@ -1852,7 +1852,7 @@
           "bin/placeholder/CovidReader.UseCases.Controllers.dll": {}
         }
       },
-      "CovidReader.UseCases.Implement/1.0.0": {
+      "CovidReader.UseCases.Repository/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1868,10 +1868,23 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.11"
         },
         "compile": {
-          "bin/placeholder/CovidReader.UseCases.Implement.dll": {}
+          "bin/placeholder/CovidReader.UseCases.Repository.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CovidReader.UseCases.Implement.dll": {}
+          "bin/placeholder/CovidReader.UseCases.Repository.dll": {}
+        }
+      },
+      "CovidReader.UseCases.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CovidReader.UseCases.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.UseCases.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.UseCases.Service.dll": {}
         }
       },
       "CovidReader.Utilities/1.0.0": {
@@ -6271,10 +6284,15 @@
       "path": "../../src/applications/CovidReader.UseCases.Controllers/CovidReader.UseCases.Controllers.csproj",
       "msbuildProject": "../../src/applications/CovidReader.UseCases.Controllers/CovidReader.UseCases.Controllers.csproj"
     },
-    "CovidReader.UseCases.Implement/1.0.0": {
+    "CovidReader.UseCases.Repository/1.0.0": {
       "type": "project",
-      "path": "../../src/applications/CovidReader.UseCases.Implement/CovidReader.UseCases.Implement.csproj",
-      "msbuildProject": "../../src/applications/CovidReader.UseCases.Implement/CovidReader.UseCases.Implement.csproj"
+      "path": "../../src/applications/CovidReader.UseCases.Repository/CovidReader.UseCases.Repository.csproj",
+      "msbuildProject": "../../src/applications/CovidReader.UseCases.Repository/CovidReader.UseCases.Repository.csproj"
+    },
+    "CovidReader.UseCases.Service/1.0.0": {
+      "type": "project",
+      "path": "../../src/applications/CovidReader.UseCases.Service/CovidReader.UseCases.Service.csproj",
+      "msbuildProject": "../../src/applications/CovidReader.UseCases.Service/CovidReader.UseCases.Service.csproj"
     },
     "CovidReader.Utilities/1.0.0": {
       "type": "project",
@@ -6285,7 +6303,8 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "CovidReader.UseCases.Controllers >= 1.0.0",
-      "CovidReader.UseCases.Implement >= 1.0.0",
+      "CovidReader.UseCases.Repository >= 1.0.0",
+      "CovidReader.UseCases.Service >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.17",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.17",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.17",
@@ -6332,8 +6351,11 @@
             "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Controllers\\CovidReader.UseCases.Controllers.csproj": {
               "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Controllers\\CovidReader.UseCases.Controllers.csproj"
             },
-            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\CovidReader.UseCases.Implement.csproj": {
-              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\CovidReader.UseCases.Implement.csproj"
+            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Repository\\CovidReader.UseCases.Repository.csproj": {
+              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Repository\\CovidReader.UseCases.Repository.csproj"
+            },
+            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Service\\CovidReader.UseCases.Service.csproj": {
+              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Service\\CovidReader.UseCases.Service.csproj"
             }
           }
         }

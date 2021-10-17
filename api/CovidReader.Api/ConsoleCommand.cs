@@ -1,5 +1,5 @@
 ﻿using CovidReader.UseCases;
-using CovidReader.UseCases.Implement;
+using CovidReader.UseCases.Service;
 using CovidReader.Models;
 using CovidReader.Repository;
 using CovidReader.Repository.Api;

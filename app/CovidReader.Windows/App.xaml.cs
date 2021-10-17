@@ -7,12 +7,13 @@ using CovidReader.Service.Api;
 using CovidReader.Service.Covid19;
 using CovidReader.UseCases;
 using CovidReader.UseCases.Controllers;
-using CovidReader.UseCases.Implement;
+using CovidReader.UseCases.Repository;
 using CovidReader.ViewControls.Wpf;
 using CovidReader.ViewControls.Wpf.CustomerRegionAdapters;
 using CovidReader.ViewControls.Wpf.Services;
 using CovidReader.Windows.ViewModels;
 using CovidReader.Windows.ViewModels.Dialogs;
+using CovidReader.Windows.ViewModels.Login;
 using CovidReader.Windows.Views;
 using CovidReader.Windows.Views.Dialogs;
 using CovidReader.Windows.Views.Login;
@@ -65,6 +66,7 @@ namespace CovidReader.Windows
         protected override Window CreateShell()
         {
             return Container.Resolve<MainWindow>(); //初期表示ビュー
+            //return Container.Resolve<LoginWindow>(); //初期表示ビュー
         }
 
         /// <summary>
@@ -131,6 +133,8 @@ namespace CovidReader.Windows
         {
             base.ConfigureViewModelLocator();
 
+            ViewModelLocationProvider.Register<LoginWindow, LoginWindowViewModel>();
+            ViewModelLocationProvider.Register<LoginMainContent, LoginMainContentViewModel>();
             ViewModelLocationProvider.Register<MainWindow, MainWindowViewModel>();
             ViewModelLocationProvider.Register<HomeView, HomeViewModel>();
             ViewModelLocationProvider.Register<InfectionChartView, InfectionChartViewModel>();

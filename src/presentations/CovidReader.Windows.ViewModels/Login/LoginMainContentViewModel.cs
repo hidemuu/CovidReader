@@ -17,9 +17,9 @@ namespace CovidReader.Windows.ViewModels.Login
 {
     public class LoginMainContentViewModel : BindableBase, INavigationAware, IRegionMemberLifetime
     {
-        private IRegionNavigationJournal _journal;
-        private readonly IRegionManager _regionManager;
-        private readonly IDialogService _dialogService;
+        private IRegionNavigationJournal journal;
+        private readonly IRegionManager regionManager;
+        private readonly IDialogService dialogService;
 
         private bool _isCanExcute;
         public bool IsCanExcute
@@ -57,18 +57,18 @@ namespace CovidReader.Windows.ViewModels.Login
         {
             if (string.IsNullOrEmpty(this.CurrentUser.LoginId))
             {
-                _dialogService.Show("WarningDialog", new DialogParameters($"message={"LoginIdを入力して下さい!"}"), null);
+                dialogService.Show("WarningDialog", new DialogParameters($"message={"LoginIdを入力して下さい!"}"), null);
                 return;
             }
             this.CurrentUser.Password = passwordBox.Password;
             if (string.IsNullOrEmpty(this.CurrentUser.Password))
             {
-                _dialogService.Show("WarningDialog", new DialogParameters($"message={"Passwordを入力して下さい!"}"), null);
+                dialogService.Show("WarningDialog", new DialogParameters($"message={"Passwordを入力して下さい!"}"), null);
                 return;
             }
             else if (Global.AllUsers.Where(t => t.LoginId == this.CurrentUser.LoginId && t.Password == this.CurrentUser.Password).Count() == 0)
             {
-                _dialogService.Show("WarningDialog", new DialogParameters($"message={"LoginIdかPasswordが一致しません!"}"), null);
+                dialogService.Show("WarningDialog", new DialogParameters($"message={"LoginIdかPasswordが一致しません!"}"), null);
                 return;
             }
             ShellSwitcher.Switch<LoginWindow, MainWindow>();
@@ -76,26 +76,26 @@ namespace CovidReader.Windows.ViewModels.Login
 
         private void ExecuteGoForwardCommand()
         {
-            _journal.GoForward();
+            journal.GoForward();
         }
 
         public LoginMainContentViewModel(IRegionManager regionManager, IDialogService dialogService)
         {
-            _regionManager = regionManager;
-            _dialogService = dialogService;
+            this.regionManager = regionManager;
+            this.dialogService = dialogService;
         }
 
         private void Navigate(string navigatePath)
         {
             if (navigatePath != null)
-                _regionManager.RequestNavigate(RegionNames.LoginRegion, navigatePath);
+                regionManager.RequestNavigate(RegionNames.LoginRegion, navigatePath);
         }
 
 
 
         private bool CanExecuteGoForwardCommand(PasswordBox passwordBox)
         {
-            this.IsCanExcute = _journal != null && _journal.CanGoForward;
+            this.IsCanExcute = journal != null && journal.CanGoForward;
             return true;
         }
 
@@ -106,13 +106,12 @@ namespace CovidReader.Windows.ViewModels.Login
 
         public void OnNavigatedFrom(NavigationContext navigationContext)
         {
-            //MessageBox.Show("退出了LoginMainContent");
+            //MessageBox.Show("退出完了 - LoginMainContent");
         }
 
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
-            //MessageBox.Show("从CreateAccount导航到LoginMainContent");
-            _journal = navigationContext.NavigationService.Journal;
+            journal = navigationContext.NavigationService.Journal;
 
             var loginId = navigationContext.Parameters["loginId"] as string;
             if (loginId != null)

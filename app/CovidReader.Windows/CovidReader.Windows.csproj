@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Controllers\CovidReader.UseCases.Controllers.csproj" />
-    <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Implement\CovidReader.UseCases.Implement.csproj" />
+    <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Repository\CovidReader.UseCases.Repository.csproj" />
     <ProjectReference Include="..\..\src\infrastructures\CovidReader.ViewControls.Wpf\CovidReader.ViewControls.Wpf.csproj" />
     <ProjectReference Include="..\..\src\presentations\CovidReader.Windows.ViewModels\CovidReader.Windows.ViewModels.csproj" />
     <ProjectReference Include="..\..\src\presentations\CovidReader.Windows.Views\CovidReader.Windows.Views.csproj" />

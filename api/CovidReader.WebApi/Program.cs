@@ -1,7 +1,7 @@
 using CovidReader.Repository.Api.Sql;
 using CovidReader.UseCases;
 using CovidReader.UseCases.Controllers;
-using CovidReader.UseCases.Implement;
+using CovidReader.UseCases.Service;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

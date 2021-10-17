@@ -25,8 +25,6 @@ namespace CovidReader.Windows.ViewModels
 
         public SeriesCollection Series { get; set; }
         public ReadOnlyReactiveCollection<InfectionChartModel> Models { get; }
-        private ObservableCollection<Infection> infections { get; set; }
-
         public InfectionChartViewModel(IRegionManager regionManager, IApiRepository apiRepository)
         {
             this.regionManager = regionManager;
@@ -34,8 +32,7 @@ namespace CovidReader.Windows.ViewModels
 
             var task = this.apiRepository.Infections.GetAsync();
             Task.WaitAll(task);
-            infections = new ObservableCollection<Infection>(task.Result);
-            Models = this.infections.ToReadOnlyReactiveCollection(c => new InfectionChartModel(c));
+            Models = new ObservableCollection<Infection>(task.Result).ToReadOnlyReactiveCollection(c => new InfectionChartModel(c));
 
             var values = new ChartValues<int>();
             foreach (var number in Models.Select(x => x.Number))

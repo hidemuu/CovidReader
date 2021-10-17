@@ -32,13 +32,14 @@ namespace CovidReader.Windows.ViewModels
         /// </summary>
         public ReactivePropertySlim<int> TabPage { get; set; } = new ReactivePropertySlim<int>(-1);
         public ReactivePropertySlim<string> Guidance { get; set; } = new ReactivePropertySlim<string>("");
-        private IRegionManager regionManager { get; }
+        public IRegionManager RegionManager { get; }
 
         //コマンドハンドラ
         public ReactiveCommand TabChangeCommand { get; } = new ReactiveCommand();
         public ReactiveCommand LoadingCommand { get; } = new ReactiveCommand();
 
         private CompositeDisposable disposables = new CompositeDisposable();
+
 
         /// <summary>
         /// コンストラクタ
@@ -48,13 +49,13 @@ namespace CovidReader.Windows.ViewModels
         /// <param name="dialogService"></param>
         public MainWindowViewModel(IRegionManager regionManager, IModuleManager moduleManager,IDialogService dialogService)
         {
-            this.regionManager = regionManager;
+            this.RegionManager = regionManager;
             //表示ページコンテンツ登録
-            Models.Add(new MainWindowModel(0, "Home", "Home", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(HomeView))));
-            Models.Add(new MainWindowModel(1, "Table", "Table", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(InfectionTableView))));
-            Models.Add(new MainWindowModel(2, "Chart", "Cog", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(InfectionChartView))));
-            Models.Add(new MainWindowModel(3, "Dashboard", "Cog", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(DashboardView))));
-            Models.Add(new MainWindowModel(4, "Setting", "Cog", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(SettingView))));
+            Models.Add(new MainWindowModel(0, "Home", "Home", () => this.RegionManager.RequestNavigate(RegionNames.MainRegion, nameof(HomeView))));
+            Models.Add(new MainWindowModel(1, "Dashboard", "Cog", () => this.RegionManager.RequestNavigate(RegionNames.MainRegion, nameof(DashboardView))));
+            Models.Add(new MainWindowModel(2, "Table", "Table", () => this.RegionManager.RequestNavigate(RegionNames.MainRegion, nameof(InfectionTableView))));
+            Models.Add(new MainWindowModel(3, "Chart", "Cog", () => this.RegionManager.RequestNavigate(RegionNames.MainRegion, nameof(InfectionChartView))));
+            Models.Add(new MainWindowModel(4, "Setting", "Cog", () => this.RegionManager.RequestNavigate(RegionNames.MainRegion, nameof(SettingView))));
 
             //ボタンコマンドをサブスクライブ
             LoadingCommand.Subscribe(_ => Models.FirstOrDefault(x => x.Title.Value == "Home").TabCommand());
