@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CovidReader.Repository.Api.Json
 {
-    public class JsonApiRepository : IApiRepository
+    public class JsonApiRepository : IApiRepository, IApiMapper
     {
         private readonly string _path;
         private readonly string _encode;

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CovidReader.Repository.Covid19.MHLW.InMemory
 {
-    public class InMemoryCovid19Repository : ICovid19Repository
+    public class InMemoryCovid19Repository : ICovid19Repository, ICovid19Mapper
     {
         public InMemoryCovid19Repository()
         {

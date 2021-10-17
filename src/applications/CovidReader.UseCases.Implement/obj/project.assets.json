@@ -1992,16 +1992,6 @@
           "bin/placeholder/CovidReader.Models.dll": {}
         }
       },
-      "CovidReader.Plugins/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/CovidReader.Plugins.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CovidReader.Plugins.dll": {}
-        }
-      },
       "CovidReader.Repository/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -2103,8 +2093,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "CovidReader.Plugins": "1.0.0",
-          "CovidReader.Service": "1.0.0",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "92.0.4515.10700"
         },
@@ -6998,11 +6986,6 @@
       "type": "project",
       "path": "../../domains/CovidReader.Models/CovidReader.Models.csproj",
       "msbuildProject": "../../domains/CovidReader.Models/CovidReader.Models.csproj"
-    },
-    "CovidReader.Plugins/1.0.0": {
-      "type": "project",
-      "path": "../CovidReader.Plugins/CovidReader.Plugins.csproj",
-      "msbuildProject": "../CovidReader.Plugins/CovidReader.Plugins.csproj"
     },
     "CovidReader.Repository/1.0.0": {
       "type": "project",

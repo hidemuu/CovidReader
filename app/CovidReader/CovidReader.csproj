@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\api\CovidReader.Api\CovidReader.Api.csproj" />
+    <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Controllers\CovidReader.UseCases.Controllers.csproj" />
     <ProjectReference Include="..\..\src\infrastructures\CovidReader.ViewControls\CovidReader.ViewControls.csproj" />
   </ItemGroup>
 

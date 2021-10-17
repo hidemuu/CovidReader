@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "CovidReader.Api/1.0.0": {
         "dependencies": {
+          "CovidReader.UseCases.Controllers": "1.0.0",
           "CovidReader.UseCases.Implement": "1.0.0",
           "NETStandard.Library": "2.0.3"
         },
@@ -1511,13 +1512,21 @@
       },
       "CovidReader.UseCases/1.0.0": {
         "dependencies": {
-          "CovidReader.Plugins": "1.0.0",
-          "CovidReader.Service": "1.0.0",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "92.0.4515.10700"
         },
         "runtime": {
           "CovidReader.UseCases.dll": {}
+        }
+      },
+      "CovidReader.UseCases.Controllers/1.0.0": {
+        "dependencies": {
+          "CovidReader.Plugins": "1.0.0",
+          "CovidReader.Service": "1.0.0",
+          "CovidReader.UseCases": "1.0.0"
+        },
+        "runtime": {
+          "CovidReader.UseCases.Controllers.dll": {}
         }
       },
       "CovidReader.UseCases.Implement/1.0.0": {
@@ -2513,6 +2522,11 @@
       "sha512": ""
     },
     "CovidReader.UseCases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CovidReader.UseCases.Controllers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

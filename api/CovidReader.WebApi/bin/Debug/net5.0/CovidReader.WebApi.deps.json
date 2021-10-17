@@ -33,7 +33,8 @@
     ".NETCoreApp,Version=v5.0": {
       "CovidReader.WebApi/1.0.0": {
         "dependencies": {
-          "CovidReader.Api": "1.0.0",
+          "CovidReader.UseCases.Controllers": "1.0.0",
+          "CovidReader.UseCases.Implement": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "3.1.17",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.17",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.17",
@@ -1521,17 +1522,6 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "CovidReader.Api/1.0.0": {
-        "dependencies": {
-          "CovidReader.UseCases.Implement": "1.0.0"
-        },
-        "runtime": {
-          "CovidReader.Api.dll": {}
-        },
-        "compile": {
-          "CovidReader.Api.dll": {}
-        }
-      },
       "CovidReader.Models/1.0.0": {
         "dependencies": {
           "CsvHelper": "27.1.1",
@@ -1638,8 +1628,6 @@
       },
       "CovidReader.UseCases/1.0.0": {
         "dependencies": {
-          "CovidReader.Plugins": "1.0.0",
-          "CovidReader.Service": "1.0.0",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "92.0.4515.10700"
         },
@@ -1648,6 +1636,19 @@
         },
         "compile": {
           "CovidReader.UseCases.dll": {}
+        }
+      },
+      "CovidReader.UseCases.Controllers/1.0.0": {
+        "dependencies": {
+          "CovidReader.Plugins": "1.0.0",
+          "CovidReader.Service": "1.0.0",
+          "CovidReader.UseCases": "1.0.0"
+        },
+        "runtime": {
+          "CovidReader.UseCases.Controllers.dll": {}
+        },
+        "compile": {
+          "CovidReader.UseCases.Controllers.dll": {}
         }
       },
       "CovidReader.UseCases.Implement/1.0.0": {
@@ -4217,11 +4218,6 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "CovidReader.Api/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "CovidReader.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4268,6 +4264,11 @@
       "sha512": ""
     },
     "CovidReader.UseCases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CovidReader.UseCases.Controllers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

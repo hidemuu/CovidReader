@@ -1701,19 +1701,6 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "CovidReader.Api/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "CovidReader.UseCases.Implement": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/CovidReader.Api.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CovidReader.Api.dll": {}
-        }
-      },
       "CovidReader.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1840,8 +1827,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "CovidReader.Plugins": "1.0.0",
-          "CovidReader.Service": "1.0.0",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "92.0.4515.10700"
         },
@@ -1850,6 +1835,21 @@
         },
         "runtime": {
           "bin/placeholder/CovidReader.UseCases.dll": {}
+        }
+      },
+      "CovidReader.UseCases.Controllers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CovidReader.Plugins": "1.0.0",
+          "CovidReader.Service": "1.0.0",
+          "CovidReader.UseCases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.UseCases.Controllers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.UseCases.Controllers.dll": {}
         }
       },
       "CovidReader.UseCases.Implement/1.0.0": {
@@ -6216,11 +6216,6 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "CovidReader.Api/1.0.0": {
-      "type": "project",
-      "path": "../CovidReader.Api/CovidReader.Api.csproj",
-      "msbuildProject": "../CovidReader.Api/CovidReader.Api.csproj"
-    },
     "CovidReader.Models/1.0.0": {
       "type": "project",
       "path": "../../src/domains/CovidReader.Models/CovidReader.Models.csproj",
@@ -6271,6 +6266,11 @@
       "path": "../../src/applications/CovidReader.UseCases/CovidReader.UseCases.csproj",
       "msbuildProject": "../../src/applications/CovidReader.UseCases/CovidReader.UseCases.csproj"
     },
+    "CovidReader.UseCases.Controllers/1.0.0": {
+      "type": "project",
+      "path": "../../src/applications/CovidReader.UseCases.Controllers/CovidReader.UseCases.Controllers.csproj",
+      "msbuildProject": "../../src/applications/CovidReader.UseCases.Controllers/CovidReader.UseCases.Controllers.csproj"
+    },
     "CovidReader.UseCases.Implement/1.0.0": {
       "type": "project",
       "path": "../../src/applications/CovidReader.UseCases.Implement/CovidReader.UseCases.Implement.csproj",
@@ -6284,7 +6284,8 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "CovidReader.Api >= 1.0.0",
+      "CovidReader.UseCases.Controllers >= 1.0.0",
+      "CovidReader.UseCases.Implement >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.17",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.17",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.17",
@@ -6328,8 +6329,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\api\\CovidReader.Api\\CovidReader.Api.csproj": {
-              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\api\\CovidReader.Api\\CovidReader.Api.csproj"
+            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Controllers\\CovidReader.UseCases.Controllers.csproj": {
+              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Controllers\\CovidReader.UseCases.Controllers.csproj"
+            },
+            "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\CovidReader.UseCases.Implement.csproj": {
+              "projectPath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\CovidReader.UseCases.Implement.csproj"
             }
           }
         }

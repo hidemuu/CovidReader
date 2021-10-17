@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\applications\CovidReader.UseCases\CovidReader.UseCases.csproj" />
     <ProjectReference Include="..\..\domains\CovidReader.Models\CovidReader.Models.csproj" />
+    <ProjectReference Include="..\..\domains\CovidReader.Repository\CovidReader.Repository.csproj" />
     <ProjectReference Include="..\..\infrastructures\CovidReader.ViewControls.Wpf\CovidReader.ViewControls.Wpf.csproj" />
     <ProjectReference Include="..\CovidReader.Windows.Views\CovidReader.Windows.Views.csproj" />
   </ItemGroup>

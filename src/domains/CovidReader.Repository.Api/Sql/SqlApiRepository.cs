@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CovidReader.Repository.Api.Sql
 {
-    public class SqlApiRepository : IApiRepository
+    public class SqlApiRepository : IApiRepository, IApiMapper
     {
         private readonly DbContextOptions<ApiDbContext> _dbOptions;
         private readonly ApiDbContext _db;

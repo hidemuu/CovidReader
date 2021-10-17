@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using CovidReader.ViewControls.Wpf.Services;
-using CovidReader.Windows.ViewModels.Buttons;
 using CovidReader.Windows.Views;
 using CovidReader.Windows.ViewUtility.Constants;
 using MaterialDesignThemes.Wpf;
@@ -24,28 +23,41 @@ namespace CovidReader.Windows.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
+        /// <summary>
+        /// コンテンツ制御モデル
+        /// </summary>
         public ObservableCollection<MainWindowModel> Models { get; } = new ObservableCollection<MainWindowModel>();
+        /// <summary>
+        /// タブコントロール制御プロパティ
+        /// </summary>
         public ReactivePropertySlim<int> TabPage { get; set; } = new ReactivePropertySlim<int>(-1);
         public ReactivePropertySlim<string> Guidance { get; set; } = new ReactivePropertySlim<string>("");
         private IRegionManager regionManager { get; }
 
+        //コマンドハンドラ
         public ReactiveCommand TabChangeCommand { get; } = new ReactiveCommand();
         public ReactiveCommand LoadingCommand { get; } = new ReactiveCommand();
 
-        private CompositeDisposable _disposables = new CompositeDisposable();
+        private CompositeDisposable disposables = new CompositeDisposable();
 
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="regionManager"></param>
+        /// <param name="moduleManager"></param>
+        /// <param name="dialogService"></param>
         public MainWindowViewModel(IRegionManager regionManager, IModuleManager moduleManager,IDialogService dialogService)
         {
             this.regionManager = regionManager;
             //表示ページコンテンツ登録
             Models.Add(new MainWindowModel(0, "Home", "Home", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(HomeView))));
-            Models.Add(new MainWindowModel(1, "Table", "Table", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(TableView))));
-            Models.Add(new MainWindowModel(2, "Chart", "Cog", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(ChartView))));
+            Models.Add(new MainWindowModel(1, "Table", "Table", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(InfectionTableView))));
+            Models.Add(new MainWindowModel(2, "Chart", "Cog", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(InfectionChartView))));
             Models.Add(new MainWindowModel(3, "Dashboard", "Cog", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(DashboardView))));
             Models.Add(new MainWindowModel(4, "Setting", "Cog", () => this.regionManager.RequestNavigate(RegionNames.MainRegion, nameof(SettingView))));
 
             //ボタンコマンドをサブスクライブ
-            LoadingCommand.Subscribe(_ => Models.FirstOrDefault(x => x.NavigationIconButtonViewModel.Title == "Home").TabCommand());
+            LoadingCommand.Subscribe(_ => Models.FirstOrDefault(x => x.Title.Value == "Home").TabCommand());
             TabChangeCommand.Subscribe(_ => ChangeTab());
 
             // 定期更新スレッド
@@ -54,7 +66,7 @@ namespace CovidReader.Windows.ViewModels
             {
             
             });
-            timer.AddTo(_disposables);
+            timer.AddTo(disposables);
             timer.Start();
 
         }
@@ -65,7 +77,7 @@ namespace CovidReader.Windows.ViewModels
         }
 
         /// <summary>
-        /// コンテンツコントロール用モデル
+        /// コンテンツ制御モデル
         /// </summary>
         public class MainWindowModel
         {
@@ -73,13 +85,17 @@ namespace CovidReader.Windows.ViewModels
             public int Index { get; }
             public Action TabCommand { get; }
 
-            public NavigationIconButtonViewModel NavigationIconButtonViewModel { get; }
+            public ReactivePropertySlim<string> Title { get; } = new ReactivePropertySlim<string>();
+            public ReactivePropertySlim<string> IconKey { get; } = new ReactivePropertySlim<string>();
+            public ReactivePropertySlim<bool> IsSelected { get; } = new ReactivePropertySlim<bool>();
+
 
             public MainWindowModel(int index, string title, string iconkey, Action tabcommand)
             {
                 Index = index;
                 TabCommand = tabcommand;
-                NavigationIconButtonViewModel = new NavigationIconButtonViewModel() { Title = title, IconKey = iconkey };
+                Title.Value = title;
+                IconKey.Value = iconkey;
             }
 
         }

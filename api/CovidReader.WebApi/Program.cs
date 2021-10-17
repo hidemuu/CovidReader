@@ -1,4 +1,7 @@
 using CovidReader.Repository.Api.Sql;
+using CovidReader.UseCases;
+using CovidReader.UseCases.Controllers;
+using CovidReader.UseCases.Implement;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,35 +16,12 @@ namespace CovidReader.WebApi
 {
     public class Program
     {
+        public static WebAppController WebController { get; private set; }
+
         public static void Main(string[] args)
         {
-            //CreateHostBuilder(args).Build().Run();
-
-            var host = CreateHostBuilder(args).Build(); // ASP.NET Core 2.1～ の場合
-
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                try
-                {
-                    var context = services.GetRequiredService<ApiDbContext>();
-
-                    // 自動マイグレーション適用
-                    //context.Database.Migrate();
-
-                    // 初期データ生成
-                    // ※Data フォルダ内にカスタムクラスを作成してデータ生成コードを記述しておく。
-                    //DbInitializer.Initialize(context);
-                }
-                catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "データベース初期構成中にエラーが発生しました。");
-                }
-            }
-
-            host.Run();
-
+            WebController = new WebAppController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));
+            CreateHostBuilder(args).Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

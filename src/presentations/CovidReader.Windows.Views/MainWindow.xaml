@@ -10,8 +10,7 @@
     xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:local="clr-namespace:CovidReader.Windows.Views"
     xmlns:constants="clr-namespace:CovidReader.Windows.ViewUtility.Constants;assembly=CovidReader.Windows.ViewUtility"
-    mc:Ignorable="d"
-    prism:RegionManager.RegionManager="{Binding RegionManager}"    
+    mc:Ignorable="d"    
     prism:ViewModelLocator.AutoWireViewModel="True"
     Title="MainWindow" Height="800" Width="800"
     Background="{DynamicResource MaterialDesignPaper}"
@@ -88,13 +87,13 @@
                                             Width="24"
                                             Height="24"
                                             HorizontalAlignment="Center"
-                                            Kind="{Binding NavigationIconButtonViewModel.IconKey}" />
+                                            Kind="{Binding IconKey.Value}" />
                                         <TextBlock
                                             Grid.Row="1"
                                             Margin="0,4,0,0"
                                             HorizontalAlignment="Center"
                                             Style="{StaticResource MaterialDesignCaptionTextBlock}"
-                                            Text="{Binding NavigationIconButtonViewModel.Title}" />
+                                            Text="{Binding Title.Value}" />
                                     </Grid>
                                     
                                 </DataTemplate>

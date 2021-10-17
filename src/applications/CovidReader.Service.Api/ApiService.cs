@@ -15,7 +15,7 @@ namespace CovidReader.Service.Api
     public class ApiService : IApiService
     {
         private readonly IApiRepository _repository;
-        private readonly IApiRepository _mapper;
+        private readonly IApiMapper _mapper;
         private static Process _process;
         /// <summary>
         /// チャート設定
@@ -40,7 +40,7 @@ namespace CovidReader.Service.Api
         /// </summary>
         /// <param name="repository"></param>
         /// <param name="mapper"></param>
-        public ApiService(IApiRepository repository, IApiRepository mapper)
+        public ApiService(IApiRepository repository, IApiMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;

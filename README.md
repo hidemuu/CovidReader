@@ -22,9 +22,9 @@ CovidReader
 |
 └─src  
    ├─presentations
-   |  | CovidReader.Views
-   |  | CovidReader.ViewModels
-   |
+   |  | CovidReader.Views                 : ビュー部品
+   |  | CovidReader.ViewModels            : ビューモデル部品
+   |  | CovidReader.ViewUtility           : ビュー共通データ
    |
    ├─applications
    |  | CovidReader.UseCases              : 各種アプリケーションコントロール　インターフェイス
@@ -36,8 +36,6 @@ CovidReader
    |  | 
    |  | CovidReader.Plugins               : 各種プラグイン　インターフェイス
    |  | CovidReader.Plugins.Log           : ログプラグイン　実装クラス
-   |  
-   |   
    |
    ├─domains
    |  | CovidReader.Models : データモデル

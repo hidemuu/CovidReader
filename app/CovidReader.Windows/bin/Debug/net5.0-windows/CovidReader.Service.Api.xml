@@ -29,7 +29,7 @@
             検査データ
             </summary>
         </member>
-        <member name="M:CovidReader.Service.Api.ApiService.#ctor(CovidReader.Repository.Api.IApiRepository,CovidReader.Repository.Api.IApiRepository)">
+        <member name="M:CovidReader.Service.Api.ApiService.#ctor(CovidReader.Repository.Api.IApiRepository,CovidReader.Repository.Api.IApiMapper)">
             <summary>
             コンストラクタ
             アプリケーションAPIのリポジトリとマッパーを注入

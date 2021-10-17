@@ -1,4 +1,5 @@
 using CovidReader.UseCases;
+using CovidReader.UseCases.Controllers;
 using CovidReader.UseCases.Implement;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

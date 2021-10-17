@@ -1,4 +1,12 @@
-﻿using CovidReader.UseCases;
+﻿using CovidReader.Repository.Api;
+using CovidReader.Repository.Api.Sql;
+using CovidReader.Repository.Covid19.MHLW;
+using CovidReader.Repository.Covid19.MHLW.Csv;
+using CovidReader.Repository.Covid19.MHLW.InMemory;
+using CovidReader.Service.Api;
+using CovidReader.Service.Covid19;
+using CovidReader.UseCases;
+using CovidReader.UseCases.Controllers;
 using CovidReader.UseCases.Implement;
 using CovidReader.ViewControls.Wpf;
 using CovidReader.ViewControls.Wpf.CustomerRegionAdapters;
@@ -81,14 +89,25 @@ namespace CovidReader.Windows
 
             //任意のデータインスタンスを登録
             containerRegistry.RegisterInstance<IFlyoutService>(Container.Resolve<FlyoutService>());
-            containerRegistry.RegisterInstance<NativeAppController>(new NativeAppController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv")));
+            
+            containerRegistry.RegisterInstance<IApiRepository>(ApiRepositoryUseCase.UseSqlite());
+            containerRegistry.RegisterInstance<IApiMapper>((IApiMapper)ApiRepositoryUseCase.UseSqlite());
+
+            containerRegistry.RegisterInstance<ICovid19Repository>(Covid19RepositoryUseCase.UseInMemory());
+            containerRegistry.RegisterInstance<ICovid19Mapper>((ICovid19Mapper)Covid19RepositoryUseCase.UseCsv());
+
+            containerRegistry.RegisterInstance<IApiService>(Container.Resolve<ApiService>());
+            containerRegistry.RegisterInstance<ICovid19Service>(Container.Resolve<Covid19Service>());
+
+            containerRegistry.RegisterInstance<IAppController>(Container.Resolve<NativeAppController>());
+            //containerRegistry.RegisterInstance<IAppController>(new NativeAppController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv")));
 
             //Viewの登録
             containerRegistry.RegisterForNavigation<LoginMainContent>();
             containerRegistry.RegisterForNavigation<CreateAccount>();
             containerRegistry.RegisterForNavigation<HomeView>();
-            containerRegistry.RegisterForNavigation<ChartView>();
-            containerRegistry.RegisterForNavigation<TableView>();
+            containerRegistry.RegisterForNavigation<InfectionChartView>();
+            containerRegistry.RegisterForNavigation<InfectionTableView>();
             containerRegistry.RegisterForNavigation<TreeListView>();
             containerRegistry.RegisterForNavigation<DashboardView>();
             containerRegistry.RegisterForNavigation<SettingView>();
@@ -114,8 +133,8 @@ namespace CovidReader.Windows
 
             ViewModelLocationProvider.Register<MainWindow, MainWindowViewModel>();
             ViewModelLocationProvider.Register<HomeView, HomeViewModel>();
-            ViewModelLocationProvider.Register<ChartView, ChartViewModel>();
-            ViewModelLocationProvider.Register<TableView, TableViewModel>();
+            ViewModelLocationProvider.Register<InfectionChartView, InfectionChartViewModel>();
+            ViewModelLocationProvider.Register<InfectionTableView, InfectionTableViewModel>();
             ViewModelLocationProvider.Register<TreeListView, TreeListViewModel>();
             ViewModelLocationProvider.Register<DashboardView, DashboardViewModel>();
             ViewModelLocationProvider.Register<SettingView, SettingViewModel>();

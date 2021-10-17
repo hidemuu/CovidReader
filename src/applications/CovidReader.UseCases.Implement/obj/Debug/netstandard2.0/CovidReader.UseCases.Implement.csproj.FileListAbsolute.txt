@@ -42,9 +42,7 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCase
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.UseCases.Implement.deps.json
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.UseCases.Implement.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.UseCases.Implement.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.UseCases.Implement.xml
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Models.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Plugins.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Repository.Api.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Repository.Covid19.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Repository.dll
@@ -62,10 +60,8 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCase
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Service.Covid19.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Service.Covid19.xml
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.UseCases.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.UseCases.xml
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Models.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Models.xml
-C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Plugins.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Repository.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Repository.xml
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.Service.pdb
@@ -79,3 +75,4 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCase
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\obj\Debug\netstandard2.0\CovidReader.UseCases.Implement.csproj.CopyComplete
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\obj\Debug\netstandard2.0\CovidReader.UseCases.Implement.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\obj\Debug\netstandard2.0\CovidReader.UseCases.Implement.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases.Implement\bin\Debug\netstandard2.0\CovidReader.UseCases.xml

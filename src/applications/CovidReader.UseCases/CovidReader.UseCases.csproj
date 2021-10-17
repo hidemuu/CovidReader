@@ -13,9 +13,4 @@
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="92.0.4515.10700" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CovidReader.Plugins\CovidReader.Plugins.csproj" />
-    <ProjectReference Include="..\CovidReader.Service\CovidReader.Service.csproj" />
-  </ItemGroup>
-
 </Project>

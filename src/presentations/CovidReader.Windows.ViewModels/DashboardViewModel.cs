@@ -1,5 +1,4 @@
-﻿using CovidReader.Windows.ViewModels.Buttons;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;

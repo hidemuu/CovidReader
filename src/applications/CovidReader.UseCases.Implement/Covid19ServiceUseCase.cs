@@ -23,7 +23,7 @@ namespace CovidReader.UseCases.Implement
         public static ICovid19Service Create(string repositoryType, string mapperType)
         {
             ICovid19Repository repository = GetRepository(repositoryType);
-            ICovid19Repository mapper = GetRepository(mapperType);
+            ICovid19Mapper mapper = (ICovid19Mapper)GetRepository(mapperType);
             return new Covid19Service(repository, mapper);
         }
 

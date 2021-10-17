@@ -43,6 +43,11 @@
             <param name="date"></param>
             <returns></returns>
         </member>
+        <member name="T:CovidReader.Repository.Api.IApiMapper">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:CovidReader.Repository.Api.IApiRepository">
             <summary>
             アプリケーションAPIリポジトリ
@@ -182,6 +187,11 @@
             </summary>
             <param name="items"></param>
             <returns></returns>
+        </member>
+        <member name="T:CovidReader.Repository.Covid19.MHLW.ICovid19Mapper">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:CovidReader.Repository.Covid19.MHLW.ICovid19Repository">
             <summary>

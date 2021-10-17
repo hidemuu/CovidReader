@@ -14,11 +14,11 @@ namespace CovidReader.Windows.ViewModels
     public class TreeListViewModel : BindableBase
     {
         public List<Model> Models { get; set; }
-        private NativeAppController nativeAppController;
+        private IAppController appController;
 
-        public TreeListViewModel(IRegionManager regionManager, NativeAppController nativeAppController)
+        public TreeListViewModel(IRegionManager regionManager, IAppController appController)
         {
-            this.nativeAppController = nativeAppController;
+            this.appController = appController;
             ReadXml();
         }
 

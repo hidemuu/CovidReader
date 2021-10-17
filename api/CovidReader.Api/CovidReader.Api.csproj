@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Controllers\CovidReader.UseCases.Controllers.csproj" />
     <ProjectReference Include="..\..\src\applications\CovidReader.UseCases.Implement\CovidReader.UseCases.Implement.csproj" />
   </ItemGroup>
 

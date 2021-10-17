@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CovidReader.UseCases.Controllers;
 
 namespace CovidReader.Api
 {
@@ -20,26 +21,21 @@ namespace CovidReader.Api
     {
         private ConsoleAppController _controller;
 
-
         /// <summary>
         /// 
         /// </summary>
         public ConsoleCommand()
-        {
-            
-            _controller = new ConsoleAppController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));
-            
+        {    
+            _controller = new ConsoleAppController(ApiServiceUseCase.Create("sql", "sql"), Covid19ServiceUseCase.Create("inmemory", "csv"));   
             _handlers = new Dictionary<string, CommandHandler>
             {
                 //{"import", ImportAsync },
                 {"autorun", AutoRunAsync },
                 {"scrap", ScrapingAsync },
-                {"viewchart", ViewChartAsync },
-                
+                {"viewchart", ViewChartAsync },                
             };
         }
 
-        
         private async Task<string> AutoRunAsync(IEnumerable<string> parameters)
         {
             await _controller.AutoRunAsync();
@@ -51,8 +47,6 @@ namespace CovidReader.Api
             await _controller.ScrapingAsync();
             return "";
         }
-
-        
 
         private async Task<string> ViewChartAsync(IEnumerable<string> parameters)
         {

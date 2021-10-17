@@ -23,7 +23,7 @@ namespace CovidReader.UseCases.Implement
         public static IApiService Create(string repositoryType, string mapperType)
         {
             IApiRepository repository = GetRepository(repositoryType);
-            IApiRepository mapper = GetRepository(mapperType);
+            IApiMapper mapper = (IApiMapper)GetRepository(mapperType);
 
             return new ApiService(repository, mapper);
         }
@@ -41,6 +41,7 @@ namespace CovidReader.UseCases.Implement
             }
             return repository;
         }
+
 
     }
 }

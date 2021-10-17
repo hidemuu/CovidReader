@@ -1451,11 +1451,6 @@
           "CovidReader.Models.dll": {}
         }
       },
-      "CovidReader.Plugins/1.0.0": {
-        "runtime": {
-          "CovidReader.Plugins.dll": {}
-        }
-      },
       "CovidReader.Repository/1.0.0": {
         "dependencies": {
           "CovidReader.Models": "1.0.0",
@@ -1520,8 +1515,6 @@
       },
       "CovidReader.UseCases/1.0.0": {
         "dependencies": {
-          "CovidReader.Plugins": "1.0.0",
-          "CovidReader.Service": "1.0.0",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "92.0.4515.10700"
         },
@@ -2460,11 +2453,6 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "CovidReader.Models/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CovidReader.Plugins/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

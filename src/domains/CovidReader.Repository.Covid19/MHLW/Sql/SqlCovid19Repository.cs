@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CovidReader.Repository.Covid19.MHLW.Sql
 {
-    public class SqlCovid19Repository : ICovid19Repository
+    public class SqlCovid19Repository : ICovid19Repository, ICovid19Mapper
     {
         private readonly DbContextOptions<Covid19DbContext> _dbOptions;
 

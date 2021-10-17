@@ -16,7 +16,7 @@ namespace CovidReader.Service.Covid19
     public class Covid19Service : ICovid19Service
     {
         private readonly ICovid19Repository _repository;
-        private readonly ICovid19Repository _mapper;
+        private readonly ICovid19Mapper _mapper;
 
         /// <summary>
         /// コンストラクタ
@@ -24,7 +24,7 @@ namespace CovidReader.Service.Covid19
         /// </summary>
         /// <param name="repository"></param>
         /// <param name="mapper"></param>
-        public Covid19Service(ICovid19Repository repository, ICovid19Repository mapper)
+        public Covid19Service(ICovid19Repository repository, ICovid19Mapper mapper)
         {
             if (repository == null) throw new ArgumentNullException("repository", "A valid repository must be supplied.");
             if (mapper == null) throw new ArgumentNullException("mapper", "A valid repository must be supplied.");

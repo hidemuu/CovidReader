@@ -9,7 +9,7 @@
             Covid19 APIデータアクセスサービス実装クラス
             </summary>
         </member>
-        <member name="M:CovidReader.Service.Covid19.Covid19Service.#ctor(CovidReader.Repository.Covid19.MHLW.ICovid19Repository,CovidReader.Repository.Covid19.MHLW.ICovid19Repository)">
+        <member name="M:CovidReader.Service.Covid19.Covid19Service.#ctor(CovidReader.Repository.Covid19.MHLW.ICovid19Repository,CovidReader.Repository.Covid19.MHLW.ICovid19Mapper)">
             <summary>
             コンストラクタ
             リポジトリとマッパーを注入

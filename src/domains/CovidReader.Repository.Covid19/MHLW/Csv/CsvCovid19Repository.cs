@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CovidReader.Repository.Covid19.MHLW.Csv
 {
-    public class CsvCovid19Repository : ICovid19Repository
+    public class CsvCovid19Repository : ICovid19Repository, ICovid19Mapper
     {
         private readonly string _path;
         private readonly string _encode;

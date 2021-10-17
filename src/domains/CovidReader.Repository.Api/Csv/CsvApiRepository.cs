@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CovidReader.Repository.Api.Csv
 {
-    public class CsvApiRepository : IApiRepository
+    public class CsvApiRepository : IApiRepository, IApiMapper
     {
         private readonly string _path;
         private readonly string _encode;

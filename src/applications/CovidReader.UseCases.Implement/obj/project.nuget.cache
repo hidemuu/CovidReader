@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Y1dHZi21OnyFWe7kWO+YAR0Pf+scVjV8m1I8QiP16F3MTr/JoghzSapKIB8F+HVXGoVqtx1jBIx6/ylP82Tkew==",
+  "dgSpecHash": "Onubb9kO1eFxoTepaCMsxjftD9cY3303sQmucdW2K+ogtuCPHvnGjGfKJeMCTqTshz6HcXE7/eElLcu2YQkpJw==",
   "success": true,
   "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\applications\\CovidReader.UseCases.Implement\\CovidReader.UseCases.Implement.csproj",
   "expectedPackageFiles": [

@@ -1,5 +1,4 @@
-﻿using CovidReader.Windows.ViewModels.Buttons;
-using MaterialDesignColors;
+﻿using MaterialDesignColors;
 using Prism.Mvvm;
 using Reactive.Bindings;
 using System;

@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="ChartView.xaml.cs">
+    <Compile Update="InfectionChartView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="DashboardView.xaml.cs">
@@ -66,13 +66,13 @@
     <Compile Update="SettingView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="TableView.xaml.cs">
+    <Compile Update="InfectionTableView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="ChartView.xaml">
+    <Page Update="InfectionChartView.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
@@ -144,7 +144,7 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TableView.xaml">
+    <Page Update="InfectionTableView.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>

@@ -1,6 +1,5 @@
 ﻿
 
-FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\ChartView.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\DashboardView.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\Dialogs\AlertDialog.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\Dialogs\DialogWindow.xaml;;
@@ -13,10 +12,11 @@ FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windo
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\ForFuture\TreeListView.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\ForFuture\WebView.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\HomeView.xaml;;
+FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\InfectionChartView.xaml;;
+FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\InfectionTableView.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\Login\CreateAccount.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\Login\LoginMainContent.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\Login\LoginWindow.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\MainWindow.xaml;;
 FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\SettingView.xaml;;
-FC:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\TableView.xaml;;
 
