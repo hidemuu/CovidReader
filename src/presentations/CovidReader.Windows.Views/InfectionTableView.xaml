@@ -13,12 +13,12 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="500"/>
+            <RowDefinition Height="700"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Button x:Name="Yearly" Command="{Binding YearlyFilterCommand}" Content="年" Margin="3"/>
-            <Button x:Name="Monthly" Command="{Binding MonthlyFilterCommand}" Content="月" Margin="3"/>
             <Button x:Name="Weekly" Command="{Binding WeeklyFilterCommand}" Content="週" Margin="3"/>
+            <Button x:Name="Monthly" Command="{Binding MonthlyFilterCommand}" Content="月" Margin="3"/>
+            <Button x:Name="Yearly" Command="{Binding YearlyFilterCommand}" Content="年" Margin="3"/>
         </StackPanel>
         <ListView Grid.Row="1" ItemsSource="{Binding Models}" ScrollViewer.HorizontalScrollBarVisibility="Auto">
             <ListView.View>

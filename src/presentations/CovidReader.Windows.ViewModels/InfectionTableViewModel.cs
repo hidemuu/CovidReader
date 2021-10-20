@@ -23,10 +23,15 @@ namespace CovidReader.Windows.ViewModels
         private IRegionNavigationJournal journal;
         private readonly IRegionManager regionManager;
 
-        public ReactiveCommand YearlyFilterCommand { get; } = new ReactiveCommand();
-        public ReactiveCommand MonthlyFilterCommand { get; } = new ReactiveCommand();
         public ReactiveCommand WeeklyFilterCommand { get; } = new ReactiveCommand();
+        public ReactiveCommand MonthlyFilterCommand { get; } = new ReactiveCommand();
+        public ReactiveCommand YearlyFilterCommand { get; } = new ReactiveCommand();
+        
         public bool KeepAlive => true;
+        private readonly IEnumerable<Infection> allInfections;
+        private readonly IEnumerable<Infection> weeklyInfections;
+        private readonly IEnumerable<Infection> monthlyInfections;
+        private readonly IEnumerable<Infection> yearlyInfections;
         private ObservableCollection<Infection> Infections { get; set; }
         public ReadOnlyReactiveCollection<InfectionTableModel> Models { get; }
         public ReactiveProperty<InfectionTableModel> SelectedItem { get; set; }
@@ -35,21 +40,37 @@ namespace CovidReader.Windows.ViewModels
         {
             this.regionManager = regionManager;
             this.apiRepository = apiRepository;
-
             var task = this.apiRepository.Infections.GetAsync();
             Task.WaitAll(task);
-            Infections = new ObservableCollection<Infection>(task.Result);
+            allInfections = task.Result;
+            var offset = -60;
+            weeklyInfections = allInfections.Where(x => 
+                DateTime.Now.AddDays(offset - 7) < DateTime.Parse(x.Date) && 
+                DateTime.Parse(x.Date) < DateTime.Now.AddDays(offset));
+            monthlyInfections = allInfections.Where(x =>
+                DateTime.Now.AddDays(offset - 30) < DateTime.Parse(x.Date) &&
+                DateTime.Parse(x.Date) < DateTime.Now.AddDays(offset));
+            yearlyInfections = allInfections.Where(x =>
+                DateTime.Now.AddDays(offset - 365) < DateTime.Parse(x.Date) &&
+                DateTime.Parse(x.Date) < DateTime.Now.AddDays(offset));
+            Infections = new ObservableCollection<Infection>(weeklyInfections);
             this.Models = Infections.ToReadOnlyReactiveCollection(c => new InfectionTableModel(c));
 
-            YearlyFilterCommand.Subscribe(_ => FilterDate());
-            MonthlyFilterCommand.Subscribe(_ => FilterDate());
-            WeeklyFilterCommand.Subscribe(_ => FilterDate());
+            YearlyFilterCommand.Subscribe(_ => FilterDate("y"));
+            MonthlyFilterCommand.Subscribe(_ => FilterDate("m"));
+            WeeklyFilterCommand.Subscribe(_ => FilterDate("w"));
 
         }
 
-        private void FilterDate()
+        private void FilterDate(string filter)
         {
-            Infections.OrderBy(x => DateTime.Parse(x.Date));
+            Infections.Clear();
+            switch (filter)
+            {
+                case "y": Infections.AddRange(yearlyInfections); break;
+                case "m": Infections.AddRange(monthlyInfections); break;
+                case "w": Infections.AddRange(weeklyInfections); break;
+            }
             
         }
 
@@ -69,7 +90,6 @@ namespace CovidReader.Windows.ViewModels
             
 
         }
-
 
     }
 

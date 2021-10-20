@@ -13,15 +13,21 @@
     <Grid>
         <Grid.RowDefinitions>
         <!-- 行を定義 -->
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="700" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <!-- 列を定義 -->
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <lvc:CartesianChart Grid.Column="0" 
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#FF272424">
+            <Button x:Name="Weekly" Command="{Binding WeeklyFilterCommand}" Content="週" Margin="3"/>
+            <Button x:Name="Monthly" Command="{Binding MonthlyFilterCommand}" Content="月" Margin="3"/>
+            <Button x:Name="Yearly" Command="{Binding YearlyFilterCommand}" Content="年" Margin="3"/>
+        </StackPanel>
+        <lvc:CartesianChart Grid.Row="1" 
                             Background="#FF272424" Zoom="Xy" LegendLocation="Right"
-                            Series="{Binding Series}">
+                            Series="{Binding Series.Value}">
             <!--<lvc:CartesianChart.AxisX>
                 <lvc:Axis Labels="{Binding Labels}" LabelsRotation="-45" Foreground="LightGray">
                     <lvc:Axis.Separator>
