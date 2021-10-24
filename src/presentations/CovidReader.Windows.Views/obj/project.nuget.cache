@@ -1,19 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "TPj/6FuKhlajVW+E3Mqecprm4GTZlW2aKb9oMKe8vZSBEjiWT99ViBRdX6i7PYwHp/MF+jM52MpN1Cp6wsSEWA==",
+  "dgSpecHash": "b+A2gO5zzDNr0O+S2hcW5Y5saWhUAhvG+w0gWKMSm0pB8oxGq9+c90hv7fJM0M9I1o3nUUApOjslKH1HfQan1A==",
   "success": true,
   "projectFilePath": "C:\\Users\\nando\\Documents\\GitHub\\CovidReader\\src\\presentations\\CovidReader.Windows.Views\\CovidReader.Windows.Views.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nando\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\livecharts.wpf.netcore3\\0.9.7\\livecharts.wpf.netcore3.0.9.7.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\mahapps.metro\\2.4.7\\mahapps.metro.2.4.7.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\materialdesigncolors\\2.0.1\\materialdesigncolors.2.0.1.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\materialdesignthemes\\4.1.0\\materialdesignthemes.4.1.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\materialdesignthemes.mahapps\\0.1.7\\materialdesignthemes.mahapps.0.1.7.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\reactiveproperty\\7.12.0\\reactiveproperty.7.12.0.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\reactiveproperty.core\\7.12.0\\reactiveproperty.core.7.12.0.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\nando\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
     "C:\\Users\\nando\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
   ],
   "logs": []

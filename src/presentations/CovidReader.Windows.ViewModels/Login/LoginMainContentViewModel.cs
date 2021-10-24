@@ -1,7 +1,6 @@
-﻿using CovidReader.ViewControls.Wpf.Models;
-using CovidReader.Windows.Views;
+﻿using CovidReader.Windows.Views;
 using CovidReader.Windows.Views.Login;
-using CovidReader.Windows.ViewUtility.Constants;
+using CovidReader.Windows.Models.Constants;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
@@ -12,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using CovidReader.Windows.Models;
 
 namespace CovidReader.Windows.ViewModels.Login
 {

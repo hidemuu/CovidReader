@@ -1,6 +1,6 @@
 ﻿using CovidReader.Windows.Views;
 using CovidReader.Windows.Views.Login;
-using CovidReader.Windows.ViewUtility.Constants;
+using CovidReader.Windows.Models.Constants;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
@@ -17,11 +17,24 @@ namespace CovidReader.Windows.ViewModels
     public class HomeViewModel : BindableBase, INavigationAware, IRegionMemberLifetime
     {
 
+        #region フィールド
 
         private IRegionNavigationJournal journal;
         private readonly IRegionManager regionManager;
 
+        #endregion
+
+        #region プロパティ
+
+        public bool KeepAlive => true;
+
+        #endregion
+
+        #region コマンド
+
         public ReactiveCommand LoginCommand { get; } = new ReactiveCommand();
+
+        #endregion
 
         /// <summary>
         /// コンストラクタ
@@ -33,7 +46,7 @@ namespace CovidReader.Windows.ViewModels
             LoginCommand.Subscribe(() => ShellSwitcher.Switch<MainWindow, LoginWindow>());
         }
 
-        public bool KeepAlive => true;
+        #region ナビゲーションメソッド
 
         /// <summary>
         /// このメソッドの返す値により、画面のインスタンスを使いまわすかどうか制御できる。
@@ -65,9 +78,9 @@ namespace CovidReader.Windows.ViewModels
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
             journal = navigationContext.NavigationService.Journal;
-
-            
         }
+
+        #endregion
 
     }
 }

@@ -9,7 +9,7 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:local="clr-namespace:CovidReader.Windows.Views"
-    xmlns:constants="clr-namespace:CovidReader.Windows.ViewUtility.Constants;assembly=CovidReader.Windows.ViewUtility"
+    xmlns:constants="clr-namespace:CovidReader.Windows.Models.Constants;assembly=CovidReader.Windows.Models"
     mc:Ignorable="d"    
     prism:ViewModelLocator.AutoWireViewModel="True"
     Title="MainWindow" Height="800" Width="800"

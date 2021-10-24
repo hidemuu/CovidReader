@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using CovidReader.ViewControls.Wpf.Services;
 using CovidReader.Windows.Views;
-using CovidReader.Windows.ViewUtility.Constants;
+using CovidReader.Windows.Models.Constants;
 using MaterialDesignThemes.Wpf;
 using Prism.Modularity;
 using Prism.Mvvm;
@@ -18,11 +18,14 @@ using Prism.Regions;
 using Prism.Services.Dialogs;
 using Reactive.Bindings;
 using Reactive.Bindings.Extensions;
+using CovidReader.Windows.Models;
 
 namespace CovidReader.Windows.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
+        #region プロパティ
+
         /// <summary>
         /// コンテンツ制御モデル
         /// </summary>
@@ -34,12 +37,16 @@ namespace CovidReader.Windows.ViewModels
         public ReactivePropertySlim<string> Guidance { get; set; } = new ReactivePropertySlim<string>("");
         public IRegionManager RegionManager { get; }
 
-        //コマンドハンドラ
+        #endregion
+
+        #region コマンド
+
         public ReactiveCommand TabChangeCommand { get; } = new ReactiveCommand();
         public ReactiveCommand LoadingCommand { get; } = new ReactiveCommand();
 
         private CompositeDisposable disposables = new CompositeDisposable();
 
+        #endregion
 
         /// <summary>
         /// コンストラクタ
@@ -72,34 +79,14 @@ namespace CovidReader.Windows.ViewModels
 
         }
 
+        #region 内部メソッド
+
         private void ChangeTab() 
         {
             Models.FirstOrDefault(x => x.Index == TabPage.Value).TabCommand();
         }
 
-        /// <summary>
-        /// コンテンツ制御モデル
-        /// </summary>
-        public class MainWindowModel
-        {
-
-            public int Index { get; }
-            public Action TabCommand { get; }
-
-            public ReactivePropertySlim<string> Title { get; } = new ReactivePropertySlim<string>();
-            public ReactivePropertySlim<string> IconKey { get; } = new ReactivePropertySlim<string>();
-            public ReactivePropertySlim<bool> IsSelected { get; } = new ReactivePropertySlim<bool>();
-
-
-            public MainWindowModel(int index, string title, string iconkey, Action tabcommand)
-            {
-                Index = index;
-                TabCommand = tabcommand;
-                Title.Value = title;
-                IconKey.Value = iconkey;
-            }
-
-        }
+        #endregion
 
     }
 }

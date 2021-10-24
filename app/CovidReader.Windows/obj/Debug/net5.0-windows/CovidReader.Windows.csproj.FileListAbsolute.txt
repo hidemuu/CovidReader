@@ -546,11 +546,11 @@ C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\ne
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\ForFuture\TreeModel.xml
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.dll
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.Windows.ViewUtility.dll
-C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.Windows.ViewUtility.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.UseCases.xml
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.UseCases.Controllers.dll
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.UseCases.Controllers.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.UseCases.Repository.dll
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.UseCases.Repository.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.UseCases.Repository.xml
+C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.Windows.Models.dll
+C:\Users\nando\Documents\GitHub\CovidReader\app\CovidReader.Windows\bin\Debug\net5.0-windows\CovidReader.Windows.Models.pdb

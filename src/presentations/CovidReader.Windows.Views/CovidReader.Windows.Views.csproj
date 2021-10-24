@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\infrastructures\CovidReader.ViewStyles.Wpf\CovidReader.ViewStyles.Wpf.csproj" />
-    <ProjectReference Include="..\CovidReader.Windows.ViewUtility\CovidReader.Windows.ViewUtility.csproj" />
+    <ProjectReference Include="..\CovidReader.Windows.Models\CovidReader.Windows.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,5 +1,5 @@
-﻿using CovidReader.ViewControls.Wpf.Models;
-using CovidReader.Windows.ViewUtility.Constants;
+﻿using CovidReader.Windows.Models;
+using CovidReader.Windows.Models.Constants;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;

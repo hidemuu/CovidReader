@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CovidReader.Windows.Views.Login"
-        xmlns:constants="clr-namespace:CovidReader.Windows.ViewUtility.Constants;assembly=CovidReader.Windows.ViewUtility"
+        xmlns:constants="clr-namespace:CovidReader.Windows.Models.Constants;assembly=CovidReader.Windows.Models"
         mc:Ignorable="d"
         xmlns:prism="http://prismlibrary.com/"
         xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"

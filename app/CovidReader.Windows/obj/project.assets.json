@@ -2123,6 +2123,20 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
+      "CovidReader.Windows.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CovidReader.Models": "1.0.0",
+          "ReactiveProperty": "7.12.0"
+        },
+        "compile": {
+          "bin/placeholder/CovidReader.Windows.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CovidReader.Windows.Models.dll": {}
+        }
+      },
       "CovidReader.Windows.ViewModels/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2149,7 +2163,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "CovidReader.ViewStyles.Wpf": "1.0.0",
-          "CovidReader.Windows.ViewUtility": "1.0.0",
+          "CovidReader.Windows.Models": "1.0.0",
           "Prism.Wpf": "8.1.97"
         },
         "compile": {
@@ -2161,16 +2175,6 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
         ]
-      },
-      "CovidReader.Windows.ViewUtility/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/CovidReader.Windows.ViewUtility.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CovidReader.Windows.ViewUtility.dll": {}
-        }
       }
     }
   },
@@ -6986,6 +6990,11 @@
       "path": "../../src/infrastructures/CovidReader.ViewStyles.Wpf/CovidReader.ViewStyles.Wpf.csproj",
       "msbuildProject": "../../src/infrastructures/CovidReader.ViewStyles.Wpf/CovidReader.ViewStyles.Wpf.csproj"
     },
+    "CovidReader.Windows.Models/1.0.0": {
+      "type": "project",
+      "path": "../../src/presentations/CovidReader.Windows.Models/CovidReader.Windows.Models.csproj",
+      "msbuildProject": "../../src/presentations/CovidReader.Windows.Models/CovidReader.Windows.Models.csproj"
+    },
     "CovidReader.Windows.ViewModels/1.0.0": {
       "type": "project",
       "path": "../../src/presentations/CovidReader.Windows.ViewModels/CovidReader.Windows.ViewModels.csproj",
@@ -6995,11 +7004,6 @@
       "type": "project",
       "path": "../../src/presentations/CovidReader.Windows.Views/CovidReader.Windows.Views.csproj",
       "msbuildProject": "../../src/presentations/CovidReader.Windows.Views/CovidReader.Windows.Views.csproj"
-    },
-    "CovidReader.Windows.ViewUtility/1.0.0": {
-      "type": "project",
-      "path": "../../src/presentations/CovidReader.Windows.ViewUtility/CovidReader.Windows.ViewUtility.csproj",
-      "msbuildProject": "../../src/presentations/CovidReader.Windows.ViewUtility/CovidReader.Windows.ViewUtility.csproj"
     }
   },
   "projectFileDependencyGroups": {

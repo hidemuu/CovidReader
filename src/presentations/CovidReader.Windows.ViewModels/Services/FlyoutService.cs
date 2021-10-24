@@ -1,4 +1,4 @@
-﻿using CovidReader.Windows.ViewUtility.Constants;
+﻿using CovidReader.Windows.Models.Constants;
 using MahApps.Metro.Controls;
 using Prism.Commands;
 using Prism.Regions;

@@ -71,11 +71,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.ViewStyles.Wpf"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Windows.ViewModels", "src\presentations\CovidReader.Windows.ViewModels\CovidReader.Windows.ViewModels.csproj", "{73852DC0-9FDC-4848-BFC8-70349541CB63}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Windows.ViewUtility", "src\presentations\CovidReader.Windows.ViewUtility\CovidReader.Windows.ViewUtility.csproj", "{5144AC52-F4A4-47D9-BCF7-0E825FD7870A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.Windows.Models", "src\presentations\CovidReader.Windows.Models\CovidReader.Windows.Models.csproj", "{5144AC52-F4A4-47D9-BCF7-0E825FD7870A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.UseCases.Controllers", "src\applications\CovidReader.UseCases.Controllers\CovidReader.UseCases.Controllers.csproj", "{424A3D3D-30BB-4E66-9F6E-B7323E947A15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidReader.UseCases.Service", "src\applications\CovidReader.UseCases.Service\CovidReader.UseCases.Service.csproj", "{D79980A8-40D7-4C0F-B0F1-C1D01B9C8E0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidReader.UseCases.Service", "src\applications\CovidReader.UseCases.Service\CovidReader.UseCases.Service.csproj", "{D79980A8-40D7-4C0F-B0F1-C1D01B9C8E0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

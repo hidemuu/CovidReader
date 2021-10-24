@@ -15,12 +15,18 @@ namespace CovidReader.Windows.ViewModels
     public class SettingViewModel : BindableBase
     {
 
+        #region プロパティ
         public Swatch[] Swatches { get; } = new SwatchesProvider().Swatches.ToArray();
 
         public ReactivePropertySlim<Swatch> SelectedSwatch { get; }
 
         public ReactivePropertySlim<string> BackupPath { get; }
 
+        #endregion
+
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         public SettingViewModel()
         {
             // ComboBoxの初期値を設定するにはItemsSourceで利用しているインスタンスの中から指定する必要がある
@@ -31,10 +37,7 @@ namespace CovidReader.Windows.ViewModels
             BackupPath = new ReactivePropertySlim<string>(backupPath);
         }
 
-        private void ChangeTheme(Swatch swatch)
-        {
-            ThemeService.ApplyTheme(swatch);
-        }
+        #region メソッド
 
         public void RegistBackupPath()
         {
@@ -54,6 +57,19 @@ namespace CovidReader.Windows.ViewModels
         {
             
         }
+
+        #endregion
+
+
+        #region 内部メソッド
+
+        private void ChangeTheme(Swatch swatch)
+        {
+            ThemeService.ApplyTheme(swatch);
+        }
+
+        #endregion
+
 
     }
 }

@@ -1482,6 +1482,15 @@
           "CovidReader.ViewStyles.Wpf.dll": {}
         }
       },
+      "CovidReader.Windows.Models/1.0.0": {
+        "dependencies": {
+          "CovidReader.Models": "1.0.0",
+          "ReactiveProperty": "7.12.0"
+        },
+        "runtime": {
+          "CovidReader.Windows.Models.dll": {}
+        }
+      },
       "CovidReader.Windows.ViewModels/1.0.0": {
         "dependencies": {
           "CovidReader.Models": "1.0.0",
@@ -1498,16 +1507,11 @@
       "CovidReader.Windows.Views/1.0.0": {
         "dependencies": {
           "CovidReader.ViewStyles.Wpf": "1.0.0",
-          "CovidReader.Windows.ViewUtility": "1.0.0",
+          "CovidReader.Windows.Models": "1.0.0",
           "Prism.Wpf": "8.1.97"
         },
         "runtime": {
           "CovidReader.Windows.Views.dll": {}
-        }
-      },
-      "CovidReader.Windows.ViewUtility/1.0.0": {
-        "runtime": {
-          "CovidReader.Windows.ViewUtility.dll": {}
         }
       }
     }
@@ -2524,17 +2528,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "CovidReader.Windows.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "CovidReader.Windows.ViewModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "CovidReader.Windows.Views/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CovidReader.Windows.ViewUtility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

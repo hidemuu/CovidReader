@@ -67,9 +67,12 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Window
 C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\obj\Debug\net5.0-windows\CovidReader.Windows.Views.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\bin\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\bin\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\bin\Debug\net5.0-windows\CovidReader.Windows.ViewUtility.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\bin\Debug\net5.0-windows\CovidReader.Windows.ViewUtility.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\obj\Debug\net5.0-windows\InfectionTableView.g.cs
 C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\obj\Debug\net5.0-windows\InfectionChartView.g.cs
 C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\obj\Debug\net5.0-windows\InfectionChartView.baml
 C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\obj\Debug\net5.0-windows\InfectionTableView.baml
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\bin\Debug\net5.0-windows\CovidReader.Windows.Models.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\bin\Debug\net5.0-windows\CovidReader.Windows.Models.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\bin\Debug\net5.0-windows\CovidReader.Models.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\bin\Debug\net5.0-windows\CovidReader.Models.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\presentations\CovidReader.Windows.Views\bin\Debug\net5.0-windows\CovidReader.Models.xml

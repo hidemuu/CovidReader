@@ -1,5 +1,5 @@
 ﻿using CovidReader.Windows.Views;
-using CovidReader.Windows.ViewUtility.Constants;
+using CovidReader.Windows.Models.Constants;
 using Prism.Mvvm;
 using Prism.Regions;
 using System;

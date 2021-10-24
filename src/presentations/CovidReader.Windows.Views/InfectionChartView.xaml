@@ -9,7 +9,7 @@
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="{DynamicResource MaterialDesignPaper}">
+             Background="#FF272424">
     <Grid>
         <Grid.RowDefinitions>
         <!-- 行を定義 -->
@@ -20,11 +20,22 @@
             <!-- 列を定義 -->
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#FF272424">
-            <Button x:Name="Weekly" Command="{Binding WeeklyFilterCommand}" Content="週" Margin="3"/>
-            <Button x:Name="Monthly" Command="{Binding MonthlyFilterCommand}" Content="月" Margin="3"/>
-            <Button x:Name="Yearly" Command="{Binding YearlyFilterCommand}" Content="年" Margin="3"/>
-        </StackPanel>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Button x:Name="Weekly" Command="{Binding WeeklyFilterCommand}" Content="週" Margin="3"/>
+                <Button x:Name="Monthly" Command="{Binding MonthlyFilterCommand}" Content="月" Margin="3"/>
+                <Button x:Name="Yearly" Command="{Binding YearlyFilterCommand}" Content="年" Margin="3"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="Daily" Command="{Binding DailyFilterCommand}" Content="日報" Margin="3"/>
+                <Button x:Name="Total" Command="{Binding TotalFilterCommand}" Content="累計" Margin="3"/>
+            </StackPanel>
+        </Grid>
+        
         <lvc:CartesianChart Grid.Row="1" 
                             Background="#FF272424" Zoom="Xy" LegendLocation="Right"
                             Series="{Binding Series.Value}">

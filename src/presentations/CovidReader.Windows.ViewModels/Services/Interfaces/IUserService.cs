@@ -1,4 +1,4 @@
-﻿using CovidReader.ViewControls.Wpf.Models;
+﻿using CovidReader.Windows.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
