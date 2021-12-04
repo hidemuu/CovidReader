@@ -43,6 +43,7 @@ namespace CovidReader.Windows.ViewModels
 
         #region コマンド
 
+        public ReactiveCommand ClearFilterCommand { get; } = new ReactiveCommand();
         public ReactiveCommand WeeklyFilterCommand { get; } = new ReactiveCommand();
         public ReactiveCommand MonthlyFilterCommand { get; } = new ReactiveCommand();
         public ReactiveCommand YearlyFilterCommand { get; } = new ReactiveCommand();
@@ -63,8 +64,10 @@ namespace CovidReader.Windows.ViewModels
             originals = task.Result;
 
             Infections = new ObservableCollection<Infection>();
-            Filter("daily", "week");
-            
+            Filter("", "");
+            //Filter("daily", "week");
+
+            ClearFilterCommand.Subscribe(_ => Filter("", ""));
             YearlyFilterCommand.Subscribe(_ => FilterDate("year"));
             MonthlyFilterCommand.Subscribe(_ => FilterDate("month"));
             WeeklyFilterCommand.Subscribe(_ => FilterDate("week"));
@@ -96,6 +99,8 @@ namespace CovidReader.Windows.ViewModels
                     Infections.AddRange(edits.Where(x => date.AddDays(-30) < DateTime.Parse(x.Date) && DateTime.Parse(x.Date) < date)); break;
                 case "week":
                     Infections.AddRange(edits.Where(x => date.AddDays(-7) < DateTime.Parse(x.Date) && DateTime.Parse(x.Date) < date)); break;
+                default:
+                    Infections.AddRange(edits); break;
             }
         }
 
@@ -111,6 +116,7 @@ namespace CovidReader.Windows.ViewModels
             {
                 case "daily": edits = originals.Where(x => x.Calc == "daily"); break;
                 case "total": edits = originals.Where(x => x.Calc == "total"); break;
+                default: edits = originals; break;
             }
             Infections.AddRange(edits);
         }

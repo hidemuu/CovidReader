@@ -100,7 +100,6 @@ namespace CovidReader.Service.Api
                         TestNumber = CovidDbObjectToInt(tests.FirstOrDefault(x => x.Date == date)),
                     });
 
-
                     count++;
                 }
             });
@@ -168,14 +167,8 @@ namespace CovidReader.Service.Api
 
         private static int CovidDbObjectToInt(Covid19DbObject obj)
         {
-            if (obj != null)
-            {
-                return DataConverter.StringToInt(obj.Number, 0);
-            }
-            else
-            {
-                return 0;
-            }
+            if (obj != null) return DataConverter.StringToInt(obj.Number, 0);
+            return 0;
         }
 
         #endregion

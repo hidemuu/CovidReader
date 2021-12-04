@@ -13,7 +13,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="700"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
@@ -28,9 +28,10 @@
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button x:Name="Daily" Command="{Binding DailyFilterCommand}" Content="日報" Margin="3"/>
                 <Button x:Name="Total" Command="{Binding TotalFilterCommand}" Content="累計" Margin="3"/>
+                <Button x:Name="ALL" Command="{Binding ClearFilterCommand}" Content="全表示" Margin="3"/>
             </StackPanel>
         </Grid>
-        <ListView Grid.Row="1" ItemsSource="{Binding Models}" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+        <!--<ListView Grid.Row="1" ItemsSource="{Binding Models}" ScrollViewer.HorizontalScrollBarVisibility="Auto">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="日付" DisplayMemberBinding="{Binding Date.Value}" Width="auto"  />
@@ -46,8 +47,15 @@
                 </Style>
             </ListView.ItemContainerStyle>
             
-        </ListView>
-        <!--<DataGrid Grid.Row="1" ItemsSource="{Binding Models}" x:Name="dataGrid" />-->
+        </ListView>-->
+        <DataGrid Grid.Row="1" MaxHeight="{Binding Height}" ItemsSource="{Binding Models}" x:Name="dataGrid" 
+                  ScrollViewer.CanContentScroll="True"
+                  CanUserAddRows="False"
+                  EnableRowVirtualization="True" 
+                  EnableColumnVirtualization="True"
+                  VirtualizingStackPanel.VirtualizationMode="Standard"
+                  VirtualizingStackPanel.IsVirtualizing="True"/>
+        
         
     </Grid>
 </UserControl>

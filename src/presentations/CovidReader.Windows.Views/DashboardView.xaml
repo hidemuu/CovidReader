@@ -7,28 +7,49 @@
              mc:Ignorable="d" 
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              xmlns:constants="clr-namespace:CovidReader.Windows.Models.Constants;assembly=CovidReader.Windows.Models"
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="700" d:DesignWidth="1000"
              Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="700"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <TextBlock  Grid.Row="0" Text="Dashboard" Foreground="#3F487F" FontSize="20"  Margin="10,0,10,0" VerticalAlignment="Center" FontWeight="Bold"/>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="600"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <ContentControl Grid.Column="0" x:Name="dashboardLeftRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.DashboardLeftRegion}" prism:RegionManager.RegionManager="{Binding RegionManager}"/>
-            <ContentControl Grid.Column="1" x:Name="dashboardRightRegion" prism:RegionManager.RegionName="{x:Static constants:RegionNames.DashboardRightRegion}" prism:RegionManager.RegionManager="{Binding RegionManager}"/>
+            <lvc:CartesianChart Grid.Row="1" 
+                            Zoom="Xy" LegendLocation="Right"
+                            Series="{Binding Series.Value}">
+                
+            </lvc:CartesianChart>
+            <ListView Grid.Column="1" ItemsSource="{Binding Models}" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="日付" DisplayMemberBinding="{Binding Date.Value}" Width="auto"  />
+                        <GridViewColumn Header="感染者数" DisplayMemberBinding="{Binding PatientNumber.Value}" Width="auto" />
+                        <GridViewColumn Header="死亡者数" DisplayMemberBinding="{Binding DeathNumber.Value}" Width="auto" />
+                        <GridViewColumn Header="入院者数" DisplayMemberBinding="{Binding CureNumber.Value}" Width="auto" />
+                        <GridViewColumn Header="治癒者数" DisplayMemberBinding="{Binding RecoveryNumber.Value}" Width="auto" />
+                    </GridView>
+                </ListView.View>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+            </ListView>
         </Grid>
         
     </Grid>

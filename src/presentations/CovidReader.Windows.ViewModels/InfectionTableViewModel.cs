@@ -21,6 +21,8 @@ namespace CovidReader.Windows.ViewModels
 
         #region プロパティ
 
+        public int Height { get; set; } = 700;
+
         /// <summary>
         /// ビューバインディングモデル
         /// </summary>
