@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
-import NavMenu from '../components/layout/NavMenu';
+import Header from "../templetes/Header";
+import Footer from "../templetes/Footer";
+import NavMenu from "../templetes/NavMenu";
 
 export class Layout extends Component {
   static displayName = Layout.name;

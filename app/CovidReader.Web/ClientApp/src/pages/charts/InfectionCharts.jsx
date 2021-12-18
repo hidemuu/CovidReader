@@ -88,11 +88,11 @@ export default class InfectionCharts extends React.Component {
       const endDate = new Date(this.props.endDate);
       const dateFilter = this.props.dateFilter;
       let startDate = new Date(this.props.endDate);
-      if(dateFilter == 'week'){
+      if(dateFilter === 'week'){
         startDate.setDate( startDate.getDate() - 7);
-      }else if(dateFilter == 'month'){
+      }else if(dateFilter === 'month'){
         startDate.setDate( startDate.getDate() - 30);
-      }else if(dateFilter == 'year'){
+      }else if(dateFilter === 'year'){
         startDate.setDate( startDate.getDate() - 365);
       }else{
         startDate.setDate( startDate.getDate() - 365);

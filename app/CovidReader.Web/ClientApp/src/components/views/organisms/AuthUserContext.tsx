@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState } from "react"
-import AuthUser from "./models/auth"
+import React, { createContext, useContext, useState } from "react";
+import AuthUser from "../../models/auth";
 
 type OperationType = {
   login: (userId: string) => void

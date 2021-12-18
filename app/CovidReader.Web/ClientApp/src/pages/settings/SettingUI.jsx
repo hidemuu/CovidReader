@@ -1,5 +1,5 @@
 import React from "react";
-import SettingTemplate from "../components/templates/SettingTemplate";
+import SettingTemplate from "../../templetes/SettingTemplate";
 
 export default class Settings extends React.Component {
   render() {

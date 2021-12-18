@@ -4,9 +4,9 @@ import { createStyles, makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-import img01 from '../img/img01.jpg';
-import img02 from '../img/img02.jpg';
-import img03 from '../img/img03.jpg';
+import img01 from '../assets/img/img01.jpg';
+import img02 from '../assets/img/img02.jpg';
+import img03 from '../assets/img/img03.jpg';
 
 //ホーム画面
 export default class Home extends Component {

@@ -31,6 +31,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\components\views\atoms\buttons\" />
+    <Folder Include="ClientApp\src\components\views\molecules\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

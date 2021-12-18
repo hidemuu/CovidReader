@@ -8,9 +8,9 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import InfectionCharts from './InfectionCharts';
-import InfectionTables from './InfectionTables';
-import ComboBox from "../components/ComboBox";
+import InfectionCharts from '../charts/InfectionCharts';
+import InfectionTables from '../tables/InfectionTables';
+import ComboBox from "../../components/views/atoms/inputs/ComboBox";
 
 const Dashboard = () => {
 

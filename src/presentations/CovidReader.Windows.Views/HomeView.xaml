@@ -14,7 +14,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TextBlock  Grid.Row="0" Text="CovidReader" Foreground="#3F487F" FontSize="25"  Margin="20,0,20,0" VerticalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock  Grid.Row="0" Text="Stocker" Foreground="#3F487F" FontSize="25"  Margin="20,0,20,0" VerticalAlignment="Center" FontWeight="Bold"/>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
             <!--<CheckBox IsChecked="{Binding IsEnabled}" Content="Logined" Margin="10"/>-->
             <Button Command="{Binding LoginCommand}" Content="Login" Margin="10"/>
