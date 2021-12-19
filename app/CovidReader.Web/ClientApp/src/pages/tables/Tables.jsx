@@ -10,7 +10,6 @@ export default class Tables extends React.Component {
         return (
             <div>
                 <InfectionTables calc='daily' endDate={new Date()} dateFilter='year'/>
-                {/* <InspectionTables calc='daily'/> */}
             </div>
         );
         

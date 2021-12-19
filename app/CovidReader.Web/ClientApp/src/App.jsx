@@ -9,8 +9,8 @@ import Tables from "./pages/tables/Tables";
 import Settings from "./pages/settings/Settings";
 import SettingUI from "./pages/settings/SettingUI";
 import Dashboard from "./pages/dashboards/Dashboard";
-import SignIn from "./pages/signins/SignIn";
-import SignUp from "./pages/signins/SignUp";
+import SignIn from "./pages/accounts/SignIn";
+import SignUp from "./pages/accounts/SignUp";
 
 export default class App extends Component {
   
@@ -30,8 +30,7 @@ export default class App extends Component {
         <Route path="/settings" component={Settings}></Route>
         <Route path="/settingui" component={SettingUI}></Route>
         {/* <Route path="/archives/:article" component={Archives}></Route> */}
-        {/* <Route path="/register" component={Register}></Route> */}
-        
+        {/* <Route path="/register" component={Register}></Route> */}        
       </Layout>
     );
   }

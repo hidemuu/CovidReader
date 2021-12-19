@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import DashboardTemplate from "../components/templates/DashboardTemplate";
-import ComboBox from "../components/ComboBox";
+import DashboardTemplate from "../../templates/DashboardTemplate";
 
 const DashboardSummary = () => {
 
@@ -21,8 +20,6 @@ const DashboardSummary = () => {
     setDateFilter('year');
     console.log('clicked yearlybutton');
   };
-
-
 
   return (
     <DashboardTemplate title="サマリーページ">

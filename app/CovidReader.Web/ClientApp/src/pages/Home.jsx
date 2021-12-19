@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { createStyles, makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import img01 from '../assets/img/img01.jpg';
 import img02 from '../assets/img/img02.jpg';
 import img03 from '../assets/img/img03.jpg';
+import styles from "../components/styles/js/styles";
 
 //ホーム画面
 export default class Home extends Component {
@@ -37,23 +37,6 @@ export default class Home extends Component {
 
   render () {
 
-    //スタイルシート生成
-    const useStyles = makeStyles((theme) =>
-      createStyles({
-        root: {
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-around',
-          overflow: 'hidden',
-          backgroundColor: theme.palette.background.paper,
-        },
-        gridList: {
-          width: 500,
-          height: 700,
-        },
-      }),
-    );
-
     //コンテンツリスト
     const contentsTileData = [
       {
@@ -76,8 +59,8 @@ export default class Home extends Component {
     return (
       <div>
         <h1>新型コロナウイルス データ解析</h1>
-        <div className={useStyles.root}>
-          <GridList cellHeight={400} className={useStyles.gridList}>
+        <div className={styles.home}>
+          <GridList cellHeight={400} className={styles.gridList}>
             <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
               {/* <ListSubheader component="div">APIデータ</ListSubheader> */}
             </GridListTile>
@@ -100,8 +83,8 @@ export default class Home extends Component {
           </GridList>
         </div>
         <h3>コンテンツリスト</h3>
-        <div className={useStyles.root}>
-          <GridList cellHeight={400} className={useStyles.gridList}>
+        <div className={styles.home}>
+          <GridList cellHeight={400} className={styles.gridList}>
             <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
               {/* <ListSubheader component="div">タイルリスト</ListSubheader> */}
             </GridListTile>

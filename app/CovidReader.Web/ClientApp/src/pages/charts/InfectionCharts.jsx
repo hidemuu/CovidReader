@@ -1,8 +1,5 @@
 import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { Line, Bar } from 'react-chartjs-2';
-import CircularProgress from "@material-ui/core/CircularProgress";
+import ChartTemplate from "../../templates/ChartTemplate";
 
 //定数
 const basepath = 'api/infection/';
@@ -54,159 +51,21 @@ export default class InfectionCharts extends React.Component {
 
   //レンダリング
   render() {
-
-    //スタイル設定
-    const useStyles = makeStyles((theme) => ({
-      typography: {
-        marginTop: theme.spacing(0),
-        marginBottom: theme.spacing(0),
-      },
-      grid: {
-        margin: "auto",
-      },
-      button: {
-        marginTop: "auto",
-        marginBottom: theme.spacing(5),
-        width: "250px",
-        height: "200px",
-        fontSize: "30px",
-        margin: theme.spacing(1),
-      },
-      backdrop: {
-        color: "#fff"
-      },
-    }));
-
-    //データ取得完了後処理
-    if(!this.state.loading){
-      
-      //データ格納
-      const data = this.state.data;
-      const category = this.props.calc;
-      const disp = this.props.disp;
-      //日付フィルタ ADD 2021.10.02
-      const endDate = new Date(this.props.endDate);
-      const dateFilter = this.props.dateFilter;
-      let startDate = new Date(this.props.endDate);
-      if(dateFilter === 'week'){
-        startDate.setDate( startDate.getDate() - 7);
-      }else if(dateFilter === 'month'){
-        startDate.setDate( startDate.getDate() - 30);
-      }else if(dateFilter === 'year'){
-        startDate.setDate( startDate.getDate() - 365);
-      }else{
-        startDate.setDate( startDate.getDate() - 365);
-      }
-
-      console.log('draw start' + startDate + ' - ' + endDate);
-
-      const query = data.filter(item => { return item.calc ==  category}).filter(item => {return new Date(item.date) >= startDate && new Date(item.date) <= endDate});
-      //データラベル生成
-      const chartLabels = query.map(item => { return item.date; });
-      console.log(chartLabels);
-      //各系列の描画パラメータ設定
-      const chartItems = [
-        query.map(item => { return item.deathNumber; }), 
-        query.map(item => { return item.cureNumber; }), 
-        query.map(item => { return item.patientNumber; }),
-        query.map(item => { return item.recoveryNumber; }),
-        query.map(item => { return item.severeNumber; }),
-        query.map(item => { return item.testNumber; }), 
-      ]
-
-      let chartData = [];
-      let queryLabels = [];
-      let c = 0;
-      for (let i = 0; i < labels.length; i++){
-        if(isEnables[i] === true){
-          chartData.push({
-            type: chartTypes[c],
-            // yAxisID: yAxisIDs[c],
-            label: labels[c],
-            data: chartItems[c],
-            borderColor: borderColors[c],
-            backgroundColor: backgroundColors[c],
-            borderWidth: borderWidthes[c],
-          });
-          queryLabels.push(labels[c]);
-          c++;
-        }
-        
-      }
-
-      
-      console.log(chartData);
-
-      //チャートオプション設定
-      const options = {
-        legend: {
-          //display: false
-        },
-        title: {
-          display: true,
-          text: 'title'
-        },
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                suggestedMax: 40,
-                suggestedMin: 0,
-                stepSize: 10,
-                callback: (value, index, values) => { return value + ''; }
-              }
-            }
-          ]
-        }
-      };
-
-      //デザイン
-      if(disp == 'all'){
-        return (
-          <div>
-            <Typography variant="h5" align="center" className={useStyles.typography}>
-              <div>一覧</div>
-            </Typography>
-            <Line  
-                data={{
-                  labels: chartLabels,
-                  datasets: chartData,
-                }} 
-                options={options}/>
-          </div>
-        );
-      }
-      else{
-        return (
-          <div>
-            <Typography variant="h5" align="center" className={useStyles.typography}>
-              <div>個別</div>
-            </Typography>
-            <Grid container style={{ paddingTop: 30 }} justifyContent="flex-end" direction="row">
-              {queryLabels.map((label, index) => (
-                <Grid item className={useStyles.grid} xs={12}>
-                <Bar  
-                data={{
-                  labels: chartLabels,
-                  datasets: chartData.filter(d => {return d.label == label}),
-                }} 
-                options={options}/>
-              </Grid>
-              ))}
-            </Grid>
-          </div>
-          
-        );
-      }
-      
-    }else{
-
       return (
-        <CircularProgress color="inherit" />
-        
+          <ChartTemplate
+              chartTypes={chartTypes}
+              labels={labels}
+              borderColors={borderColors}
+              backgroundColors={backgroundColors}
+              borderWidthes={borderWidthes}
+              isEnables={isEnables}
+              loading={this.state.loading}
+              data={this.state.data}
+              category={this.props.calc}
+              disp={this.props.disp}
+              endDate={this.props.endDate}
+              dateFilter={this.props.dateFilter}
+          />
       );
-    }
-    
-    
   }
 }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
-//import './NavMenu.css';
 
 export default class NavMenu extends Component {
   static displayName = NavMenu.name;
