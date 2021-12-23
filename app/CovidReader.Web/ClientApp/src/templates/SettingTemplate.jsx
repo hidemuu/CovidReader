@@ -21,7 +21,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import themes from "../components/styles/js/themes";
 import styles from "../components/styles/js/styles";
-import Copyright from "../components/views/organisms/Copyright";
+import Copyright from "../components/views/molecules/Copyright";
 
 //テンプレートデザイン
 const SettingTemplate = ({

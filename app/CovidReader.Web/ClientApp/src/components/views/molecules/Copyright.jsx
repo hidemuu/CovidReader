@@ -8,7 +8,7 @@ const Copyright = ({ name }) => {
             {"Copyright © "}
             <Link color="inherit" to="/">
                 {name}
-      </Link>{" "}
+            </Link>{" "}
             {new Date().getFullYear()}
             {"."}
         </Typography>

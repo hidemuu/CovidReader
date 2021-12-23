@@ -55,11 +55,11 @@ const Dashboard = () => {
                     <Grid item className={styles().grid} xs={3}>
                         <DatePicker selected={endDate} onChange={(date) => handleDatepickerChanged(date)} />
                     </Grid>
-                </Grid>
+            </Grid>
             <DashboardTemplate
                 charts={<InfectionCharts calc='daily' disp='units' endDate={endDate} dateFilter={dateFilter} />}
                 tables={<InfectionTables calc='daily' endDate={endDate} dateFilter={dateFilter} />}
-                />
+            />
         </div>
   );
 };
