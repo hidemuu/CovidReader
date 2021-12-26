@@ -24,103 +24,109 @@ import styles from "../components/styles/js/styles";
 import Copyright from "../components/views/molecules/Copyright";
 
 //テンプレートデザイン
-const SettingTemplate = ({
-  children,
-  title,
-}) => {
-  const [open, setOpen] = React.useState(true);
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+export default class SettingTemplate extends React.Component {
 
-  return (
-    <ThemeProvider theme={themes}>
-      <div className={styles().root}>
-        <CssBaseline />
-        <AppBar
-          position="absolute"
-                  className={clsx(styles().appBar, open && styles().appBarShift)}
-        >
-            <Toolbar className={styles().toolbar}>
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              className={clsx(
-                  styles().menuButton,
-                  open && styles().menuButtonHidden
-              )}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              className={styles().title}
-            >
-              管理画面
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <Drawer
-          variant="permanent"
-          classes={{
-              paper: clsx(styles().drawerPaper, !open && styles().drawerPaperClose),
-          }}
-          open={open}
-        >
-            <div className={styles().toolbarIcon}>
-            <IconButton onClick={handleDrawerClose}>
-              <ChevronLeftIcon />
-            </IconButton>
-          </div>
-          <Divider />
-          <List>
-              <Link to="/settings" className={styles().link}>
-              <ListItem button>
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText primary="トップページ" />
-              </ListItem>
-            </Link>
-              <Link to="/settingui" className={styles().link}>
-              <ListItem button>
-                <ListItemIcon>
-                  <ShoppingCartIcon />
-                </ListItemIcon>
-                <ListItemText primary="サマリーページ" />
-              </ListItem>
-            </Link>
-          </List>
-        </Drawer>
-        <main className={styles().content}>
-          <div className={styles().appBarSpacer} />
-          <Container maxWidth="lg" className={styles().container}>
-            <Typography
-              component="h2"
-              variant="h5"
-              color="inherit"
-              noWrap
-              className={styles().pageTitle}
-            >
-              {title}
-            </Typography>
-            {children}
-            <Box pt={4}>
-              <Copyright name="管理画面" />
-            </Box>
-          </Container>
-        </main>
-      </div>
-    </ThemeProvider>
-  );
-};
+    //コンストラクタ
+    constructor(props) {
+        super(props);
+        this.state = {
+            open: false,
+        };
+    }
 
-export default SettingTemplate;
+    render() {
+        const { children, title } = this.props;
+        const handleDrawerOpen = () => {
+            this.setState({ open: true });
+        };
+        const handleDrawerClose = () => {
+            this.setState({ open: false });
+        };
+
+        return (
+            <ThemeProvider theme={themes}>
+                <div className={styles.root}>
+                    <CssBaseline />
+                    <AppBar
+                        position="absolute"
+                        className={clsx(styles.appBar, this.state.open && styles.appBarShift)}
+                    >
+                        <Toolbar className={styles.toolbar}>
+                            <IconButton
+                                edge="start"
+                                color="inherit"
+                                aria-label="open drawer"
+                                onClick={handleDrawerOpen}
+                                className={clsx(
+                                    styles.menuButton,
+                                    this.state.open && styles.menuButtonHidden
+                                )}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                            <Typography
+                                component="h1"
+                                variant="h6"
+                                color="inherit"
+                                noWrap
+                                className={styles.title}
+                            >
+                                管理画面
+            </Typography>
+                        </Toolbar>
+                    </AppBar>
+                    <Drawer
+                        variant="permanent"
+                        classes={{
+                            paper: clsx(styles.drawerPaper, !this.state.open && styles.drawerPaperClose),
+                        }}
+                        open={this.state.open}
+                    >
+                        <div className={styles.toolbarIcon}>
+                            <IconButton onClick={handleDrawerClose}>
+                                <ChevronLeftIcon />
+                            </IconButton>
+                        </div>
+                        <Divider />
+                        <List>
+                            <Link to="/settings" className={styles.link}>
+                                <ListItem button>
+                                    <ListItemIcon>
+                                        <HomeIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="トップページ" />
+                                </ListItem>
+                            </Link>
+                            <Link to="/settingui" className={styles.link}>
+                                <ListItem button>
+                                    <ListItemIcon>
+                                        <ShoppingCartIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="サマリーページ" />
+                                </ListItem>
+                            </Link>
+                        </List>
+                    </Drawer>
+                    <main className={styles.content}>
+                        <div className={styles.appBarSpacer} />
+                        <Container maxWidth="lg" className={styles.container}>
+                            <Typography
+                                component="h2"
+                                variant="h5"
+                                color="inherit"
+                                noWrap
+                                className={styles.pageTitle}
+                            >
+                                {title}
+                            </Typography>
+                            {children}
+                            <Box pt={4}>
+                                <Copyright name="管理画面" />
+                            </Box>
+                        </Container>
+                    </main>
+                </div>
+            </ThemeProvider>
+        );
+    }
+}

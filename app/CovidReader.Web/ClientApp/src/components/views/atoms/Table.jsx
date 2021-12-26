@@ -1,10 +1,9 @@
 ﻿import React from "react";
 import MaterialTable from 'material-table';
 
-const Table = ({
-    title, columns, data
-}) => {
-
+export default class Table extends React.Component {
+    render() {
+        const { title, columns, data } = this.props;
         return (
             <div>
                 <MaterialTable
@@ -28,5 +27,4 @@ const Table = ({
             </div>
         );
     }
-
-export default Table;
+}

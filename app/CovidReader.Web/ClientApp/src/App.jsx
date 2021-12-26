@@ -9,8 +9,8 @@ import Tables from "./pages/tables/Tables";
 import Settings from "./pages/settings/Settings";
 import SettingUI from "./pages/settings/SettingUI";
 import Dashboard from "./pages/dashboards/Dashboard";
-import SignIn from "./pages/accounts/SignIn";
-import SignUp from "./pages/accounts/SignUp";
+import Signin from "./pages/accounts/Signin";
+import Signup from "./pages/accounts/Signup";
 
 export default class App extends Component {
   
@@ -22,8 +22,8 @@ export default class App extends Component {
     return (
       <Layout>
         <Route exact path='/' component={Home} />
-        <Route exact path="/signin" component={SignIn}></Route>
-        <Route exact path="/signup" component={SignUp}></Route>
+        <Route exact path="/signin" component={Signin}></Route>
+        <Route exact path="/signup" component={Signup}></Route>
         <Route path="/dashboard" component={Dashboard}></Route>
         <Route path="/charts" component={Charts}></Route>
         <Route path="/tables" component={Tables}></Route>
