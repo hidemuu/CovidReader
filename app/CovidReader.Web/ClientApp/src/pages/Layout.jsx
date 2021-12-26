@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
-import Header from "../templates/Header";
-import Footer from "../templates/Footer";
+import Header from "../components/views/molecules/Header";
+import Footer from "../components/views/molecules/Footer";
 import NavMenu from "../templates/NavMenu";
 
 export class Layout extends Component {
@@ -23,7 +23,7 @@ export class Layout extends Component {
                           {this.props.children}
                       </div>
                   </div>
-                  <Footer />
+                  <Footer title="Covid Reader" />
               </div>
           </div>
 

@@ -1,0 +1,80 @@
+root {
+    display: flex;
+}
+
+board {
+    background-color: #F2F2F2;
+}
+
+home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    overflow: hidden; 
+}
+
+toolbar {
+    padding-right: 24px;
+}
+
+toolbarIcon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 8px; 
+}
+
+menuButton {
+    margin-right: 36px;
+}
+
+menuButtonHidden {
+    display: none;
+}
+
+title {
+    flex-grow: 1;
+}
+
+drawerPaper {
+    position: relative;
+    white-space: nowrap;
+}
+
+drawerPaperClose {
+    overflow-x: hidden;
+}
+
+content {
+    flex-grow: 1; 
+    height: 100vh;
+    overflow: auto;
+}
+
+link {
+    text-decoration: none;
+}
+
+gridList {
+    width: 500px;
+    height: 700px;
+}
+
+grid {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button {
+    margin-top: auto;
+    width: 250px;
+    height: 200px;
+    font-size: 30px
+}
+
+backdrop {
+    color: #fff
+}

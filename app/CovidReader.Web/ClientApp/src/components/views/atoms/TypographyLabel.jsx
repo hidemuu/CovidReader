@@ -8,5 +8,4 @@ const TypographyLabel = ({ content }) => {
         </Typography>
     );
 };
-
 export default TypographyLabel

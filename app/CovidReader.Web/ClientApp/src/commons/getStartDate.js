@@ -1,5 +1,5 @@
 export default function getStartDate(endDate, dateFilter) {
-    let startDate = endDate;
+    let startDate = new Date(endDate);
     if(dateFilter == 'week'){
         startDate.setDate( startDate.getDate() - 7);
     }else if(dateFilter == 'month'){

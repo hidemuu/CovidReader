@@ -1,13 +1,14 @@
 import React from 'react';
+import CircularProgress from "@material-ui/core/CircularProgress";
 import ChartTemplate from "../../templates/ChartTemplate";
+import getStateDate from "../../commons/getStartDate";
 
 //定数
 const basepath = 'api/infection/';
 const chartTypes = ['bar', 'bar', 'bar', 'bar', 'bar', 'bar'];
-const yAxisIDs = ['y-axis', 'y-axis', 'y-axis', 'y-axis', 'y-axis', 'y-axis'];
-const labels = ['死亡者', '入院者', '陽性者', '治癒者', '重傷者', '検査者']; //EDIT 2021.09.29 ラベルデータをユニーク変数名から配列に変更（汎用化）
-const borderColors = ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)']; //ADD 2021.09.29 ボーダー色を宣言
-const backgroundColors = ['rgba(255,0,0,1)', 'rgba(0,255,0,1)', 'rgba(0,0,255,1)', 'rgba(255,255,0,1)', 'rgba(0,255,255,1)', 'rgba(255,0,255,1)']; //ADD 2021.09.29 背景色を宣言
+const labels = ['死亡者', '入院者', '陽性者', '治癒者', '重傷者', '検査者'];
+const borderColors = ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)','rgba(0, 0, 0, 0)'];
+const backgroundColors = ['rgba(255,0,0,1)', 'rgba(0,255,0,1)', 'rgba(0,0,255,1)', 'rgba(255,255,0,1)', 'rgba(0,255,255,1)', 'rgba(255,0,255,1)'];
 const borderWidthes = [1, 1, 1, 1, 1, 1];
 const isEnables = [true, false, true, false, false, false];
 
@@ -50,22 +51,94 @@ export default class InfectionCharts extends React.Component {
   }
 
   //レンダリング
-  render() {
-      return (
-          <ChartTemplate
-              chartTypes={chartTypes}
-              labels={labels}
-              borderColors={borderColors}
-              backgroundColors={backgroundColors}
-              borderWidthes={borderWidthes}
-              isEnables={isEnables}
-              loading={this.state.loading}
-              data={this.state.data}
-              category={this.props.calc}
-              disp={this.props.disp}
-              endDate={this.props.endDate}
-              dateFilter={this.props.dateFilter}
-          />
-      );
+    render() {
+
+        //データ取得完了後処理
+        if (!this.state.loading) {
+
+            //データ格納
+            let startDate = getStateDate(this.props.endDate, this.props.dateFilter);
+            
+            console.log('draw start' + startDate + ' - ' + this.props.endDate);
+
+            const query = this.state.data.filter(item => { return item.calc == this.props.calc }).filter(item => { return new Date(item.date) >= startDate && new Date(item.date) <= this.props.endDate });
+            //データラベル生成
+            const chartLabels = query.map(item => { return item.date; });
+            console.log(chartLabels);
+            //各系列の描画パラメータ設定
+            const chartItems = [
+                query.map(item => { return item.deathNumber; }),
+                query.map(item => { return item.cureNumber; }),
+                query.map(item => { return item.patientNumber; }),
+                query.map(item => { return item.recoveryNumber; }),
+                query.map(item => { return item.severeNumber; }),
+                query.map(item => { return item.testNumber; }),
+            ]
+
+            let chartData = [];
+            let queryLabels = [];
+            let c = 0;
+            for (let i = 0; i < labels.length; i++) {
+                if (isEnables[i] === true) {
+                    chartData.push({
+                        type: chartTypes[c],
+                        // yAxisID: yAxisIDs[c],
+                        label: labels[c],
+                        data: chartItems[c],
+                        borderColor: borderColors[c],
+                        backgroundColor: backgroundColors[c],
+                        borderWidth: borderWidthes[c],
+                    });
+                    queryLabels.push(labels[c]);
+                    c++;
+                }
+
+            }
+
+            console.log(chartData);
+
+            //チャートオプション設定
+            const options = {
+                legend: {
+                    //display: false
+                },
+                title: {
+                    display: true,
+                    text: 'title'
+                },
+                scales: {
+                    yAxes: [
+                        {
+                            ticks: {
+                                suggestedMax: 40,
+                                suggestedMin: 0,
+                                stepSize: 10,
+                                callback: (value, index, values) => { return value + ''; }
+                            }
+                        }
+                    ]
+                }
+            };
+
+            return (
+                <ChartTemplate
+                    chartLabels={chartLabels}
+                    chartData={chartData}
+                    options={options}
+                    queryLabels={queryLabels}
+                    disp={this.props.disp}
+                />
+            );
+
+        } else {
+
+            return (
+                <CircularProgress color="inherit" />
+
+            );
+        }
+
+
+      
   }
 }

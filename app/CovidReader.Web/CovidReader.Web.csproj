@@ -32,7 +32,6 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\assets\ico\" />
-    <Folder Include="ClientApp\src\components\views\atoms\frames\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
