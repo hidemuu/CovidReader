@@ -26,6 +26,7 @@ export default class ChartTemplate extends React.Component {
                         datasets={chartData}
                         options={options}
                         queryLabels={queryLabels}
+                        isBar={true}
                     />
                 </div>
             );
