@@ -3,7 +3,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import 'react-tabs/style/react-tabs.css';
 import InfectionCharts from './InfectionCharts';
 import DateTab from "../../components/views/organisms/DateTab";
-import ChartPageTemplate from "../../templates/ChartPageTemplate";
+import ChartTemplate from "../../templates/ChartTemplate";
 
 //感染データ、検査データチャート一覧表示
 export default class Charts extends React.Component {
@@ -53,11 +53,11 @@ export default class Charts extends React.Component {
                     selectedDate={this.state.endDate}
                     onChangeDatepicker={(date) => this.handleDatepickerChanged(date)}
                 />
-                <ChartPageTemplate
-                    dailyAllCharts={<InfectionCharts calc='daily' disp='all' endDate={this.state.endDate} dateFilter={this.state.dateFilter} />}
-                    dailyUnitCharts={<InfectionCharts calc='daily' disp='units' endDate={this.state.endDate} dateFilter={this.state.dateFilter} />}
-                    totalAllCharts={<InfectionCharts calc='total' disp='all' endDate={this.state.endDate} dateFilter={this.state.dateFilter} />}
-                    totalUnitCharts={<InfectionCharts calc='total' disp='units' endDate={this.state.endDate} dateFilter={this.state.dateFilter} />}
+                <ChartTemplate
+                    dailyAllCharts={<InfectionCharts calc='daily' isAll={true} endDate={this.state.endDate} dateFilter={this.state.dateFilter} />}
+                    dailyUnitCharts={<InfectionCharts calc='daily' isAll={false} endDate={this.state.endDate} dateFilter={this.state.dateFilter} />}
+                    totalAllCharts={<InfectionCharts calc='total' isAll={true} endDate={this.state.endDate} dateFilter={this.state.dateFilter} />}
+                    totalUnitCharts={<InfectionCharts calc='total' isAll={false} endDate={this.state.endDate} dateFilter={this.state.dateFilter} />}
                 />
             </div>
         );

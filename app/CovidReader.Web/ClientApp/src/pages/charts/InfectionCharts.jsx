@@ -1,6 +1,6 @@
 import React from 'react';
-import CircularProgress from "@material-ui/core/CircularProgress";
-import ChartTemplate from "../../templates/ChartTemplate";
+import Progress from "../../components/views/atoms/Progress";
+import ChartScreen from "../../components/views/organisms/ChartScreen";
 import getStateDate from "../../commons/getStartDate";
 
 //定数
@@ -121,19 +121,19 @@ export default class InfectionCharts extends React.Component {
             };
 
             return (
-                <ChartTemplate
+                <ChartScreen
                     chartLabels={chartLabels}
                     chartData={chartData}
                     options={options}
                     queryLabels={queryLabels}
-                    disp={this.props.disp}
+                    isAll={this.props.isAll}
                 />
             );
 
         } else {
 
             return (
-                <CircularProgress color="inherit" />
+                <Progress />
 
             );
         }

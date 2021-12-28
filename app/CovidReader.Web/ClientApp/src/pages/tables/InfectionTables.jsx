@@ -1,7 +1,8 @@
 import React from "react";
 import getStateDate from "../../commons/getStartDate";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import Progress from "../../components/views/atoms/Progress";
 import Table from "../../components/views/atoms/Table";
+
 const basepath = 'api/infection/';
 const title = '感染状況';
 const labels = ['日付', '死亡者数', '入院者数', '陽性者数', '回復者数', '重傷者数', '検査数'];
@@ -99,7 +100,7 @@ export default class InfectionTables extends React.Component {
       } else {
 
           return (
-              <CircularProgress color="inherit" />
+              <Progress />
           );
       }
 

@@ -1,35 +1,38 @@
 ﻿import React from 'react';
-import LineChart from '../components/views/atoms/LineChart';
-import ChartContainer from '../components/views/molecules/ChartContainer';
-import TypographyLabel from '../components/views/atoms/TypographyLabel';
+import { Grid, Typography } from '@material-ui/core';
+import "react-datepicker/dist/react-datepicker.css";
+import 'react-tabs/style/react-tabs.css';
+import styles from "../components/styles/js/styles";
 
 export default class ChartTemplate extends React.Component {
     render() {
-        const { chartLabels, chartData, options, queryLabels, disp } = this.props;
-        if (disp == 'all') {
-            return (
-                <div>
-                    <TypographyLabel content="一覧" />
-                    <LineChart
-                        labels={chartLabels}
-                        datasets={chartData}
-                        options={options} />
-                </div>
-            );
-        }
-        else {
-            return (
-                <div>
-                    <TypographyLabel content="個別" />
-                    <ChartContainer
-                        labels={chartLabels}
-                        datasets={chartData}
-                        options={options}
-                        queryLabels={queryLabels}
-                        isBar={true}
-                    />
-                </div>
-            );
-        }
+        const { dailyAllCharts, dailyUnitCharts, totalAllCharts, totalUnitCharts } = this.props;
+        return (
+            <div>
+                <Typography variant="h5" align="center" className={styles.typography}>
+                    <div>全国感染状況 : 日報</div>
+                </Typography>
+                <Grid container style={{ paddingTop: 30, paddingBottom: 50 }} justifyContent="flex-end" direction="row">
+                    <Grid item className={styles.grid} xs={6}>
+                        {dailyAllCharts}
+                    </Grid>
+                    <Grid item className={styles.grid} xs={6}>
+                        {dailyUnitCharts}
+                    </Grid>
+                </Grid>
+                <Typography variant="h5" align="center" className={styles.typography}>
+                    <div>全国感染状況 : 累計</div>
+                </Typography>
+                <Grid container style={{ paddingTop: 30, paddingBottom: 50 }} justifyContent="flex-end" direction="row">
+                    <Grid item className={styles.grid} xs={6}>
+                        {totalAllCharts}
+                    </Grid>
+                    <Grid item className={styles.grid} xs={6}>
+                        {totalUnitCharts}
+                    </Grid>
+                </Grid>
+            </div>
+        );
+
     }
 }

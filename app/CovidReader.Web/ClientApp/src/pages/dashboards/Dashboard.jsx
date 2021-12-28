@@ -54,7 +54,7 @@ export default class Dashboard extends React.Component {
                     onChangeDatepicker={(date) => this.onChangeDatepicker(date)}
                 />
                 <DashboardTemplate
-                    charts={<InfectionCharts calc='daily' disp='units' endDate={this.state.selectedDate} dateFilter={this.state.dateFilter} />}
+                    charts={<InfectionCharts calc='daily' isAll={false} endDate={this.state.selectedDate} dateFilter={this.state.dateFilter} />}
                     tables={<InfectionTables calc='daily' endDate={this.state.selectedDate} dateFilter={this.state.dateFilter} />}
                 />
             </div>
