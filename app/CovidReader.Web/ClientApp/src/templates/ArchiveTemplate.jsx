@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import Article from "../components/views/organisms/Article";
+import Article from "../components/views/atoms/Article";
 
 export default class ArchiveTemplate extends React.Component {
     render() {

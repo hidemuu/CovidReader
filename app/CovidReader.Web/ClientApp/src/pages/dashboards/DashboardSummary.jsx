@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import dateFilterType from "../../commons/constants/dateFilterType";
 import DashboardTemplate from "../../templates/DashboardTemplate";
 
 const DashboardSummary = () => {
@@ -7,17 +8,17 @@ const DashboardSummary = () => {
 
   //週表示ボタンクリックイベント
   let handleWeeklyButtonClick = () =>　{ 
-    setDateFilter('week');
+    setDateFilter(dateFilterType.WEEK);
     console.log('clicked weeklybutton');
   };
   //月表示ボタンクリックイベント
   let handleMonthlyButtonClick = () => {
-    setDateFilter('month');
+      setDateFilter(dateFilterType.MONTH);
     console.log('clicked monthlybutton');
   };
   //年表示ボタンクリックイベント
   let handleYearlyButtonClick = () => {
-    setDateFilter('year');
+      setDateFilter(dateFilterType.YEAR);
     console.log('clicked yearlybutton');
   };
 

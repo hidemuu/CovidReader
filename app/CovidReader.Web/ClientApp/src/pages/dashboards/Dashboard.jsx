@@ -5,6 +5,7 @@ import DateTab from "../../components/views/organisms/DateTab";
 import DashboardTemplate from "../../templates/DashboardTemplate";
 import InfectionCharts from '../charts/InfectionCharts';
 import InfectionTables from '../tables/InfectionTables';
+import dateFilterType from "../../commons/constants/dateFilterType";
 import styles from "../../components/styles/js/styles";
 
 export default class Dashboard extends React.Component {
@@ -14,27 +15,13 @@ export default class Dashboard extends React.Component {
         super(props);
         this.state = {
             selectedDate: new Date(),
-            selectedTabIndex: 2,
-            dateFilter: 'all',
+            selectedTabIndex: dateFilterType.YEAR,
         };
     }
 
     //タブセレクトイベント
     onSelectTab = (index, last) => {
-        console.log('Selected tab: ' + index + ', Last tab: ' + last);
         this.setState({ selectedTabIndex: index });
-        if (index === 0) {
-            this.setState({ dateFilter: 'week' });
-            console.log('clicked weeklybutton');
-        }
-        else if (index === 1) {
-            this.setState({ dateFilter: 'month' });
-            console.log('clicked monthlybutton');
-        }
-        else if (index === 2) {
-            this.setState({ dateFilter: 'year' });
-            console.log('clicked yearlybutton');
-        }
     }
 
     //カレンダークリックイベント
@@ -43,8 +30,6 @@ export default class Dashboard extends React.Component {
     }
 
     render() {
-        
-
         return (
             <div className={styles.board}>
                 <DateTab
@@ -54,8 +39,8 @@ export default class Dashboard extends React.Component {
                     onChangeDatepicker={(date) => this.onChangeDatepicker(date)}
                 />
                 <DashboardTemplate
-                    charts={<InfectionCharts calc='daily' isAll={false} endDate={this.state.selectedDate} dateFilter={this.state.dateFilter} />}
-                    tables={<InfectionTables calc='daily' endDate={this.state.selectedDate} dateFilter={this.state.dateFilter} />}
+                    charts={<InfectionCharts calc='daily' isAll={false} endDate={this.state.selectedDate} dateFilter={this.state.selectedTabIndex} />}
+                    tables={<InfectionTables calc='daily' endDate={this.state.selectedDate} dateFilter={this.state.selectedTabIndex} />}
                 />
             </div>
         );

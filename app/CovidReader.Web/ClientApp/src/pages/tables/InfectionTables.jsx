@@ -1,7 +1,8 @@
 import React from "react";
-import getStateDate from "../../commons/getStartDate";
+import getStateDate from "../../commons/functions/getStartDate";
 import Progress from "../../components/views/atoms/Progress";
 import Table from "../../components/views/atoms/Table";
+import fetchData from "../../commons/functions/fetchData";
 
 const basepath = 'api/infection/';
 const title = '感染状況';
@@ -16,46 +17,19 @@ export default class InfectionTables extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      data: [],
-      loading:true,
+      data: null,
     };
   }
 
   //マウント時イベントハンドラ
-  componentDidMount() {
-    this.populateItemAsync();  
-  }
-
-  //テーブルデータ取得
-  async populateItemAsync(){
-    
-    await fetch(basepath)
-    .then((response) => {
-      if (response.status === 200) {
-        return response.json();
-      } else {
-        throw new Error();
-      }
-    })
-    .then((json) => {
-      console.log(json);
-      this.setState({
-        data: json,
-        loading: false,
-      });
-    })
-    .catch((error) =>{
-      console.error('--- fetch error ' + basepath + '---');
-      console.error(error);
-    });
-
+    async componentDidMount() {
+        await fetchData(basepath, this);
   }
 
   //レンダリング
   render() {
-
       //データ取得完了後処理
-      if (!this.state.loading) {
+      if (this.state.data != null) {
 
           const startTime = performance.now(); // 開始時間
 
@@ -95,15 +69,9 @@ export default class InfectionTables extends React.Component {
                   data={query}
               />
           );
-
-          //データ取得中処理
+      //データ取得中処理
       } else {
-
-          return (
-              <Progress />
-          );
+          return ( <Progress /> );
       }
-
-      
   }
 }

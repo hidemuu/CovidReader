@@ -1,7 +1,8 @@
 import React from 'react';
 import Progress from "../../components/views/atoms/Progress";
 import ChartScreen from "../../components/views/organisms/ChartScreen";
-import getStateDate from "../../commons/getStartDate";
+import getStateDate from "../../commons/functions/getStartDate";
+import fetchData from "../../commons/functions/fetchData";
 
 //定数
 const basepath = 'api/infection/';
@@ -19,42 +20,20 @@ export default class InfectionCharts extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      data: [],
-      loading:true,
+      data: null,
     };
   }
 
   //マウント時イベントハンドラ
-  componentDidMount() {
-    this.populateItemAsync();  
-  }
-
-  //チャートデータ取得
-  async populateItemAsync(){
-
-    console.log(basepath);
-    await fetch(basepath)
-    .then((response) => response.json())
-    .then((json) => {
-      console.log(json);
-      this.setState({
-        data: json,
-        loading: false,
-      });
-      
-    })
-    .catch((error) =>{
-      console.error('--- fetch error ' + basepath +  '---');
-      console.error(error);
-    });
-
+  async componentDidMount() {
+      await fetchData(basepath, this);
   }
 
   //レンダリング
     render() {
 
         //データ取得完了後処理
-        if (!this.state.loading) {
+        if (this.state.data != null) {
 
             //データ格納
             let startDate = getStateDate(this.props.endDate, this.props.dateFilter);
