@@ -36,14 +36,22 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\components\views\ts\atoms\Article.tsx" />
+    <None Remove="ClientApp\src\components\views\ts\atoms\BarChart.tsx" />
+    <None Remove="ClientApp\src\components\views\ts\atoms\Footer.tsx" />
+    <None Remove="ClientApp\src\components\views\ts\atoms\Header.tsx" />
+    <None Remove="ClientApp\src\components\views\ts\atoms\LineChart.tsx" />
+    <None Remove="ClientApp\src\components\views\ts\atoms\NavContent.tsx" />
+    <None Remove="ClientApp\src\components\views\ts\atoms\Progress.tsx" />
+    <None Remove="ClientApp\src\components\views\ts\atoms\Table.tsx" />
+    <None Remove="ClientApp\src\components\views\ts\atoms\TypographyLabel.tsx" />
+    <None Remove="ClientApp\src\components\views\ts\molecules\ChartContainer.tsx" />
+    <None Remove="ClientApp\src\components\views\ts\molecules\ChartSelector.tsx" />
     <None Remove="ClientApp\src\templates\HomeTemplate.tsx" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ClientApp\src\assets\ico\" />
     <Folder Include="ClientApp\src\components\views\js\" />
-    <Folder Include="ClientApp\src\components\views\ts\molecules\" />
-    <Folder Include="ClientApp\src\components\views\ts\organisms\" />
     <Folder Include="ClientApp\src\pages\js\" />
     <Folder Include="ClientApp\src\pages\ts\" />
     <Folder Include="ClientApp\src\templates\js\" />
