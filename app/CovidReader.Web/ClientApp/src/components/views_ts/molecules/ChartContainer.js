@@ -17,7 +17,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
-var styles_1 = require("../../../styles/js/styles");
+var styles_1 = require("../../styles/js/styles");
 var ChartContainer = /** @class */ (function (_super) {
     __extends(ChartContainer, _super);
     function ChartContainer() {
@@ -25,7 +25,7 @@ var ChartContainer = /** @class */ (function (_super) {
     }
     ChartContainer.prototype.render = function () {
         return (React.createElement("div", null,
-            React.createElement(core_1.Grid, { container: true, style: { paddingTop: 30 }, justifyContent: "flex-end", direction: "row" }, this.props.queryLabels.map(function (label, index) { return (React.createElement(core_1.Grid, { item: true, className: styles_1.default.grid, xs: 12 })); }))));
+            React.createElement(core_1.Grid, { container: true, style: { paddingTop: 30 }, justifyContent: "flex-end", direction: "row" }, this.props.queryLabels.map(function (label, index) { return (React.createElement(core_1.Grid, { item: true, className: (0, styles_1.default)().grid, xs: 12 })); }))));
     };
     return ChartContainer;
 }(React.Component));

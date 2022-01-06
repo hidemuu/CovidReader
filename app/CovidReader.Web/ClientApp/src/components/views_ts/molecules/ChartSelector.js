@@ -19,7 +19,7 @@ var React = require("react");
 var core_1 = require("@material-ui/core");
 var LineChart_1 = require("../atoms/LineChart");
 var BarChart_1 = require("../atoms/BarChart");
-var styles_1 = require("../../../styles/js/styles");
+var styles_1 = require("../../styles/js/styles");
 var ChartSelector = /** @class */ (function (_super) {
     __extends(ChartSelector, _super);
     function ChartSelector() {
@@ -27,7 +27,7 @@ var ChartSelector = /** @class */ (function (_super) {
     }
     ChartSelector.prototype.render = function () {
         return (React.createElement("div", null,
-            React.createElement(core_1.Grid, { item: true, className: styles_1.default.grid, xs: 12 }, this.props.isBar
+            React.createElement(core_1.Grid, { item: true, className: (0, styles_1.default)().grid, xs: 12 }, this.props.isBar
                 ? React.createElement(BarChart_1.default, { labels: this.props.labels, datasets: this.props.datasets, options: this.props.options })
                 : React.createElement(LineChart_1.default, { labels: this.props.labels, datasets: this.props.datasets, options: this.props.options }))));
     };

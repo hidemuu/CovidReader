@@ -1,7 +1,7 @@
 ﻿import * as React from "react";
 import { Grid } from '@material-ui/core';
 import ChartSelector from '../molecules/ChartSelector';
-import styles from "../../../styles/js/styles";
+import styles from "../../styles/js/styles";
 
 type Props = {
     isBar: boolean;
@@ -18,7 +18,7 @@ export default class ChartContainer extends React.Component<Props> {
             <div>
                 <Grid container style={{ paddingTop: 30 }} justifyContent="flex-end" direction="row">
                     {this.props.queryLabels.map((label, index) => (
-                        <Grid item className={styles.grid} xs={12}>
+                        <Grid item className={styles().grid} xs={12}>
                             {/*<ChartSelector*/}
                             {/*    labels={this.props.labels}*/}
                             {/*    datasets={this.props.datasets.filter(d => { return d.label === label })}*/}

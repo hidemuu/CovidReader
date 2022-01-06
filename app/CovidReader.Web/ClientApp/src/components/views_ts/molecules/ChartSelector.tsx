@@ -2,7 +2,7 @@
 import { Grid } from '@material-ui/core';
 import LineChart from '../atoms/LineChart';
 import BarChart from '../atoms/BarChart';
-import styles from "../../../styles/js/styles";
+import styles from "../../styles/js/styles";
 
 type Props = {
     isBar: boolean;
@@ -16,7 +16,7 @@ export default class ChartSelector extends React.Component<Props> {
     render(): JSX.Element {
         return (
             <div>
-                <Grid item className={styles.grid} xs={12}>
+                <Grid item className={styles().grid} xs={12}>
                     {this.props.isBar
                         ? <BarChart
                             labels={this.props.labels}
