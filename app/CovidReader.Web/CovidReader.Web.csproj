@@ -35,44 +35,52 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\components\views_ts\atoms\Article.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\atoms\BarChart.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\atoms\Footer.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\atoms\Header.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\atoms\LineChart.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\atoms\NavContent.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\atoms\Progress.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\atoms\Table.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\atoms\TypographyLabel.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\molecules\ChartContainer.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\molecules\ChartSelector.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\organisms\ChartScreen.tsx" />
-    <None Remove="ClientApp\src\components\views_ts\organisms\DateTab.tsx" />
-    <None Remove="ClientApp\src\pages_ts\accounts\Signin.tsx" />
-    <None Remove="ClientApp\src\pages_ts\accounts\Signup.tsx" />
-    <None Remove="ClientApp\src\pages_ts\charts\Charts.tsx" />
-    <None Remove="ClientApp\src\pages_ts\charts\InfectionCharts.tsx" />
-    <None Remove="ClientApp\src\pages_ts\dashboards\Dashboard.tsx" />
-    <None Remove="ClientApp\src\pages_ts\Home.tsx" />
-    <None Remove="ClientApp\src\pages_ts\Layout.tsx" />
-    <None Remove="ClientApp\src\pages_ts\registers\Register.tsx" />
-    <None Remove="ClientApp\src\pages_ts\settings\Settings.tsx" />
-    <None Remove="ClientApp\src\pages_ts\settings\SettingUI.tsx" />
-    <None Remove="ClientApp\src\pages_ts\tables\InfectionTables.tsx" />
-    <None Remove="ClientApp\src\pages_ts\tables\Tables.tsx" />
-    <None Remove="ClientApp\src\templates\HomeTemplate.tsx" />
-    <None Remove="ClientApp\src\templates_ts\ChartTemplate.tsx" />
-    <None Remove="ClientApp\src\templates_ts\DashboardTemplate.tsx" />
-    <None Remove="ClientApp\src\templates_ts\NavMenu.tsx" />
-    <None Remove="ClientApp\src\templates_ts\RegisterTemplate.tsx" />
-    <None Remove="ClientApp\src\templates_ts\SettingTemplate.tsx" />
-    <None Remove="ClientApp\src\templates_ts\SigninTemplate.tsx" />
-    <None Remove="ClientApp\src\templates_ts\SignupTemplate.tsx" />
+    <None Remove="ClientApp\src\ts\App.tsx" />
+    <None Remove="ClientApp\src\ts\commons\%40types\model.d.ts" />
+    <None Remove="ClientApp\src\js\commons\@types\field.d.ts" />
+    <None Remove="ClientApp\src\ts\commons\constants\dateFilterType.ts" />
+    <None Remove="ClientApp\src\ts\commons\functions\fetchData.ts" />
+    <None Remove="ClientApp\src\ts\commons\functions\getStartDate.ts" />
+    <None Remove="ClientApp\src\ts\components\styles\styles.ts" />
+    <None Remove="ClientApp\src\ts\components\styles\themes.ts" />
+    <None Remove="ClientApp\src\ts\components\views\atoms\Article.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\atoms\BarChart.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\atoms\Footer.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\atoms\Header.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\atoms\LineChart.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\atoms\NavContent.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\atoms\Progress.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\atoms\Table.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\atoms\TypographyLabel.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\molecules\ChartContainer.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\molecules\ChartSelector.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\molecules\NavBar.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\organisms\ChartScreen.tsx" />
+    <None Remove="ClientApp\src\ts\components\views\organisms\DateTab.tsx" />
+    <None Remove="ClientApp\src\ts\pages\accounts\Signin.tsx" />
+    <None Remove="ClientApp\src\ts\pages\accounts\Signup.tsx" />
+    <None Remove="ClientApp\src\ts\pages\charts\Charts.tsx" />
+    <None Remove="ClientApp\src\ts\pages\charts\InfectionCharts.tsx" />
+    <None Remove="ClientApp\src\ts\pages\dashboards\Dashboard.tsx" />
+    <None Remove="ClientApp\src\ts\pages\Home.tsx" />
+    <None Remove="ClientApp\src\ts\pages\Layout.tsx" />
+    <None Remove="ClientApp\src\ts\pages\registers\Register.tsx" />
+    <None Remove="ClientApp\src\ts\pages\settings\Settings.tsx" />
+    <None Remove="ClientApp\src\ts\pages\settings\SettingUI.tsx" />
+    <None Remove="ClientApp\src\ts\pages\tables\InfectionTables.tsx" />
+    <None Remove="ClientApp\src\ts\pages\tables\Tables.tsx" />
+    <None Remove="ClientApp\src\js\templates\HomeTemplate.tsx" />
+    <None Remove="ClientApp\src\ts\templates\ChartTemplate.tsx" />
+    <None Remove="ClientApp\src\ts\templates\DashboardTemplate.tsx" />
+    <None Remove="ClientApp\src\ts\templates\NavMenu.tsx" />
+    <None Remove="ClientApp\src\ts\templates\RegisterTemplate.tsx" />
+    <None Remove="ClientApp\src\ts\templates\SettingTemplate.tsx" />
+    <None Remove="ClientApp\src\ts\templates\SigninTemplate.tsx" />
+    <None Remove="ClientApp\src\ts\templates\SignupTemplate.tsx" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ClientApp\src\assets\ico\" />
-    <Folder Include="ClientApp\src\models_ts\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
