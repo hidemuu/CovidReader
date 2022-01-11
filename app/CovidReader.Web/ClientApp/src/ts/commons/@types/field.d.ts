@@ -23,6 +23,11 @@
         tabNumber: Number
     }
 
+    export interface IChartScreen {
+        isAllType: Model.IChartType,
+        type: Model.IChartType,
+    }
+
     export interface IChartTemplate {
         calc: string,
         isAll: boolean,
@@ -31,7 +36,26 @@
     }
 
     export interface IChartData {
-        data: IFetchData,
+        data: IFetchData[],
+        chart: Model.IChart,
     }
-    
+
+    // Table
+    export interface ITableIndex {
+        endDate: Date,
+        tabNumber: Number
+    }
+
+    export interface ITableData {
+        data: IFetchData[],
+        table: Model.ITable,
+    }
+
+    // Dashboard
+    export interface IDashboard {
+        selectedDate: Date,
+        selectedTabIndex: Number,
+    }
+
+
 }

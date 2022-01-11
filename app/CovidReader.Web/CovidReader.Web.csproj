@@ -38,6 +38,7 @@
     <None Remove="ClientApp\src\ts\App.tsx" />
     <None Remove="ClientApp\src\ts\commons\%40types\model.d.ts" />
     <None Remove="ClientApp\src\js\commons\@types\field.d.ts" />
+    <None Remove="ClientApp\src\ts\commons\constants\calcType.ts" />
     <None Remove="ClientApp\src\ts\commons\constants\dateFilterType.ts" />
     <None Remove="ClientApp\src\ts\commons\functions\fetchData.ts" />
     <None Remove="ClientApp\src\ts\commons\functions\getStartDate.ts" />

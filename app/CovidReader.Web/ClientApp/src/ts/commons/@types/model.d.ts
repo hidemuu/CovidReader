@@ -11,9 +11,9 @@
 
     // Chart
     export interface IChart {
-        labels: string[],
+        labels: object[],
         datasets: object[],
-        options: object[],
+        options: object,
     }
 
     export interface IChartType {
@@ -28,25 +28,26 @@
     export interface IChartContainer {
         chart: IChart,
         type: IChartType,
-        queryLabels: string[],
+        queryLabels: object[],
     }
 
     export interface IChartScreen {
         chart: IChart,
-        queryLabels: string[],
+        queryLabels: object[],
         isAll: boolean,
     }
 
     export interface IChartTemplate {
-        dailyAllCharts: Function,
-        dailyUnitCharts: Function,
-        totalAllCharts: Function,
-        totalUnitCharts: Function,
+        dailyAllCharts: JSX.Element,
+        dailyUnitCharts: JSX.Element,
+        totalAllCharts: JSX.Element,
+        totalUnitCharts: JSX.Element,
     }
 
     export interface IChartData {
         calc: string,
-        endDate: string,
+        endDate: Date,
+        isAll: boolean,
         dateFilter: Number,
     }
 
@@ -55,6 +56,12 @@
         title: string,
         columns: object[],
         data: object[],
+    }
+
+    export interface ITableData {
+        calc: string,
+        endDate: Date,
+        dateFilter: Number,
     }
 
     //Tab
@@ -96,8 +103,8 @@
     // Dashboard
 
     export interface IDashboardTemplate {
-        charts: Function;
-        tables: Function;
+        charts: JSX.Element;
+        tables: JSX.Element;
     }
 
     // Auth

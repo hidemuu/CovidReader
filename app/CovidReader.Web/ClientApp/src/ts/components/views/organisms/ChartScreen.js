@@ -25,13 +25,15 @@ var ChartScreen = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     ChartScreen.prototype.render = function () {
+        this.state.isAllType.isBar = false;
+        this.state.type.isBar = true;
         return (React.createElement("div", null, this.props.isAll ?
             React.createElement("div", null,
                 React.createElement(TypographyLabel_1.default, { content: "\u4E00\u89A7" }),
-                React.createElement(ChartSelector_1.default, { labels: this.props.chartLabels, datasets: this.props.chartData, options: this.props.options, isBar: false })) :
+                React.createElement(ChartSelector_1.default, { chart: this.props.chart, type: this.state.isAllType })) :
             React.createElement("div", null,
                 React.createElement(TypographyLabel_1.default, { content: "\u500B\u5225" }),
-                React.createElement(ChartContainer_1.default, { labels: this.props.chartLabels, datasets: this.props.chartData, options: this.props.options, queryLabels: this.props.queryLabels, isBar: true }))));
+                React.createElement(ChartContainer_1.default, { chart: this.props.chart, queryLabels: this.props.queryLabels, type: this.state.type }))));
     };
     return ChartScreen;
 }(React.Component));

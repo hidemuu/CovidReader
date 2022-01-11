@@ -9,27 +9,19 @@ import dateFilterType from "../../commons/constants/dateFilterType";
 
 export default class Charts extends React.Component<null, Field.IChartIndex> {
 
-    //コンストラクタ
-    constructor(props) {
-        super(props);
-        this.state = {
-            endDate: new Date(),
-            tabNumber: dateFilterType.YEAR,
-        };
-    }
-
+    
     //マウント時イベントハンドラ
     componentDidMount() {
 
     }
 
     //タブセレクトイベント
-    onSelectTab(index, last) {
+    onSelectTab(index: Number) {
         this.setState({ tabNumber: index });
     }
 
     //カレンダークリックイベント
-    onChangeDatepicker(date) {
+    onChangeDatepicker(date: Date) {
         this.setState({ endDate: date });
     }
 
@@ -38,9 +30,9 @@ export default class Charts extends React.Component<null, Field.IChartIndex> {
             <div>
                 <DateTab
                     selectedTabIndex={this.state.tabNumber}
-                    onSelectTab={(index, last) => this.onSelectTab(index, last)}
+                    onSelectTab={(index: Number) => this.onSelectTab(index)}
                     selectedDate={this.state.endDate}
-                    onChangeDatepicker={(date) => this.onChangeDatepicker(date)}
+                    onChangeDatepicker={(date: Date) => this.onChangeDatepicker(date)}
                 />
                 <ChartTemplate
                     dailyAllCharts={<InfectionCharts calc='daily' isAll={true} endDate={this.state.endDate} dateFilter={this.state.tabNumber} />}

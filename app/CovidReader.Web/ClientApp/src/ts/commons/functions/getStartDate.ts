@@ -1,7 +1,7 @@
 ﻿import dateFilterType from "../constants/dateFilterType";
 
-export default function getStartDate(endDate: string, dateFilter: Number) {
-    let startDate = new Date(endDate);
+export default function getStartDate(endDate: Date, dateFilter: Number) {
+    let startDate = endDate;
     if (dateFilter == dateFilterType.WEEK) {
         startDate.setDate(startDate.getDate() - 7);
     } else if (dateFilter == dateFilterType.MONTH) {

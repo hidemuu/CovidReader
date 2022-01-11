@@ -15,14 +15,6 @@ const isEnables = [true, false, true, false, false, false];
 
 export default class InfectionCharts extends React.Component<Model.IChartData, Field.IChartData> {
 
-    //コンストラクタ
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: null,
-        };
-    }
-
     //マウント時イベントハンドラ
     async componentDidMount() {
         await fetchData(basepath, this);
@@ -38,7 +30,8 @@ export default class InfectionCharts extends React.Component<Model.IChartData, F
 
             console.log('draw start' + startDate + ' - ' + this.props.endDate);
 
-            const query = this.state.data.filter(item => { return item.calc == this.props.calc }).filter(item => { return new Date(item.date) >= startDate && new Date(item.date) <= this.props.endDate });
+            //指定calcの指定日付範囲のデータをクエリ
+            const query = this.state.data.filter(item => { return item.calc == this.props.calc }).filter(item => { return item.date >= startDate && item.date <= this.props.endDate });
             //データラベル生成
             const chartLabels = query.map(item => { return item.date; });
             console.log(chartLabels);
@@ -53,13 +46,13 @@ export default class InfectionCharts extends React.Component<Model.IChartData, F
             ]
 
             let chartData = [];
-            let queryLabels = [];
+            let queryLabels :any[];
+            queryLabels = [];
             let c = 0;
             for (let i = 0; i < labels.length; i++) {
                 if (isEnables[i] === true) {
                     chartData.push({
                         type: chartTypes[c],
-                        // yAxisID: yAxisIDs[c],
                         label: labels[c],
                         data: chartItems[c],
                         borderColor: borderColors[c],
@@ -90,18 +83,22 @@ export default class InfectionCharts extends React.Component<Model.IChartData, F
                                 suggestedMax: 40,
                                 suggestedMin: 0,
                                 stepSize: 10,
-                                callback: (value, index, values) => { return value + ''; }
+                                callback: (value:any, index:any, values:any) => { return value + ''; }
                             }
                         }
                     ]
                 }
             };
 
+            
+
+            this.state.chart.labels = chartLabels;
+            this.state.chart.datasets = chartData;
+            this.state.chart.options = options;
+
             return (
                 <ChartScreen
-                    chartLabels={chartLabels}
-                    chartData={chartData}
-                    options={options}
+                    chart={this.state.chart}
                     queryLabels={queryLabels}
                     isAll={this.props.isAll}
                 />
