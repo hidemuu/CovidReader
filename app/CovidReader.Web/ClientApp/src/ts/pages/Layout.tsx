@@ -4,7 +4,7 @@ import Header from "../components/views/atoms/Header";
 import Footer from "../components/views/atoms/Footer";
 import NavMenu from "../templates/NavMenu";
 
-export class Layout extends React.Component<Model.ILayout, null> {
+export class Layout extends React.Component<Model.ILayout, {}> {
     static displayName = Layout.name;
 
     render(): JSX.Element {

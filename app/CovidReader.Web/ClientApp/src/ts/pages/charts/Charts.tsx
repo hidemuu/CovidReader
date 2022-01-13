@@ -7,7 +7,7 @@ import ChartTemplate from "../../templates/ChartTemplate";
 import dateFilterType from "../../commons/constants/dateFilterType";
 
 
-export default class Charts extends React.Component<null, Field.IChartIndex> {
+export default class Charts extends React.Component<{}, Field.IChartIndex> {
 
     
     //マウント時イベントハンドラ

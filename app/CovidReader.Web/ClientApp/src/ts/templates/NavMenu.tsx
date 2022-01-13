@@ -1,12 +1,11 @@
 ﻿import * as React from "react";
 import NavBar from '../components/views/molecules/NavBar';
 
-export default class NavMenu extends React.Component<Model.INavMenuTemplate> {
+export default class NavMenu extends React.Component<Model.INavMenuTemplate, {}> {
     static displayName = NavMenu.name;
 
-    constructor(props) {
+    constructor(props : Model.INavMenuTemplate) {
         super(props);
-
         this.toggleNavbar = this.toggleNavbar.bind(this);
         this.state = {
             collapsed: true,

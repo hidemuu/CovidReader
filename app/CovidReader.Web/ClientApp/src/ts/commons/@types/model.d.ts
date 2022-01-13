@@ -9,6 +9,10 @@
         title: string,
     }
 
+    export interface ICopyright{
+        content: string,
+    }
+
     // Chart
     export interface IChart {
         labels: object[],
@@ -101,10 +105,21 @@
     }
 
     // Dashboard
-
     export interface IDashboardTemplate {
         charts: JSX.Element;
         tables: JSX.Element;
+    }
+
+    // Setting
+    export interface ISettingTemplate{
+        children: React.ReactNode,
+        title: string,
+    }
+
+    // Register
+    export interface IRegisterTemplate{
+        currentState: number,
+        activeStep: number,
     }
 
     // Auth
@@ -115,6 +130,16 @@
     export type OperationType = {
         login: (userId: string) => void
         logout: () => void
+    }
+
+    // Footer
+    export interface IFooter{
+        title: string,
+    }
+
+    // Header
+    export interface IHeader{
+        title: string,
     }
 
     // Layout

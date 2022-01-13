@@ -13,7 +13,7 @@ export default class ChartContainer extends React.Component<Model.IChartContaine
                         <Grid item className={styles().grid} xs={12}>
                             <ChartSelector
                                 type={this.props.type}
-                                chart.options={this.props.chart.options}
+                                options={this.props.chart.options}
                                 labels={this.props.chart.labels}
                                 datasets={this.props.chart.datasets.filter(d => { return d.label === label })}
                                 

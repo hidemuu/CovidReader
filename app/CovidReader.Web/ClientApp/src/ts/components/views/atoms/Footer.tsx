@@ -1,10 +1,6 @@
 ﻿import * as React from "react";
 
-type Props = {
-    title: string;
-};
-
-export default class Footer extends React.Component<Props> {
+export default class Footer extends React.Component<Model.IFooter> {
 
     render(): JSX.Element {
         return (

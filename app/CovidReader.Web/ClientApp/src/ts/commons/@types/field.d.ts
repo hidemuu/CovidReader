@@ -57,5 +57,15 @@
         selectedTabIndex: Number,
     }
 
+    // Settings
+    export interface ISettingTemplate {
+        open: boolean,
+    }
+
+    // Register
+    export interface IRegisterTemplate{
+        activeStep: number,
+        currentState: number,
+    }
 
 }

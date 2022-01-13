@@ -1,10 +1,6 @@
 ﻿import * as React from "react";
 
-type Props = {
-    title: string;
-};
-
-export default class Header extends React.Component<Props> {
+export default class Header extends React.Component<Model.IHeader> {
 
     render(): JSX.Element {
         return (
