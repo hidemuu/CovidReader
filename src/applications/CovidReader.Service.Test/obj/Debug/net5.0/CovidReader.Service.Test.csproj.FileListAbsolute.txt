@@ -1,12 +1,12 @@
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\CoverletSourceRootsMapping
-C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\testhost.exe
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\testhost.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\testhost.exe
+C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\NUnit3.TestAdapter.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\NUnit3.TestAdapter.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\nunit.engine.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\nunit.engine.api.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\nunit.engine.core.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\Constants.cs
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\CovidReader.Service.Test.deps.json
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Service.Test\bin\Debug\net5.0\CovidReader.Service.Test.runtimeconfig.json

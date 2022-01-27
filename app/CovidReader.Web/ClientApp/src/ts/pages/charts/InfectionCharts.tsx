@@ -3,6 +3,7 @@ import Progress from "../../components/views/atoms/Progress";
 import ChartScreen from "../../components/views/organisms/ChartScreen";
 import getStateDate from "../../commons/functions/getStartDate";
 import fetchData from "../../commons/functions/fetchData";
+import getStringFromDate from "../../commons/functions/getStringFromDate";
 
 //定数
 const basepath = 'api/infection/';
@@ -33,7 +34,7 @@ export default class InfectionCharts extends React.Component<Model.IChartData, F
             //指定calcの指定日付範囲のデータをクエリ
             const query = this.state.data.filter(item => { return item.calc == this.props.calc }).filter(item => { return item.date >= startDate && item.date <= this.props.endDate });
             //データラベル生成
-            const chartLabels = query.map(item => { return item.date; });
+            const chartLabels = query.map(item => { return getStringFromDate(item.date); });
             console.log(chartLabels);
             //各系列の描画パラメータ設定
             const chartItems = [
@@ -45,7 +46,7 @@ export default class InfectionCharts extends React.Component<Model.IChartData, F
                 query.map(item => { return item.testNumber; }),
             ]
 
-            let chartData = [];
+            let chartData : Field.IChartData[] = [];
             let queryLabels :any[];
             queryLabels = [];
             let c = 0;

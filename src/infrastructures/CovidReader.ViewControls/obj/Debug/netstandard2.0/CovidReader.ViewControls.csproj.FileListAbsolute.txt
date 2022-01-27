@@ -1,7 +1,6 @@
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls\bin\Debug\netstandard2.0\CovidReader.ViewControls.deps.json
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls\bin\Debug\netstandard2.0\CovidReader.ViewControls.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls\bin\Debug\netstandard2.0\CovidReader.ViewControls.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls\obj\Debug\netstandard2.0\CovidReader.ViewControls.csproj.AssemblyReference.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls\obj\Debug\netstandard2.0\CovidReader.ViewControls.AssemblyInfoInputs.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls\obj\Debug\netstandard2.0\CovidReader.ViewControls.AssemblyInfo.cs
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewControls\obj\Debug\netstandard2.0\CovidReader.ViewControls.csproj.CoreCompileInputs.cache

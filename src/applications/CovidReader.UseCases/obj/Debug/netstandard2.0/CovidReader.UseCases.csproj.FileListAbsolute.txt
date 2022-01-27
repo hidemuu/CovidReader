@@ -20,10 +20,10 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Control
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\bin\Debug\netstandard2.0\CovidReader.UseCases.deps.json
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\bin\Debug\netstandard2.0\CovidReader.UseCases.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\bin\Debug\netstandard2.0\CovidReader.UseCases.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\bin\Debug\netstandard2.0\CovidReader.UseCases.xml
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\obj\Debug\netstandard2.0\CovidReader.UseCases.csproj.AssemblyReference.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\obj\Debug\netstandard2.0\CovidReader.UseCases.AssemblyInfoInputs.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\obj\Debug\netstandard2.0\CovidReader.UseCases.AssemblyInfo.cs
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\obj\Debug\netstandard2.0\CovidReader.UseCases.csproj.CoreCompileInputs.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\obj\Debug\netstandard2.0\CovidReader.UseCases.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\obj\Debug\netstandard2.0\CovidReader.UseCases.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.UseCases\bin\Debug\netstandard2.0\CovidReader.UseCases.xml

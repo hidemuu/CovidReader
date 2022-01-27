@@ -35,9 +35,9 @@ namespace CovidReader.Windows.ViewModels.Dialogs
         {
             ButtonResult result = ButtonResult.None;
 
-            if (parameter?.ToLower() == "true")
+            if (Convert.ToBoolean(parameter))
                 result = ButtonResult.Yes;
-            else if (parameter?.ToLower() == "false")
+            else 
                 result = ButtonResult.No;
 
             RaiseRequestClose(new DialogResult(result));

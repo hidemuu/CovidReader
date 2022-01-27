@@ -16,7 +16,7 @@ export default class Charts extends React.Component<{}, Field.IChartIndex> {
     }
 
     //タブセレクトイベント
-    onSelectTab(index: Number) {
+    onSelectTab(index: number) {
         this.setState({ tabNumber: index });
     }
 
@@ -30,7 +30,7 @@ export default class Charts extends React.Component<{}, Field.IChartIndex> {
             <div>
                 <DateTab
                     selectedTabIndex={this.state.tabNumber}
-                    onSelectTab={(index: Number) => this.onSelectTab(index)}
+                    onSelectTab={(index: number) => this.onSelectTab(index)}
                     selectedDate={this.state.endDate}
                     onChangeDatepicker={(date: Date) => this.onChangeDatepicker(date)}
                 />

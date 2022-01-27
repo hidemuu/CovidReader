@@ -4,7 +4,8 @@ const outputPath = path.resolve(__dirname, 'public');
 module.exports = {
   devtool: 'source-map',
     context: path.join(__dirname, "src"),
-  entry: './index.jsx',
+    entry: './index.jsx',
+    //entry: './index.tsx',
   mode: 'development',
   output: {
     path: outputPath,
@@ -21,10 +22,12 @@ module.exports = {
   module: {
       rules: [
           {
-              test: /\.js[x]?$/,
+              //test: /\.js[x]?$/,
+              test: /\.tsx?$/,
               exclude: /(node_modules|bower_components)/,
               use: {
-                  loader: 'babel-loader',
+                  //loader: 'babel-loader',
+                  loader: "ts-loader",
                   options: {
                     presets: [
                       '@babel/preset-env',

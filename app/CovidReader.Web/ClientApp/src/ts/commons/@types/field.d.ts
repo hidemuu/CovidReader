@@ -20,7 +20,7 @@
     // Chart
     export interface IChartIndex {
         endDate: Date,
-        tabNumber: Number
+        tabNumber: number
     }
 
     export interface IChartScreen {

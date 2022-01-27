@@ -117,12 +117,16 @@
   $ npm install elemental --save
   $ npm install node-sass
   $ npm install react-datepicker --save
-  $ npm install --save @types/react-datepicker
   $ npm install --save react-tabs
   $ npm install react-router-dom
-  $ npm install --save-dev @types/react-router-dom
   $ npm i react-intl
   $ npm i material-ui-pickers
+  $ npm i typescript ts-loader --save-dev
+  $ npm i @types/react --save-dev
+  $ npm i @types/react-dom --save-dev
+  $ npm install --save-dev @types/react-router-dom
+  $ npm install --save @types/react-datepicker
+  $ npm install --save @types/react-tabs
 
   $ npm i -g topojson
   $ npm install -g koko

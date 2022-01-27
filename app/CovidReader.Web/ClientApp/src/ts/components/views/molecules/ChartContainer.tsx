@@ -16,7 +16,6 @@ export default class ChartContainer extends React.Component<Model.IChartContaine
                                 options={this.props.chart.options}
                                 labels={this.props.chart.labels}
                                 datasets={this.props.chart.datasets.filter(d => { return d.label === label })}
-                                
                             />
                         </Grid>
                     ))}

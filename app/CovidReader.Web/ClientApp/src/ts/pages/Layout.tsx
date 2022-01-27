@@ -1,10 +1,14 @@
 ﻿import * as React from "react";
-import { withRouter } from "react-router-dom";
+import { RouteComponentProps, withRouter } from "react-router-dom";
 import Header from "../components/views/atoms/Header";
 import Footer from "../components/views/atoms/Footer";
 import NavMenu from "../templates/NavMenu";
 
-export class Layout extends React.Component<Model.ILayout, {}> {
+interface ILayout extends RouteComponentProps {
+    children: object,
+}
+
+export class Layout extends React.Component<ILayout, {}> {
     static displayName = Layout.name;
 
     render(): JSX.Element {
@@ -14,7 +18,7 @@ export class Layout extends React.Component<Model.ILayout, {}> {
         console.log("layout");
         return (
             <div>
-                <NavMenu location={this.props.location} />
+                <NavMenu collapsed={true}/>
                 <div className="container" style={containerStyle}>
                     {/* <Header /> */}
                     <div className="row">

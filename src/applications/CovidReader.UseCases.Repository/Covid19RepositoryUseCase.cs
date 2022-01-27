@@ -18,8 +18,6 @@ namespace CovidReader.UseCases.Repository
     /// </summary>
     public class Covid19RepositoryUseCase
     {
-
-
         /// <summary>
         /// SQLite連携のリポジトリを生成
         /// </summary>

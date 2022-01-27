@@ -446,8 +446,15 @@ C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Service.Api.dll
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Service.Covid19.dll
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Service.dll
+C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Controllers.dll
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.dll
+C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Repository.dll
+C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Service.dll
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Utilities.dll
+C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Controllers.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Repository.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Repository.xml
+C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Service.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Models.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Models.xml
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Plugins.pdb
@@ -463,6 +470,7 @@ C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Service.Covid19.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Service.Covid19.xml
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.xml
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Utilities.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.Utilities.xml
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\obj\Debug\net5.0\CovidReader.WebApi.csproj.AssemblyReference.cache
@@ -481,11 +489,3 @@ C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\obj\Debug\net
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\obj\Debug\net5.0\ref\CovidReader.WebApi.dll
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\obj\Debug\net5.0\CovidReader.WebApi.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\obj\Debug\net5.0\CovidReader.WebApi.genruntimeconfig.cache
-C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.xml
-C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Controllers.dll
-C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Controllers.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Repository.dll
-C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Repository.pdb
-C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Repository.xml
-C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Service.dll
-C:\Users\nando\Documents\GitHub\CovidReader\api\CovidReader.WebApi\bin\Debug\net5.0\CovidReader.UseCases.Service.pdb

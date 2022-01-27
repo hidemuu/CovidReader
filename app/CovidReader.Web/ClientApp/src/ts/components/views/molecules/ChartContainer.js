@@ -17,7 +17,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var core_1 = require("@material-ui/core");
-var styles_1 = require("../../styles/js/styles");
+var styles_1 = require("../../styles/styles");
 var ChartContainer = /** @class */ (function (_super) {
     __extends(ChartContainer, _super);
     function ChartContainer() {

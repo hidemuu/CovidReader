@@ -15,9 +15,19 @@
 
     // Chart
     export interface IChart {
-        labels: object[],
-        datasets: object[],
+        labels: string[],
+        datasets: IChartData[],
         options: object,
+    }
+
+    export interface IChartData {
+        label: string,
+        deathNumber: Number,
+        cureNumber: Number,
+        patientNumber: Number,
+        recoveryNumber: Number,
+        severeNumber: Number,
+        testNumber: Number,
     }
 
     export interface IChartType {
@@ -25,14 +35,16 @@
     }
 
     export interface IChartSelector {
-        chart: IChart,
+        labels: string[],
+        datasets: IChartData[],
+        options: object,
         type: IChartType,
     }
 
     export interface IChartContainer {
         chart: IChart,
         type: IChartType,
-        queryLabels: object[],
+        queryLabels: string[],
     }
 
     export interface IChartScreen {
@@ -71,7 +83,7 @@
     //Tab
     export interface IDateTab {
         onSelectTab: Function,
-        selectedTabIndex: Number,
+        selectedTabIndex: number,
         onChangeDatepicker: Function,
         selectedDate: Date,
     }
@@ -144,7 +156,6 @@
 
     // Layout
     export interface ILayout {
-        location: object,
         children: object,
     }
 

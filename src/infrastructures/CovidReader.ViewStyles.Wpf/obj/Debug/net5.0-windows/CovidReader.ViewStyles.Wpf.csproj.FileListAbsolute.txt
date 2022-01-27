@@ -3,13 +3,6 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.View
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\bin\Debug\net5.0-windows\ref\CovidReader.ViewStyles.Wpf.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\bin\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.csproj.AssemblyReference.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.AssemblyInfoInputs.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.AssemblyInfo.cs
-C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.csproj.CoreCompileInputs.cache
-C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\ref\CovidReader.ViewStyles.Wpf.dll
-C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.pdb
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\Assets\Styles\Button.baml
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\Assets\Styles\Calendar.baml
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\Assets\Styles\CheckBox.baml
@@ -40,3 +33,10 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.View
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\Styles\NavigationRailResource.baml
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf_MarkupCompile.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.g.resources
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.AssemblyInfoInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.AssemblyInfo.cs
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.csproj.CoreCompileInputs.cache
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\ref\CovidReader.ViewStyles.Wpf.dll
+C:\Users\nando\Documents\GitHub\CovidReader\src\infrastructures\CovidReader.ViewStyles.Wpf\obj\Debug\net5.0-windows\CovidReader.ViewStyles.Wpf.pdb

@@ -18,11 +18,11 @@ namespace CovidReader.Windows.Models
 
         public InfectionModel(Infection model)
         {
-            Date.Value = model.Date;
-            PatientNumber.Value = model.PatientNumber;
-            DeathNumber.Value = model.DeathNumber;
-            CureNumber.Value = model.CureNumber;
-            RecoveryNumber.Value = model.RecoveryNumber;
+            this.Date.Value = model.Date;
+            this.PatientNumber.Value = model.PatientNumber;
+            this.DeathNumber.Value = model.DeathNumber;
+            this.CureNumber.Value = model.CureNumber;
+            this.RecoveryNumber.Value = model.RecoveryNumber;
         }
     }
 }

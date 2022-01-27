@@ -12,13 +12,13 @@ export default class ChartSelector extends React.Component<Model.IChartSelector>
                 <Grid item className={styles().grid} xs={12}>
                     {this.props.type.isBar
                         ? <BarChart
-                            labels={this.props.chart.labels}
-                            datasets={this.props.chart.datasets}
-                            options={this.props.chart.options} />
+                            labels={this.props.labels}
+                            datasets={this.props.datasets}
+                            options={this.props.options} />
                         : <LineChart
-                            labels={this.props.chart.labels}
-                            datasets={this.props.chart.datasets}
-                            options={this.props.chart.options} />}
+                            labels={this.props.labels}
+                            datasets={this.props.datasets}
+                            options={this.props.options} />}
                 </Grid>
             </div>
         );

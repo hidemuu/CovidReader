@@ -35,8 +35,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Margin="5"  Foreground="White"  FontSize="12" Background="#5cb85c" Command="{Binding CloseDialogCommand}" CommandParameter="true" Content="Yes" Width="64" Height="28" HorizontalAlignment="Right" Grid.Row="1"/>
-            <Button Grid.Column="1" Margin="5"  Foreground="White"  FontSize="12" Background="#d9534f" Command="{Binding CloseDialogCommand}" CommandParameter="false" Content="No" Width="64" Height="28" HorizontalAlignment="Left" Grid.Row="1"/>
+            <Button Margin="5"  Foreground="White"  FontSize="12" Background="#5cb85c" Command="{Binding CloseDialogCommand}" CommandParameter="1" Content="Yes" Width="64" Height="28" HorizontalAlignment="Right" Grid.Row="1"/>
+            <Button Grid.Column="1" Margin="5"  Foreground="White"  FontSize="12" Background="#d9534f" Command="{Binding CloseDialogCommand}" CommandParameter="0" Content="No" Width="64" Height="28" HorizontalAlignment="Left" Grid.Row="1"/>
         </Grid>
     </Grid>
 </UserControl>
