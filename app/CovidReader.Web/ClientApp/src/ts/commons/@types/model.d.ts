@@ -22,12 +22,12 @@
 
     export interface IChartData {
         label: string,
-        deathNumber: Number,
-        cureNumber: Number,
-        patientNumber: Number,
-        recoveryNumber: Number,
-        severeNumber: Number,
-        testNumber: Number,
+        deathNumber: number,
+        cureNumber: number,
+        patientNumber: number,
+        recoveryNumber: number,
+        severeNumber: number,
+        testNumber: number,
     }
 
     export interface IChartType {
@@ -64,7 +64,7 @@
         calc: string,
         endDate: Date,
         isAll: boolean,
-        dateFilter: Number,
+        dateFilter: number,
     }
 
     // Table
@@ -77,7 +77,7 @@
     export interface ITableData {
         calc: string,
         endDate: Date,
-        dateFilter: Number,
+        dateFilter: number,
     }
 
     //Tab

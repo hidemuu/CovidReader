@@ -2,7 +2,7 @@
 import dateFilterType from "../../commons/constants/dateFilterType";
 import InfectionTables from './InfectionTables';
 
-export default class Tables extends React.Component<null, Field.ITableIndex> {
+export default class Tables extends React.Component<{}, Field.ITableIndex> {
 
 
     render(): JSX.Element {

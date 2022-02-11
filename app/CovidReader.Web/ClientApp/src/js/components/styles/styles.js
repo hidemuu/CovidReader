@@ -10,6 +10,9 @@ const styles = makeStyles((theme) =>
         board: {
             backgroundColor: "#F2F2F2",
         },
+        h1: {
+            backgroundColor: "#00FF00",
+        },
         home: {
             display: 'flex',
             flexWrap: 'wrap',

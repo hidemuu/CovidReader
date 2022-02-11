@@ -3,18 +3,18 @@
     // FetchData
     export interface IFetchData {
         id: object,
-        index: Number,
+        index: number,
         date: Date,
         calc: string,
         countryName: string,
         prefName: string,
         cityName: string,
-        deathNumber: Number,
-        cureNumber: Number,
-        patientNumber: Number,
-        recoveryNumber: Number,
-        severeNumber: Number,
-        testNumber: Number,
+        deathNumber: number,
+        cureNumber: number,
+        patientNumber: number,
+        recoveryNumber: number,
+        severeNumber: number,
+        testNumber: number,
     }
 
     // Chart
@@ -32,7 +32,7 @@
         calc: string,
         isAll: boolean,
         endDate: Date,
-        tabNumber: Number
+        tabNumber: number
     }
 
     export interface IChartData {
@@ -43,7 +43,7 @@
     // Table
     export interface ITableIndex {
         endDate: Date,
-        tabNumber: Number
+        tabNumber: number
     }
 
     export interface ITableData {
@@ -54,7 +54,7 @@
     // Dashboard
     export interface IDashboard {
         selectedDate: Date,
-        selectedTabIndex: Number,
+        selectedTabIndex: number,
     }
 
     // Settings

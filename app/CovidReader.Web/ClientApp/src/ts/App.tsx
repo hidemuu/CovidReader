@@ -7,7 +7,7 @@ import Charts from "./pages/charts/Charts";
 import Tables from "./pages/tables/Tables";
 import Dashboard from "./pages/dashboards/Dashboard";
 
-export default class App extends React.Component<null> {
+export default class App extends React.Component<{}> {
 
     static displayName = App.name;
 

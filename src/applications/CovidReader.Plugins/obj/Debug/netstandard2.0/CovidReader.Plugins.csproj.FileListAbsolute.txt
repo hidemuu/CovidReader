@@ -15,3 +15,4 @@ C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Plugins
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Plugins\obj\Debug\netstandard2.0\CovidReader.Plugins.csproj.CoreCompileInputs.cache
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Plugins\obj\Debug\netstandard2.0\CovidReader.Plugins.dll
 C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Plugins\obj\Debug\netstandard2.0\CovidReader.Plugins.pdb
+C:\Users\nando\Documents\GitHub\CovidReader\src\applications\CovidReader.Plugins\obj\Debug\netstandard2.0\CovidReader.Plugins.csproj.AssemblyReference.cache

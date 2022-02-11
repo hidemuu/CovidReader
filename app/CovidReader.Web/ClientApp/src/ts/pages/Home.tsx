@@ -4,7 +4,7 @@ import img02 from '../../assets/img/img02.jpg';
 import img03 from '../../assets/img/img03.jpg';
 import HomeTemplate from '../templates/HomeTemplate';
 
-export default class Home extends React.Component<null, null> {
+export default class Home extends React.Component<{}, {}> {
     static displayName = Home.name;
 
     //API更新ボタンクリックイベント

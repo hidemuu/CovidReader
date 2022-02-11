@@ -119,6 +119,7 @@
   $ npm install react-datepicker --save
   $ npm install --save react-tabs
   $ npm install react-router-dom
+  $ npm i --save react-select
   $ npm i react-intl
   $ npm i material-ui-pickers
   $ npm i typescript ts-loader --save-dev

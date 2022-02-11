@@ -8,10 +8,10 @@ import InfectionTables from '../tables/InfectionTables';
 import dateFilterType from "../../commons/constants/dateFilterType";
 import styles from "../../components/styles/styles";
 
-export default class Dashboard extends React.Component<null, Field.IDashboard> {
+export default class Dashboard extends React.Component<{}, Field.IDashboard> {
 
     //タブセレクトイベント
-    onSelectTab = (index: Number) => {
+    onSelectTab = (index: number) => {
         this.setState({ selectedTabIndex: index });
     }
 
@@ -25,7 +25,7 @@ export default class Dashboard extends React.Component<null, Field.IDashboard> {
             <div className={styles().board}>
                 <DateTab
                     selectedTabIndex={this.state.selectedTabIndex}
-                    onSelectTab={(index: Number) => this.onSelectTab(index)}
+                    onSelectTab={(index: number) => this.onSelectTab(index)}
                     selectedDate={this.state.selectedDate}
                     onChangeDatepicker={(date: Date) => this.onChangeDatepicker(date)}
                 />

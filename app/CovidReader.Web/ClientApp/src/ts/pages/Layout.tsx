@@ -16,6 +16,7 @@ export class Layout extends React.Component<ILayout, {}> {
             marginTop: "0px"
         };
         console.log("layout");
+        console.log(this.props.children);
         return (
             <div>
                 <NavMenu collapsed={true}/>
